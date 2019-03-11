@@ -1,0 +1,21 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+D:\Study\单片机\电子设计大赛\STC12C2052AD\pwm\pwm.uvproj
+Project File Date:  07/18/2015
+
+<h2>Output:</h2>
+compiling main.c...
+main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: data=9.0 xdata=0 code=47
+"pwm" - 0 Error(s), 0 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=9.0 xdata=0 code=47
+creating hex file from "pwm"...
+"pwm" - 0 Error(s), 0 Warning(s).

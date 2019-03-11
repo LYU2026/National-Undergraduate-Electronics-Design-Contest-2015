@@ -1,0 +1,4 @@
+"main.obj",
+"uart.obj" 
+TO "chaoshengbo" 
+RAMSIZE(256) 

@@ -1,0 +1,5 @@
+"VIIC_C51.obj",
+"ZLG7290.obj",
+"timer.obj" 
+TO "timer" 
+RAMSIZE(256) 

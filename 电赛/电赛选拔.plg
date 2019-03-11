@@ -1,0 +1,1627 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\York\Desktop\电赛\电赛选拔.uvproj
+Project File Date:  05/17/2015
+
+<h2>Output:</h2>
+compiling main.c...
+main.c(2): warning C318: can't open file 'lcd.h'
+main.c(10): warning C206: 'LCD1602_Init': missing function-prototype
+main.c(13): warning C206: 'LCD1602_MoveToPosition': missing function-prototype
+main.c(13): error C267: 'LCD1602_MoveToPosition': requires ANSI-style prototype
+main.c - 1 Error(s), 3 Warning(s).
+compiling lcd.c...
+lcd.c - 0 Error(s), 0 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+main.c(7): warning C280: 'p1': unreferenced local variable
+main.c(9): warning C280: 'p4': unreferenced local variable
+compiling lcd.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYONECHARONADDR?LCD
+Program Size: data=9.1 xdata=0 code=350
+creating hex file from "电赛选拔"...
+"电赛选拔" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(6): warning C280: 'p0': unreferenced local variable
+main.c(9): warning C280: 'p4': unreferenced local variable
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYONECHARONADDR?LCD
+Program Size: data=9.1 xdata=0 code=350
+creating hex file from "电赛选拔"...
+"电赛选拔" - 0 Error(s), 3 Warning(s).
+compiling main.c...
+main.c(11): error C202: 'p1': undefined identifier
+main.c - 1 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=15.1 xdata=0 code=611
+creating hex file from "电赛选拔"...
+"电赛选拔" - 0 Error(s), 0 Warning(s).
+compiling main.c...
+main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling lcd.c...
+linking...
+Program Size: data=15.1 xdata=0 code=611
+creating hex file from "电赛选拔"...
+"电赛选拔" - 0 Error(s), 0 Warning(s).
+compiling main1.c...
+main1.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: data=15.1 xdata=0 code=611
+creating hex file from "电赛选拔"...
+"电赛选拔" - 0 Error(s), 0 Warning(s).
+compiling main1.c...
+main1.c(2): warning C318: can't open file 'lcd.h'
+main1.c(3): warning C318: can't open file '18B20.h'
+main1.c(12): error C202: 'DisplayData': undefined identifier
+main1.c(25): error C202: 'DisplayData': undefined identifier
+main1.c(35): error C202: 'Data0': undefined identifier
+main1.c(36): error C202: 'Data0': undefined identifier
+main1.c(37): error C202: 'Data0': undefined identifier
+main1.c(38): error C202: 'Data0': undefined identifier
+main1.c(39): error C202: 'Data0': undefined identifier
+main1.c(43): error C202: 'Data0': undefined identifier
+main1.c(46): error C202: 'T': undefined identifier
+main1.c(48): error C202: 'T': undefined identifier
+main1.c(50): error C202: 'T': undefined identifier
+main1.c(52): error C202: 'T': undefined identifier
+main1.c(54): error C202: 'T': undefined identifier
+main1.c(56): error C202: 'T': undefined identifier
+main1.c(58): error C202: 'T': undefined identifier
+main1.c(60): error C202: 'T': undefined identifier
+main1.c(62): error C202: 'T': undefined identifier
+main1.c(64): error C202: 'T': undefined identifier
+main1.c - 18 Error(s), 2 Warning(s).
+compiling main1.c...
+main1.c(2): warning C318: can't open file 'lcd.h'
+main1.c(3): warning C318: can't open file '18B20.h'
+main1.c(80): warning C206: 'LCD1602_WriteInformation': missing function-prototype
+main1.c(80): error C267: 'LCD1602_WriteInformation': requires ANSI-style prototype
+main1.c - 1 Error(s), 3 Warning(s).
+compiling main1.c...
+main1.c(2): warning C318: can't open file 'lcd.h'
+main1.c(3): warning C318: can't open file '18B20.h'
+main1.c(22): warning C206: 'LCD1602_Init': missing function-prototype
+main1.c(28): warning C206: 'Ds18b20ReadTemp': missing function-prototype
+main1.c(94): warning C206: 'LCD1602_WriteInformation': missing function-prototype
+main1.c(94): error C267: 'LCD1602_WriteInformation': requires ANSI-style prototype
+main1.c - 1 Error(s), 5 Warning(s).
+Build target 'Target 1'
+compiling main1.c...
+main1.c(2): warning C318: can't open file 'lcd.h'
+main1.c(3): warning C318: can't open file '18B20.h'
+main1.c(22): warning C206: 'LCD1602_Init': missing function-prototype
+main1.c(28): warning C206: 'Ds18b20ReadTemp': missing function-prototype
+main1.c(94): warning C206: 'LCD1602_WriteInformation': missing function-prototype
+main1.c(94): error C267: 'LCD1602_WriteInformation': requires ANSI-style prototype
+compiling lcd.c...
+Target not created
+compiling main1.c...
+main1.c(2): warning C318: can't open file 'lcd.h'
+main1.c(3): warning C318: can't open file '18B20.h'
+main1.c(22): warning C206: 'LCD1602_Init': missing function-prototype
+main1.c(28): warning C206: 'Ds18b20ReadTemp': missing function-prototype
+main1.c(94): warning C206: 'LCD1602_WriteInformation': missing function-prototype
+main1.c(94): error C267: 'LCD1602_WriteInformation': requires ANSI-style prototype
+main1.c - 1 Error(s), 5 Warning(s).
+compiling main1.c...
+main1.c(2): warning C318: can't open file 'lcd.h'
+main1.c(3): warning C318: can't open file '18B20.h'
+main1.c(22): warning C206: 'LCD1602_Init': missing function-prototype
+main1.c(28): warning C206: 'Ds18b20ReadTemp': missing function-prototype
+main1.c(95): warning C206: 'LCD1602_MoveToPosition': missing function-prototype
+main1.c(95): error C267: 'LCD1602_MoveToPosition': requires ANSI-style prototype
+main1.c - 1 Error(s), 5 Warning(s).
+compiling main1.c...
+main1.c(2): warning C318: can't open file 'lcd.h'
+main1.c(3): warning C318: can't open file '18B20.h'
+main1.c(22): warning C206: 'LCD1602_Init': missing function-prototype
+main1.c(28): warning C206: 'Ds18b20ReadTemp': missing function-prototype
+main1.c(95): warning C206: 'LCD1602_MoveToPosition': missing function-prototype
+main1.c(95): error C267: 'LCD1602_MoveToPosition': requires ANSI-style prototype
+main1.c - 1 Error(s), 5 Warning(s).
+compiling main1.c...
+main1.c(2): warning C318: can't open file 'lcd.h'
+main1.c(7): warning C206: 'LCD1602_Init': missing function-prototype
+main1.c(10): warning C206: 'LCD1602_MoveToPosition': missing function-prototype
+main1.c(10): error C267: 'LCD1602_MoveToPosition': requires ANSI-style prototype
+main1.c - 1 Error(s), 3 Warning(s).
+compiling main1.c...
+main1.c(2): warning C318: can't open file 'lcd.h'
+main1.c(7): warning C206: 'LCD1602_Init': missing function-prototype
+main1.c(11): warning C206: 'LCD1602_DisplayString': missing function-prototype
+main1.c(11): error C267: 'LCD1602_DisplayString': requires ANSI-style prototype
+main1.c - 1 Error(s), 3 Warning(s).
+compiling main1.c...
+main1.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: data=15.1 xdata=0 code=605
+creating hex file from "电赛选拔"...
+"电赛选拔" - 0 Error(s), 0 Warning(s).
+compiling main1.c...
+main1.c(3): warning C318: can't open file '18B20.h'
+main1.c(99): warning C206: 'Ds18b20ReadTemp': missing function-prototype
+main1.c - 0 Error(s), 2 Warning(s).
+compiling main1.c...
+main1.c(3): warning C318: can't open file '18B20.h'
+main1.c(99): warning C206: 'Ds18b20ReadTemp': missing function-prototype
+main1.c - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling 18B20.c...
+18B20\18B20.c(169): error C141: syntax error near '(', expected ')'
+18B20\18B20.c(169): error C141: syntax error near ')'
+18B20\18B20.c(211): error C202: 'T': undefined identifier
+18B20\18B20.c(213): error C202: 'T': undefined identifier
+18B20\18B20.c(215): error C202: 'T': undefined identifier
+18B20\18B20.c(217): error C202: 'T': undefined identifier
+18B20\18B20.c(219): error C202: 'T': undefined identifier
+18B20\18B20.c(221): error C202: 'T': undefined identifier
+18B20\18B20.c(223): error C202: 'T': undefined identifier
+18B20\18B20.c(225): error C202: 'T': undefined identifier
+18B20\18B20.c(227): error C202: 'T': undefined identifier
+18B20\18B20.c(229): error C202: 'T': undefined identifier
+18B20\18B20.c(235): error C202: 'T': undefined identifier
+18B20\18B20.c(236): error C202: 'T': undefined identifier
+18B20\18B20.c(238): error C202: 'T': undefined identifier
+Target not created
+compiling 18B20.c...
+18B20\18B20.c(159): error C141: syntax error near '0xF9'
+18B20\18B20.c - 1 Error(s), 0 Warning(s).
+compiling 18B20.c...
+18B20\18B20.c(168): error C141: syntax error near '/'
+18B20\18B20.c - 1 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling 18B20.c...
+linking...
+Program Size: data=62.1 xdata=0 code=2145
+creating hex file from "电赛选拔"...
+"电赛选拔" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main1.c...
+main1.c(3): warning C318: can't open file '18B20.h'
+main1.c(99): warning C206: 'Ds18b20ReadTemp': missing function-prototype
+linking...
+Program Size: data=62.1 xdata=0 code=2127
+creating hex file from "电赛选拔"...
+"电赛选拔" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling main1.c...
+main1.c(3): warning C318: can't open file '18B20.h'
+main1.c(99): warning C206: 'Ds18b20ReadTemp': missing function-prototype
+linking...
+Program Size: data=62.1 xdata=0 code=2120
+creating hex file from "电赛选拔"...
+"电赛选拔" - 0 Error(s), 2 Warning(s).
+compiling main1.c...
+main1.c(3): warning C318: can't open file '18B20.h'
+main1.c(29): warning C206: 'Ds18b20ReadTemp': missing function-prototype
+main1.c - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: data=62.1 xdata=0 code=2120
+creating hex file from "电赛选拔"...
+"电赛选拔" - 0 Error(s), 0 Warning(s).
+compiling main1.c...
+main1.c(3): warning C318: can't open file '18B20.h'
+main1.c(4): warning C318: can't open file 'ds1302.h'
+main1.c(29): warning C206: 'Ds18b20ReadTemp': missing function-prototype
+main1.c(110): error C202: 'ADDR_SEC_R': undefined identifier
+main1.c(111): error C202: 'ADDR_MIN_R': undefined identifier
+main1.c(112): error C202: 'ADDR_HOUR_R': undefined identifier
+main1.c(113): error C202: 'ADDR_DAY_R': undefined identifier
+main1.c(114): error C202: 'ADDR_MONTH_R': undefined identifier
+main1.c(115): error C202: 'ADDR_WEEK_R': undefined identifier
+main1.c(116): error C202: 'ADDR_YEAR_R': undefined identifier
+main1.c(120): error C141: syntax error near 'readtime'
+main1.c(120): error C231: 'readtime': redefinition
+main1.c - 9 Error(s), 3 Warning(s).
+compiling main1.c...
+main1.c(3): warning C318: can't open file '18B20.h'
+main1.c(4): warning C318: can't open file 'ds1302.h'
+main1.c(111): error C202: 'ADDR_SEC_R': undefined identifier
+main1.c(112): error C202: 'ADDR_MIN_R': undefined identifier
+main1.c(113): error C202: 'ADDR_HOUR_R': undefined identifier
+main1.c(114): error C202: 'ADDR_DAY_R': undefined identifier
+main1.c(115): error C202: 'ADDR_MONTH_R': undefined identifier
+main1.c(116): error C202: 'ADDR_WEEK_R': undefined identifier
+main1.c(117): error C202: 'ADDR_YEAR_R': undefined identifier
+main1.c(122): error C141: syntax error near 'if'
+main1.c(122): error C141: syntax error near '&', expected ')'
+main1.c(124): error C247: non-address/-constant initializer
+main1.c(127): error C141: syntax error near 'if'
+main1.c(127): error C141: syntax error near '&', expected ')'
+main1.c(129): error C231: 'Time0': redefinition
+main1.c(129): error C247: non-address/-constant initializer
+main1.c(130): error C129: missing ';' before '+='
+main1.c - 15 Error(s), 2 Warning(s).
+compiling main1.c...
+main1.c(3): warning C318: can't open file '18B20.h'
+main1.c(4): warning C318: can't open file 'ds1302.h'
+main1.c(111): error C202: 'ADDR_SEC_R': undefined identifier
+main1.c(112): error C202: 'ADDR_MIN_R': undefined identifier
+main1.c(113): error C202: 'ADDR_HOUR_R': undefined identifier
+main1.c(114): error C202: 'ADDR_DAY_R': undefined identifier
+main1.c(115): error C202: 'ADDR_MONTH_R': undefined identifier
+main1.c(116): error C202: 'ADDR_WEEK_R': undefined identifier
+main1.c(117): error C202: 'ADDR_YEAR_R': undefined identifier
+main1.c(122): error C141: syntax error near 'if'
+main1.c(122): error C141: syntax error near '&', expected ')'
+main1.c(124): error C247: non-address/-constant initializer
+main1.c(127): error C141: syntax error near 'if'
+main1.c(127): error C141: syntax error near '&', expected ')'
+main1.c(129): error C231: 'Time0': redefinition
+main1.c(129): error C247: non-address/-constant initializer
+main1.c(130): error C129: missing ';' before '+='
+main1.c - 15 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling main1.c...
+main1.c(3): warning C318: can't open file '18B20.h'
+main1.c(4): warning C318: can't open file 'ds1302.h'
+main1.c(111): error C202: 'ADDR_SEC_R': undefined identifier
+main1.c(112): error C202: 'ADDR_MIN_R': undefined identifier
+main1.c(113): error C202: 'ADDR_HOUR_R': undefined identifier
+main1.c(114): error C202: 'ADDR_DAY_R': undefined identifier
+main1.c(115): error C202: 'ADDR_MONTH_R': undefined identifier
+main1.c(116): error C202: 'ADDR_WEEK_R': undefined identifier
+main1.c(117): error C202: 'ADDR_YEAR_R': undefined identifier
+main1.c(122): error C141: syntax error near 'if'
+main1.c(122): error C141: syntax error near '&', expected ')'
+main1.c(124): error C247: non-address/-constant initializer
+main1.c(127): error C141: syntax error near 'if'
+main1.c(127): error C141: syntax error near '&', expected ')'
+main1.c(129): error C231: 'Time0': redefinition
+main1.c(129): error C247: non-address/-constant initializer
+main1.c(130): error C129: missing ';' before '+='
+compiling ds1302.c...
+Target not created
+compiling main1.c...
+main1.c(3): warning C318: can't open file '18B20.h'
+main1.c(4): warning C318: can't open file 'ds1302.h'
+main1.c(111): error C202: 'ADDR_SEC_R': undefined identifier
+main1.c(112): error C202: 'ADDR_MIN_R': undefined identifier
+main1.c(113): error C202: 'ADDR_HOUR_R': undefined identifier
+main1.c(114): error C202: 'ADDR_DAY_R': undefined identifier
+main1.c(115): error C202: 'ADDR_MONTH_R': undefined identifier
+main1.c(116): error C202: 'ADDR_WEEK_R': undefined identifier
+main1.c(117): error C202: 'ADDR_YEAR_R': undefined identifier
+main1.c(122): error C141: syntax error near 'if'
+main1.c(122): error C141: syntax error near '&', expected ')'
+main1.c(124): error C247: non-address/-constant initializer
+main1.c(127): error C141: syntax error near 'if'
+main1.c(127): error C141: syntax error near '&', expected ')'
+main1.c(129): error C231: 'Time0': redefinition
+main1.c(129): error C247: non-address/-constant initializer
+main1.c(130): error C129: missing ';' before '+='
+main1.c - 15 Error(s), 2 Warning(s).
+compiling main1.c...
+main1.c(3): warning C318: can't open file '18B20.h'
+main1.c(122): error C141: syntax error near 'if'
+main1.c(122): error C141: syntax error near '&', expected ')'
+main1.c(124): error C247: non-address/-constant initializer
+main1.c(127): error C141: syntax error near 'if'
+main1.c(127): error C141: syntax error near '&', expected ')'
+main1.c(129): error C231: 'Time0': redefinition
+main1.c(129): error C247: non-address/-constant initializer
+main1.c(130): error C129: missing ';' before '+='
+main1.c - 8 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main1.c...
+main1.c(3): warning C318: can't open file '18B20.h'
+main1.c(122): error C141: syntax error near 'if'
+main1.c(122): error C141: syntax error near '&', expected ')'
+main1.c(124): error C247: non-address/-constant initializer
+main1.c(127): error C141: syntax error near 'if'
+main1.c(127): error C141: syntax error near '&', expected ')'
+main1.c(129): error C231: 'Time0': redefinition
+main1.c(129): error C247: non-address/-constant initializer
+main1.c(130): error C129: missing ';' before '+='
+Target not created
+compiling main1.c...
+main1.c(3): warning C318: can't open file '18B20.h'
+main1.c(122): error C141: syntax error near 'if'
+main1.c(122): error C141: syntax error near '&', expected ')'
+main1.c(124): error C247: non-address/-constant initializer
+main1.c(127): error C141: syntax error near 'if'
+main1.c(127): error C141: syntax error near '&', expected ')'
+main1.c(129): error C231: 'Time0': redefinition
+main1.c(129): error C247: non-address/-constant initializer
+main1.c(130): error C129: missing ';' before '+='
+main1.c - 8 Error(s), 1 Warning(s).
+compiling main1.c...
+main1.c(122): error C141: syntax error near 'if'
+main1.c(122): error C141: syntax error near '&', expected ')'
+main1.c(124): error C247: non-address/-constant initializer
+main1.c(127): error C141: syntax error near 'if'
+main1.c(127): error C141: syntax error near '&', expected ')'
+main1.c(129): error C231: 'Time0': redefinition
+main1.c(129): error C247: non-address/-constant initializer
+main1.c(130): error C129: missing ';' before '+='
+main1.c - 8 Error(s), 0 Warning(s).
+compiling main1.c...
+main1.c(122): error C141: syntax error near 'if'
+main1.c(122): error C141: syntax error near '&', expected ')'
+main1.c(124): error C247: non-address/-constant initializer
+main1.c(127): error C141: syntax error near 'if'
+main1.c(127): error C141: syntax error near '&', expected ')'
+main1.c(129): error C231: 'Time0': redefinition
+main1.c(129): error C247: non-address/-constant initializer
+main1.c(130): error C279: 'Time0': multiple initialization
+main1.c(131): error C141: syntax error near '}'
+main1.c(132): error C141: syntax error near '0'
+main1.c(132): error C231: '_LCD1602_DisplayOneCharOnAddr': redefinition
+main1.c(133): error C141: syntax error near '0'
+main1.c(133): error C231: '_LCD1602_DisplayOneCharOnAddr': redefinition
+main1.c(134): error C141: syntax error near '0'
+main1.c(134): error C141: syntax error near ')'
+main1.c(135): error C141: syntax error near '0'
+main1.c(135): error C141: syntax error near ')'
+main1.c(136): error C141: syntax error near '0'
+main1.c(136): error C141: syntax error near ')'
+main1.c(137): error C141: syntax error near '0'
+main1.c(137): error C141: syntax error near ')'
+main1.c(138): error C141: syntax error near '0'
+main1.c(138): error C141: syntax error near ')'
+main1.c(139): error C141: syntax error near '0'
+main1.c(139): error C141: syntax error near ')'
+main1.c(140): error C141: syntax error near '0'
+main1.c(140): error C141: syntax error near ')'
+main1.c(141): error C141: syntax error near '0'
+main1.c(141): error C141: syntax error near ')'
+main1.c(142): error C141: syntax error near '0'
+main1.c(142): error C231: '_LCD1602_DisplayOneCharOnAddr': redefinition
+main1.c(143): error C141: syntax error near '1'
+main1.c(143): error C231: '_LCD1602_MoveToPosition': redefinition
+main1.c(144): error C231: '_LCD1602_DisplayString': redefinition
+main1.c(145): error C141: syntax error near '1'
+main1.c(145): error C141: syntax error near ')'
+main1.c(146): error C141: syntax error near '1'
+main1.c(146): error C141: syntax error near ')'
+main1.c(147): error C141: syntax error near '1'
+main1.c(147): error C141: syntax error near ')'
+main1.c(148): error C141: syntax error near '1'
+main1.c(148): error C141: syntax error near ')'
+main1.c(149): error C141: syntax error near '1'
+main1.c(149): error C141: syntax error near ')'
+main1.c(150): error C141: syntax error near '1'
+main1.c(150): error C141: syntax error near ')'
+main1.c(151): error C141: syntax error near '1'
+main1.c(151): error C141: syntax error near ')'
+main1.c(152): error C141: syntax error near '1'
+main1.c(152): error C141: syntax error near ')'
+main1.c - 50 Error(s), 0 Warning(s).
+compiling main1.c...
+main1.c(123): error C141: syntax error near 'if'
+main1.c(123): error C141: syntax error near '&', expected ')'
+main1.c(125): error C247: non-address/-constant initializer
+main1.c(128): error C141: syntax error near 'if'
+main1.c(128): error C141: syntax error near '&', expected ')'
+main1.c(130): error C231: 'Time0': redefinition
+main1.c(130): error C247: non-address/-constant initializer
+main1.c(131): error C279: 'Time0': multiple initialization
+main1.c(132): error C141: syntax error near '}'
+main1.c(133): error C141: syntax error near '0'
+main1.c(133): error C231: '_LCD1602_DisplayOneCharOnAddr': redefinition
+main1.c(134): error C141: syntax error near '0'
+main1.c(134): error C231: '_LCD1602_DisplayOneCharOnAddr': redefinition
+main1.c(135): error C141: syntax error near '0'
+main1.c(135): error C141: syntax error near ')'
+main1.c(136): error C141: syntax error near '0'
+main1.c(136): error C141: syntax error near ')'
+main1.c(137): error C141: syntax error near '0'
+main1.c(137): error C141: syntax error near ')'
+main1.c(138): error C141: syntax error near '0'
+main1.c(138): error C141: syntax error near ')'
+main1.c(139): error C141: syntax error near '0'
+main1.c(139): error C141: syntax error near ')'
+main1.c(140): error C141: syntax error near '0'
+main1.c(140): error C141: syntax error near ')'
+main1.c(141): error C141: syntax error near '0'
+main1.c(141): error C141: syntax error near ')'
+main1.c(142): error C141: syntax error near '0'
+main1.c(142): error C141: syntax error near ')'
+main1.c(143): error C141: syntax error near '0'
+main1.c(143): error C231: '_LCD1602_DisplayOneCharOnAddr': redefinition
+main1.c(144): error C141: syntax error near '1'
+main1.c(144): error C231: '_LCD1602_MoveToPosition': redefinition
+main1.c(145): error C231: '_LCD1602_DisplayString': redefinition
+main1.c(146): error C141: syntax error near '1'
+main1.c(146): error C141: syntax error near ')'
+main1.c(147): error C141: syntax error near '1'
+main1.c(147): error C141: syntax error near ')'
+main1.c(148): error C141: syntax error near '1'
+main1.c(148): error C141: syntax error near ')'
+main1.c(149): error C141: syntax error near '1'
+main1.c(149): error C141: syntax error near ')'
+main1.c(150): error C141: syntax error near '1'
+main1.c(150): error C141: syntax error near ')'
+main1.c(151): error C141: syntax error near '1'
+main1.c(151): error C141: syntax error near ')'
+main1.c(152): error C141: syntax error near '1'
+main1.c(152): error C141: syntax error near ')'
+main1.c(153): error C141: syntax error near '1'
+main1.c(153): error C141: syntax error near ')'
+main1.c - 50 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main1.c...
+main1.c(123): error C141: syntax error near 'if'
+main1.c(123): error C141: syntax error near '&', expected ')'
+main1.c(125): error C247: non-address/-constant initializer
+main1.c(128): error C141: syntax error near 'if'
+main1.c(128): error C141: syntax error near '&', expected ')'
+main1.c(130): error C231: 'Time0': redefinition
+main1.c(130): error C247: non-address/-constant initializer
+main1.c(131): error C279: 'Time0': multiple initialization
+main1.c(132): error C141: syntax error near '}'
+main1.c(133): error C141: syntax error near '0'
+main1.c(133): error C231: '_LCD1602_DisplayOneCharOnAddr': redefinition
+main1.c(134): error C141: syntax error near '0'
+main1.c(134): error C231: '_LCD1602_DisplayOneCharOnAddr': redefinition
+main1.c(135): error C141: syntax error near '0'
+main1.c(135): error C141: syntax error near ')'
+main1.c(136): error C141: syntax error near '0'
+main1.c(136): error C141: syntax error near ')'
+main1.c(137): error C141: syntax error near '0'
+main1.c(137): error C141: syntax error near ')'
+main1.c(138): error C141: syntax error near '0'
+main1.c(138): error C141: syntax error near ')'
+main1.c(139): error C141: syntax error near '0'
+main1.c(139): error C141: syntax error near ')'
+main1.c(140): error C141: syntax error near '0'
+main1.c(140): error C141: syntax error near ')'
+main1.c(141): error C141: syntax error near '0'
+main1.c(141): error C141: syntax error near ')'
+main1.c(142): error C141: syntax error near '0'
+main1.c(142): error C141: syntax error near ')'
+main1.c(143): error C141: syntax error near '0'
+main1.c(143): error C231: '_LCD1602_DisplayOneCharOnAddr': redefinition
+main1.c(144): error C141: syntax error near '1'
+main1.c(144): error C231: '_LCD1602_MoveToPosition': redefinition
+main1.c(145): error C231: '_LCD1602_DisplayString': redefinition
+main1.c(146): error C141: syntax error near '1'
+main1.c(146): error C141: syntax error near ')'
+main1.c(147): error C141: syntax error near '1'
+main1.c(147): error C141: syntax error near ')'
+main1.c(148): error C141: syntax error near '1'
+main1.c(148): error C141: syntax error near ')'
+main1.c(149): error C141: syntax error near '1'
+main1.c(149): error C141: syntax error near ')'
+main1.c(150): error C141: syntax error near '1'
+main1.c(150): error C141: syntax error near ')'
+main1.c(151): error C141: syntax error near '1'
+main1.c(151): error C141: syntax error near ')'
+main1.c(152): error C141: syntax error near '1'
+main1.c(152): error C141: syntax error near ')'
+main1.c(153): error C141: syntax error near '1'
+main1.c(153): error C141: syntax error near ')'
+Target not created
+compiling main1.c...
+main1.c(123): error C141: syntax error near 'if'
+main1.c(123): error C141: syntax error near '&', expected ')'
+main1.c(125): error C247: non-address/-constant initializer
+main1.c(128): error C141: syntax error near 'if'
+main1.c(128): error C141: syntax error near '&', expected ')'
+main1.c(130): error C231: 'Time0': redefinition
+main1.c(130): error C247: non-address/-constant initializer
+main1.c(131): error C279: 'Time0': multiple initialization
+main1.c(132): error C141: syntax error near '}'
+main1.c(133): error C141: syntax error near '0'
+main1.c(133): error C231: '_LCD1602_DisplayOneCharOnAddr': redefinition
+main1.c(134): error C141: syntax error near '0'
+main1.c(134): error C231: '_LCD1602_DisplayOneCharOnAddr': redefinition
+main1.c(135): error C141: syntax error near '0'
+main1.c(135): error C141: syntax error near ')'
+main1.c(136): error C141: syntax error near '0'
+main1.c(136): error C141: syntax error near ')'
+main1.c(137): error C141: syntax error near '0'
+main1.c(137): error C141: syntax error near ')'
+main1.c(138): error C141: syntax error near '0'
+main1.c(138): error C141: syntax error near ')'
+main1.c(139): error C141: syntax error near '0'
+main1.c(139): error C141: syntax error near ')'
+main1.c(140): error C141: syntax error near '0'
+main1.c(140): error C141: syntax error near ')'
+main1.c(141): error C141: syntax error near '0'
+main1.c(141): error C141: syntax error near ')'
+main1.c(142): error C141: syntax error near '0'
+main1.c(142): error C141: syntax error near ')'
+main1.c(143): error C141: syntax error near '0'
+main1.c(143): error C231: '_LCD1602_DisplayOneCharOnAddr': redefinition
+main1.c(144): error C141: syntax error near '1'
+main1.c(144): error C231: '_LCD1602_MoveToPosition': redefinition
+main1.c(145): error C231: '_LCD1602_DisplayString': redefinition
+main1.c(146): error C141: syntax error near '1'
+main1.c(146): error C141: syntax error near ')'
+main1.c(147): error C141: syntax error near '1'
+main1.c(147): error C141: syntax error near ')'
+main1.c(148): error C141: syntax error near '1'
+main1.c(148): error C141: syntax error near ')'
+main1.c(149): error C141: syntax error near '1'
+main1.c(149): error C141: syntax error near ')'
+main1.c(150): error C141: syntax error near '1'
+main1.c(150): error C141: syntax error near ')'
+main1.c(151): error C141: syntax error near '1'
+main1.c(151): error C141: syntax error near ')'
+main1.c(152): error C141: syntax error near '1'
+main1.c(152): error C141: syntax error near ')'
+main1.c(153): error C141: syntax error near '1'
+main1.c(153): error C141: syntax error near ')'
+main1.c - 50 Error(s), 0 Warning(s).
+compiling main1.c...
+main1.c(123): error C141: syntax error near 'if'
+main1.c(123): error C141: syntax error near '&&', expected ')'
+main1.c(125): error C247: non-address/-constant initializer
+main1.c(128): error C141: syntax error near 'if'
+main1.c(128): error C141: syntax error near '&&', expected ')'
+main1.c(130): error C231: 'Time0': redefinition
+main1.c(130): error C247: non-address/-constant initializer
+main1.c(131): error C279: 'Time0': multiple initialization
+main1.c(132): error C141: syntax error near '}'
+main1.c(133): error C141: syntax error near '0'
+main1.c(133): error C231: '_LCD1602_DisplayOneCharOnAddr': redefinition
+main1.c(134): error C141: syntax error near '0'
+main1.c(134): error C231: '_LCD1602_DisplayOneCharOnAddr': redefinition
+main1.c(135): error C141: syntax error near '0'
+main1.c(135): error C141: syntax error near ')'
+main1.c(136): error C141: syntax error near '0'
+main1.c(136): error C141: syntax error near ')'
+main1.c(137): error C141: syntax error near '0'
+main1.c(137): error C141: syntax error near ')'
+main1.c(138): error C141: syntax error near '0'
+main1.c(138): error C141: syntax error near ')'
+main1.c(139): error C141: syntax error near '0'
+main1.c(139): error C141: syntax error near ')'
+main1.c(140): error C141: syntax error near '0'
+main1.c(140): error C141: syntax error near ')'
+main1.c(141): error C141: syntax error near '0'
+main1.c(141): error C141: syntax error near ')'
+main1.c(142): error C141: syntax error near '0'
+main1.c(142): error C141: syntax error near ')'
+main1.c(143): error C141: syntax error near '0'
+main1.c(143): error C231: '_LCD1602_DisplayOneCharOnAddr': redefinition
+main1.c(144): error C141: syntax error near '1'
+main1.c(144): error C231: '_LCD1602_MoveToPosition': redefinition
+main1.c(145): error C231: '_LCD1602_DisplayString': redefinition
+main1.c(146): error C141: syntax error near '1'
+main1.c(146): error C141: syntax error near ')'
+main1.c(147): error C141: syntax error near '1'
+main1.c(147): error C141: syntax error near ')'
+main1.c(148): error C141: syntax error near '1'
+main1.c(148): error C141: syntax error near ')'
+main1.c(149): error C141: syntax error near '1'
+main1.c(149): error C141: syntax error near ')'
+main1.c(150): error C141: syntax error near '1'
+main1.c(150): error C141: syntax error near ')'
+main1.c(151): error C141: syntax error near '1'
+main1.c(151): error C141: syntax error near ')'
+main1.c(152): error C141: syntax error near '1'
+main1.c(152): error C141: syntax error near ')'
+main1.c(153): error C141: syntax error near '1'
+main1.c(153): error C141: syntax error near ')'
+main1.c - 50 Error(s), 0 Warning(s).
+compiling main1.c...
+main1.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DS18B20READTEMP?18B20
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=72.1 xdata=0 code=2649
+creating hex file from "电赛选拔"...
+"电赛选拔" - 0 Error(s), 3 Warning(s).
+compiling main1.c...
+main1.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DS18B20READTEMP?18B20
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=72.1 xdata=0 code=2645
+creating hex file from "电赛选拔"...
+"电赛选拔" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main1.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DS18B20READTEMP?18B20
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=78.1 xdata=0 code=2686
+creating hex file from "电赛选拔"...
+"电赛选拔" - 0 Error(s), 3 Warning(s).
+compiling main1.c...
+main1.h(19): warning C206: 'NOP': missing function-prototype
+main1.h(43): error C202: 'bee': undefined identifier
+main1.h(45): error C202: 'bee': undefined identifier
+main1.c - 2 Error(s), 1 Warning(s).
+compiling main1.c...
+main1.h(27): warning C206: '_nop_': missing function-prototype
+main1.h(27): error C264: intrinsic '_nop_': declaration/activation error
+C:\Program Files\keil\C51\Inc\intrins.h(19): error C231: '_nop_': redefinition
+main1.c - 2 Error(s), 1 Warning(s).
+compiling main1.c...
+main1.h(27): warning C206: 'NOP': missing function-prototype
+main1.c - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling SetTime.c...
+main1.h(27): warning C206: 'NOP': missing function-prototype
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  WEEK0
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  DISPLAYDATA
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  T
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  TIME0
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  WEEK
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  DATA0
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  NUM1
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  ADDATA
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  SEG_DATA
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _KEYBOARDSCAN
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _DELAY1
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _DELAY0
+    MODULE:  SetTime.obj (SETTIME)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_KEYBOARDSCAN?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DS18B20READTEMP?18B20
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?SETTIME
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?SETTIME
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?SETTIME
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_DS18B20WRITEBYTE?18B20
+    LENGTH:  0002H
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?DS18B20READTEMP?18B20
+    LENGTH:  0001H
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+    ADDRESS: 0EE0H
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  SetTime.obj (SETTIME)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  SetTime.obj (SETTIME)
+    ADDRESS: 0F10H
+Program Size: data=131.1 xdata=0 code=4414
+Target not created
+compiling main1.c...
+main1.h(27): warning C206: 'NOP': missing function-prototype
+main1.c(11): error C202: 'Time0': undefined identifier
+main1.c(29): error C202: 'DisplayData': undefined identifier
+main1.c(42): error C202: 'DisplayData': undefined identifier
+main1.c(52): error C202: 'Data0': undefined identifier
+main1.c(53): error C202: 'Data0': undefined identifier
+main1.c(54): error C202: 'Data0': undefined identifier
+main1.c(55): error C202: 'Data0': undefined identifier
+main1.c(56): error C202: 'Data0': undefined identifier
+main1.c(60): error C202: 'Data0': undefined identifier
+main1.c(63): error C202: 'T': undefined identifier
+main1.c(65): error C202: 'T': undefined identifier
+main1.c(67): error C202: 'T': undefined identifier
+main1.c(69): error C202: 'T': undefined identifier
+main1.c(71): error C202: 'T': undefined identifier
+main1.c(73): error C202: 'T': undefined identifier
+main1.c(75): error C202: 'T': undefined identifier
+main1.c(77): error C202: 'T': undefined identifier
+main1.c(79): error C202: 'T': undefined identifier
+main1.c(81): error C202: 'T': undefined identifier
+main1.c(87): error C202: 'T': undefined identifier
+main1.c(88): error C202: 'T': undefined identifier
+main1.c(90): error C202: 'T': undefined identifier
+main1.c(97): error C202: 'Time0': undefined identifier
+main1.c(98): error C202: 'Time0': undefined identifier
+main1.c(99): error C202: 'Time0': undefined identifier
+main1.c(100): error C202: 'Time0': undefined identifier
+main1.c(101): error C202: 'Time0': undefined identifier
+main1.c(102): error C202: 'Time0': undefined identifier
+main1.c(103): error C202: 'Time0': undefined identifier
+main1.c(108): error C202: 'Time0': undefined identifier
+main1.c(110): error C202: 'Time0': undefined identifier
+main1.c(111): error C202: 'Time0': undefined identifier
+main1.c(113): error C202: 'Time0': undefined identifier
+main1.c(115): error C202: 'Time0': undefined identifier
+main1.c(116): error C202: 'Time0': undefined identifier
+main1.c(120): error C202: 'Time0': undefined identifier
+main1.c(121): error C202: 'Time0': undefined identifier
+main1.c(122): error C202: 'Time0': undefined identifier
+main1.c(123): error C202: 'Time0': undefined identifier
+main1.c(125): error C202: 'Time0': undefined identifier
+main1.c(126): error C202: 'Time0': undefined identifier
+main1.c(128): error C202: 'Time0': undefined identifier
+main1.c(129): error C202: 'Time0': undefined identifier
+main1.c(133): error C202: 'Time0': undefined identifier
+main1.c(134): error C202: 'Time0': undefined identifier
+main1.c(136): error C202: 'Time0': undefined identifier
+main1.c(137): error C202: 'Time0': undefined identifier
+main1.c(139): error C202: 'Time0': undefined identifier
+main1.c(140): error C202: 'Time0': undefined identifier
+main1.c - 49 Error(s), 1 Warning(s).
+compiling main1.c...
+main1.h(27): warning C206: 'NOP': missing function-prototype
+main1.c - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling SetTime.c...
+main1.h(27): warning C206: 'NOP': missing function-prototype
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  WEEK0
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  DISPLAYDATA
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  T
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  TIME0
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  WEEK
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  DATA0
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  NUM1
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  ADDATA
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  SEG_DATA
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _KEYBOARDSCAN
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _DELAY1
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _DELAY0
+    MODULE:  SetTime.obj (SETTIME)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_KEYBOARDSCAN?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DS18B20READTEMP?18B20
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?SETTIME
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?SETTIME
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?SETTIME
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_DS18B20WRITEBYTE?18B20
+    LENGTH:  0002H
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?DS18B20READTEMP?18B20
+    LENGTH:  0001H
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+    ADDRESS: 0EE0H
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  SetTime.obj (SETTIME)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  SetTime.obj (SETTIME)
+    ADDRESS: 0F10H
+Program Size: data=131.1 xdata=0 code=4414
+Target not created
+compiling SetTime.c...
+main1.h(27): warning C206: 'NOP': missing function-prototype
+SetTime.c(226): warning C206: 'DS1302_WriteOneByteAtAddr': missing function-prototype
+SetTime.c(226): error C267: 'DS1302_WriteOneByteAtAddr': requires ANSI-style prototype
+SetTime.c - 1 Error(s), 2 Warning(s).
+compiling SetTime.c...
+main1.h(27): warning C206: 'NOP': missing function-prototype
+SetTime.c - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  WEEK0
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  DISPLAYDATA
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  T
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  TIME0
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  WEEK
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  DATA0
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  NUM1
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  ADDATA
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  SEG_DATA
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _KEYBOARDSCAN
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _DELAY1
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _DELAY0
+    MODULE:  SetTime.obj (SETTIME)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_KEYBOARDSCAN?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DS18B20READTEMP?18B20
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?SETTIME
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?SETTIME
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?SETTIME
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_DS18B20WRITEBYTE?18B20
+    LENGTH:  0002H
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?DS18B20READTEMP?18B20
+    LENGTH:  0001H
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+    ADDRESS: 0EE0H
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  SetTime.obj (SETTIME)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  SetTime.obj (SETTIME)
+    ADDRESS: 0F10H
+Program Size: data=131.1 xdata=0 code=4414
+Target not created
+compiling ds1302.c...
+DS1302\ds1302.c - 0 Error(s), 0 Warning(s).
+compiling main1.c...
+main1.h(27): warning C206: 'NOP': missing function-prototype
+main1.c - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  WEEK0
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  DISPLAYDATA
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  T
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  TIME0
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  WEEK
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  DATA0
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  NUM1
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  ADDATA
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  SEG_DATA
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _KEYBOARDSCAN
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _DELAY1
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _DELAY0
+    MODULE:  SetTime.obj (SETTIME)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_KEYBOARDSCAN?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DS18B20READTEMP?18B20
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?SETTIME
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?SETTIME
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?SETTIME
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_DS18B20WRITEBYTE?18B20
+    LENGTH:  0002H
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?DS18B20READTEMP?18B20
+    LENGTH:  0001H
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+    ADDRESS: 0EE0H
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  SetTime.obj (SETTIME)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  SetTime.obj (SETTIME)
+    ADDRESS: 0F10H
+Program Size: data=131.1 xdata=0 code=4414
+Target not created
+compiling SetTime.c...
+main1.h(27): warning C206: 'NOP': missing function-prototype
+SetTime.c - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  WEEK0
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  DISPLAYDATA
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  T
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  TIME0
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  WEEK
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  DATA0
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  NUM1
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  ADDATA
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  SEG_DATA
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _KEYBOARDSCAN
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _DELAY1
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _DELAY0
+    MODULE:  SetTime.obj (SETTIME)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_KEYBOARDSCAN?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DS18B20READTEMP?18B20
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?SETTIME
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?SETTIME
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?SETTIME
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?_DS18B20WRITEBYTE?18B20
+    LENGTH:  0002H
+*** ERROR L107: ADDRESS SPACE OVERFLOW
+    SPACE:   DATA    
+    SEGMENT: ?DT?DS18B20READTEMP?18B20
+    LENGTH:  0001H
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+    ADDRESS: 0EE0H
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  SetTime.obj (SETTIME)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  SetTime.obj (SETTIME)
+    ADDRESS: 0F10H
+Program Size: data=131.1 xdata=0 code=4414
+Target not created
+compiling SetTime.c...
+main1.h(27): warning C206: 'NOP': missing function-prototype
+SetTime.c - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main1.c...
+main1.h(27): warning C206: 'NOP': missing function-prototype
+compiling lcd.c...
+compiling 18B20.c...
+compiling ds1302.c...
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  WEEK0
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  DISPLAYDATA
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  T
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  TIME0
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  WEEK
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  DATA0
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  NUM1
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  ADDATA
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  SEG_DATA
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _KEYBOARDSCAN
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _DELAY1
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _DELAY0
+    MODULE:  SetTime.obj (SETTIME)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_KEYBOARDSCAN?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DS18B20READTEMP?18B20
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?SETTIME
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?SETTIME
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?SETTIME
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+    ADDRESS: 0F5EH
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  SetTime.obj (SETTIME)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  SetTime.obj (SETTIME)
+    ADDRESS: 0F9AH
+Program Size: data=9.1 xdata=122 code=4615
+Target not created
+compiling SetTime.c...
+SetTime.c(9): error C202: 'Time0': undefined identifier
+SetTime.c(29): error C202: 'Time0': undefined identifier
+SetTime.c(33): error C202: 'Time0': undefined identifier
+SetTime.c(51): error C202: 'Time0': undefined identifier
+SetTime.c - 4 Error(s), 0 Warning(s).
+compiling SetTime.c...
+main1.h(27): warning C206: 'NOP': missing function-prototype
+SetTime.c - 0 Error(s), 1 Warning(s).
+compiling main1.c...
+main1.h(27): warning C206: 'NOP': missing function-prototype
+main1.c - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  WEEK0
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  DISPLAYDATA
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  T
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  TIME0
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  WEEK
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  DATA0
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  NUM1
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  ADDATA
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  SEG_DATA
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _KEYBOARDSCAN
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _DELAY1
+    MODULE:  SetTime.obj (SETTIME)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _DELAY0
+    MODULE:  SetTime.obj (SETTIME)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_KEYBOARDSCAN?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DS18B20READTEMP?18B20
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?SETTIME
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?SETTIME
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?SETTIME
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+    ADDRESS: 0F5EH
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  SetTime.obj (SETTIME)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  SetTime.obj (SETTIME)
+    ADDRESS: 0F9AH
+Program Size: data=9.1 xdata=122 code=4615
+Target not created
+compiling main1.c...
+main1.h(27): warning C206: 'NOP': missing function-prototype
+main1.c - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DS18B20READTEMP?18B20
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+    ADDRESS: 0F13H
+Program Size: data=9.1 xdata=71 code=4442
+creating hex file from "电赛选拔"...
+"电赛选拔" - 0 Error(s), 6 Warning(s).
+compiling main1.c...
+main1.h(27): warning C206: 'NOP': missing function-prototype
+main1.h(32): warning C280: 'j': unreferenced local variable
+main1.c - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DS18B20READTEMP?18B20
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+    ADDRESS: 0F06H
+Program Size: data=9.1 xdata=75 code=4443
+creating hex file from "电赛选拔"...
+"电赛选拔" - 0 Error(s), 6 Warning(s).
+Build target 'Target 1'
+compiling main1.c...
+main1.h(27): warning C206: 'NOP': missing function-prototype
+main1.h(32): warning C280: 'j': unreferenced local variable
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DS18B20READTEMP?18B20
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+    ADDRESS: 0F09H
+Program Size: data=9.1 xdata=75 code=4446
+creating hex file from "电赛选拔"...
+"电赛选拔" - 0 Error(s), 8 Warning(s).
+compiling main1.c...
+main1.h(27): warning C206: 'NOP': missing function-prototype
+main1.h(32): warning C280: 'j': unreferenced local variable
+main1.c - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DS18B20READTEMP?18B20
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+    ADDRESS: 0F06H
+Program Size: data=9.1 xdata=75 code=4443
+creating hex file from "电赛选拔"...
+"电赛选拔" - 0 Error(s), 6 Warning(s).
+compiling main1.c...
+main1.h(27): warning C206: 'NOP': missing function-prototype
+main1.h(32): warning C280: 'j': unreferenced local variable
+main1.c - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DS18B20READTEMP?18B20
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+    ADDRESS: 0F06H
+Program Size: data=9.1 xdata=75 code=4443
+creating hex file from "电赛选拔"...
+"电赛选拔" - 0 Error(s), 6 Warning(s).
+compiling main1.c...
+main1.h(27): warning C206: 'NOP': missing function-prototype
+main1.h(32): warning C280: 'j': unreferenced local variable
+main1.c - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DS18B20READTEMP?18B20
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+    ADDRESS: 0F06H
+Program Size: data=9.1 xdata=75 code=4443
+creating hex file from "电赛选拔"...
+"电赛选拔" - 0 Error(s), 6 Warning(s).
+compiling main1.c...
+main1.h(27): warning C206: 'NOP': missing function-prototype
+main1.h(32): warning C280: 'j': unreferenced local variable
+main1.c - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DS18B20READTEMP?18B20
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+    ADDRESS: 0F06H
+Program Size: data=9.1 xdata=75 code=4443
+creating hex file from "电赛选拔"...
+"电赛选拔" - 0 Error(s), 6 Warning(s).
+Build target 'Target 1'
+compiling main1.c...
+main1.h(27): warning C206: 'NOP': missing function-prototype
+main1.h(32): warning C280: 'j': unreferenced local variable
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DS18B20READTEMP?18B20
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+    ADDRESS: 0F06H
+Program Size: data=9.1 xdata=75 code=4443
+creating hex file from "电赛选拔"...
+"电赛选拔" - 0 Error(s), 8 Warning(s).
+Build target 'Target 1'
+compiling main1.c...
+main1.h(27): warning C206: 'NOP': missing function-prototype
+main1.h(32): warning C280: 'j': unreferenced local variable
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DS18B20READTEMP?18B20
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+    ADDRESS: 0F14H
+Program Size: data=9.1 xdata=75 code=4457
+creating hex file from "电赛选拔"...
+"电赛选拔" - 0 Error(s), 8 Warning(s).
+Build target 'Target 1'
+compiling main1.c...
+main1.h(27): warning C206: 'NOP': missing function-prototype
+main1.h(32): warning C280: 'j': unreferenced local variable
+main1.c(15): error C237: '_delay1': function already has a body
+main1.c(24): error C237: '_delay0': function already has a body
+main1.c(45): error C237: '_keyboardscan': function already has a body
+Target not created
+compiling main1.c...
+main1.h(27): warning C206: 'NOP': missing function-prototype
+main1.h(32): warning C280: 'j': unreferenced local variable
+main1.c(15): error C237: '_delay1': function already has a body
+main1.c(24): error C237: '_delay0': function already has a body
+main1.c(45): error C237: '_keyboardscan': function already has a body
+main1.c - 3 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling main1.c...
+main1.c(13): warning C206: 'NOP': missing function-prototype
+main1.c(18): warning C280: 'j': unreferenced local variable
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DS18B20READTEMP?18B20
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+    ADDRESS: 0F06H
+Program Size: data=9.1 xdata=75 code=4443
+creating hex file from "电赛选拔"...
+"电赛选拔" - 0 Error(s), 8 Warning(s).
+Build target 'Target 1'
+compiling main1.c...
+main1.c(13): warning C206: 'NOP': missing function-prototype
+main1.c(18): warning C280: 'j': unreferenced local variable
+main1.c(263): warning C294: unreachable code
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_YEAR1?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DS18B20READTEMP?18B20
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+    ADDRESS: 0EDCH
+Program Size: data=9.1 xdata=75 code=4401
+creating hex file from "电赛选拔"...
+"电赛选拔" - 0 Error(s), 10 Warning(s).
+Build target 'Target 1'
+compiling main1.c...
+main1.c(13): warning C206: 'NOP': missing function-prototype
+main1.c(18): warning C280: 'j': unreferenced local variable
+main1.c(263): warning C294: unreachable code
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_YEAR1?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DS18B20READTEMP?18B20
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+    ADDRESS: 0E9EH
+Program Size: data=9.1 xdata=75 code=4379
+creating hex file from "电赛选拔"...
+"电赛选拔" - 0 Error(s), 10 Warning(s).
+compiling main1.c...
+main1.c(14): warning C206: 'NOP': missing function-prototype
+main1.c(246): error C202: 'p': undefined identifier
+main1.c - 1 Error(s), 1 Warning(s).
+compiling main1.c...
+main1.c(14): warning C206: 'NOP': missing function-prototype
+main1.c(258): warning C206: 'year': missing function-prototype
+main1.c(258): error C267: 'year': requires ANSI-style prototype
+main1.c - 1 Error(s), 2 Warning(s).
+compiling main1.c...
+main1.c(14): warning C206: 'NOP': missing function-prototype
+main1.c - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DS18B20READTEMP?18B20
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+    ADDRESS: 0ED0H
+Program Size: data=9.1 xdata=71 code=4391
+creating hex file from "电赛选拔"...
+"电赛选拔" - 0 Error(s), 5 Warning(s).
+Build target 'Target 1'
+compiling main1.c...
+main1.c(14): warning C206: 'NOP': missing function-prototype
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?READTIME?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN1
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DS18B20READTEMP?18B20
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  main1.obj (MAIN1)
+    ADDRESS: 0ED0H
+Program Size: data=9.1 xdata=71 code=4385
+creating hex file from "电赛选拔"...
+"电赛选拔" - 0 Error(s), 7 Warning(s).

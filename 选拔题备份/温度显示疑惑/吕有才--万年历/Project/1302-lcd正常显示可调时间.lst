@@ -1,0 +1,24 @@
+C51 COMPILER V9.52.0.0   1302_LCD________________                                          04/08/2015 10:57:07 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE 1302_LCD________________
+OBJECT MODULE PLACED IN ..\Outpt\1302-lcd正常显示可调时间.obj
+COMPILER INVOKED BY: C:\Program Files\keil\C51\BIN\C51.EXE ..\Source\1302-lcd正常显示可调时间.c BROWSE DEBUG OBJECTEXTEN
+                    -D PRINT(.\1302-lcd正常显示可调时间.lst) TABS(2) OBJECT(..\Outpt\1302-lcd正常显示可调时间.obj)
+
+line level    source
+
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   1030    ----
+   CONSTANT SIZE    =      7    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      9    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,262 @@
+C51 COMPILER V9.52.0.0   MAIN2                                                             04/06/2015 21:40:21 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE MAIN2
+OBJECT MODULE PLACED IN ..\Outpt\main2.obj
+COMPILER INVOKED BY: C:\Program Files\keil\C51\BIN\C51.EXE ..\Source\main2.c BROWSE DEBUG OBJECTEXTEND PRINT(.\main2.lst
+                    -) TABS(2) OBJECT(..\Outpt\main2.obj)
+
+line level    source
+
+   1          //通过按键来调整时间
+   2          
+   3          #include<reg51.h>
+   4          #include"lcd.h"
+   5          #include"ds1302.h"
+   6          #include"8DigitalTubeDisplay.h"
+   7          
+   8          void LcdDisplay();
+   9          void show();
+  10          unsigned char TIME[13];
+  11          extern unsigned char code ucInitTime[]={0x10,0x20,0x15,0x12,0x04,0x04,0x11};  //初始化后设置为:15年04月2日
+             -星期4 19点49分00秒
+  12                                                 /* 秒 分 时 日 月 星期 年 */ 
+  13          unsigned char code Time[]={0x10,0x20,0x15,0x12,0x04,0x04,0x11};
+  14          
+  15          void delay(unsigned char n)
+  16          {
+  17   1        while(n--);
+  18   1      }
+  19          
+  20          unsigned char keyboardscan(void)
+  21          {
+  22   1        unsigned char board_h, board_l;
+  23   1        P2=0x0f;
+  24   1        board_h=P1&0x0f;
+  25   1        if(board_h!=0x0f)
+  26   1        {
+  27   2          delay(5);
+  28   2          board_h=P1&0x0f;
+  29   2          if(board_h!=0x0f)
+  30   2          {
+  31   3            P2=board_h|0xf0;
+  32   3            board_l=P2&0xf0;
+  33   3            return(board_h+board_l);
+  34   3          }
+  35   2        }
+  36   1        return(0xff);
+  37   1      }
+  38          
+  39          /*******************************************************************************
+  40          * 函数名         : main
+  41          * 函数功能       : 主函数
+  42          * 输入           : 无
+  43          * 输出           : 无
+  44          *******************************************************************************/
+  45          
+  46          
+  47          void main()
+  48          { 
+  49   1         TCON=0x04;
+  50   1         EA=1;EX0=1;
+  51   1         LCD1602_Init();
+  52   1         DS1302_WriteOneByteAtAddr(0x8e,0x80);  
+  53   1         DS1302_SetInit(ucInitTime);  
+C51 COMPILER V9.52.0.0   MAIN2                                                             04/06/2015 21:40:21 PAGE 2   
+
+  54   1        while(1)
+  55   1        {   LcdDisplay();}
+  56   1      }
+  57          /*******************************************************************************
+  58          * 函数名         : LcdDisplay()
+  59          * 函数功能       : 显示函数
+  60          * 输入           : 无
+  61          * 输出           : 无
+  62          *******************************************************************************/
+  63          
+  64          void LcdDisplay(void)
+  65          {
+  66   1        LCD1602_DisplayOneCharOnAddr(0,0,('D'));
+  67   1          LCD1602_DisplayOneCharOnAddr(0,1,('a'));
+  68   1          LCD1602_DisplayOneCharOnAddr(0,2,'t');
+  69   1          LCD1602_DisplayOneCharOnAddr(0,3,'a');
+  70   1          LCD1602_DisplayOneCharOnAddr(0,4,':');
+  71   1          LCD1602_DisplayOneCharOnAddr(0,5,'2');
+  72   1          LCD1602_DisplayOneCharOnAddr(0,6,'0');
+  73   1          LCD1602_DisplayOneCharOnAddr(0,7,('0'+DS1302_ReadOneByteAtAddr(ADDR_YEAR_R)/16));     //年
+  74   1          LCD1602_DisplayOneCharOnAddr(0,8,('0'+DS1302_ReadOneByteAtAddr(ADDR_YEAR_R)%16));
+  75   1          LCD1602_DisplayOneCharOnAddr(0,9,(0x00));
+  76   1          LCD1602_DisplayOneCharOnAddr(0,10,('0'+DS1302_ReadOneByteAtAddr(ADDR_MONTH_R)/16));     //月
+  77   1          LCD1602_DisplayOneCharOnAddr(0,11,('0'+DS1302_ReadOneByteAtAddr(ADDR_MONTH_R)%16));
+  78   1          LCD1602_DisplayOneCharOnAddr(0,12,(0x01));
+  79   1          LCD1602_DisplayOneCharOnAddr(0,13,('0'+DS1302_ReadOneByteAtAddr(ADDR_DAY_R)/16));     //日
+  80   1          LCD1602_DisplayOneCharOnAddr(0,14,('0'+DS1302_ReadOneByteAtAddr(ADDR_DAY_R)%16)); 
+  81   1          LCD1602_DisplayOneCharOnAddr(0,15,0x02);
+  82   1          LCD1602_DisplayOneCharOnAddr(1,0,('0'+DS1302_ReadOneByteAtAddr(ADDR_HOUR_R)/16));       //时
+  83   1          LCD1602_DisplayOneCharOnAddr(1,1,('0'+DS1302_ReadOneByteAtAddr(ADDR_HOUR_R)%16));        
+  84   1          LCD1602_DisplayOneCharOnAddr(1,2,(':'));
+  85   1          LCD1602_DisplayOneCharOnAddr(1,3,('0'+DS1302_ReadOneByteAtAddr(ADDR_MIN_R)/16));        //分
+  86   1          LCD1602_DisplayOneCharOnAddr(1,4,('0'+DS1302_ReadOneByteAtAddr(ADDR_MIN_R)%16));  
+  87   1          LCD1602_DisplayOneCharOnAddr(1,5,(':'));
+  88   1          LCD1602_DisplayOneCharOnAddr(1,6,('0'+DS1302_ReadOneByteAtAddr(ADDR_SEC_R)/16));        //秒
+  89   1          LCD1602_DisplayOneCharOnAddr(1,7,('0'+DS1302_ReadOneByteAtAddr(ADDR_SEC_R)%16));
+  90   1          LCD1602_DisplayOneCharOnAddr(1,10,('0'+DS1302_ReadOneByteAtAddr(ADDR_WEEK_R)%16));  //星期    
+  91   1          LCD1602_DisplayOneCharOnAddr(1,13,0x03);
+  92   1          LCD1602_DisplayOneCharOnAddr(1,14,0x04);
+  93   1          LCD1602_DisplayOneCharOnAddr(1,15,0x05);         
+  94   1      }
+  95          
+  96          void show()
+  97          {
+  98   1          while(1)
+  99   1        {
+ 100   2      
+ 101   2        TIME[0]=DS1302_ReadOneByteAtAddr(ADDR_SEC_R)/16;
+ 102   2        TIME[1]=DS1302_ReadOneByteAtAddr(ADDR_SEC_R)%16;
+ 103   2        TIME[2]=DS1302_ReadOneByteAtAddr(ADDR_MIN_R)/16;
+ 104   2        TIME[3]=DS1302_ReadOneByteAtAddr(ADDR_MIN_R)%16;    
+ 105   2        TIME[4]=DS1302_ReadOneByteAtAddr(ADDR_HOUR_R)/16;
+ 106   2        TIME[5]=DS1302_ReadOneByteAtAddr(ADDR_HOUR_R)%16;   
+ 107   2        TIME[6]=DS1302_ReadOneByteAtAddr(ADDR_DAY_R)/16;
+ 108   2        TIME[7]=DS1302_ReadOneByteAtAddr(ADDR_DAY_R)%16;  
+ 109   2        TIME[8]=DS1302_ReadOneByteAtAddr(ADDR_MONTH_R)/16;
+ 110   2        TIME[9]=DS1302_ReadOneByteAtAddr(ADDR_MONTH_R)%16;
+ 111   2        TIME[10]=DS1302_ReadOneByteAtAddr(ADDR_YEAR_R)/16;
+ 112   2        TIME[11]=DS1302_ReadOneByteAtAddr(ADDR_YEAR_R)%16;    
+ 113   2        TIME[12]=DS1302_ReadOneByteAtAddr(ADDR_WEEK_R)%16;
+ 114   2          
+ 115   2        LcdDisplay(); 
+C51 COMPILER V9.52.0.0   MAIN2                                                             04/06/2015 21:40:21 PAGE 3   
+
+ 116   2      
+ 117   2        DisplayOneCharOnAddr(TIME[4],0);
+ 118   2        DisplayOneCharOnAddr(TIME[5],1);
+ 119   2        DisplayOneCharOnAddr(16,2);
+ 120   2        DisplayOneCharOnAddr(TIME[2],3);
+ 121   2        DisplayOneCharOnAddr(TIME[3],4);
+ 122   2        DisplayOneCharOnAddr(16,5);
+ 123   2        DisplayOneCharOnAddr(TIME[0],6);
+ 124   2        DisplayOneCharOnAddr(TIME[1],7);
+ 125   2        
+ 126   2      
+ 127   2        }
+ 128   1      }
+ 129          void time() interrupt 2
+ 130          {
+ 131   1        while(1)
+ 132   1        {
+ 133   2          switch(keyboardscan())
+ 134   2           {
+ 135   3          //case 0x77:
+ 136   3          //    DisplayOneCharOnAddr(0,8); break;
+ 137   3          case 0xb7://年加一
+ 138   3              {  
+ 139   4                  Time[6]=Time[6]+0xf0; 
+*** ERROR C183 IN LINE 139 OF ..\Source\main2.c: unmodifiable lvalue
+ 140   4              //    DS1302_WriteOneByteAtAddr(0x8e,0x80); 
+ 141   4               //   DS1302_SetInit(Time); 
+ 142   4                //  LcdDisplay(); 
+ 143   4              }
+ 144   3          case 0xd7://年减1
+ 145   3              {  
+ 146   4                  Time[6]=ucInitTime[6]-0xf0; 
+*** ERROR C183 IN LINE 146 OF ..\Source\main2.c: unmodifiable lvalue
+ 147   4                //  DS1302_WriteOneByteAtAddr(0x8e,0x80); 
+ 148   4               //   DS1302_SetInit(Time); 
+ 149   4                //  LcdDisplay(); 
+ 150   4              }       
+ 151   3          case 0xe7://month add
+ 152   3                {  
+ 153   4                  Time[5]=Time[5]+0xf0; 
+*** ERROR C183 IN LINE 153 OF ..\Source\main2.c: unmodifiable lvalue
+ 154   4                //  DS1302_WriteOneByteAtAddr(0x8e,0x80); 
+ 155   4                //  DS1302_SetInit(Time); 
+ 156   4                //  LcdDisplay(); 
+ 157   4              }   
+ 158   3          case 0x7b:
+ 159   3                  {  
+ 160   4                  Time[5]=Time[5]-0xf0; 
+*** ERROR C183 IN LINE 160 OF ..\Source\main2.c: unmodifiable lvalue
+ 161   4                //  DS1302_WriteOneByteAtAddr(0x8e,0x80); 
+ 162   4                //  DS1302_SetInit(Time); 
+ 163   4                //  LcdDisplay(); 
+ 164   4                  } 
+ 165   3          case 0xbb://day
+ 166   3                    {  
+ 167   4                  Time[4]=Time[4]+0xf0; 
+*** ERROR C183 IN LINE 167 OF ..\Source\main2.c: unmodifiable lvalue
+ 168   4                //  DS1302_WriteOneByteAtAddr(0x8e,0x80); 
+ 169   4                 // DS1302_SetInit(Time); 
+ 170   4                //  LcdDisplay(); 
+ 171   4              } 
+ 172   3          case 0xdb:
+C51 COMPILER V9.52.0.0   MAIN2                                                             04/06/2015 21:40:21 PAGE 4   
+
+ 173   3                      {  
+ 174   4                  Time[4]=Time[4]-0xf0; 
+*** ERROR C183 IN LINE 174 OF ..\Source\main2.c: unmodifiable lvalue
+ 175   4                //  DS1302_WriteOneByteAtAddr(0x8e,0x80); 
+ 176   4      //DS1302_SetInit(Time); 
+ 177   4              //    LcdDisplay(); 
+ 178   4              }  
+ 179   3          case 0xeb://week
+ 180   3                      {  
+ 181   4                  Time[3]=Time[3]+0xf0; 
+*** ERROR C183 IN LINE 181 OF ..\Source\main2.c: unmodifiable lvalue
+ 182   4              //    DS1302_WriteOneByteAtAddr(0x8e,0x80); 
+ 183   4               //   DS1302_SetInit(Time); 
+ 184   4                //  LcdDisplay(); 
+ 185   4              }
+ 186   3          case 0x7d:
+ 187   3                      {  
+ 188   4                  Time[3]=Time[3]-0xf0; 
+*** ERROR C183 IN LINE 188 OF ..\Source\main2.c: unmodifiable lvalue
+ 189   4              //    DS1302_WriteOneByteAtAddr(0x8e,0x80); 
+ 190   4               //   DS1302_SetInit(Time); 
+ 191   4                //  LcdDisplay(); 
+ 192   4              }
+ 193   3          case 0xbd://hour
+ 194   3                      {  
+ 195   4                  Time[2]=Time[2]+0xf0; 
+*** ERROR C183 IN LINE 195 OF ..\Source\main2.c: unmodifiable lvalue
+ 196   4                //  DS1302_WriteOneByteAtAddr(0x8e,0x80); 
+ 197   4                //  DS1302_SetInit(Time); 
+ 198   4                //  LcdDisplay(); 
+ 199   4              }
+ 200   3          case 0xdd:
+ 201   3                      {  
+ 202   4                  Time[2]=Time[2]-0xf0; 
+*** ERROR C183 IN LINE 202 OF ..\Source\main2.c: unmodifiable lvalue
+ 203   4              //    DS1302_WriteOneByteAtAddr(0x8e,0x80); 
+ 204   4               //   DS1302_SetInit(Time); 
+ 205   4                //  LcdDisplay(); 
+ 206   4              }
+ 207   3          case 0xed://min
+ 208   3                      Time[1]=Time[1]+0xf0; 
+*** ERROR C183 IN LINE 208 OF ..\Source\main2.c: unmodifiable lvalue
+ 209   3          case 0x7e:
+ 210   3                  Time[1]=Time[1]-0xf0; 
+*** ERROR C183 IN LINE 210 OF ..\Source\main2.c: unmodifiable lvalue
+ 211   3          case 0xbe://sec
+ 212   3                  Time[0]=Time[0]+0xf0; 
+*** ERROR C183 IN LINE 212 OF ..\Source\main2.c: unmodifiable lvalue
+ 213   3          case 0xde:
+ 214   3                    Time[0]=Time[0]-0xf0; 
+*** ERROR C183 IN LINE 214 OF ..\Source\main2.c: unmodifiable lvalue
+ 215   3        //  case 0xee:
+ 216   3            //  DisplayOneCharOnAddr(15,8); break; 
+ 217   3          default: 
+ 218   3                        DS1302_WriteOneByteAtAddr(0x8e,0x80); 
+ 219   3                  DS1302_SetInit(Time); 
+ 220   3                  LcdDisplay(); break;
+ 221   3            } 
+ 222   2          show(); 
+ 223   2          while(keyboardscan()==0x77)     
+ 224   2            break;
+ 225   2        }
+C51 COMPILER V9.52.0.0   MAIN2                                                             04/06/2015 21:40:21 PAGE 5   
+
+ 226   1      }
+ 227          
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  14 ERROR(S)

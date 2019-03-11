@@ -1,0 +1,8 @@
+"12864.obj",
+"ds1302.obj",
+"I2C.obj",
+"main3.obj",
+"18B20.obj",
+"8DigitalTubeDisplay.obj" 
+TO "lab" 
+RAMSIZE(256) 

@@ -1,0 +1,111 @@
+BL51 BANKED LINKER/LOCATER V5.03                                                        05/08/2012  08:19:48  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V5.03, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE folw.obj TO flow RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  folw.obj (FOLW)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?LLDIIDATA)
+
+
+LINK MAP OF MODULE:  flow (FOLW)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0004H     UNIT         _DATA_GROUP_
+            IDATA   000CH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0033H     UNIT         ?PR?MAIN?FOLW
+            CODE    0036H     0021H     UNIT         ?PR?_DELAY?FOLW
+            CODE    0057H     0020H     UNIT         ?C?LIB_CODE
+            CODE    0077H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   flow (FOLW)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?FOLW
+
+?PR?MAIN?FOLW                  -----    -----
+  +--> ?PR?_DELAY?FOLW
+
+?PR?_DELAY?FOLW                0008H    0004H
+
+
+
+SYMBOL TABLE OF MODULE:  flow (FOLW)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        FOLW
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  C:0003H         PUBLIC        main
+BL51 BANKED LINKER/LOCATER V5.03                                                      05/08/2012  08:19:48  PAGE 2
+
+
+  C:0041H         PUBLIC        _delay
+  C:0039H         SYMBOL        L?0011
+  -------         PROC          L?0010
+  -------         ENDPROC       L?0010
+  C:0039H         SYMBOL        L?0011
+  -------         PROC          _DELAY
+  D:0008H         SYMBOL        dly
+  C:0041H         LINE#         12
+  C:0049H         LINE#         13
+  C:0049H         LINE#         14
+  C:0056H         LINE#         15
+  -------         ENDPROC       _DELAY
+  -------         PROC          MAIN
+  -------         DO            
+  D:0002H         SYMBOL        i
+  D:0003H         SYMBOL        x
+  -------         ENDDO         
+  C:0003H         LINE#         17
+  C:0003H         LINE#         18
+  C:0003H         LINE#         21
+  C:0003H         LINE#         22
+  C:0003H         LINE#         23
+  C:0006H         LINE#         24
+  C:000FH         LINE#         25
+  C:000FH         LINE#         26
+  C:0012H         LINE#         27
+  C:0015H         LINE#         28
+  C:001EH         LINE#         29
+  C:001EH         LINE#         30
+  C:0021H         LINE#         31
+  C:0023H         LINE#         32
+  C:0025H         LINE#         33
+  C:0025H         LINE#         34
+  C:0029H         LINE#         35
+  C:002CH         LINE#         36
+  C:0030H         LINE#         37
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        FOLW
+
+  -------         MODULE        ?C?LLDIIDATA
+  C:0060H         PUBLIC        ?C?LLDIIDATA
+  C:0057H         PUBLIC        ?C?LLDIIDATA1
+  C:0059H         PUBLIC        ?C?LLDIIDATA8
+  -------         ENDMOD        ?C?LLDIIDATA
+
+Program Size: data=13.0 xdata=0 code=131
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

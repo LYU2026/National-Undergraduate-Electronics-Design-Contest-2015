@@ -1,0 +1,5 @@
+"demo.obj",
+"VIIC_C51.obj",
+"lcd.obj" 
+TO "demo" 
+RAMSIZE(256) 

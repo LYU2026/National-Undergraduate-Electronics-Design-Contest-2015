@@ -1,0 +1,2514 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+D:\Study\单片机\电赛选拔实验\1.uvproj
+Project File Date:  05/17/2015
+
+<h2>Output:</h2>
+compiling main.c...
+main.c(1): warning C318: can't open file 'rg52.h'
+main.c(2): warning C318: can't open file 'temp.h'
+main.c(3): warning C318: can't open file 'lcd.h'
+main.c(40): error C143: invalid absolute bit address
+main.c - 1 Error(s), 3 Warning(s).
+compiling main.c...
+main.c(1): warning C318: can't open file 'rg52.h'
+main.c(2): warning C318: can't open file 'temp.h'
+main.c(3): warning C318: can't open file 'lcd.h'
+main.c(58): error C143: invalid absolute bit address
+main.c(59): error C231: 'Delay': redefinition
+main.c - 2 Error(s), 3 Warning(s).
+compiling main.c...
+main.c(1): warning C318: can't open file 'rg52.h'
+main.c(2): warning C318: can't open file 'temp.h'
+main.c(3): warning C318: can't open file 'lcd.h'
+main.c(58): error C143: invalid absolute bit address
+main.c - 1 Error(s), 3 Warning(s).
+compiling main.c...
+main.c(1): warning C318: can't open file 'rg52.h'
+main.c(2): warning C318: can't open file 'temp.h'
+main.c(58): error C143: invalid absolute bit address
+main.c - 1 Error(s), 2 Warning(s).
+compiling main.c...
+main.c(1): warning C318: can't open file 'rg52.h'
+main.c(31): error C141: syntax error near 'sbit'
+main.c(80): error C143: invalid absolute bit address
+main.c(809): warning C316: unterminated conditionals
+main.c - 2 Error(s), 2 Warning(s).
+compiling main.c...
+main.c(1): warning C318: can't open file 'rg51.h'
+main.c(31): error C141: syntax error near 'sbit'
+main.c(80): error C143: invalid absolute bit address
+main.c(809): warning C316: unterminated conditionals
+main.c - 2 Error(s), 2 Warning(s).
+compiling main.c...
+main.c(1): warning C318: can't open file 'rg51.h'
+main.c(80): error C143: invalid absolute bit address
+main.c(809): warning C316: unterminated conditionals
+main.c - 1 Error(s), 2 Warning(s).
+compiling main.c...
+C:\Program Files\keil\C51\Inc\reg52.h(13): error C231: 'P0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(14): error C231: 'P1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(15): error C231: 'P2': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(16): error C231: 'P3': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(17): error C231: 'PSW': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(18): error C231: 'ACC': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(19): error C231: 'B': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(20): error C231: 'SP': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(21): error C231: 'DPL': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(22): error C231: 'DPH': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(23): error C231: 'PCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(24): error C231: 'TCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(25): error C231: 'TMOD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(26): error C231: 'TL0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(27): error C231: 'TL1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(28): error C231: 'TH0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(29): error C231: 'TH1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(30): error C231: 'IE': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(31): error C231: 'IP': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(32): error C231: 'SCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(33): error C231: 'SBUF': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(45): error C231: 'CY': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(46): error C231: 'AC': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(47): error C231: 'F0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(48): error C231: 'RS1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(49): error C231: 'RS0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(50): error C231: 'OV': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(51): error C231: 'P': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(54): error C231: 'TF1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(55): error C231: 'TR1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(56): error C231: 'TF0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(57): error C231: 'TR0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(58): error C231: 'IE1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(59): error C231: 'IT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(60): error C231: 'IE0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(61): error C231: 'IT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(64): error C231: 'EA': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(66): error C231: 'ES': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(67): error C231: 'ET1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(68): error C231: 'EX1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(69): error C231: 'ET0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(70): error C231: 'EX0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(74): error C231: 'PS': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(75): error C231: 'PT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(76): error C231: 'PX1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(77): error C231: 'PT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(78): error C231: 'PX0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(81): error C231: 'RD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(82): error C231: 'WR': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(83): error C231: 'T1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(84): error C231: 'T0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(85): error C231: 'INT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(86): error C231: 'INT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(87): error C231: 'TXD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(88): error C231: 'RXD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(91): error C231: 'SM0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(92): error C231: 'SM1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(93): error C231: 'SM2': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(94): error C231: 'REN': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(95): error C231: 'TB8': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(96): error C231: 'RB8': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(97): error C231: 'TI': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(98): error C231: 'RI': redefinition
+main.c(80): error C143: invalid absolute bit address
+main.c(809): warning C316: unterminated conditionals
+main.c - 64 Error(s), 1 Warning(s).
+compiling main.c...
+main.c(2): warning C318: can't open file 'temp.h'
+main.c(3): warning C318: can't open file 'lcd.h'
+main.c(4): warning C318: can't open file 'pcf8591.h'
+C:\Program Files\keil\C51\Inc\reg52.h(13): error C231: 'P0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(14): error C231: 'P1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(15): error C231: 'P2': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(16): error C231: 'P3': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(17): error C231: 'PSW': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(18): error C231: 'ACC': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(19): error C231: 'B': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(20): error C231: 'SP': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(21): error C231: 'DPL': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(22): error C231: 'DPH': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(23): error C231: 'PCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(24): error C231: 'TCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(25): error C231: 'TMOD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(26): error C231: 'TL0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(27): error C231: 'TL1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(28): error C231: 'TH0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(29): error C231: 'TH1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(30): error C231: 'IE': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(31): error C231: 'IP': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(32): error C231: 'SCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(33): error C231: 'SBUF': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(45): error C231: 'CY': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(46): error C231: 'AC': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(47): error C231: 'F0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(48): error C231: 'RS1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(49): error C231: 'RS0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(50): error C231: 'OV': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(51): error C231: 'P': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(54): error C231: 'TF1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(55): error C231: 'TR1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(56): error C231: 'TF0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(57): error C231: 'TR0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(58): error C231: 'IE1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(59): error C231: 'IT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(60): error C231: 'IE0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(61): error C231: 'IT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(64): error C231: 'EA': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(66): error C231: 'ES': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(67): error C231: 'ET1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(68): error C231: 'EX1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(69): error C231: 'ET0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(70): error C231: 'EX0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(74): error C231: 'PS': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(75): error C231: 'PT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(76): error C231: 'PX1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(77): error C231: 'PT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(78): error C231: 'PX0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(81): error C231: 'RD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(82): error C231: 'WR': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(83): error C231: 'T1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(84): error C231: 'T0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(85): error C231: 'INT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(86): error C231: 'INT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(87): error C231: 'TXD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(88): error C231: 'RXD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(91): error C231: 'SM0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(92): error C231: 'SM1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(93): error C231: 'SM2': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(94): error C231: 'REN': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(95): error C231: 'TB8': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(96): error C231: 'RB8': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(97): error C231: 'TI': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(98): error C231: 'RI': redefinition
+main.c(80): error C143: invalid absolute bit address
+main.c - 64 Error(s), 3 Warning(s).
+compiling main.c...
+main.c(2): warning C318: can't open file 'temp.h'
+main.c(3): warning C318: can't open file 'lcd.h'
+main.c(4): warning C318: can't open file 'pcf8591.h'
+main.c(80): error C143: invalid absolute bit address
+main.c - 1 Error(s), 3 Warning(s).
+compiling main.c...
+main.c(80): error C143: invalid absolute bit address
+main.c - 1 Error(s), 0 Warning(s).
+compiling main.c...
+main.c(80): error C143: invalid absolute bit address
+main.c - 1 Error(s), 0 Warning(s).
+compiling main.c...
+main.c(98): warning C206: 'delay0': missing function-prototype
+main.c(98): error C267: 'delay0': requires ANSI-style prototype
+main.c(113): error C231: 'delay0': redefinition
+main.c(119): error C231: 'delay0': redefinition
+main.c(200): error C141: syntax error near 'unsigned'
+main.c(201): error C141: syntax error near ']'
+main.c(202): error C141: syntax error near ']'
+main.c(203): error C141: syntax error near ']'
+main.c(204): error C141: syntax error near ']'
+main.c - 8 Error(s), 1 Warning(s).
+compiling main.c...
+main.c(207): warning C206: 'LCD1602_Init': missing function-prototype
+main.c(212): warning C206: 'LCD1602_WriteInformation': missing function-prototype
+main.c(212): error C267: 'LCD1602_WriteInformation': requires ANSI-style prototype
+main.c - 1 Error(s), 2 Warning(s).
+compiling main.c...
+main.c(222): warning C206: 'LcdDisplay': missing function-prototype
+main.c(227): warning C206: 'LcdDisplayTemp0': missing function-prototype
+main.c(227): error C267: 'LcdDisplayTemp0': requires ANSI-style prototype
+main.c(240): error C141: syntax error near 'void'
+main.c(241): error C141: syntax error near '{'
+main.c(276): error C141: syntax error near 'unsigned'
+main.c(277): error C141: syntax error near '{'
+main.c(323): error C141: syntax error near 'void'
+main.c(324): error C141: syntax error near '{'
+main.c(454): error C141: syntax error near 'void'
+main.c(456): error C141: syntax error near 'unsigned'
+main.c(456): error C202: 'T': undefined identifier
+main.c(457): error C141: syntax error near 'float'
+main.c(457): error C202: 'tp': undefined identifier
+main.c(458): error C202: 'temp': undefined identifier
+main.c(462): error C202: 'temp': undefined identifier
+main.c(463): error C202: 'temp': undefined identifier
+main.c(464): error C202: 'tp': undefined identifier
+main.c(465): error C202: 'temp': undefined identifier
+main.c(474): error C202: 'tp': undefined identifier
+main.c(476): error C202: 'temp': undefined identifier
+main.c(483): error C202: 'temp': undefined identifier
+main.c(484): error C202: 'temp': undefined identifier
+main.c(485): error C202: 'temp': undefined identifier
+main.c(486): error C202: 'temp': undefined identifier
+main.c(487): error C202: 'temp': undefined identifier
+main.c(494): error C202: 'T': undefined identifier
+main.c(496): error C202: 'T': undefined identifier
+main.c(498): error C202: 'T': undefined identifier
+main.c(500): error C202: 'T': undefined identifier
+main.c(502): error C202: 'T': undefined identifier
+main.c(504): error C202: 'T': undefined identifier
+main.c(506): error C202: 'T': undefined identifier
+main.c(508): error C202: 'T': undefined identifier
+main.c(510): error C202: 'T': undefined identifier
+main.c(512): error C202: 'T': undefined identifier
+main.c(517): error C202: 'T': undefined identifier
+main.c(518): error C202: 'T': undefined identifier
+main.c(520): error C202: 'T': undefined identifier
+main.c(551): error C202: 'WRITEADDR': undefined identifier
+main.c(566): error C202: 'READADDR': undefined identifier
+main.c(581): error C202: 'WRITEADDR': undefined identifier
+main.c(600): error C202: 'p3': undefined identifier
+main.c(809): warning C316: unterminated conditionals
+main.c - 41 Error(s), 3 Warning(s).
+compiling main.c...
+main.c(222): warning C206: 'LcdDisplay': missing function-prototype
+main.c(227): warning C206: 'LcdDisplayTemp0': missing function-prototype
+main.c(227): error C267: 'LcdDisplayTemp0': requires ANSI-style prototype
+main.c(240): error C141: syntax error near 'void'
+main.c(241): error C141: syntax error near '{'
+main.c(276): error C141: syntax error near 'unsigned'
+main.c(277): error C141: syntax error near '{'
+main.c(323): error C141: syntax error near 'void'
+main.c(324): error C141: syntax error near '{'
+main.c(454): error C141: syntax error near 'void'
+main.c(456): error C141: syntax error near 'unsigned'
+main.c(456): error C202: 'T': undefined identifier
+main.c(457): error C141: syntax error near 'float'
+main.c(457): error C202: 'tp': undefined identifier
+main.c(458): error C202: 'temp': undefined identifier
+main.c(462): error C202: 'temp': undefined identifier
+main.c(463): error C202: 'temp': undefined identifier
+main.c(464): error C202: 'tp': undefined identifier
+main.c(465): error C202: 'temp': undefined identifier
+main.c(474): error C202: 'tp': undefined identifier
+main.c(476): error C202: 'temp': undefined identifier
+main.c(483): error C202: 'temp': undefined identifier
+main.c(484): error C202: 'temp': undefined identifier
+main.c(485): error C202: 'temp': undefined identifier
+main.c(486): error C202: 'temp': undefined identifier
+main.c(487): error C202: 'temp': undefined identifier
+main.c(494): error C202: 'T': undefined identifier
+main.c(496): error C202: 'T': undefined identifier
+main.c(498): error C202: 'T': undefined identifier
+main.c(500): error C202: 'T': undefined identifier
+main.c(502): error C202: 'T': undefined identifier
+main.c(504): error C202: 'T': undefined identifier
+main.c(506): error C202: 'T': undefined identifier
+main.c(508): error C202: 'T': undefined identifier
+main.c(510): error C202: 'T': undefined identifier
+main.c(512): error C202: 'T': undefined identifier
+main.c(517): error C202: 'T': undefined identifier
+main.c(518): error C202: 'T': undefined identifier
+main.c(520): error C202: 'T': undefined identifier
+main.c(551): error C202: 'WRITEADDR': undefined identifier
+main.c(566): error C202: 'READADDR': undefined identifier
+main.c(581): error C202: 'WRITEADDR': undefined identifier
+main.c(809): warning C316: unterminated conditionals
+main.c - 40 Error(s), 3 Warning(s).
+compiling main.c...
+main.c(2): warning C318: can't open file 'temp.h'
+main.c(3): warning C318: can't open file 'lcd.h'
+main.c(4): warning C318: can't open file 'pcf8591.h'
+main.c(206): warning C206: 'LCD1602_Init': missing function-prototype
+main.c(211): warning C206: 'LCD1602_WriteInformation': missing function-prototype
+main.c(211): error C267: 'LCD1602_WriteInformation': requires ANSI-style prototype
+main.c - 1 Error(s), 5 Warning(s).
+compiling main.c...
+main.c(2): warning C318: can't open file 'temp.h'
+main.c(3): warning C318: can't open file 'lcd.h'
+main.c(4): warning C318: can't open file 'pcf8591.h'
+main.c(207): warning C206: 'LCD1602_Init': missing function-prototype
+main.c(221): warning C206: 'LCD1602_MoveToPosition': missing function-prototype
+main.c(221): error C267: 'LCD1602_MoveToPosition': requires ANSI-style prototype
+main.c - 1 Error(s), 5 Warning(s).
+compiling main.c...
+main.c(2): warning C318: can't open file 'temp.h'
+main.c(3): warning C318: can't open file 'lcd.h'
+main.c(4): warning C318: can't open file 'pcf8591.h'
+main.c(229): warning C206: 'LcdDisplay': missing function-prototype
+main.c(234): warning C206: 'LcdDisplayTemp0': missing function-prototype
+main.c(234): error C267: 'LcdDisplayTemp0': requires ANSI-style prototype
+main.c(247): error C141: syntax error near 'void'
+main.c(248): error C141: syntax error near '{'
+main.c(283): error C141: syntax error near 'unsigned'
+main.c(284): error C141: syntax error near '{'
+main.c(330): error C141: syntax error near 'void'
+main.c(331): error C141: syntax error near '{'
+main.c(461): error C141: syntax error near 'void'
+main.c(463): error C141: syntax error near 'unsigned'
+main.c(463): error C202: 'T': undefined identifier
+main.c(464): error C141: syntax error near 'float'
+main.c(464): error C202: 'tp': undefined identifier
+main.c(465): error C202: 'temp': undefined identifier
+main.c(469): error C202: 'temp': undefined identifier
+main.c(470): error C202: 'temp': undefined identifier
+main.c(471): error C202: 'tp': undefined identifier
+main.c(472): error C202: 'temp': undefined identifier
+main.c(481): error C202: 'tp': undefined identifier
+main.c(483): error C202: 'temp': undefined identifier
+main.c(490): error C202: 'temp': undefined identifier
+main.c(491): error C202: 'temp': undefined identifier
+main.c(492): error C202: 'temp': undefined identifier
+main.c(493): error C202: 'temp': undefined identifier
+main.c(494): error C202: 'temp': undefined identifier
+main.c(501): error C202: 'T': undefined identifier
+main.c(503): error C202: 'T': undefined identifier
+main.c(505): error C202: 'T': undefined identifier
+main.c(507): error C202: 'T': undefined identifier
+main.c(509): error C202: 'T': undefined identifier
+main.c(511): error C202: 'T': undefined identifier
+main.c(513): error C202: 'T': undefined identifier
+main.c(515): error C202: 'T': undefined identifier
+main.c(517): error C202: 'T': undefined identifier
+main.c(519): error C202: 'T': undefined identifier
+main.c(524): error C202: 'T': undefined identifier
+main.c(525): error C202: 'T': undefined identifier
+main.c(527): error C202: 'T': undefined identifier
+main.c(558): error C202: 'WRITEADDR': undefined identifier
+main.c(573): error C202: 'READADDR': undefined identifier
+main.c(588): error C202: 'WRITEADDR': undefined identifier
+main.c - 40 Error(s), 5 Warning(s).
+compiling main.c...
+main.c(2): warning C318: can't open file 'temp.h'
+main.c(3): warning C318: can't open file 'lcd.h'
+main.c(4): warning C318: can't open file 'pcf8591.h'
+main.c(207): warning C206: 'LCD1602_Init': missing function-prototype
+main.c(221): warning C206: 'LCD1602_MoveToPosition': missing function-prototype
+main.c(221): error C267: 'LCD1602_MoveToPosition': requires ANSI-style prototype
+main.c - 1 Error(s), 5 Warning(s).
+compiling main.c...
+main.c(2): warning C318: can't open file 'temp.h'
+main.c(3): warning C318: can't open file 'lcd.h'
+main.c(4): warning C318: can't open file 'pcf8591.h'
+main.c(33): error C202: 'LCDPORT': undefined identifier
+main.c(34): error C202: 'LCD1602_RS': undefined identifier
+main.c(35): error C202: 'LCD1602_RW': undefined identifier
+main.c(36): error C202: 'LCD1602_EN': undefined identifier
+main.c(37): error C202: 'LCDPORT': undefined identifier
+main.c(38): error C202: 'LCD1602_EN': undefined identifier
+main.c(52): error C202: 'LCDPORT': undefined identifier
+main.c(53): error C202: 'LCD1602_RS': undefined identifier
+main.c(54): error C202: 'LCD1602_RW': undefined identifier
+main.c(55): error C202: 'LCD1602_EN': undefined identifier
+main.c(56): error C202: 'LCD1602_EN': undefined identifier
+main.c - 11 Error(s), 3 Warning(s).
+compiling main.c...
+main.c(2): warning C318: can't open file 'temp.h'
+main.c(3): warning C318: can't open file 'lcd.h'
+main.c(4): warning C318: can't open file 'pcf8591.h'
+main.c(74): warning C206: 'Delay': missing function-prototype
+main.c(74): error C267: 'Delay': requires ANSI-style prototype
+main.c(159): error C231: 'Delay': redefinition
+main.c(162): error C231: 'Delay': redefinition
+main.c - 3 Error(s), 4 Warning(s).
+compiling main.c...
+main.c(2): warning C318: can't open file 'temp.h'
+main.c(3): warning C318: can't open file 'lcd.h'
+main.c(4): warning C318: can't open file 'pcf8591.h'
+main.c(174): error C237: '_Delay': function already has a body
+main.c - 1 Error(s), 3 Warning(s).
+compiling main.c...
+main.c(2): warning C318: can't open file 'temp.h'
+main.c(3): warning C318: can't open file 'lcd.h'
+main.c(4): warning C318: can't open file 'pcf8591.h'
+main.c(382): warning C206: 'LcdDisplay': missing function-prototype
+main.c(387): warning C206: 'LcdDisplayTemp0': missing function-prototype
+main.c(387): error C267: 'LcdDisplayTemp0': requires ANSI-style prototype
+main.c(400): error C141: syntax error near 'void'
+main.c(401): error C141: syntax error near '{'
+main.c(436): error C141: syntax error near 'unsigned'
+main.c(437): error C141: syntax error near '{'
+main.c(483): error C141: syntax error near 'void'
+main.c(484): error C141: syntax error near '{'
+main.c(614): error C141: syntax error near 'void'
+main.c(616): error C141: syntax error near 'unsigned'
+main.c(616): error C202: 'T': undefined identifier
+main.c(617): error C141: syntax error near 'float'
+main.c(617): error C202: 'tp': undefined identifier
+main.c(618): error C202: 'temp': undefined identifier
+main.c(622): error C202: 'temp': undefined identifier
+main.c(623): error C202: 'temp': undefined identifier
+main.c(624): error C202: 'tp': undefined identifier
+main.c(625): error C202: 'temp': undefined identifier
+main.c(634): error C202: 'tp': undefined identifier
+main.c(636): error C202: 'temp': undefined identifier
+main.c(643): error C202: 'temp': undefined identifier
+main.c(644): error C202: 'temp': undefined identifier
+main.c(645): error C202: 'temp': undefined identifier
+main.c(646): error C202: 'temp': undefined identifier
+main.c(647): error C202: 'temp': undefined identifier
+main.c(654): error C202: 'T': undefined identifier
+main.c(656): error C202: 'T': undefined identifier
+main.c(658): error C202: 'T': undefined identifier
+main.c(660): error C202: 'T': undefined identifier
+main.c(662): error C202: 'T': undefined identifier
+main.c(664): error C202: 'T': undefined identifier
+main.c(666): error C202: 'T': undefined identifier
+main.c(668): error C202: 'T': undefined identifier
+main.c(670): error C202: 'T': undefined identifier
+main.c(672): error C202: 'T': undefined identifier
+main.c(677): error C202: 'T': undefined identifier
+main.c(678): error C202: 'T': undefined identifier
+main.c(680): error C202: 'T': undefined identifier
+main.c(711): error C202: 'WRITEADDR': undefined identifier
+main.c(726): error C202: 'READADDR': undefined identifier
+main.c(741): error C202: 'WRITEADDR': undefined identifier
+main.c - 40 Error(s), 5 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(2): warning C318: can't open file 'temp.h'
+main.c(3): warning C318: can't open file 'lcd.h'
+main.c(4): warning C318: can't open file 'pcf8591.h'
+main.c(382): warning C206: 'LcdDisplay': missing function-prototype
+main.c(387): warning C206: 'LcdDisplayTemp0': missing function-prototype
+main.c(387): error C267: 'LcdDisplayTemp0': requires ANSI-style prototype
+main.c(400): error C141: syntax error near 'void'
+main.c(401): error C141: syntax error near '{'
+main.c(436): error C141: syntax error near 'unsigned'
+main.c(437): error C141: syntax error near '{'
+main.c(483): error C141: syntax error near 'void'
+main.c(484): error C141: syntax error near '{'
+main.c(614): error C141: syntax error near 'void'
+main.c(617): error C141: syntax error near 'float'
+main.c(617): error C202: 'tp': undefined identifier
+main.c(618): error C202: 'temp': undefined identifier
+main.c(622): error C202: 'temp': undefined identifier
+main.c(623): error C202: 'temp': undefined identifier
+main.c(624): error C202: 'tp': undefined identifier
+main.c(625): error C202: 'temp': undefined identifier
+main.c(634): error C202: 'tp': undefined identifier
+main.c(636): error C202: 'temp': undefined identifier
+main.c(643): error C202: 'temp': undefined identifier
+main.c(644): error C202: 'temp': undefined identifier
+main.c(645): error C202: 'temp': undefined identifier
+main.c(646): error C202: 'temp': undefined identifier
+main.c(647): error C202: 'temp': undefined identifier
+main.c(711): error C202: 'WRITEADDR': undefined identifier
+main.c(726): error C202: 'READADDR': undefined identifier
+main.c(741): error C202: 'WRITEADDR': undefined identifier
+compiling ds1302.c...
+compiling i2c.c...
+compiling temp.c...
+compiling lcd.c...
+Target not created
+compiling main.c...
+main.c(2): warning C318: can't open file 'temp.h'
+main.c(3): warning C318: can't open file 'lcd.h'
+main.c(382): warning C206: 'LcdDisplay': missing function-prototype
+main.c(387): warning C206: 'LcdDisplayTemp0': missing function-prototype
+main.c(387): error C267: 'LcdDisplayTemp0': requires ANSI-style prototype
+main.c(400): error C141: syntax error near 'void'
+main.c(401): error C141: syntax error near '{'
+main.c(436): error C141: syntax error near 'unsigned'
+main.c(437): error C141: syntax error near '{'
+main.c(483): error C141: syntax error near 'void'
+main.c(484): error C141: syntax error near '{'
+main.c(614): error C141: syntax error near 'void'
+main.c(617): error C141: syntax error near 'float'
+main.c(617): error C202: 'tp': undefined identifier
+main.c(618): error C202: 'temp': undefined identifier
+main.c(622): error C202: 'temp': undefined identifier
+main.c(623): error C202: 'temp': undefined identifier
+main.c(624): error C202: 'tp': undefined identifier
+main.c(625): error C202: 'temp': undefined identifier
+main.c(634): error C202: 'tp': undefined identifier
+main.c(636): error C202: 'temp': undefined identifier
+main.c(643): error C202: 'temp': undefined identifier
+main.c(644): error C202: 'temp': undefined identifier
+main.c(645): error C202: 'temp': undefined identifier
+main.c(646): error C202: 'temp': undefined identifier
+main.c(647): error C202: 'temp': undefined identifier
+main.c(711): error C202: 'WRITEADDR': undefined identifier
+main.c(726): error C202: 'READADDR': undefined identifier
+main.c(741): error C202: 'WRITEADDR': undefined identifier
+main.c - 25 Error(s), 4 Warning(s).
+compiling main.c...
+main.c(2): warning C318: can't open file 'temp.h'
+main.c(3): warning C318: can't open file 'lcd.h'
+main.c(194): error C231: 'LCD1602_RS': redefinition
+main.c(195): error C231: 'LCD1602_RW': redefinition
+main.c(196): error C231: 'LCD1602_EN': redefinition
+main.c(969): warning C316: unterminated conditionals
+main.c - 3 Error(s), 3 Warning(s).
+compiling main.c...
+main.c(2): warning C318: can't open file 'temp.h'
+main.c(3): warning C318: can't open file 'lcd.h'
+main.c(195): error C231: 'LCD1602_RW': redefinition
+main.c(196): error C231: 'LCD1602_EN': redefinition
+main.c(969): warning C316: unterminated conditionals
+main.c - 2 Error(s), 3 Warning(s).
+compiling main.c...
+main.c(2): warning C318: can't open file 'temp.h'
+main.c(3): warning C318: can't open file 'lcd.h'
+main.c(382): warning C206: 'LcdDisplay': missing function-prototype
+main.c(387): warning C206: 'LcdDisplayTemp0': missing function-prototype
+main.c(387): error C267: 'LcdDisplayTemp0': requires ANSI-style prototype
+main.c(400): error C141: syntax error near 'void'
+main.c(401): error C141: syntax error near '{'
+main.c(436): error C141: syntax error near 'unsigned'
+main.c(437): error C141: syntax error near '{'
+main.c(483): error C141: syntax error near 'void'
+main.c(484): error C141: syntax error near '{'
+main.c(614): error C141: syntax error near 'void'
+main.c(617): error C141: syntax error near 'float'
+main.c(617): error C202: 'tp': undefined identifier
+main.c(618): error C202: 'temp': undefined identifier
+main.c(622): error C202: 'temp': undefined identifier
+main.c(623): error C202: 'temp': undefined identifier
+main.c(624): error C202: 'tp': undefined identifier
+main.c(625): error C202: 'temp': undefined identifier
+main.c(634): error C202: 'tp': undefined identifier
+main.c(636): error C202: 'temp': undefined identifier
+main.c(643): error C202: 'temp': undefined identifier
+main.c(644): error C202: 'temp': undefined identifier
+main.c(645): error C202: 'temp': undefined identifier
+main.c(646): error C202: 'temp': undefined identifier
+main.c(647): error C202: 'temp': undefined identifier
+main.c(711): error C202: 'WRITEADDR': undefined identifier
+main.c(726): error C202: 'READADDR': undefined identifier
+main.c(741): error C202: 'WRITEADDR': undefined identifier
+main.c(969): warning C316: unterminated conditionals
+main.c - 25 Error(s), 5 Warning(s).
+compiling main.c...
+main.c(2): warning C318: can't open file 'temp.h'
+main.c(3): warning C318: can't open file 'lcd.h'
+main.c(382): warning C206: 'LcdDisplay': missing function-prototype
+main.c(387): warning C206: 'LcdDisplayTemp0': missing function-prototype
+main.c(387): error C267: 'LcdDisplayTemp0': requires ANSI-style prototype
+main.c(402): error C231: 'LcdDisplay': redefinition
+main.c(435): error C231: 'LcdDisplay': redefinition
+main.c(481): error C237: 'checkday': function already has a body
+main.c(616): error C231: 'LcdDisplayTemp0': redefinition
+main.c(683): error C231: 'LcdDisplayTemp0': redefinition
+main.c(712): error C202: 'WRITEADDR': undefined identifier
+main.c(727): error C202: 'READADDR': undefined identifier
+main.c(742): error C202: 'WRITEADDR': undefined identifier
+main.c(970): warning C316: unterminated conditionals
+main.c - 9 Error(s), 5 Warning(s).
+compiling main.c...
+main.c(2): warning C318: can't open file 'temp.h'
+main.c(3): warning C318: can't open file 'lcd.h'
+main.c(383): warning C206: 'LcdDisplay': missing function-prototype
+main.c(403): error C231: 'LcdDisplay': redefinition
+main.c(436): error C231: 'LcdDisplay': redefinition
+main.c(482): error C237: 'checkday': function already has a body
+main.c(713): error C202: 'WRITEADDR': undefined identifier
+main.c(728): error C202: 'READADDR': undefined identifier
+main.c(743): error C202: 'WRITEADDR': undefined identifier
+main.c(971): warning C316: unterminated conditionals
+main.c - 6 Error(s), 4 Warning(s).
+compiling main.c...
+main.c(483): error C237: 'checkday': function already has a body
+main.c(714): error C202: 'WRITEADDR': undefined identifier
+main.c(729): error C202: 'READADDR': undefined identifier
+main.c(744): error C202: 'WRITEADDR': undefined identifier
+main.c(972): warning C316: unterminated conditionals
+main.c - 4 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(501): error C237: 'checkday': function already has a body
+main.c(763): error C141: syntax error near '.'
+main.c(991): warning C316: unterminated conditionals
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(501): error C237: 'checkday': function already has a body
+main.c(991): warning C316: unterminated conditionals
+Target not created
+compiling main.c...
+main.c(991): warning C316: unterminated conditionals
+main.c - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  DATA
+    MODULE:  lcd.obj (LCD)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _DELAY
+    MODULE:  lcd.obj (LCD)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _LCD1602_DISPLAYSTRING
+    MODULE:  lcd.obj (LCD)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _LCD1602_DISPLAYONECHARONADDR
+    MODULE:  lcd.obj (LCD)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _LCD1602_MOVETOPOSITION
+    MODULE:  lcd.obj (LCD)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  LCD1602_INIT
+    MODULE:  lcd.obj (LCD)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  ?_LCD1602_WRITEINFORMATION?BIT
+    MODULE:  lcd.obj (LCD)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _LCD1602_WRITEINFORMATION
+    MODULE:  lcd.obj (LCD)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  LCD1602_CHECKBUSY
+    MODULE:  lcd.obj (LCD)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CHECKDAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_READONEBYTEATADDR?DS1302
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCD1602_INIT?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYONECHARONADDR?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _MONTH
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _YEAR
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _SEC
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DAY
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _HOUR
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _MIN
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  READTIME
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _WEEKSET
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  READTIME
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0CAFH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _YEAR
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0705H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MONTH
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 072EH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DAY
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0757H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _HOUR
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0780H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MIN
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 07A9H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _SEC
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 07D2H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WEEKSET
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 07FBH
+Program Size: data=78.2 xdata=0 code=4607
+Target not created
+Build target 'Target 1'
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  DATA
+    MODULE:  lcd.obj (LCD)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _DELAY
+    MODULE:  lcd.obj (LCD)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _LCD1602_DISPLAYSTRING
+    MODULE:  lcd.obj (LCD)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _LCD1602_DISPLAYONECHARONADDR
+    MODULE:  lcd.obj (LCD)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _LCD1602_MOVETOPOSITION
+    MODULE:  lcd.obj (LCD)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  LCD1602_INIT
+    MODULE:  lcd.obj (LCD)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  ?_LCD1602_WRITEINFORMATION?BIT
+    MODULE:  lcd.obj (LCD)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _LCD1602_WRITEINFORMATION
+    MODULE:  lcd.obj (LCD)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  LCD1602_CHECKBUSY
+    MODULE:  lcd.obj (LCD)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CHECKDAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_READONEBYTEATADDR?DS1302
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCD1602_INIT?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYONECHARONADDR?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _MONTH
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _YEAR
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _SEC
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DAY
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _HOUR
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _MIN
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  READTIME
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _WEEKSET
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  READTIME
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0CAFH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _YEAR
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0705H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MONTH
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 072EH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DAY
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0757H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _HOUR
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0780H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MIN
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 07A9H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _SEC
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 07D2H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WEEKSET
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 07FBH
+Program Size: data=78.2 xdata=0 code=4607
+Target not created
+compiling main.c...
+main.c(991): warning C316: unterminated conditionals
+main.c - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  DATA
+    MODULE:  lcd.obj (LCD)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _DELAY
+    MODULE:  lcd.obj (LCD)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _LCD1602_DISPLAYSTRING
+    MODULE:  lcd.obj (LCD)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _LCD1602_DISPLAYONECHARONADDR
+    MODULE:  lcd.obj (LCD)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _LCD1602_MOVETOPOSITION
+    MODULE:  lcd.obj (LCD)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  LCD1602_INIT
+    MODULE:  lcd.obj (LCD)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  ?_LCD1602_WRITEINFORMATION?BIT
+    MODULE:  lcd.obj (LCD)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _LCD1602_WRITEINFORMATION
+    MODULE:  lcd.obj (LCD)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  LCD1602_CHECKBUSY
+    MODULE:  lcd.obj (LCD)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CHECKDAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_READONEBYTEATADDR?DS1302
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCD1602_INIT?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYONECHARONADDR?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _MONTH
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _YEAR
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _SEC
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DAY
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _HOUR
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _MIN
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  READTIME
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _WEEKSET
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  READTIME
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0CAFH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _YEAR
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0705H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MONTH
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 072EH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DAY
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0757H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _HOUR
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0780H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MIN
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 07A9H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _SEC
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 07D2H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WEEKSET
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 07FBH
+Program Size: data=78.2 xdata=0 code=4607
+Target not created
+compiling main.c...
+main.c(991): warning C316: unterminated conditionals
+main.c - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CHECKDAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_READONEBYTEATADDR?DS1302
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _MONTH
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _YEAR
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _SEC
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DAY
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _HOUR
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _MIN
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  READTIME
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _WEEKSET
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  READTIME
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0CAFH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0CDAH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _YEAR
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0705H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MONTH
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 072EH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DAY
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0757H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _HOUR
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0780H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MIN
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 07A9H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _SEC
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 07D2H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WEEKSET
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 07FBH
+Program Size: data=78.1 xdata=0 code=4102
+creating hex file from "1"...
+"1" - 0 Error(s), 24 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(994): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CHECKDAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?TIMESETTING?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?PCF8591PLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_READONEBYTEATADDR?DS1302
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _MONTH
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _YEAR
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _SEC
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DAY
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _HOUR
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _MIN
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  READTIME
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _WEEKSET
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  READTIME
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0D92H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _YEAR
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0705H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MONTH
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 072EH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DAY
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0757H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _HOUR
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0780H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MIN
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 07A9H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _SEC
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 07D2H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WEEKSET
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 07FBH
+Program Size: data=86.1 xdata=0 code=4050
+creating hex file from "1"...
+"1" - 0 Error(s), 27 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(994): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CHECKDAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_READONEBYTEATADDR?DS1302
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _MONTH
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _YEAR
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _SEC
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DAY
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _HOUR
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _MIN
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  READTIME
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _WEEKSET
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  READTIME
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0CAFH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0CD7H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _YEAR
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0705H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MONTH
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 072EH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DAY
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0757H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _HOUR
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0780H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MIN
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 07A9H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _SEC
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 07D2H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WEEKSET
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 07FBH
+Program Size: data=78.1 xdata=0 code=4108
+creating hex file from "1"...
+"1" - 0 Error(s), 25 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(994): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CHECKDAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?TIMESETTING?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?PCF8591PLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_READONEBYTEATADDR?DS1302
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _MONTH
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _YEAR
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _SEC
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DAY
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _HOUR
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _MIN
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  READTIME
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _WEEKSET
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  READTIME
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0D92H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _YEAR
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0705H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MONTH
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 072EH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DAY
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0757H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _HOUR
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0780H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MIN
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 07A9H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _SEC
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 07D2H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WEEKSET
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 07FBH
+Program Size: data=86.1 xdata=0 code=4050
+creating hex file from "1"...
+"1" - 0 Error(s), 27 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(380): warning C280: 'p1': unreferenced local variable
+main.c(381): warning C280: 'p2': unreferenced local variable
+main.c(382): warning C280: 'p3': unreferenced local variable
+main.c(383): warning C280: 'p4': unreferenced local variable
+main.c(998): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CHECKDAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?TIMESETTING?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?PCF8591PLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_READONEBYTEATADDR?DS1302
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _MONTH
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _YEAR
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _SEC
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DAY
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _HOUR
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _MIN
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  READTIME
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _WEEKSET
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  READTIME
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0DB0H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _YEAR
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0705H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MONTH
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 072EH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DAY
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0757H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _HOUR
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0780H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MIN
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 07A9H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _SEC
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 07D2H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WEEKSET
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 07FBH
+Program Size: data=86.1 xdata=0 code=4080
+creating hex file from "1"...
+"1" - 0 Error(s), 31 Warning(s).
+compiling main.c...
+main.c(380): warning C280: 'p1': unreferenced local variable
+main.c(381): warning C280: 'p2': unreferenced local variable
+main.c(382): warning C280: 'p3': unreferenced local variable
+main.c(383): warning C280: 'p4': unreferenced local variable
+main.c(1000): warning C316: unterminated conditionals
+main.c(393): warning C294: unreachable code
+main.c - 0 Error(s), 6 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CHECKDAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?TIMESETTING?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?PCF8591PLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_READONEBYTEATADDR?DS1302
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _MONTH
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _YEAR
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _SEC
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DAY
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _HOUR
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _MIN
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  READTIME
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _WEEKSET
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _YEAR
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0705H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MONTH
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 072EH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DAY
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0757H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _HOUR
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0780H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MIN
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 07A9H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _SEC
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 07D2H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WEEKSET
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 07FBH
+Program Size: data=86.1 xdata=0 code=4060
+creating hex file from "1"...
+"1" - 0 Error(s), 25 Warning(s).
+compiling main.c...
+main.c(381): warning C280: 'p1': unreferenced local variable
+main.c(382): warning C280: 'p2': unreferenced local variable
+main.c(383): warning C280: 'p3': unreferenced local variable
+main.c(384): warning C280: 'p4': unreferenced local variable
+main.c(1005): error C202: 'ADDR_SEC_R': undefined identifier
+main.c(1006): error C202: 'ADDR_MIN_R': undefined identifier
+main.c(1007): error C202: 'ADDR_HOUR_R': undefined identifier
+main.c(1008): error C202: 'ADDR_DAY_R': undefined identifier
+main.c(1009): error C202: 'ADDR_MONTH_R': undefined identifier
+main.c(1010): error C202: 'ADDR_WEEK_R': undefined identifier
+main.c(1011): error C202: 'ADDR_YEAR_R': undefined identifier
+main.c(1012): warning C316: unterminated conditionals
+main.c - 7 Error(s), 5 Warning(s).
+compiling main.c...
+main.c(382): warning C280: 'p1': unreferenced local variable
+main.c(383): warning C280: 'p2': unreferenced local variable
+main.c(384): warning C280: 'p3': unreferenced local variable
+main.c(385): warning C280: 'p4': unreferenced local variable
+main.c(1013): warning C316: unterminated conditionals
+main.c - 0 Error(s), 5 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CHECKDAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?TIMESETTING?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?PCF8591PLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _MONTH
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _YEAR
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _SEC
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DAY
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _HOUR
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _MIN
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _WEEKSET
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _YEAR
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0705H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MONTH
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 072EH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DAY
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0757H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _HOUR
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0780H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MIN
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 07A9H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _SEC
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 07D2H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WEEKSET
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 07FBH
+Program Size: data=86.1 xdata=0 code=4138
+creating hex file from "1"...
+"1" - 0 Error(s), 23 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(382): warning C280: 'p1': unreferenced local variable
+main.c(383): warning C280: 'p2': unreferenced local variable
+main.c(384): warning C280: 'p3': unreferenced local variable
+main.c(385): warning C280: 'p4': unreferenced local variable
+main.c(1013): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CHECKDAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _MONTH
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _YEAR
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _SEC
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DAY
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _HOUR
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _MIN
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _WEEKSET
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0CFDH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _YEAR
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0705H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MONTH
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 072EH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DAY
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0757H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _HOUR
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0780H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MIN
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 07A9H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _SEC
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 07D2H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WEEKSET
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 07FBH
+Program Size: data=78.1 xdata=0 code=4196
+creating hex file from "1"...
+"1" - 0 Error(s), 26 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(382): warning C280: 'p1': unreferenced local variable
+main.c(383): warning C280: 'p2': unreferenced local variable
+main.c(384): warning C280: 'p3': unreferenced local variable
+main.c(385): warning C280: 'p4': unreferenced local variable
+main.c(1013): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CHECKDAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _MONTH
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _YEAR
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _SEC
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DAY
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _HOUR
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _MIN
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _WEEKSET
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0CEDH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _YEAR
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 084BH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MONTH
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0874H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DAY
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 089DH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _HOUR
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 08C6H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MIN
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 08EFH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _SEC
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0918H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _WEEKSET
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0941H
+Program Size: data=78.1 xdata=0 code=4180
+creating hex file from "1"...
+"1" - 0 Error(s), 26 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(382): warning C280: 'p1': unreferenced local variable
+main.c(383): warning C280: 'p2': unreferenced local variable
+main.c(384): warning C280: 'p3': unreferenced local variable
+main.c(385): warning C280: 'p4': unreferenced local variable
+main.c(996): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CHECKDAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _MONTH
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _YEAR
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _SEC
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DAY
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _HOUR
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _MIN
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0CD5H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _YEAR
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0848H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MONTH
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0875H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DAY
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 08A2H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _HOUR
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 08CFH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MIN
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 08FCH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _SEC
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0929H
+Program Size: data=78.1 xdata=0 code=4138
+creating hex file from "1"...
+"1" - 0 Error(s), 24 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(382): warning C280: 'p1': unreferenced local variable
+main.c(383): warning C280: 'p2': unreferenced local variable
+main.c(384): warning C280: 'p3': unreferenced local variable
+main.c(385): warning C280: 'p4': unreferenced local variable
+main.c(996): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CHECKDAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _MONTH
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _YEAR
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _SEC
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DAY
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _HOUR
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _MIN
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0CD0H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _YEAR
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0848H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MONTH
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0874H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DAY
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 08A0H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _HOUR
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 08CCH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MIN
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 08F8H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _SEC
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0924H
+Program Size: data=78.1 xdata=0 code=4133
+creating hex file from "1"...
+"1" - 0 Error(s), 24 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(382): warning C280: 'p1': unreferenced local variable
+main.c(383): warning C280: 'p2': unreferenced local variable
+main.c(384): warning C280: 'p3': unreferenced local variable
+main.c(385): warning C280: 'p4': unreferenced local variable
+main.c(1224): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0DD3H
+Program Size: data=77.1 xdata=0 code=4785
+creating hex file from "1"...
+"1" - 0 Error(s), 10 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(382): warning C280: 'p1': unreferenced local variable
+main.c(383): warning C280: 'p2': unreferenced local variable
+main.c(384): warning C280: 'p3': unreferenced local variable
+main.c(385): warning C280: 'p4': unreferenced local variable
+main.c(1224): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0DD3H
+Program Size: data=77.1 xdata=0 code=4785
+creating hex file from "1"...
+"1" - 0 Error(s), 10 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(382): warning C280: 'p1': unreferenced local variable
+main.c(383): warning C280: 'p2': unreferenced local variable
+main.c(384): warning C280: 'p3': unreferenced local variable
+main.c(385): warning C280: 'p4': unreferenced local variable
+main.c(1224): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0DD3H
+Program Size: data=77.1 xdata=0 code=4785
+creating hex file from "1"...
+"1" - 0 Error(s), 10 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(390): warning C280: 'p1': unreferenced local variable
+main.c(391): warning C280: 'p2': unreferenced local variable
+main.c(392): warning C280: 'p3': unreferenced local variable
+main.c(393): warning C280: 'p4': unreferenced local variable
+main.c(1232): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY0?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0DD3H
+Program Size: data=77.1 xdata=0 code=4809
+creating hex file from "1"...
+"1" - 0 Error(s), 11 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(390): warning C280: 'p1': unreferenced local variable
+main.c(391): warning C280: 'p2': unreferenced local variable
+main.c(392): warning C280: 'p3': unreferenced local variable
+main.c(393): warning C280: 'p4': unreferenced local variable
+main.c(1232): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY0?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0DD3H
+Program Size: data=77.1 xdata=0 code=4809
+creating hex file from "1"...
+"1" - 0 Error(s), 11 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(390): warning C280: 'p1': unreferenced local variable
+main.c(391): warning C280: 'p2': unreferenced local variable
+main.c(392): warning C280: 'p3': unreferenced local variable
+main.c(393): warning C280: 'p4': unreferenced local variable
+main.c(1232): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0DD3H
+Program Size: data=77.1 xdata=0 code=4809
+creating hex file from "1"...
+"1" - 0 Error(s), 11 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(390): warning C280: 'p1': unreferenced local variable
+main.c(391): warning C280: 'p2': unreferenced local variable
+main.c(392): warning C280: 'p3': unreferenced local variable
+main.c(393): warning C280: 'p4': unreferenced local variable
+main.c(1232): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0DD3H
+Program Size: data=77.1 xdata=0 code=4809
+creating hex file from "1"...
+"1" - 0 Error(s), 11 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(390): warning C280: 'p1': unreferenced local variable
+main.c(391): warning C280: 'p2': unreferenced local variable
+main.c(392): warning C280: 'p3': unreferenced local variable
+main.c(393): warning C280: 'p4': unreferenced local variable
+main.c(1232): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0DD3H
+Program Size: data=77.1 xdata=0 code=4808
+creating hex file from "1"...
+"1" - 0 Error(s), 11 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(390): warning C280: 'p1': unreferenced local variable
+main.c(391): warning C280: 'p2': unreferenced local variable
+main.c(392): warning C280: 'p3': unreferenced local variable
+main.c(393): warning C280: 'p4': unreferenced local variable
+main.c(1233): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0DDAH
+Program Size: data=77.1 xdata=0 code=4815
+creating hex file from "1"...
+"1" - 0 Error(s), 11 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(436): error C141: syntax error near 'breakl'
+main.c(437): error C202: 'breakl': undefined identifier
+main.c(1234): warning C316: unterminated conditionals
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(390): warning C280: 'p1': unreferenced local variable
+main.c(391): warning C280: 'p2': unreferenced local variable
+main.c(392): warning C280: 'p3': unreferenced local variable
+main.c(393): warning C280: 'p4': unreferenced local variable
+main.c(1234): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0DE0H
+Program Size: data=77.1 xdata=0 code=4823
+creating hex file from "1"...
+"1" - 0 Error(s), 11 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(390): warning C280: 'p1': unreferenced local variable
+main.c(392): warning C280: 'p4': unreferenced local variable
+main.c(1235): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0DDBH
+Program Size: data=77.1 xdata=0 code=4809
+creating hex file from "1"...
+"1" - 0 Error(s), 9 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(28): error C231: 'DS1302_CLK': redefinition
+main.c(29): error C231: 'DS1302_IO': redefinition
+main.c(30): error C231: 'DS1302_RST': redefinition
+main.c(31): error C231: 'ACC0': redefinition
+main.c(32): error C231: 'ACC7': redefinition
+main.c(1370): warning C316: unterminated conditionals
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(392): warning C280: 'p1': unreferenced local variable
+main.c(394): warning C280: 'p4': unreferenced local variable
+main.c(1237): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  DS18B20READTEMP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0DDBH
+Program Size: data=77.1 xdata=0 code=4809
+creating hex file from "1"...
+"1" - 0 Error(s), 9 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(392): warning C280: 'p1': unreferenced local variable
+main.c(394): warning C280: 'p4': unreferenced local variable
+main.c(1375): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+Program Size: data=77.1 xdata=0 code=5043
+creating hex file from "1"...
+"1" - 0 Error(s), 7 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(392): warning C280: 'p1': unreferenced local variable
+main.c(394): warning C280: 'p4': unreferenced local variable
+main.c(1022): error C202: 'aNum': undefined identifier
+main.c(1375): warning C316: unterminated conditionals
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(392): warning C280: 'p1': unreferenced local variable
+main.c(394): warning C280: 'p4': unreferenced local variable
+main.c(1375): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+Program Size: data=77.1 xdata=0 code=5069
+creating hex file from "1"...
+"1" - 0 Error(s), 7 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(392): warning C280: 'p1': unreferenced local variable
+main.c(394): warning C280: 'p4': unreferenced local variable
+main.c(1375): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+Program Size: data=77.1 xdata=0 code=5063
+creating hex file from "1"...
+"1" - 0 Error(s), 7 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(392): warning C280: 'p1': unreferenced local variable
+main.c(394): warning C280: 'p4': unreferenced local variable
+main.c(1377): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+Program Size: data=77.1 xdata=0 code=5077
+creating hex file from "1"...
+"1" - 0 Error(s), 7 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+Program Size: data=77.1 xdata=0 code=5077
+creating hex file from "1"...
+"1" - 0 Error(s), 4 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+main.c(392): warning C280: 'p1': unreferenced local variable
+main.c(394): warning C280: 'p4': unreferenced local variable
+main.c(1377): warning C316: unterminated conditionals
+compiling i2c.c...
+compiling ds1302.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+Program Size: data=77.1 xdata=0 code=5083
+creating hex file from "1"...
+"1" - 0 Error(s), 7 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(392): warning C280: 'p1': unreferenced local variable
+main.c(394): warning C280: 'p4': unreferenced local variable
+main.c(1377): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+Program Size: data=77.1 xdata=0 code=5072
+creating hex file from "1"...
+"1" - 0 Error(s), 7 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(392): warning C280: 'p1': unreferenced local variable
+main.c(394): warning C280: 'p4': unreferenced local variable
+main.c(1377): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+Program Size: data=77.1 xdata=0 code=5065
+creating hex file from "1"...
+"1" - 0 Error(s), 7 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(392): warning C280: 'p1': unreferenced local variable
+main.c(394): warning C280: 'p4': unreferenced local variable
+main.c(1377): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+Program Size: data=77.1 xdata=0 code=5059
+creating hex file from "1"...
+"1" - 0 Error(s), 7 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(392): warning C280: 'p1': unreferenced local variable
+main.c(394): warning C280: 'p4': unreferenced local variable
+main.c(1379): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+Program Size: data=77.1 xdata=0 code=5061
+creating hex file from "1"...
+"1" - 0 Error(s), 7 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(392): warning C280: 'p1': unreferenced local variable
+main.c(394): warning C280: 'p4': unreferenced local variable
+main.c(1379): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+Program Size: data=77.1 xdata=0 code=5059
+creating hex file from "1"...
+"1" - 0 Error(s), 7 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+main.c(392): warning C280: 'p1': unreferenced local variable
+main.c(394): warning C280: 'p4': unreferenced local variable
+main.c(1379): warning C316: unterminated conditionals
+compiling i2c.c...
+compiling ds1302.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+Program Size: data=77.1 xdata=0 code=5063
+creating hex file from "1"...
+"1" - 0 Error(s), 7 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(392): warning C280: 'p1': unreferenced local variable
+main.c(394): warning C280: 'p4': unreferenced local variable
+main.c(1381): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?TIMESETTING?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?PCF8591PLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DS18B20READTEMP?MAIN
+Program Size: data=90.1 xdata=0 code=4998
+creating hex file from "1"...
+"1" - 0 Error(s), 11 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(392): warning C280: 'p1': unreferenced local variable
+main.c(394): warning C280: 'p4': unreferenced local variable
+main.c(1382): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?TIMESETTING?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?PCF8591PLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DS18B20READTEMP?MAIN
+Program Size: data=90.1 xdata=0 code=5001
+creating hex file from "1"...
+"1" - 0 Error(s), 11 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(392): warning C280: 'p1': unreferenced local variable
+main.c(394): warning C280: 'p4': unreferenced local variable
+main.c(1380): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+Program Size: data=77.1 xdata=0 code=5063
+creating hex file from "1"...
+"1" - 0 Error(s), 7 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(392): warning C280: 'p1': unreferenced local variable
+main.c(394): warning C280: 'p4': unreferenced local variable
+main.c(1381): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+Program Size: data=77.1 xdata=0 code=5066
+creating hex file from "1"...
+"1" - 0 Error(s), 7 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(392): warning C280: 'p1': unreferenced local variable
+main.c(394): warning C280: 'p4': unreferenced local variable
+main.c(1381): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+Program Size: data=77.1 xdata=0 code=5063
+creating hex file from "1"...
+"1" - 0 Error(s), 7 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(392): warning C280: 'p1': unreferenced local variable
+main.c(394): warning C280: 'p4': unreferenced local variable
+main.c(1487): warning C316: unterminated conditionals
+linking...
+*** WARNING L13: RECURSIVE CALL TO SEGMENT
+    SEGMENT: ?PR?LCDDISPLAY?MAIN
+    CALLER:  ?PR?_DAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+Program Size: data=77.1 xdata=0 code=5327
+creating hex file from "1"...
+"1" - 0 Error(s), 8 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(392): warning C280: 'p1': unreferenced local variable
+main.c(394): warning C280: 'p4': unreferenced local variable
+main.c(1382): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+Program Size: data=77.1 xdata=0 code=5063
+creating hex file from "1"...
+"1" - 0 Error(s), 7 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(392): warning C280: 'p1': unreferenced local variable
+main.c(394): warning C280: 'p4': unreferenced local variable
+main.c(1382): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY1?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAYA?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RESTTIME?MAIN
+Program Size: data=77.1 xdata=0 code=5056
+creating hex file from "1"...
+"1" - 0 Error(s), 7 Warning(s).

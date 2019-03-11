@@ -1,0 +1,7 @@
+"main.obj",
+"ds1302.obj",
+"I2C.obj",
+"temp.obj",
+"12864.obj" 
+TO "lab" 
+RAMSIZE(256) 

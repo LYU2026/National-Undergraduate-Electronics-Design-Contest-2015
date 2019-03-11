@@ -1,0 +1,155 @@
+C51 COMPILER V9.52.0.0   TIMECORRECT                                                       04/01/2015 13:29:08 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE TIMECORRECT
+OBJECT MODULE PLACED IN ..\Outpt\TimeCorrect.obj
+COMPILER INVOKED BY: C:\Program Files\keil\C51\BIN\C51.EXE ..\Source\TimeCorrect.c BROWSE DEBUG OBJECTEXTEND PRINT(.\Tim
+                    -eCorrect.lst) TABS(2) OBJECT(..\Outpt\TimeCorrect.obj)
+
+line level    source
+
+   1          //外部中断0
+   2          //P3.2接KEY1   P2接键盘
+   3          
+   4          //往main函数添加
+   5          TCON=0x02;
+   6          EA=1;EX0=1;
+   7          
+   8          
+   9          //interrupt 
+  10          void time() interrupt 0
+  11          {
+  12   1        while(1)
+  13   1        {
+  14   2          switch(keyboardscan())
+*** WARNING C206 IN LINE 14 OF ..\Source\TimeCorrect.c: 'keyboardscan': missing function-prototype
+  15   2           {
+  16   3          //case 0x77:
+  17   3          //    DisplayOneCharOnAddr(0,8); break;
+  18   3          case 0xb7://年加一
+  19   3              {  
+  20   4                  Time[6]=ucInitTime[6]+0xf0; 
+*** ERROR C202 IN LINE 20 OF ..\Source\TimeCorrect.c: 'Time': undefined identifier
+  21   4              //    DS1302_WriteOneByteAtAddr(0x8e,0x80); 
+  22   4               //   DS1302_SetInit(Time); 
+  23   4                //  LcdDisplay(); 
+  24   4              }
+  25   3          case 0xd7://年减1
+  26   3              {  
+  27   4                  Time[6]=ucInitTime[6]-0xf0; 
+*** ERROR C202 IN LINE 27 OF ..\Source\TimeCorrect.c: 'Time': undefined identifier
+  28   4                //  DS1302_WriteOneByteAtAddr(0x8e,0x80); 
+  29   4               //   DS1302_SetInit(Time); 
+  30   4                //  LcdDisplay(); 
+  31   4              }       
+  32   3          case 0xe7://month add
+  33   3                {  
+  34   4                  Time[5]=ucInitTime[5]+0xf0; 
+*** ERROR C202 IN LINE 34 OF ..\Source\TimeCorrect.c: 'Time': undefined identifier
+  35   4                //  DS1302_WriteOneByteAtAddr(0x8e,0x80); 
+  36   4                //  DS1302_SetInit(Time); 
+  37   4                //  LcdDisplay(); 
+  38   4              }   
+  39   3          case 0x7b:
+  40   3                  {  
+  41   4                  Time[5]=ucInitTime[5]-0xf0; 
+*** ERROR C202 IN LINE 41 OF ..\Source\TimeCorrect.c: 'Time': undefined identifier
+  42   4                //  DS1302_WriteOneByteAtAddr(0x8e,0x80); 
+  43   4                //  DS1302_SetInit(Time); 
+  44   4                //  LcdDisplay(); 
+  45   4                  } 
+  46   3          case 0xbb://day
+  47   3                    {  
+  48   4                  Time[4]=ucInitTime[4]+0xf0; 
+*** ERROR C202 IN LINE 48 OF ..\Source\TimeCorrect.c: 'Time': undefined identifier
+C51 COMPILER V9.52.0.0   TIMECORRECT                                                       04/01/2015 13:29:08 PAGE 2   
+
+  49   4                //  DS1302_WriteOneByteAtAddr(0x8e,0x80); 
+  50   4                 // DS1302_SetInit(Time); 
+  51   4                //  LcdDisplay(); 
+  52   4              } 
+  53   3          case 0xdb:
+  54   3                      {  
+  55   4                  Time[4]=ucInitTime[4]-0xf0; 
+*** ERROR C202 IN LINE 55 OF ..\Source\TimeCorrect.c: 'Time': undefined identifier
+  56   4                //  DS1302_WriteOneByteAtAddr(0x8e,0x80); 
+  57   4      //DS1302_SetInit(Time); 
+  58   4              //    LcdDisplay(); 
+  59   4              }  
+  60   3          case 0xeb://week
+  61   3                      {  
+  62   4                  Time[3]=ucInitTime[3]+0xf0; 
+*** ERROR C202 IN LINE 62 OF ..\Source\TimeCorrect.c: 'Time': undefined identifier
+  63   4              //    DS1302_WriteOneByteAtAddr(0x8e,0x80); 
+  64   4               //   DS1302_SetInit(Time); 
+  65   4                //  LcdDisplay(); 
+  66   4              }
+  67   3          case 0x7d:
+  68   3                      {  
+  69   4                  Time[3]=ucInitTime[3]-0xf0; 
+*** ERROR C202 IN LINE 69 OF ..\Source\TimeCorrect.c: 'Time': undefined identifier
+  70   4              //    DS1302_WriteOneByteAtAddr(0x8e,0x80); 
+  71   4               //   DS1302_SetInit(Time); 
+  72   4                //  LcdDisplay(); 
+  73   4              }
+  74   3          case 0xbd://hour
+  75   3                      {  
+  76   4                  Time[2]=ucInitTime[2]+0xf0; 
+*** ERROR C202 IN LINE 76 OF ..\Source\TimeCorrect.c: 'Time': undefined identifier
+  77   4                //  DS1302_WriteOneByteAtAddr(0x8e,0x80); 
+  78   4                //  DS1302_SetInit(Time); 
+  79   4                //  LcdDisplay(); 
+  80   4              }
+  81   3          case 0xdd:
+  82   3                      {  
+  83   4                  Time[2]=ucInitTime[2]-0xf0; 
+*** ERROR C202 IN LINE 83 OF ..\Source\TimeCorrect.c: 'Time': undefined identifier
+  84   4              //    DS1302_WriteOneByteAtAddr(0x8e,0x80); 
+  85   4               //   DS1302_SetInit(Time); 
+  86   4                //  LcdDisplay(); 
+  87   4              }
+  88   3          case 0xed://min
+  89   3                      Time[1]=ucInitTime[1]+0xf0; 
+*** ERROR C202 IN LINE 89 OF ..\Source\TimeCorrect.c: 'Time': undefined identifier
+  90   3          case 0x7e:
+  91   3                  Time[1]=ucInitTime[1]-0xf0; 
+*** ERROR C202 IN LINE 91 OF ..\Source\TimeCorrect.c: 'Time': undefined identifier
+  92   3          case 0xbe://sec
+  93   3                  Time[0]=ucInitTime[0]+0xf0; 
+*** ERROR C202 IN LINE 93 OF ..\Source\TimeCorrect.c: 'Time': undefined identifier
+  94   3          case 0xde:
+  95   3                    Time[0]=ucInitTime[0]-0xf0; 
+*** ERROR C202 IN LINE 95 OF ..\Source\TimeCorrect.c: 'Time': undefined identifier
+  96   3        //  case 0xee:
+  97   3            //  DisplayOneCharOnAddr(15,8); break; 
+  98   3          default: 
+  99   3                        DS1302_WriteOneByteAtAddr(0x8e,0x80); 
+ 100   3                  DS1302_SetInit(Time); 
+ 101   3                  LcdDisplay(); break;
+C51 COMPILER V9.52.0.0   TIMECORRECT                                                       04/01/2015 13:29:08 PAGE 3   
+
+ 102   3            } 
+ 103   2          show();     
+ 104   2        }
+ 105   1      }
+ 106          
+ 107          unsigned char keyboardscan(void)
+ 108          {
+ 109   1        unsigned char board_h, board_l;
+ 110   1        P2=0x0f;
+ 111   1        board_h=P1&0x0f;
+ 112   1        if(board_h!=0x0f)
+ 113   1        {
+ 114   2          delay(5);
+ 115   2          board_h=P1&0x0f;
+ 116   2          if(board_h!=0x0f)
+ 117   2          {
+ 118   3            P2=board_h|0xf0;
+ 119   3            board_l=P2&0xf0;
+ 120   3            return(board_h+board_l);
+ 121   3          }
+ 122   2        }
+ 123   1        return(0xff);
+ 124   1      }
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  14 ERROR(S)

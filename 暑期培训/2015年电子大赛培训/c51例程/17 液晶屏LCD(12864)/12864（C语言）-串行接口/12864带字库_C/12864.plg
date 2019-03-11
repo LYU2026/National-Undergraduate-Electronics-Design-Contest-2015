@@ -1,0 +1,17 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\Administrator\Desktop\2015年电子大赛培训\c51例程\17 液晶屏LCD(12864)\12864（C语言）-串行接口\12864带字库_C\12864C.uvproj
+Project File Date:  08/05/2014
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling 12864.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+Program Size: data=17.0 xdata=0 code=1873
+creating hex file from "12864"...
+"12864" - 0 Error(s), 1 Warning(s).

@@ -1,0 +1,217 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+D:\Study\单片机\吕有才--万年历\吕有才--万年历\Project\ds1302.uvproj
+Project File Date:  05/30/2015
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling main3.c...
+..\Source\main3.c(7): warning C318: can't open file 'temp.h'
+compiling temp.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCD1602_INIT?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN3
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?TIMESETTING?MAIN3
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?READTIME?MAIN3
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD12864_DISPLAYONECHARONADDR?12864
+Program Size: data=54.2 xdata=0 code=4489
+creating hex file from "..\Outpt\ds1302"...
+"..\Outpt\ds1302" - 0 Error(s), 9 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCD1602_INIT?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DAYDATA?MAIN3
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?TIMESETTING?MAIN3
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?READTIME?MAIN3
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD12864_DISPLAYONECHARONADDR?12864
+Program Size: data=54.2 xdata=0 code=4489
+creating hex file from "..\Outpt\ds1302"...
+"..\Outpt\ds1302" - 0 Error(s), 8 Warning(s).
+compiling main3.c...
+..\Source\main3.c(7): warning C318: can't open file 'temp.h'
+..\Source\main3.c - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD12864_DISPLAYONECHARONADDR?12864
+Program Size: data=52.1 xdata=0 code=2086
+creating hex file from "..\Outpt\ds1302"...
+"..\Outpt\ds1302" - 0 Error(s), 4 Warning(s).
+compiling main3.c...
+..\Source\main3.c(3): warning C318: can't open file 'lcd.h'
+..\Source\main3.c(5): warning C318: can't open file 'temp.h'
+..\Source\main3.c(37): warning C206: 'Ds18b20ReadTemp': missing function-prototype
+..\Source\main3.c(38): warning C206: 'LcdDisplayTemp0': missing function-prototype
+..\Source\main3.c(38): error C267: 'LcdDisplayTemp0': requires ANSI-style prototype
+..\Source\main3.c(46): error C231: 'LcdDisplayTemp0': redefinition
+..\Source\main3.c(51): error C202: 'DisplayData': undefined identifier
+..\Source\main3.c(64): error C202: 'DisplayData': undefined identifier
+..\Source\main3.c(74): error C202: 'Data0': undefined identifier
+..\Source\main3.c(75): error C202: 'Data0': undefined identifier
+..\Source\main3.c(76): error C202: 'Data0': undefined identifier
+..\Source\main3.c(77): error C202: 'Data0': undefined identifier
+..\Source\main3.c(78): error C202: 'Data0': undefined identifier
+..\Source\main3.c(82): error C202: 'Data0': undefined identifier
+..\Source\main3.c(114): error C231: 'LcdDisplayTemp0': redefinition
+..\Source\main3.c - 11 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main3.c...
+..\Source\main3.c(4): warning C318: can't open file 'lcd.h'
+..\Source\main3.c(6): warning C318: can't open file 'temp.h'
+..\Source\main3.c(38): warning C206: 'Ds18b20ReadTemp': missing function-prototype
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?MAIN3
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD12864_DISPLAYONECHARONADDR?12864
+Program Size: data=48.1 xdata=0 code=2109
+creating hex file from "..\Outpt\ds1302"...
+"..\Outpt\ds1302" - 0 Error(s), 8 Warning(s).
+compiling main3.c...
+..\Source\main3.c(4): warning C318: can't open file 'lcd.h'
+..\Source\main3.c(6): warning C318: can't open file 'temp.h'
+..\Source\pcf8591.h(2): warning C318: can't open file 'I2C.h'
+..\Source\main3.c(32): warning C206: 'Ds18b20ReadTemp': missing function-prototype
+..\Source\main3.c - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling ds1302.c...
+compiling I2C.c...
+..\Source\I2C.c(6): warning C318: can't open file 'I2C.h'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN3
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN3
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ADDISPLAY?MAIN3
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD12864_DISPLAYONECHARONADDR?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=125.3 xdata=32 code=3190
+creating hex file from "..\Outpt\ds1302"...
+"..\Outpt\ds1302" - 0 Error(s), 9 Warning(s).
+compiling main3.c...
+..\Source\main3.c(4): warning C318: can't open file 'lcd.h'
+..\Source\main3.c(6): warning C318: can't open file 'temp.h'
+..\Source\pcf8591.h(2): warning C318: can't open file 'I2C.h'
+..\Source\main3.c(32): warning C206: 'Ds18b20ReadTemp': missing function-prototype
+..\Source\main3.c - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN3
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN3
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ADDISPLAY?MAIN3
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD12864_DISPLAYONECHARONADDR?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=126.3 xdata=32 code=3190
+creating hex file from "..\Outpt\ds1302"...
+"..\Outpt\ds1302" - 0 Error(s), 8 Warning(s).
+Build target 'Target 1'
+compiling main3.c...
+..\Source\main3.c(4): warning C318: can't open file 'lcd.h'
+..\Source\main3.c(6): warning C318: can't open file 'temp.h'
+..\Source\pcf8591.h(2): warning C318: can't open file 'I2C.h'
+..\Source\main3.c(32): warning C206: 'Ds18b20ReadTemp': missing function-prototype
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN3
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN3
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN3
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD12864_DISPLAYONECHARONADDR?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=122.2 xdata=32 code=3190
+creating hex file from "..\Outpt\ds1302"...
+"..\Outpt\ds1302" - 0 Error(s), 12 Warning(s).
+compiling main3.c...
+..\Source\main3.c(4): warning C318: can't open file 'lcd.h'
+..\Source\main3.c(6): warning C318: can't open file 'temp.h'
+..\Source\pcf8591.h(2): warning C318: can't open file 'I2C.h'
+..\Source\main3.c(32): warning C206: 'Ds18b20ReadTemp': missing function-prototype
+..\Source\main3.c - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling temp.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN3
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN3
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ADDISPLAY?MAIN3
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD12864_DISPLAYONECHARONADDR?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=125.3 xdata=32 code=3190
+creating hex file from "..\Outpt\ds1302"...
+"..\Outpt\ds1302" - 0 Error(s), 8 Warning(s).

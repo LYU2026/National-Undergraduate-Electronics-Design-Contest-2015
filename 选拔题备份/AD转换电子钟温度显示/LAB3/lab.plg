@@ -1,0 +1,199 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+D:\Study\单片机\电子设计大赛\LAB3\lab.uvproj
+Project File Date:  05/30/2015
+
+<h2>Output:</h2>
+compiling main3.c...
+main3.c(4): warning C318: can't open file 'lcd.h'
+C:\Program Files\keil\C51\Inc\reg52.h(13): error C231: 'P0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(14): error C231: 'P1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(15): error C231: 'P2': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(16): error C231: 'P3': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(17): error C231: 'PSW': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(18): error C231: 'ACC': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(19): error C231: 'B': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(20): error C231: 'SP': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(21): error C231: 'DPL': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(22): error C231: 'DPH': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(23): error C231: 'PCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(24): error C231: 'TCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(25): error C231: 'TMOD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(26): error C231: 'TL0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(27): error C231: 'TL1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(28): error C231: 'TH0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(29): error C231: 'TH1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(30): error C231: 'IE': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(31): error C231: 'IP': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(32): error C231: 'SCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(33): error C231: 'SBUF': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(45): error C231: 'CY': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(46): error C231: 'AC': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(47): error C231: 'F0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(48): error C231: 'RS1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(49): error C231: 'RS0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(50): error C231: 'OV': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(51): error C231: 'P': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(54): error C231: 'TF1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(55): error C231: 'TR1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(56): error C231: 'TF0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(57): error C231: 'TR0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(58): error C231: 'IE1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(59): error C231: 'IT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(60): error C231: 'IE0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(61): error C231: 'IT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(64): error C231: 'EA': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(66): error C231: 'ES': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(67): error C231: 'ET1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(68): error C231: 'EX1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(69): error C231: 'ET0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(70): error C231: 'EX0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(74): error C231: 'PS': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(75): error C231: 'PT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(76): error C231: 'PX1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(77): error C231: 'PT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(78): error C231: 'PX0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(81): error C231: 'RD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(82): error C231: 'WR': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(83): error C231: 'T1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(84): error C231: 'T0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(85): error C231: 'INT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(86): error C231: 'INT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(87): error C231: 'TXD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(88): error C231: 'RXD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(91): error C231: 'SM0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(92): error C231: 'SM1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(93): error C231: 'SM2': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(94): error C231: 'REN': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(95): error C231: 'TB8': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(96): error C231: 'RB8': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(97): error C231: 'TI': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(98): error C231: 'RI': redefinition
+main3.c - 63 Error(s), 1 Warning(s).
+compiling 12864.c...
+12864.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling ds1302.c...
+compiling I2C.c...
+compiling main3.c...
+main3.c(4): warning C318: can't open file 'lcd.h'
+C:\Program Files\keil\C51\Inc\reg52.h(13): error C231: 'P0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(14): error C231: 'P1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(15): error C231: 'P2': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(16): error C231: 'P3': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(17): error C231: 'PSW': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(18): error C231: 'ACC': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(19): error C231: 'B': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(20): error C231: 'SP': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(21): error C231: 'DPL': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(22): error C231: 'DPH': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(23): error C231: 'PCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(24): error C231: 'TCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(25): error C231: 'TMOD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(26): error C231: 'TL0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(27): error C231: 'TL1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(28): error C231: 'TH0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(29): error C231: 'TH1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(30): error C231: 'IE': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(31): error C231: 'IP': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(32): error C231: 'SCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(33): error C231: 'SBUF': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(45): error C231: 'CY': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(46): error C231: 'AC': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(47): error C231: 'F0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(48): error C231: 'RS1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(49): error C231: 'RS0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(50): error C231: 'OV': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(51): error C231: 'P': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(54): error C231: 'TF1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(55): error C231: 'TR1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(56): error C231: 'TF0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(57): error C231: 'TR0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(58): error C231: 'IE1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(59): error C231: 'IT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(60): error C231: 'IE0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(61): error C231: 'IT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(64): error C231: 'EA': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(66): error C231: 'ES': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(67): error C231: 'ET1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(68): error C231: 'EX1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(69): error C231: 'ET0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(70): error C231: 'EX0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(74): error C231: 'PS': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(75): error C231: 'PT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(76): error C231: 'PX1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(77): error C231: 'PT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(78): error C231: 'PX0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(81): error C231: 'RD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(82): error C231: 'WR': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(83): error C231: 'T1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(84): error C231: 'T0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(85): error C231: 'INT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(86): error C231: 'INT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(87): error C231: 'TXD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(88): error C231: 'RXD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(91): error C231: 'SM0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(92): error C231: 'SM1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(93): error C231: 'SM2': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(94): error C231: 'REN': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(95): error C231: 'TB8': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(96): error C231: 'RB8': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(97): error C231: 'TI': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(98): error C231: 'RI': redefinition
+compiling temp.c...
+Target not created
+compiling main3.c...
+main3.c(4): warning C318: can't open file 'lcd.h'
+main3.c - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling temp.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD12864_DISPLAYONECHARONADDR?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN3
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN3
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ADDISPLAY?MAIN3
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY0?MAIN3
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DS18B20READTEMP?TEMP
+Program Size: data=126.3 xdata=32 code=3209
+creating hex file from "lab"...
+"lab" - 0 Error(s), 10 Warning(s).
+Build target 'Target 1'
+compiling main3.c...
+main3.c(4): warning C318: can't open file 'lcd.h'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD12864_DISPLAYONECHARONADDR?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN3
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN3
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY0?MAIN3
+Program Size: data=116.2 xdata=32 code=3215
+creating hex file from "lab"...
+"lab" - 0 Error(s), 9 Warning(s).

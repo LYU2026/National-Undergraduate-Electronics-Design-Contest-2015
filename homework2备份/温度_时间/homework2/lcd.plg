@@ -1,0 +1,695 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+D:\Study\单片机\电子设计大赛\homework2\lcd.uvproj
+Project File Date:  06/17/2015
+
+<h2>Output:</h2>
+compiling main.c...
+main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+Program Size: data=15.1 xdata=0 code=344
+"lcd" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+Program Size: data=15.1 xdata=0 code=344
+creating hex file from "lcd"...
+"lcd" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+Program Size: data=15.1 xdata=0 code=353
+creating hex file from "lcd"...
+"lcd" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+Program Size: data=12.1 xdata=0 code=371
+creating hex file from "lcd"...
+"lcd" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling 74HC164.c...
+compiling lcd.c...
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+Program Size: data=12.1 xdata=0 code=371
+creating hex file from "lcd"...
+"lcd" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling 74HC164.c...
+compiling lcd.c...
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+Program Size: data=12.1 xdata=0 code=371
+creating hex file from "lcd"...
+"lcd" - 0 Error(s), 1 Warning(s).
+Rebuild target 'Target 1'
+compiling 74HC164.c...
+compiling lcd.c...
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+Program Size: data=12.1 xdata=0 code=408
+creating hex file from "lcd"...
+"lcd" - 0 Error(s), 1 Warning(s).
+Rebuild target 'Target 1'
+compiling 74HC164.c...
+compiling lcd.c...
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+Program Size: data=12.1 xdata=0 code=415
+creating hex file from "lcd"...
+"lcd" - 0 Error(s), 1 Warning(s).
+Rebuild target 'Target 1'
+compiling 74HC164.c...
+compiling lcd.c...
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+Program Size: data=12.1 xdata=0 code=424
+creating hex file from "lcd"...
+"lcd" - 0 Error(s), 1 Warning(s).
+Rebuild target 'Target 1'
+compiling 74HC164.c...
+compiling lcd.c...
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+Program Size: data=12.1 xdata=0 code=433
+creating hex file from "lcd"...
+"lcd" - 0 Error(s), 1 Warning(s).
+compiling main.c...
+main.c - 0 Error(s), 0 Warning(s).
+Rebuild target 'Target 1'
+compiling 74HC164.c...
+compiling lcd.c...
+compiling main.c...
+compiling ds1302.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_READONEBYTEATADDR?DS1302
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=13.1 xdata=0 code=546
+creating hex file from "lcd"...
+"lcd" - 0 Error(s), 3 Warning(s).
+compiling main.c...
+main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling ds1302.c...
+ds1302.c(13): error C202: 'ACC': undefined identifier
+ds1302.c(14): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(17): error C202: 'DS1302_IO': undefined identifier
+ds1302.c(18): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(19): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(20): error C202: 'ACC': undefined identifier
+ds1302.c(34): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(37): error C202: 'ACC': undefined identifier
+ds1302.c(38): error C202: 'DS1302_IO': undefined identifier
+ds1302.c(39): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(40): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(41): error C202: 'ACC7': undefined identifier
+ds1302.c(43): error C202: 'ACC': undefined identifier
+ds1302.c(55): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(56): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(57): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(60): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(61): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(62): error C202: 'DS1302_IO': undefined identifier
+ds1302.c(75): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(76): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(77): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(80): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(81): error C202: 'DS1302_RST': undefined identifier
+Target not created
+compiling ds1302.c...
+ds1302.c(13): error C202: 'ACC': undefined identifier
+ds1302.c(14): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(17): error C202: 'DS1302_IO': undefined identifier
+ds1302.c(18): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(19): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(20): error C202: 'ACC': undefined identifier
+ds1302.c(34): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(37): error C202: 'ACC': undefined identifier
+ds1302.c(38): error C202: 'DS1302_IO': undefined identifier
+ds1302.c(39): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(40): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(41): error C202: 'ACC7': undefined identifier
+ds1302.c(43): error C202: 'ACC': undefined identifier
+ds1302.c(55): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(56): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(57): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(60): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(61): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(62): error C202: 'DS1302_IO': undefined identifier
+ds1302.c(75): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(76): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(77): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(80): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(81): error C202: 'DS1302_RST': undefined identifier
+ds1302.c - 24 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling ds1302.c...
+ds1302.c(13): error C202: 'ACC': undefined identifier
+ds1302.c(14): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(17): error C202: 'DS1302_IO': undefined identifier
+ds1302.c(18): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(19): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(20): error C202: 'ACC': undefined identifier
+ds1302.c(34): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(37): error C202: 'ACC': undefined identifier
+ds1302.c(38): error C202: 'DS1302_IO': undefined identifier
+ds1302.c(39): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(40): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(41): error C202: 'ACC7': undefined identifier
+ds1302.c(43): error C202: 'ACC': undefined identifier
+ds1302.c(55): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(56): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(57): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(60): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(61): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(62): error C202: 'DS1302_IO': undefined identifier
+ds1302.c(75): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(76): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(77): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(80): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(81): error C202: 'DS1302_RST': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling main.c...
+compiling ds1302.c...
+ds1302.c(13): error C202: 'ACC': undefined identifier
+ds1302.c(14): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(17): error C202: 'DS1302_IO': undefined identifier
+ds1302.c(18): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(19): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(20): error C202: 'ACC': undefined identifier
+ds1302.c(34): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(37): error C202: 'ACC': undefined identifier
+ds1302.c(38): error C202: 'DS1302_IO': undefined identifier
+ds1302.c(39): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(40): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(41): error C202: 'ACC7': undefined identifier
+ds1302.c(43): error C202: 'ACC': undefined identifier
+ds1302.c(55): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(56): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(57): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(60): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(61): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(62): error C202: 'DS1302_IO': undefined identifier
+ds1302.c(75): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(76): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(77): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(80): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(81): error C202: 'DS1302_RST': undefined identifier
+Target not created
+Rebuild target 'Target 1'
+compiling 74HC164.c...
+compiling lcd.c...
+compiling main.c...
+compiling ds1302.c...
+ds1302.c(13): error C202: 'ACC': undefined identifier
+ds1302.c(14): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(17): error C202: 'DS1302_IO': undefined identifier
+ds1302.c(18): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(19): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(20): error C202: 'ACC': undefined identifier
+ds1302.c(34): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(37): error C202: 'ACC': undefined identifier
+ds1302.c(38): error C202: 'DS1302_IO': undefined identifier
+ds1302.c(39): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(40): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(41): error C202: 'ACC7': undefined identifier
+ds1302.c(43): error C202: 'ACC': undefined identifier
+ds1302.c(55): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(56): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(57): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(60): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(61): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(62): error C202: 'DS1302_IO': undefined identifier
+ds1302.c(75): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(76): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(77): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(80): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(81): error C202: 'DS1302_RST': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling ds1302.c...
+ds1302.c(13): error C202: 'ACC': undefined identifier
+ds1302.c(14): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(17): error C202: 'DS1302_IO': undefined identifier
+ds1302.c(18): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(19): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(20): error C202: 'ACC': undefined identifier
+ds1302.c(34): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(37): error C202: 'ACC': undefined identifier
+ds1302.c(38): error C202: 'DS1302_IO': undefined identifier
+ds1302.c(39): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(40): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(41): error C202: 'ACC7': undefined identifier
+ds1302.c(43): error C202: 'ACC': undefined identifier
+ds1302.c(55): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(56): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(57): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(60): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(61): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(62): error C202: 'DS1302_IO': undefined identifier
+ds1302.c(75): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(76): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(77): error C202: 'DS1302_RST': undefined identifier
+ds1302.c(80): error C202: 'DS1302_CLK': undefined identifier
+ds1302.c(81): error C202: 'DS1302_RST': undefined identifier
+Target not created
+compiling ds1302.c...
+ds1302.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?READTIME?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=39.1 xdata=0 code=1028
+creating hex file from "lcd"...
+"lcd" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=42.1 xdata=0 code=934
+creating hex file from "lcd"...
+"lcd" - 0 Error(s), 3 Warning(s).
+Rebuild target 'Target 1'
+compiling 74HC164.c...
+compiling lcd.c...
+compiling main.c...
+compiling ds1302.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=42.1 xdata=0 code=934
+creating hex file from "lcd"...
+"lcd" - 0 Error(s), 3 Warning(s).
+compiling main.c...
+main.c(19): error C141: syntax error near ';'
+main.c - 1 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(20): warning C206: 'DS1302_SetIni': missing function-prototype
+main.c(20): error C267: 'DS1302_SetIni': requires ANSI-style prototype
+main.c(33): error C141: syntax error near '['
+main.c(33): error C141: syntax error near ']'
+Target not created
+compiling main.c...
+main.c(20): warning C206: 'DS1302_SetIni': missing function-prototype
+main.c(20): error C267: 'DS1302_SetIni': requires ANSI-style prototype
+main.c - 1 Error(s), 1 Warning(s).
+compiling main.c...
+main.c(20): warning C206: 'DS1302_SetIni': missing function-prototype
+main.c(20): error C267: 'DS1302_SetIni': requires ANSI-style prototype
+main.c - 1 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(20): warning C206: 'DS1302_SetIni': missing function-prototype
+main.c(20): error C267: 'DS1302_SetIni': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(20): warning C206: 'DS1302_SetIni': missing function-prototype
+main.c(20): error C267: 'DS1302_SetIni': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(20): warning C206: 'DS1302_SetIni': missing function-prototype
+main.c(20): error C267: 'DS1302_SetIni': requires ANSI-style prototype
+Target not created
+compiling main.c...
+main.c(20): warning C206: 'DS1302_SetIni': missing function-prototype
+main.c(20): error C267: 'DS1302_SetIni': requires ANSI-style prototype
+main.c - 1 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(20): error C141: syntax error near ']'
+Target not created
+compiling main.c...
+main.c(20): warning C206: 'DS1302_SetIni': missing function-prototype
+main.c(20): error C267: 'DS1302_SetIni': requires ANSI-style prototype
+main.c - 1 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(20): warning C206: 'DS1302_SetIni': missing function-prototype
+main.c(20): error C267: 'DS1302_SetIni': requires ANSI-style prototype
+Target not created
+compiling ds1302.c...
+ds1302.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(20): warning C206: 'DS1302_SetIni': missing function-prototype
+main.c(20): error C267: 'DS1302_SetIni': requires ANSI-style prototype
+Target not created
+compiling main.c...
+main.c(15): error C141: syntax error near '['
+main.c - 1 Error(s), 0 Warning(s).
+compiling main.c...
+main.c(20): warning C206: 'DS1302_SetIni': missing function-prototype
+main.c(20): error C267: 'DS1302_SetIni': requires ANSI-style prototype
+main.c - 1 Error(s), 1 Warning(s).
+compiling main.c...
+main.c(20): warning C206: 'DS1302_SetIni': missing function-prototype
+main.c(20): error C267: 'DS1302_SetIni': requires ANSI-style prototype
+main.c - 1 Error(s), 1 Warning(s).
+compiling main.c...
+main.c(40): warning C209: '_DS1302_SetInit': too few actual parameters
+main.c(42): error C100: unprintable character 0xD5 skipped
+main.c(42): error C100: unprintable character 0xD2 skipped
+main.c(42): error C100: unprintable character 0xC4 skipped
+main.c(42): error C100: unprintable character 0xFA skipped
+main.c(42): error C100: unprintable character 0xB8 skipped
+main.c(42): error C100: unprintable character 0xB6 skipped
+main.c(42): error C100: unprintable character 0xBF skipped
+main.c(42): error C100: unprintable character 0xEE skipped
+main.c - 8 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(40): warning C209: '_DS1302_SetInit': too few actual parameters
+main.c(42): error C100: unprintable character 0xD5 skipped
+main.c(42): error C100: unprintable character 0xD2 skipped
+main.c(42): error C100: unprintable character 0xC4 skipped
+main.c(42): error C100: unprintable character 0xFA skipped
+main.c(42): error C100: unprintable character 0xB8 skipped
+main.c(42): error C100: unprintable character 0xB6 skipped
+main.c(42): error C100: unprintable character 0xBF skipped
+main.c(42): error C100: unprintable character 0xEE skipped
+Target not created
+compiling main.c...
+main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=53.1 xdata=0 code=1082
+creating hex file from "lcd"...
+"lcd" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=53.1 xdata=0 code=1085
+creating hex file from "lcd"...
+"lcd" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+Program Size: data=52.1 xdata=0 code=1094
+creating hex file from "lcd"...
+"lcd" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(103): error C141: syntax error near ']'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+Program Size: data=52.1 xdata=0 code=1094
+creating hex file from "lcd"...
+"lcd" - 0 Error(s), 2 Warning(s).
+Rebuild target 'Target 1'
+compiling 74HC164.c...
+compiling lcd.c...
+compiling main.c...
+compiling ds1302.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=53.1 xdata=0 code=1085
+creating hex file from "lcd"...
+"lcd" - 0 Error(s), 4 Warning(s).
+compiling main.c...
+74HC165.h(6): error C202: 'P21': undefined identifier
+main.c - 1 Error(s), 0 Warning(s).
+compiling main.c...
+main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling 74HC165.c...
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  DAT
+    MODULE:  74HC165.obj (74HC165)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _DELAY
+    MODULE:  74HC165.obj (74HC165)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC165
+Program Size: data=55.1 xdata=0 code=1190
+Target not created
+compiling 74HC165.c...
+74HC165.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  DAT
+    MODULE:  74HC165.obj (74HC165)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=55.1 xdata=0 code=1179
+Target not created
+compiling main.c...
+main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling 74HC165.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=53.1 xdata=0 code=1179
+creating hex file from "lcd"...
+"lcd" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=53.1 xdata=0 code=1166
+creating hex file from "lcd"...
+"lcd" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling 74HC165.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=53.1 xdata=0 code=1166
+creating hex file from "lcd"...
+"lcd" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling 74HC165.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=53.1 xdata=0 code=1166
+creating hex file from "lcd"...
+"lcd" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling 74HC165.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=53.1 xdata=0 code=1166
+creating hex file from "lcd"...
+"lcd" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling 74HC165.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=53.1 xdata=0 code=1166
+creating hex file from "lcd"...
+"lcd" - 0 Error(s), 4 Warning(s).
+compiling main.c...
+main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling 74HC165.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=53.1 xdata=0 code=1166
+creating hex file from "lcd"...
+"lcd" - 0 Error(s), 4 Warning(s).
+compiling main.c...
+main.c(141): error C202: 'Seg_Data': undefined identifier
+main.c - 1 Error(s), 0 Warning(s).
+compiling main.c...
+main.c(178): warning C206: 'lcd_wcmd': missing function-prototype
+main.c(178): error C267: 'lcd_wcmd': requires ANSI-style prototype
+main.c - 1 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(178): warning C206: 'lcd_wcmd': missing function-prototype
+main.c(178): error C267: 'lcd_wcmd': requires ANSI-style prototype
+compiling 18B20.c...
+Target not created
+compiling main.c...
+main.c(191): error C300: unterminated comment
+main.c(191): error C141: syntax error near ''
+main.c - 2 Error(s), 0 Warning(s).
+compiling main.c...
+main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=63.1 xdata=0 code=2546
+creating hex file from "lcd"...
+"lcd" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=63.1 xdata=0 code=2546
+creating hex file from "lcd"...
+"lcd" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=63.1 xdata=0 code=2546
+creating hex file from "lcd"...
+"lcd" - 0 Error(s), 3 Warning(s).

@@ -1,0 +1,5 @@
+"uart_slave.obj",
+"lcd.obj",
+"uart.obj" 
+TO "adc_slave" 
+RAMSIZE(256) 

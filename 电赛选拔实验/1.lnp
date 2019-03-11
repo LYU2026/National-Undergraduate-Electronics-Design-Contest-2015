@@ -1,0 +1,5 @@
+"main.obj",
+"i2c.obj",
+"ds1302.obj" 
+TO "1" 
+RAMSIZE(256) 

@@ -1,0 +1,8 @@
+"74HC164.obj",
+"lcd.obj",
+"main.obj",
+"ds1302.obj",
+"74HC165.obj",
+"18B20.obj" 
+TO "lcd" 
+RAMSIZE(256) 

@@ -1,0 +1,1 @@
+"..\Source\18B20\temp.c" BROWSE DEBUG OBJECTEXTEND PRINT(.\temp.lst) TABS (2) OBJECT(..\Outpt\temp.obj)

@@ -1,0 +1,120 @@
+C51 COMPILER V9.52.0.0   1                                                                 05/29/2015 16:10:33 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE 1
+OBJECT MODULE PLACED IN 1.OBJ
+COMPILER INVOKED BY: C:\Program Files\keil\C51\BIN\C51.EXE 1.c LARGE BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #include<reg52.h>
+   2          #include<intrins.h>
+   3          #include"main.h"
+   4          #include"12864.h"
+   5          
+   6          
+   7          
+   8          void delay0(unsigned int n)
+   9          {
+  10   1        unsigned int k;
+  11   1        for(k=2;k>0;k--)
+  12   1        {
+  13   2          while(n--){NOP();}
+*** WARNING C206 IN LINE 13 OF 1.c: 'NOP': missing function-prototype
+  14   2        }
+  15   1      }
+  16          void main()
+  17          {
+  18   1         lcd_init();                 //≥ı ºªØLCD
+  19   1        while(1)
+  20   1        {
+  21   2          LcdDisplayTemp0(Ds18b20ReadTemp());//œ‘ æŒ¬∂»
+*** WARNING C206 IN LINE 21 OF 1.c: 'Ds18b20ReadTemp': missing function-prototype
+  22   2        }
+  23   1      }
+  24          
+  25          void LcdDisplayTemp0(int temp)   //lcdœ‘ æ
+  26          {
+  27   1        unsigned char i; unsigned char T[5];
+  28   1          float tp;  
+  29   1        if(temp< 0)       //µ±Œ¬∂»÷µŒ™∏∫ ˝
+  30   1          {
+  31   2          DisplayData[0] = 0x40; 
+  32   2          //“ÚŒ™∂¡»°µƒŒ¬∂» « µº Œ¬∂»µƒ≤π¬Î£¨À˘“‘ºı1£¨‘Ÿ»°∑¥«Û≥ˆ‘≠¬Î
+  33   2          temp=temp-1;
+  34   2          temp=~temp;
+  35   2          tp=temp;
+  36   2          temp=tp*0.0625*100+0.5; 
+  37   2          //¡Ù¡Ω∏ˆ–° ˝µ„æÕ*100£¨+0.5 «Àƒ…·ŒÂ»Î£¨“ÚŒ™C”Ô—‘∏°µ„ ˝◊™ªªŒ™’˚–Õµƒ ±∫Ú∞—–° ˝µ„
+  38   2          //∫Û√Êµƒ ˝◊‘∂Ø»•µÙ£¨≤ªπ‹ «∑Ò¥Û”⁄0.5£¨∂¯+0.5÷Æ∫Û¥Û”⁄0.5µƒæÕ «Ω¯1¡À£¨–°”⁄0.5µƒæÕ
+  39   2          //À„”…œ0.5£¨ªπ «‘⁄–° ˝µ„∫Û√Ê°£
+  40   2       
+  41   2          }
+  42   1        else
+  43   1          {     
+  44   2          DisplayData[0] = 0x00;
+  45   2          tp=temp;//“ÚŒ™ ˝æ›¥¶¿Ì”––° ˝µ„À˘“‘Ω´Œ¬∂»∏≥∏¯“ª∏ˆ∏°µ„–Õ±‰¡ø
+  46   2          //»Áπ˚Œ¬∂» «’˝µƒƒ«√¥£¨ƒ«√¥’˝ ˝µƒ‘≠¬ÎæÕ «≤π¬ÎÀ¸±æ…Ì
+  47   2          temp=tp*0.0625*100+0.5; 
+  48   2          //¡Ù¡Ω∏ˆ–° ˝µ„æÕ*100£¨+0.5 «Àƒ…·ŒÂ»Î£¨“ÚŒ™C”Ô—‘∏°µ„ ˝◊™ªªŒ™’˚–Õµƒ ±∫Ú∞—–° ˝µ„
+  49   2          //∫Û√Êµƒ ˝◊‘∂Ø»•µÙ£¨≤ªπ‹ «∑Ò¥Û”⁄0.5£¨∂¯+0.5÷Æ∫Û¥Û”⁄0.5µƒæÕ «Ω¯1¡À£¨–°”⁄0.5µƒæÕ
+  50   2          //À„º”…œ0.5£¨ªπ «‘⁄–° ˝µ„∫Û√Ê°£
+  51   2        }
+  52   1        //P3=tp;
+  53   1      
+C51 COMPILER V9.52.0.0   1                                                                 05/29/2015 16:10:33 PAGE 2   
+
+  54   1        Data0[0] = temp / 10000;
+  55   1        Data0[1] = temp % 10000 / 1000;
+  56   1        Data0[2] = temp % 1000 / 100 ;
+  57   1        Data0[3] = temp % 100 / 10;
+  58   1        Data0[4] = temp % 10;
+  59   1        
+  60   1        for(i=0;i<=4;i++)
+  61   1        {
+  62   2          switch(Seg_Data[Data0[i]])
+  63   2          {
+  64   3            case 0xc0:
+  65   3            {T[i]=0x30;break;}
+  66   3            case 0xF9:
+  67   3            {T[i]=0x31;break;}
+  68   3            case 0xA4:
+  69   3            {T[i]=0x32;break;}
+  70   3            case 0xB0:
+  71   3            {T[i]=0x33;break;}
+  72   3            case 0x99:
+  73   3            {T[i]=0x34;break;}
+  74   3            case 0x92:
+  75   3            { T[i]=0x35;break;}
+  76   3            case 0x82:
+  77   3            { T[i]=0x36;break;}
+  78   3            case 0xF8:
+  79   3            {T[i]=0x37;break;}
+  80   3            case 0x80:
+  81   3            {T[i]=0x38;break;}
+  82   3            case 0x90:
+  83   3            {T[i]=0x39;break;}      
+  84   3          }
+  85   2        }
+  86   1        lcd_wcmd(0x80); 
+  87   1         for(i=0;i<5;i++)
+  88   1           {
+  89   2             lcd_wdat(T[i]);
+  90   2             //delay0();
+  91   2           }
+  92   1        
+  93   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    925    ----
+   CONSTANT SIZE    =   2081    ----
+   XDATA SIZE       =     37      14
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  2 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,5 @@
+"main.obj",
+"74HC164.obj",
+"lcd.obj" 
+TO "LCD_165_164" 
+RAMSIZE(256) 

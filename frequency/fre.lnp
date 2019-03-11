@@ -1,0 +1,6 @@
+"STARTUP.obj",
+"main.obj",
+"lcd12864.obj",
+"hc165.obj" 
+TO "fre" 
+RAMSIZE(256) 

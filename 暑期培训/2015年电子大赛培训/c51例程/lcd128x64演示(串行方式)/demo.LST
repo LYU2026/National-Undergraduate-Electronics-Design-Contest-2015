@@ -1,0 +1,490 @@
+C51 COMPILER V9.01   DEMO                                                                  06/18/2015 20:17:34 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE DEMO
+OBJECT MODULE PLACED IN demo.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE demo.c OPTIMIZE(7,SPEED) BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          //************************************************************************
+   2          //       demo.c    TYD-51-1实验板演示程序
+   3          //
+   4          //       (F)键：小时+1
+   5          //       (E)键：小时-1
+   6          //       (D)键：分+1
+   7          //       (C)键：分-1
+   8          //       (B)键：秒=0
+   9          //
+  10          //       (3)键：8位LED发光管测试
+  11          //       (2)键：8位LED数码管测试
+  12          //       (1)键：4*4键盘代码测试
+  13          //
+  14          //       p14:scl
+  15          //       p15:sda
+  16          //
+  17          //************************************************************************
+  18          #include <reg52.h>
+  19          #include "VIiC_C51.H"                   //包含VI2C软件包
+  20          #include "lcd.H"
+  21          
+  22          sbit LCD_PSB =  P3^2;      //串/并方式控制
+  23          
+  24          #define EEPROM24C02     0xA0            //24C02器件地址
+  25          #define PCF8563         0xA2            //PCF8563器件地址
+  26          #define WRADDR          0x00            //定义写单元首地址
+  27          #define RDADDR          0x02            //定义读单元首地址
+  28          
+  29          unsigned char code wei_tab[]={0x7f,0xbf,0xdf,0xef,0xf7,0xfb,0xfd,0xfe};
+  30          
+  31          unsigned char code led_tab[]={0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,   //0,1,2,3,4,5,6,7
+  32                                                                    0x7f,0x6f,0x77,0x7c,0x39,0x5e,0x79,0x71,   //8,9,A,B,C,D,E,F
+  33                                                                    0xbf,0x86,0xdb,0xcf,0xe6,0xed,0xfd,0x87,   //0.,1.,2.,3.,4.,5.,6.,7.
+  34                                                                    0xff,0xef,0xf7,0xfc,0xb9,0xde,0xf9,0xf1,   //8.,9.,A.,B.,C.,D.,E.,F.
+  35                                                                    0x00,0x40,0x73,0x38,0x76,0x50,0x78,0x6e};  //灭,-,P,L,H,r,t,y 
+  36          
+  37          unsigned char led_buffer[8];
+  38          
+  39          unsigned char code td[9]={0x00,0x12,0x00,0x25,0x17,0x27,0x00,0x02,0x11};        //定义初始化字
+  40                //                             秒   分   时   日  星期  月    年 
+  41          unsigned char code tyd[8]={0x26,0x27,0x0d,0x21,0x05,0x01,0x21,0x01};                
+  42          unsigned char rd[8];    //定义I2C接收缓冲区
+  43          unsigned char code disp_buffer[]={"欢迎使用TYD-51-12011年  03月27日  星期三  25℃      21:56:45    "};
+  44          unsigned char code hz[]={"日一二三四五六"};
+  45          int count=0;
+  46          char disp_count=0;
+  47          
+  48          char year=11;
+  49          char month=3;
+  50          char day=27;
+  51          char week=0;
+  52          char hour=23;
+  53          char min=56;
+  54          char sec=20;
+  55          int ms=0;
+C51 COMPILER V9.01   DEMO                                                                  06/18/2015 20:17:34 PAGE 2   
+
+  56          unsigned char key_code=0;
+  57          char temp=25;
+  58          
+  59          bit key_press=0;
+  60          bit     swich_date=0;
+  61          
+  62          
+  63          void lcd_clock()
+  64          {
+  65   1              unsigned char i;
+  66   1              for(i=0;i<16;i++)
+  67   1              {
+  68   2                  lcd_buffer[i]=disp_buffer[i];
+  69   2              }
+  70   1              disp_line(0,lcd_buffer);
+  71   1      
+  72   1              for(i=0;i<16;i++)
+  73   1              {
+  74   2                  lcd_buffer[i]=disp_buffer[i+16];
+  75   2              }
+  76   1              lcd_buffer[2]=year/10+'0';
+  77   1              lcd_buffer[3]=year%10+'0';
+  78   1      
+  79   1              lcd_buffer[8]=month/10+'0';
+  80   1              lcd_buffer[9]=month%10+'0';
+  81   1      
+  82   1              lcd_buffer[12]=day/10+'0';
+  83   1              lcd_buffer[13]=day%10+'0';
+  84   1      
+  85   1              disp_line(1,lcd_buffer);
+  86   1      
+  87   1              for(i=0;i<16;i++)
+  88   1              {
+  89   2                  lcd_buffer[i]=disp_buffer[i+32];
+  90   2              }
+  91   1      
+  92   1              lcd_buffer[6]=hz[week*2];
+  93   1              lcd_buffer[7]=hz[week*2+1];
+  94   1      
+  95   1              lcd_buffer[10]=temp/10+'0';
+  96   1              lcd_buffer[11]=temp%10+'0';
+  97   1      
+  98   1              disp_line(2,lcd_buffer);
+  99   1              
+ 100   1              for(i=0;i<16;i++)
+ 101   1              {
+ 102   2                  lcd_buffer[i]=disp_buffer[i+48];
+ 103   2              }
+ 104   1              
+ 105   1              lcd_buffer[4]=hour/10+'0';
+ 106   1              lcd_buffer[5]=hour%10+'0';
+ 107   1      
+ 108   1              lcd_buffer[7]=min/10+'0';
+ 109   1              lcd_buffer[8]=min%10+'0';
+ 110   1      
+ 111   1              lcd_buffer[10]=sec/10+'0';
+ 112   1              lcd_buffer[11]=sec%10+'0';
+ 113   1              disp_line(3,lcd_buffer);
+ 114   1      }
+ 115          
+ 116          void delay(long dly)
+ 117          {
+C51 COMPILER V9.01   DEMO                                                                  06/18/2015 20:17:34 PAGE 3   
+
+ 118   1              while(dly--);
+ 119   1      }
+ 120          
+ 121          void disp_led(void)
+ 122          {
+ 123   1              P0=0xff;
+ 124   1              P2=wei_tab[disp_count];
+ 125   1              P0=~led_tab[led_buffer[disp_count]];
+ 126   1              disp_count++;
+ 127   1              if(disp_count>7)
+ 128   1              {
+ 129   2                      disp_count=0;
+ 130   2              }
+ 131   1      }
+ 132          
+ 133          void get_data(long dat)
+ 134          {
+ 135   1              long x;
+ 136   1              x=dat;
+ 137   1              led_buffer[0]=x/100000;
+ 138   1              x=x%100000;
+ 139   1              led_buffer[1]=x/10000;
+ 140   1              x=x%10000;
+ 141   1              led_buffer[2]=x/1000;
+ 142   1              x=x%1000;
+ 143   1              led_buffer[3]=x/100;
+ 144   1              x=x%100;
+ 145   1          led_buffer[4]=x/10;
+ 146   1              x=x%10;
+ 147   1              led_buffer[5]=x;
+ 148   1      }
+ 149          
+ 150          void get_clock(void)
+ 151          {
+ 152   1              led_buffer[0]=hour/10;
+ 153   1              led_buffer[1]=hour%10;
+ 154   1              led_buffer[2]=0x21;
+ 155   1      
+ 156   1              led_buffer[3]=min/10;
+ 157   1              led_buffer[4]=min%10;
+ 158   1              led_buffer[5]=0x21;
+ 159   1      
+ 160   1              led_buffer[6]=sec/10;
+ 161   1              led_buffer[7]=sec%10;
+ 162   1      }
+ 163          
+ 164          void get_key_code(void)
+ 165          {
+ 166   1              led_buffer[0]=0x0c;
+ 167   1              led_buffer[1]=0x00;
+ 168   1              led_buffer[2]=0x0d;
+ 169   1              led_buffer[3]=0x0e;
+ 170   1              led_buffer[4]=0x21;
+ 171   1              led_buffer[5]=key_code/16;
+ 172   1              led_buffer[6]=key_code%16;
+ 173   1              led_buffer[7]=0x24;
+ 174   1      }
+ 175          
+ 176          void num_led_test(void)
+ 177          {
+ 178   1              char i,j;
+ 179   1              for(i=0;i<0x27;i++)
+C51 COMPILER V9.01   DEMO                                                                  06/18/2015 20:17:34 PAGE 4   
+
+ 180   1              {
+ 181   2                      for(j=0;j<8;j++)
+ 182   2                      {
+ 183   3                              led_buffer[j]=i;
+ 184   3                      }
+ 185   2                      delay(15000);
+ 186   2              }
+ 187   1              for(j=0;j<8;j++)
+ 188   1              {
+ 189   2                      led_buffer[j]=j+1;
+ 190   2              }
+ 191   1              delay(50000);
+ 192   1      }
+ 193          
+ 194          void lsd_led_test(void)
+ 195          {
+ 196   1              unsigned char x,i;
+ 197   1      /*
+ 198   1              led_buffer[0]=0x26;
+ 199   1              led_buffer[1]=0x27;
+ 200   1              led_buffer[2]=0x0d;
+ 201   1              led_buffer[3]=0x21;
+ 202   1              led_buffer[4]=0x05;
+ 203   1              led_buffer[5]=0x01;
+ 204   1              led_buffer[6]=0x21;
+ 205   1              led_buffer[7]=0x01;
+ 206   1      */
+ 207   1              P1=0x00;
+ 208   1              delay(15000);
+ 209   1              P1=0xff;
+ 210   1              delay(15000);
+ 211   1              P1=0x00;
+ 212   1              delay(15000);
+ 213   1              P1=0xff;
+ 214   1              delay(15000);
+ 215   1          x=1;
+ 216   1              for(i=0;i<9;i++)
+ 217   1              {
+ 218   2                      P1=~x;
+ 219   2              x=x<<1;
+ 220   2                      delay(15000);
+ 221   2              }
+ 222   1      }
+ 223          
+ 224          void clock(void)
+ 225          {
+ 226   1              ms++;
+ 227   1              if(ms>999)
+ 228   1              {
+ 229   2                      ms=0;
+ 230   2                      sec++;
+ 231   2                      if(sec>59)
+ 232   2                      {
+ 233   3                              sec=0;
+ 234   3                              min++;
+ 235   3                              if(min>59)
+ 236   3                              {
+ 237   4                                      min=0;
+ 238   4                                      hour++;
+ 239   4                                      if(hour>23)
+ 240   4                                      {
+ 241   5                                              hour=0;
+C51 COMPILER V9.01   DEMO                                                                  06/18/2015 20:17:34 PAGE 5   
+
+ 242   5                                      }
+ 243   4                              }
+ 244   3                      }
+ 245   2              //      get_clock();
+ 246   2              }
+ 247   1      }
+ 248          
+ 249          
+ 250          void init_timer0(void)
+ 251          {
+ 252   1              TMOD=0x01;              /*设置T0工作计数方式1*/
+ 253   1              TH0=0xfc;               /*加1计数器高8位TH0赋初值*/
+ 254   1              TL0=0x66;              /*加1计数器低8位TL0赋初值*/
+ 255   1              ET0=1;                   /*T0开中断*/
+ 256   1      //      EA=1;                    /*CPU开中断*/
+ 257   1              TR0=1;
+ 258   1      
+ 259   1      }
+ 260          
+ 261          void read_key(void)
+ 262          {
+ 263   1              unsigned char x;
+ 264   1          P3=0xf0;
+ 265   1              x=P3|0x0f;
+ 266   1      //      P1=P3;
+ 267   1              if(x!=0xff)
+ 268   1              {
+ 269   2                      delay(1000);
+ 270   2                  P3=0xf0;
+ 271   2                  x=P3|0x0f;
+ 272   2                      if(x!=0xff)
+ 273   2                      {
+ 274   3                          P3=x;
+ 275   3                              key_code=P3;
+ 276   3                              key_press=1;
+ 277   3                      }
+ 278   2              }
+ 279   1      }
+ 280          
+ 281          void key_test(void)
+ 282          {
+ 283   1              get_key_code();
+ 284   1              while(1)
+ 285   1              {
+ 286   2                      read_key();
+ 287   2                      if(key_press==1)
+ 288   2                      {
+ 289   3                              key_press=0;
+ 290   3                              get_key_code();
+ 291   3                      }
+ 292   2                      delay(3000);
+ 293   2          }
+ 294   1      }
+ 295          
+ 296          void key_fenxi(void)
+ 297          {
+ 298   1              switch (key_code)
+ 299   1              {
+ 300   2                      case 0x77:
+ 301   2                              hour++;
+ 302   2                              if(hour>23)
+ 303   2                              {
+C51 COMPILER V9.01   DEMO                                                                  06/18/2015 20:17:34 PAGE 6   
+
+ 304   3                                      hour=0;
+ 305   3                              }
+ 306   2                              break;
+ 307   2                      case 0x7b:
+ 308   2                              hour--;
+ 309   2                              if(hour<0)
+ 310   2                              {
+ 311   3                                      hour=23;
+ 312   3                              }
+ 313   2                              break;
+ 314   2                      case 0x7d:
+ 315   2                              min++;
+ 316   2                              if(min>59)
+ 317   2                              {
+ 318   3                                      min=0;
+ 319   3                              }
+ 320   2                              break;
+ 321   2                      case 0x7e:
+ 322   2                              min--;
+ 323   2                              if(min<0)
+ 324   2                              {
+ 325   3                                      min=59;
+ 326   3                              }
+ 327   2                              break;
+ 328   2                      case 0xb7:
+ 329   2                              sec=0;
+ 330   2                              break;
+ 331   2                      case 0xe7:
+ 332   2                              lsd_led_test();
+ 333   2                              break;
+ 334   2                      case 0xeb:
+ 335   2                              num_led_test();
+ 336   2                              break;
+ 337   2                      case 0xed:
+ 338   2                              key_test();
+ 339   2                              break;
+ 340   2                      case 0xee:
+ 341   2                              swich_date=~swich_date;
+ 342   2                              break;
+ 343   2      
+ 344   2              }
+ 345   1      }
+ 346          
+ 347          void display_time(unsigned char  *sd)
+ 348          { 
+ 349   1              sd[0]=sd[0]&0x7f;//秒屏蔽保留位
+ 350   1              sd[1]=sd[1]&0x7f;//分屏蔽保留位
+ 351   1              sd[2]=sd[2]&0x3f;//时屏蔽保留位
+ 352   1          led_buffer[0] =(sd[2]/16);
+ 353   1          led_buffer[1] =(sd[2]%16);  
+ 354   1          led_buffer[2] =0x21;
+ 355   1          led_buffer[3] =(sd[1]/16);
+ 356   1          led_buffer[4] =(sd[1]%16);
+ 357   1          led_buffer[5] =0x21;
+ 358   1          led_buffer[6] =(sd[0]/16);          
+ 359   1              led_buffer[7] =(sd[0]%16);                      
+ 360   1      }
+ 361          void display_date(unsigned char  *sd)
+ 362          { 
+ 363   1              sd[0]=sd[0]&0x3f;//日屏蔽保留位
+ 364   1              sd[2]=sd[2]&0x1f;//月屏蔽保留位
+ 365   1          led_buffer[0] =2;
+C51 COMPILER V9.01   DEMO                                                                  06/18/2015 20:17:34 PAGE 7   
+
+ 366   1              led_buffer[1] =0;       
+ 367   1          led_buffer[2] =(sd[3]/16);
+ 368   1          led_buffer[3] =(sd[3]%16)+0x10;//后面加小数点
+ 369   1          led_buffer[4] =(sd[2]/16);
+ 370   1          led_buffer[5] =(sd[2]%16)+0x10;//后面加小数点
+ 371   1          led_buffer[6] =(sd[0]/16);          
+ 372   1              led_buffer[7] =(sd[0]%16);                      
+ 373   1      }
+ 374          
+ 375          void get_tyd(void)
+ 376          {
+ 377   1              char i;
+ 378   1              for(i=0;i<8;i++)
+ 379   1              {
+ 380   2                      led_buffer[i] =rd[i];
+ 381   2          }
+ 382   1      } 
+ 383          
+ 384          void get_clock1(void)
+ 385          {
+ 386   1              rd[0]=rd[0]&0x7f;//秒屏蔽保留位
+ 387   1              rd[1]=rd[1]&0x7f;//分屏蔽保留位
+ 388   1              rd[2]=rd[2]&0x3f;//时屏蔽保留位
+ 389   1              rd[3]=rd[3]&0x3f;//日屏蔽保留位
+ 390   1              rd[4]=rd[4]&0x07;//周屏蔽保留位
+ 391   1              rd[5]=rd[5]&0x1f;//月屏蔽保留位
+ 392   1      
+ 393   1          sec=(rd[0]/16)*10+(rd[0]%16);
+ 394   1          min=(rd[1]/16)*10+(rd[1]%16);
+ 395   1          hour=(rd[2]/16)*10+(rd[2]%16);
+ 396   1          week=rd[4];
+ 397   1              day=(rd[3]/16)*10+(rd[3]%16);
+ 398   1              month=(rd[5]/16)*10+(rd[5]%16);
+ 399   1              year=(rd[6]/16)*10+(rd[6]%16);
+ 400   1      }
+ 401          
+ 402          
+ 403          void main(void)
+ 404          {
+ 405   1              long x=0;
+ 406   1              LCD_PSB=0;
+ 407   1      
+ 408   1      //      ISendStr(EEPROM24C02,0x00,tyd,8);
+ 409   1      //      delay(1000);
+ 410   1      //      IRcvStr(EEPROM24C02,0x00,rd,0x8);       //读现在的时、分、秒
+ 411   1      //  get_tyd();
+ 412   1              HZLCD_Init ();
+ 413   1              while(1);
+ 414   1              screen(disp_buffer);
+ 415   1              delay(60000);
+ 416   1      //      lcd_demo();
+ 417   1              init_timer0();
+ 418   1      //      lsd_led_test();
+ 419   1          
+ 420   1      //      ISendStr(PCF8563,WRADDR,td,0x5);        //初始化PCF8563,如果需要的话可以不去掉
+ 421   1      //      delay(1000);
+ 422   1      //      ISendStr(PCF8563,WRADDR+5,&td[5],0x4);//初始化PCF8563,如果需要的话可以不去掉
+ 423   1      
+ 424   1              while(1)
+ 425   1              {
+ 426   2                      delay(100);
+ 427   2                      IRcvStr(PCF8563,RDADDR,rd,0x7); //读现在的时、分、秒
+C51 COMPILER V9.01   DEMO                                                                  06/18/2015 20:17:34 PAGE 8   
+
+ 428   2              get_clock1();
+ 429   2                      lcd_clock();
+ 430   2                      delay(10000);
+ 431   2              }
+ 432   1      
+ 433   1      
+ 434   1          while(1)
+ 435   1              {
+ 436   2                      read_key();
+ 437   2                      if(key_press==1)
+ 438   2                      {
+ 439   3                              key_press=0;
+ 440   3                              key_fenxi();
+ 441   3                      }
+ 442   2                      delay(3000);
+ 443   2                      get_clock();
+ 444   2          }
+ 445   1      }
+ 446          
+ 447          void Timer0(void)  interrupt 1 
+ 448          {
+ 449   1              TH0=0xfc;               /*加1计数器高8位TH0赋初值*/
+ 450   1              TL0=0x7d;              /*加1计数器低8位TL0赋初值  0x67  */
+ 451   1              clock();
+ 452   1      //      disp_led();
+ 453   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   1626    ----
+   CONSTANT SIZE    =    143    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     30      18
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =      2    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

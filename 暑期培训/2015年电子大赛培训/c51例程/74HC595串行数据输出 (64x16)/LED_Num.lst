@@ -1,0 +1,344 @@
+C51 COMPILER V7.06   LED_NUM                                                               03/23/2014 14:08:44 PAGE 1   
+
+
+C51 COMPILER V7.06, COMPILATION OF MODULE LED_NUM
+OBJECT MODULE PLACED IN LED_Num.obj
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE CÓïÑÔ\LED_Num.c BROWSE DEBUG OBJECTEXTEND PRINT(.\LED_Num.lst) OBJECT(LED_N
+                    -um.obj)
+
+stmt level    source
+
+   1          /*****************************************************************************************
+   2          *          ²ÉÓÃ4½Æ¬74HC595ÊµÏÖLE16*16DµãÕóµÄ¶¯Ì¬É¨ÃèÏÔÊ¾£¨¹²Ñô¼«LdE1818µãÕó)              
+   3          *                                            Ê¹ÓÃTYD-51-1°å                                                  *
+   4          *  Á¬½Ó·½·¨£º                                                                            *
+   5          *            sbit SDAT = P1^0;  //´®ÐÐÊý¾ÝÊä³ö£¬¶¨ÒåÔÚP1.0ÉÏ                             *
+   6          *            sbit SCLK = P1^1;  //´®ÐÐÒÆÎ»Ê±ÖÓÊä³ö£¬¶¨ÒåÔÚP1.1ÉÏ                         *
+   7          *            sbit LOAD = P1^2;  //74HC595Ëø´æÂö³åÊä³ö£¬¶¨ÒåÔÚP1.2ÉÏ                      *
+   8          ******************************************************************************************/
+   9          #include <reg52.h> 
+  10          #include <intrins.h>
+  11          
+  12          sbit ADDR_A = P1^0;  //74HC138µØÖ·
+  13          sbit ADDR_B = P1^1;
+  14          sbit ADDR_C = P1^2;
+  15          sbit ADDR_D = P1^3;
+  16          sbit SDAT = P1^4;  //´®ÐÐÊý¾ÝÊä³ö£¬¶¨ÒåÔÚP1.4ÉÏ
+  17          sbit SCLK = P1^5;  //´®ÐÐÒÆÎ»Ê±ÖÓÊä³ö£¬¶¨ÒåÔÚP1.5ÉÏ
+  18          sbit LOAD = P1^6;  //74HC595Ëø´æÂö³åÊä³ö£¬¶¨ÒåÔÚP1.6ÉÏ
+  19          sbit EN = P1^7;
+  20          
+  21          #define COUNT 2500
+  22          
+  23          unsigned char line_addr=0;
+  24          unsigned int code lie_tab[]={0x0001,0x0002,0x0004,0x0008,
+  25                                       0x0010,0x0020,0x0040,0x0080,
+  26                                       0x0100,0x0200,0x0400,0x0800,
+  27                                                                   0x1000,0x2000,0x4000,0x8000
+  28          };
+  29          
+  30          unsigned char idata buffer[128];
+  31          
+  32          unsigned char code hz1[]={
+  33          /*--  ÎÄ×Ö:  ÀÊ  --*/
+  34          /*--  ËÎÌå12;  ´Ë×ÖÌåÏÂ¶ÔÓ¦µÄµãÕóÎª£º¿íx¸ß=16x16   --*/
+  35          0x08,0x00,0x10,0x3E,0x7E,0x22,0x42,0x22,0x42,0x22,0x7E,0x3E,0x42,0x22,0x42,0x22,
+  36          0x7E,0x22,0x02,0x3E,0x12,0x22,0x22,0x22,0x5A,0x21,0x46,0x21,0x82,0x28,0x40,0x10,
+  37          
+  38          /*--  ÎÄ×Ö:  ãå  --*/
+  39          /*--  ËÎÌå12;  ´Ë×ÖÌåÏÂ¶ÔÓ¦µÄµãÕóÎª£º¿íx¸ß=16x16   --*/
+  40          0x00,0x02,0x04,0x02,0x08,0x02,0x08,0x02,0xE1,0x7F,0x02,0x02,0x12,0x07,0x10,0x07,
+  41          0x88,0x0A,0x88,0x0A,0x47,0x12,0x24,0x22,0x14,0x42,0x04,0x02,0x04,0x02,0x00,0x02,
+  42          
+  43          /*--  ÎÄ×Ö:  ÄÉ  --*/
+  44          /*--  ËÎÌå12;  ´Ë×ÖÌåÏÂ¶ÔÓ¦µÄµãÕóÎª£º¿íx¸ß=16x16   --*/
+  45          0x08,0x04,0x08,0x04,0x04,0x04,0x04,0x04,0xD2,0x7F,0x4F,0x44,0x48,0x44,0x44,0x44,
+  46          0x42,0x4A,0x5F,0x52,0x42,0x51,0xC0,0x40,0x58,0x40,0x47,0x40,0x42,0x50,0x40,0x20,
+  47          
+  48          /*--  ÎÄ×Ö:  ÐÂ  --*/
+  49          /*--  ËÎÌå12;  ´Ë×ÖÌåÏÂ¶ÔÓ¦µÄµãÕóÎª£º¿íx¸ß=16x16   --*/
+  50          0x08,0x00,0x10,0x20,0xFE,0x1E,0x00,0x02,0x44,0x02,0x28,0x02,0xFF,0x7E,0x10,0x12,
+  51          0x10,0x12,0xFE,0x12,0x10,0x12,0x54,0x12,0x92,0x12,0x11,0x11,0x14,0x11,0x88,0x10,
+  52          
+  53          
+  54          
+C51 COMPILER V7.06   LED_NUM                                                               03/23/2014 14:08:44 PAGE 2   
+
+  55          
+  56          };
+  57          
+  58          
+  59          
+  60          unsigned long x=0;
+  61          
+  62          int hz=0,time=50000;
+  63          
+  64          unsigned char code hz_dot[]={
+  65          /*--  ÎÄ×Ö:  ÀÊ  --*/
+  66          /*--  ËÎÌå11;  ´Ë×ÖÌåÏÂ¶ÔÓ¦µÄµãÕóÎª£º¿íx¸ß=15x15   --*/
+  67          /*--  ¿í¶È²»ÊÇ8µÄ±¶Êý£¬ÏÖµ÷ÕûÎª£º¿í¶Èx¸ß¶È=16x15  --*/
+  68          0x08,0x00,0x10,0x3E,0x7E,0x22,0x42,0x22,0x42,0x22,0x7E,0x3E,0x42,0x22,0x42,0x22,
+  69          0x7E,0x3E,0x0A,0x22,0x12,0x22,0x2A,0x21,0x46,0x21,0x82,0x38,0x00,0x00,
+  70          
+  71          /*--  ÎÄ×Ö:  ãå  --*/
+  72          /*--  ËÎÌå11;  ´Ë×ÖÌåÏÂ¶ÔÓ¦µÄµãÕóÎª£º¿íx¸ß=15x15   --*/
+  73          /*--  ¿í¶È²»ÊÇ8µÄ±¶Êý£¬ÏÖµ÷ÕûÎª£º¿í¶Èx¸ß¶È=16x15  --*/
+  74          0x00,0x02,0x04,0x02,0x08,0x02,0xD0,0x3F,0x00,0x02,0x02,0x07,0x04,0x07,0x90,0x0A,
+  75          0x90,0x0A,0x48,0x12,0x28,0x22,0x04,0x02,0x04,0x02,0x00,0x02,0x00,0x00,
+  76          
+  77          /*--  ÎÄ×Ö:  ÄÉ  --*/
+  78          /*--  ËÎÌå11;  ´Ë×ÖÌåÏÂ¶ÔÓ¦µÄµãÕóÎª£º¿íx¸ß=15x15   --*/
+  79          /*--  ¿í¶È²»ÊÇ8µÄ±¶Êý£¬ÏÖµ÷ÕûÎª£º¿í¶Èx¸ß¶È=16x15  --*/
+  80          0x08,0x02,0x08,0x02,0x04,0x02,0xD2,0x1F,0x5E,0x12,0x48,0x12,0x44,0x12,0x42,0x15,
+  81          0xDE,0x18,0x40,0x10,0x40,0x10,0x58,0x10,0x46,0x10,0x40,0x1C,0x00,0x00,
+  82          
+  83          /*--  ÎÄ×Ö:  ÐÂ  --*/
+  84          /*--  ËÎÌå11;  ´Ë×ÖÌåÏÂ¶ÔÓ¦µÄµãÕóÎª£º¿íx¸ß=15x15   --*/
+  85          /*--  ¿í¶È²»ÊÇ8µÄ±¶Êý£¬ÏÖµ÷ÕûÎª£º¿í¶Èx¸ß¶È=16x15  --*/
+  86          0x08,0x30,0x10,0x0E,0xFE,0x02,0x44,0x02,0x28,0x02,0xFE,0x3E,0x00,0x12,0x10,0x12,
+  87          0xFE,0x12,0x10,0x12,0x54,0x12,0x92,0x12,0x10,0x11,0x9C,0x10,0x00,0x00,
+  88          
+  89          
+  90          
+  91          
+  92          
+  93          
+  94          
+  95          };
+  96          
+  97          
+  98          unsigned int timecount;
+  99          
+ 100          unsigned char cnta;
+ 101          
+ 102          unsigned char cntb;
+ 103          
+ 104          unsigned char disp_count;
+ 105          
+ 106          
+ 107          /**************************************************************************
+ 108          *
+ 109          *                      ÑÓÊ±´¦Àí
+ 110          *
+ 111          ****************************************************************************/
+ 112          void delay(unsigned long dly)
+ 113          {
+ 114   1          while(dly--);
+ 115   1      }
+ 116          
+C51 COMPILER V7.06   LED_NUM                                                               03/23/2014 14:08:44 PAGE 3   
+
+ 117          //**********************************************************************
+ 118          
+ 119          void send_byte(unsigned char dat)
+ 120          {
+ 121   1         
+ 122   1          unsigned char i,x;
+ 123   1              x=dat;
+ 124   1              for(i=0;i<8;i++)
+ 125   1              {
+ 126   2                      if((x & 0x80)!=0)
+ 127   2                      {
+ 128   3                              SDAT=1;
+ 129   3                      }
+ 130   2                      else
+ 131   2                      {
+ 132   3                              SDAT=0;
+ 133   3                      }
+ 134   2                      SCLK=1;
+ 135   2      
+ 136   2                      SCLK=0;
+ 137   2                      x=x<<1;
+ 138   2              }
+ 139   1      }
+ 140          
+ 141          
+ 142          void send_4x595out(unsigned char dat1,unsigned char dat2,unsigned char dat3,unsigned char dat4)
+ 143          {
+ 144   1          unsigned long dly;
+ 145   1              send_byte(dat4);
+ 146   1              send_byte(dat3);
+ 147   1              send_byte(dat2);
+ 148   1              send_byte(dat1);
+ 149   1          LOAD=0;
+ 150   1              dly++;
+ 151   1              LOAD=1;
+ 152   1      }
+ 153          
+ 154          void send_8x595out(unsigned char dat1,unsigned char dat2,unsigned char dat3,unsigned char dat4,unsigned ch
+             -ar dat5,unsigned char dat6,unsigned char dat7,unsigned char dat8)
+ 155          {
+ 156   1          unsigned long dly;
+ 157   1              send_byte(dat8);
+ 158   1              send_byte(dat7);
+ 159   1              send_byte(dat6);
+ 160   1              send_byte(dat5);
+ 161   1              send_byte(dat4);
+ 162   1              send_byte(dat3);
+ 163   1              send_byte(dat2);
+ 164   1              send_byte(dat1);
+ 165   1          LOAD=0;
+ 166   1              dly++;
+ 167   1              LOAD=1;
+ 168   1      }
+ 169          
+ 170          //////////////////////////////////
+ 171          char high_H8=0x80,high_L8=0x80,width_L8=0x00,width_H8=0x01;
+ 172          char flg=0;
+ 173          //////////////////////////////////
+ 174          void demo(void)
+ 175          {
+ 176   1              while(1)
+ 177   1              {
+C51 COMPILER V7.06   LED_NUM                                                               03/23/2014 14:08:44 PAGE 4   
+
+ 178   2                      send_4x595out(high_L8^0xff,high_H8^0xff,width_L8^0xff,width_H8^0xff);
+ 179   2                      delay(time);
+ 180   2                      high_H8=high_H8>>1;
+ 181   2                      if((high_H8==0)&&(flg==0))
+ 182   2                      {
+ 183   3                              high_L8=0x80;
+ 184   3                              flg=1;
+ 185   3                      }
+ 186   2                      else
+ 187   2                              high_L8=high_L8>>1;
+ 188   2                      if((high_L8==0)&&(flg==1))
+ 189   2                      {
+ 190   3                              high_H8=0x80;
+ 191   3                              flg=0;
+ 192   3                      }
+ 193   2              }                       
+ 194   1      }
+ 195          
+ 196          void get_dotdata(void)
+ 197          {
+ 198   1              unsigned char i,j=0;
+ 199   1          
+ 200   1              for(i=0;i<16;i++)
+ 201   1              {
+ 202   2              buffer[j]=~hz1[i*2];j++;
+ 203   2                      buffer[j]=~hz1[i*2+1];j++;
+ 204   2                      buffer[j]=~hz1[32+i*2];j++;
+ 205   2                      buffer[j]=~hz1[32+i*2+1];j++;
+ 206   2              buffer[j]=~hz1[64+i*2];j++;
+ 207   2                      buffer[j]=~hz1[64+i*2+1];j++;
+ 208   2                      buffer[j]=~hz1[96+i*2];j++;
+ 209   2                      buffer[j]=~hz1[96+i*2+1];j++;
+ 210   2              }
+ 211   1      }
+ 212          
+ 213          //*************************************************
+ 214          void main(void)
+ 215          {
+ 216   1          unsigned char i,j;
+ 217   1         
+ 218   1          EN=0;
+ 219   1      
+ 220   1          get_dotdata();
+ 221   1      
+ 222   1      /*      while(1)
+ 223   1              {
+ 224   1                  line_addr=0;
+ 225   1      
+ 226   1                      for(i=0;i<16;i++)
+ 227   1                      {       
+ 228   1                              send_8x595out(~dot1[i*8+0],~dot1[i*8+1],~dot1[i*8+2],~dot1[i*8+3],~dot1[i*8+4],~dot1[i*8+5],~dot1[i*8+6
+             -],~dot1[i*8+7]);
+ 229   1                      
+ 230   1              
+ 231   1                              P1=(P1 & 0xf0)+line_addr;
+ 232   1                      line_addr++;
+ 233   1                      
+ 234   1      
+ 235   1                      }
+ 236   1      
+ 237   1              }*/
+ 238   1      
+C51 COMPILER V7.06   LED_NUM                                                               03/23/2014 14:08:44 PAGE 5   
+
+ 239   1              while(1)
+ 240   1              {
+ 241   2                  line_addr=0;
+ 242   2      //        P1=(P1 & 0xf0)+line_addr;
+ 243   2      //              send_8x595out(~0x01,~0x03,~0x07,~0x0f,~0x1f,~0x3f,~0x7f,~0xff);
+ 244   2      
+ 245   2                      for(i=0;i<16;i++)
+ 246   2                      {
+ 247   3                              send_8x595out(buffer[i*8+0],buffer[i*8+1],buffer[i*8+2],buffer[i*8+3],buffer[i*8+4],buffer[i*8+5],buffe
+             -r[i*8+6],buffer[i*8+7]);
+ 248   3                              P1=(P1 & 0xf0)+line_addr;
+ 249   3                              line_addr++;
+ 250   3      //                      delay(5);
+ 251   3                      }
+ 252   2      
+ 253   2              }
+ 254   1      /*
+ 255   1              TMOD=0x01;
+ 256   1              TH0=(65536-COUNT)/256;
+ 257   1              TL0=(65536-COUNT)%256;
+ 258   1              TR0=1;     //¿ªÆô¶¨Ê±0
+ 259   1              ET0=1;
+ 260   1              LOAD=1;
+ 261   1          SCLK=0;
+ 262   1              SDAT=0;
+ 263   1      //      EA=1;      //¿ªÆôÖÐ¶Ï
+ 264   1              cntb=0;
+ 265   1          send_4x595out(0,0,0,0);
+ 266   1              send_4x595out(0,255,0,255);
+ 267   1      
+ 268   1          while(1);
+ 269   1              {   
+ 270   1              for(j=0;j<16;j++)
+ 271   1                      {
+ 272   1                          send_4x595out((~lie_tab[j]%256),(~lie_tab[j]/256),~hz_dot[j*2+1+hz*2],~hz_dot[j*2+hz*2]);
+ 273   1                          delay(10);
+ 274   1                      }
+ 275   1                      x++;
+ 276   1                      if(x>2)
+ 277   1                      {
+ 278   1                              hz++;
+ 279   1                              x=0;
+ 280   1                              if(hz>111)
+ 281   1                              {
+ 282   1                                      hz=0;
+ 283   1                              }
+ 284   1                      }
+ 285   1      
+ 286   1              }//*/    
+ 287   1      }
+*** WARNING C280 IN LINE 216 OF CÓïÑÔ\LED_NUM.C: 'j': unreferenced local variable
+ 288          
+ 289          /*************************************************
+ 290          *
+ 291          *          ¶¨Ê±ÖÐ¶Ï
+ 292          ********************************************************/                                                   
+ 293          void t0(void) interrupt 1 using 0
+ 294          {
+ 295   1              unsigned char x1,x2;
+ 296   1      
+ 297   1              TH0=(65536-COUNT)/256;   //¶¨Ê±Æ÷¸ßÎ»×°ÔØÊý¾Ý
+ 298   1              TL0=(65536-COUNT)%256;   //¶¨Ê±Æ÷µÍÎ»×°ÔØÊý¾Ý
+C51 COMPILER V7.06   LED_NUM                                                               03/23/2014 14:08:44 PAGE 6   
+
+ 299   1      
+ 300   1      
+ 301   1      }
+*** WARNING C280 IN LINE 295 OF CÓïÑÔ\LED_NUM.C: 'x1': unreferenced local variable
+*** WARNING C280 IN LINE 295 OF CÓïÑÔ\LED_NUM.C: 'x2': unreferenced local variable
+ 302          
+ 303          
+ 304          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    566    ----
+   CONSTANT SIZE    =    280    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     19      28
+   IDATA SIZE       =    128    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  3 WARNING(S),  0 ERROR(S)

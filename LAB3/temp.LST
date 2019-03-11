@@ -1,0 +1,125 @@
+C51 COMPILER V9.52.0.0   TEMP                                                              05/30/2015 22:53:50 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE TEMP
+OBJECT MODULE PLACED IN temp.OBJ
+COMPILER INVOKED BY: C:\Program Files\keil\C51\BIN\C51.EXE temp.c LARGE BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #include"temp.h"
+   2          #include"intrins.h"
+   3          /*******************************************************************************
+   4          * 函 数 名         : Delay1ms
+   5          * 函数功能       : 延时函数
+   6          * 输    入         : 无
+   7          * 输    出         : 无
+   8          *******************************************************************************/
+   9          
+  10          void DS18B20_Init(void)
+  11          {
+  12   1        unsigned char x=0;
+  13   1        DQ = 1;    //DQ复位
+  14   1        Delay_us(10);
+  15   1        //Delay(8);  //稍做延时,10us
+  16   1        DQ = 0;    //单片机将DQ拉低
+  17   1        Delay_us(500);
+  18   1        //Delay(80); //精确延时 大于 480us ,498us
+  19   1        DQ = 1;    //拉高总线
+  20   1        Delay_us(154);
+  21   1        //Delay(14);  //154us
+  22   1        x=DQ;      //稍做延时后 如果x=0则初始化成功 x=1则初始化失败
+  23   1        Delay_us(212);
+  24   1        //Delay(20); //212us
+  25   1      }
+  26          
+  27          
+  28          
+  29          unsigned char DS18B20_ReadOneChar(void)
+  30          {
+  31   1        unsigned char i=0;
+  32   1        unsigned char dat = 0;
+  33   1        for (i=8;i>0;i--)
+  34   1        {
+  35   2          DQ = 0; // 给脉冲信号
+  36   2          dat>>=1;
+  37   2          DQ = 1; // 给脉冲信号
+  38   2          if(DQ)
+  39   2          dat|=0x80;
+  40   2          Delay_us(56);
+  41   2          //Delay(4); //56us
+  42   2        }
+  43   1        return(dat);
+  44   1      }
+  45          
+  46          
+  47          
+  48          void DS18B20_WriteOneChar(unsigned char dat)
+  49          {
+  50   1        unsigned char i=0;
+  51   1        for (i=8; i>0; i--)
+  52   1        {
+  53   2          DQ = 0;
+  54   2          DQ = dat&0x01;
+  55   2          Delay_us(66);
+C51 COMPILER V9.52.0.0   TEMP                                                              05/30/2015 22:53:50 PAGE 2   
+
+  56   2          //Delay(5); //66us
+  57   2          DQ = 1;
+  58   2          dat>>=1;
+  59   2        }
+  60   1      }
+  61          
+  62          
+  63          
+  64          unsigned int DS18B20_ReadTemperature()
+  65          {
+  66   1        unsigned char a=0;
+  67   1        unsigned char b=0;
+  68   1        unsigned int t=0;
+  69   1        DS18B20_Init();
+  70   1        DS18B20_WriteOneChar(0xCC); // 跳过读序号列号的操作
+  71   1        DS18B20_WriteOneChar(0x44); // 启动温度转换
+  72   1        DS18B20_Init();
+  73   1        DS18B20_WriteOneChar(0xCC); //跳过读序号列号的操作
+  74   1        DS18B20_WriteOneChar(0xBE); //读取温度寄存器等（共可读9个寄存器） 前两个就是温度
+  75   1        a=DS18B20_ReadOneChar();
+  76   1        b=DS18B20_ReadOneChar();
+  77   1        t=b;
+  78   1        t<<=8;
+  79   1        t=t|a;
+  80   1        //t= t/2; //放大10倍输出并四舍五入---此行没用
+  81   1        return(t);
+  82   1      }
+  83          void Delay_us(unsigned int uiUs)  //us延时函数
+  84          {
+  85   1        for(;uiUs > 0;uiUs--)
+  86   1        {
+  87   2          _nop_();
+  88   2        } 
+  89   1      }
+  90          
+  91          
+  92          
+  93          void Delay_ms(unsigned int uiMs)  //ms延时函数
+  94          {
+  95   1        unsigned int i;
+  96   1        for(;uiMs > 0;uiMs--)
+  97   1        {
+  98   2          for(i = 1498;i > 0;i--);
+  99   2        }
+ 100   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    254    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----       6
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

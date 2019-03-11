@@ -1,0 +1,291 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+D:\Study\单片机\电子设计大赛\homework2\LCD_165_164.uvproj
+Project File Date:  06/16/2015
+
+<h2>Output:</h2>
+compiling lcd.c...
+LCD1602\lcd.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(2): warning C318: can't open file '74HC164h'
+main.c(3): warning C318: can't open file 'lcd.h'
+main.c(17): error C202: 'INPUT': undefined identifier
+main.c(19): error C202: 'CLK': undefined identifier
+main.c(20): error C202: 'CLK': undefined identifier
+compiling 74HC164.c...
+74HC164\74HC164.c(2): warning C318: can't open file '74HC164h'
+74HC164\74HC164.c(19): error C202: 'INPUT': undefined identifier
+74HC164\74HC164.c(21): error C202: 'CLK': undefined identifier
+74HC164\74HC164.c(22): error C202: 'CLK': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(2): warning C318: can't open file '74HC164h'
+main.c(3): warning C318: can't open file 'lcd.h'
+main.c(17): error C202: 'INPUT': undefined identifier
+main.c(19): error C202: 'CLK': undefined identifier
+main.c(20): error C202: 'CLK': undefined identifier
+compiling lcd.c...
+compiling 74HC164.c...
+74HC164\74HC164.c(2): warning C318: can't open file '74HC164h'
+74HC164\74HC164.c(19): error C202: 'INPUT': undefined identifier
+74HC164\74HC164.c(21): error C202: 'CLK': undefined identifier
+74HC164\74HC164.c(22): error C202: 'CLK': undefined identifier
+Target not created
+compiling main.c...
+main.c(2): warning C318: can't open file '74HC164h'
+main.c(17): error C202: 'INPUT': undefined identifier
+main.c(19): error C202: 'CLK': undefined identifier
+main.c(20): error C202: 'CLK': undefined identifier
+main.c - 3 Error(s), 1 Warning(s).
+compiling main.c...
+main.c(2): warning C318: can't open file '74HC164h'
+main.c(13): warning C280: 'bComOrData': unreferenced local variable
+main.c - 0 Error(s), 2 Warning(s).
+compiling main.c...
+main.c(2): warning C318: can't open file '74HC164h'
+main.c(13): warning C280: 'bComOrData': unreferenced local variable
+main.c - 0 Error(s), 2 Warning(s).
+compiling main.c...
+main.c(2): warning C318: can't open file '74HC164h'
+main.c - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling 74HC164.c...
+74HC164.c(2): warning C318: can't open file '74HC164h'
+74HC164.c(19): error C202: 'INPUT': undefined identifier
+74HC164.c(21): error C202: 'CLK': undefined identifier
+74HC164.c(22): error C202: 'CLK': undefined identifier
+compiling lcd.c...
+lcd.c(3): warning C318: can't open file '74HC164h'
+lcd.c(24): warning C206: 'HC164': missing function-prototype
+lcd.c(24): error C267: 'HC164': requires ANSI-style prototype
+lcd.c(28): error C202: 'LCDPORT': undefined identifier
+Target not created
+compiling main.c...
+main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling 74HC164.c...
+compiling lcd.c...
+lcd.c(28): error C202: 'LCDPORT': undefined identifier
+Target not created
+compiling lcd.c...
+lcd.c(28): error C193: '&': illegal type conversion from/to 'void'
+lcd.c - 1 Error(s), 0 Warning(s).
+compiling lcd.c...
+lcd.c(28): error C193: '&': illegal type conversion from/to 'void'
+lcd.c - 1 Error(s), 0 Warning(s).
+compiling lcd.c...
+lcd.c(28): error C193: '&': illegal type conversion from/to 'void'
+lcd.c - 1 Error(s), 0 Warning(s).
+compiling lcd.c...
+lcd.c(28): error C193: '&&': illegal type conversion from/to 'void'
+lcd.c - 1 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling lcd.c...
+lcd.c(28): error C193: '&&': illegal type conversion from/to 'void'
+Target not created
+compiling lcd.c...
+lcd.c(28): error C193: '&&': illegal type conversion from/to 'void'
+lcd.c - 1 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling lcd.c...
+lcd.c(28): error C193: '&&': illegal type conversion from/to 'void'
+Target not created
+Build target 'Target 1'
+compiling lcd.c...
+lcd.c(28): error C193: '&': illegal type conversion from/to 'void'
+Target not created
+Rebuild target 'Target 1'
+compiling main.c...
+compiling 74HC164.c...
+compiling lcd.c...
+lcd.c(28): error C193: '&': illegal type conversion from/to 'void'
+Target not created
+Build target 'Target 1'
+compiling lcd.c...
+lcd.c(28): error C193: '&&': illegal type conversion from/to 'void'
+Target not created
+compiling lcd.c...
+lcd.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling 74HC164.c...
+74HC164.c(15): error C231: '_HC164': redefinition
+74HC164.c(24): error C231: '_HC164': redefinition
+Target not created
+Build target 'Target 1'
+compiling 74HC164.c...
+74HC164.c(15): error C231: '_HC164': redefinition
+74HC164.c(24): error C231: '_HC164': redefinition
+Target not created
+Build target 'Target 1'
+compiling main.c...
+hc164.h(7): error C141: syntax error near 'char'
+compiling 74HC164.c...
+hc164.h(7): error C141: syntax error near 'char'
+74HC164.c(15): error C231: '_HC164': redefinition
+74HC164.c(24): error C231: '_HC164': redefinition
+compiling lcd.c...
+hc164.h(7): error C141: syntax error near 'char'
+Target not created
+compiling main.c...
+main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling 74HC164.c...
+compiling lcd.c...
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _DELAY
+    MODULE:  lcd.obj (LCD)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCD1602_INIT?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYONECHARONADDR?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+Program Size: data=16.1 xdata=0 code=340
+Target not created
+compiling main.c...
+main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling 74HC164.c...
+compiling lcd.c...
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _DELAY
+    MODULE:  lcd.obj (LCD)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+Program Size: data=15.1 xdata=0 code=352
+Target not created
+compiling main.c...
+main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _DELAY
+    MODULE:  lcd.obj (LCD)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+Program Size: data=15.1 xdata=0 code=352
+Target not created
+compiling main.c...
+main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _DELAY
+    MODULE:  lcd.obj (LCD)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+Program Size: data=15.1 xdata=0 code=352
+Target not created
+compiling lcd.c...
+lcd.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _DELAY
+    MODULE:  lcd.obj (LCD)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+Program Size: data=15.1 xdata=0 code=352
+Target not created
+Build target 'Target 1'
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _DELAY
+    MODULE:  lcd.obj (LCD)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+Program Size: data=15.1 xdata=0 code=352
+Target not created
+Build target 'Target 1'
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  _DELAY
+    MODULE:  lcd.obj (LCD)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+Program Size: data=15.1 xdata=0 code=352
+Target not created
+compiling main.c...
+main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling lcd.c...
+lcd.c(62): warning C206: 'Delay_lcd': missing function-prototype
+lcd.c(62): error C267: 'Delay_lcd': requires ANSI-style prototype
+lcd.c(147): error C231: 'Delay_lcd': redefinition
+lcd.c(150): error C231: 'Delay_lcd': redefinition
+Target not created
+Build target 'Target 1'
+compiling main.c...
+compiling lcd.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+Program Size: data=15.1 xdata=0 code=344
+creating hex file from "LCDContrle"...
+"LCDContrle" - 0 Error(s), 2 Warning(s).
+compiling main.c...
+main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+Program Size: data=15.1 xdata=0 code=344
+creating hex file from "LCDContrle"...
+"LCDContrle" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+Program Size: data=15.1 xdata=0 code=344
+creating hex file from "LCDContrle"...
+"LCDContrle" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+Program Size: data=15.1 xdata=0 code=344
+creating hex file from "LCDContrle"...
+"LCDContrle" - 0 Error(s), 2 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+compiling 74HC164.c...
+compiling lcd.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?74HC164
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+Program Size: data=15.1 xdata=0 code=344
+creating hex file from "LCDContrle"...
+"LCDContrle" - 0 Error(s), 2 Warning(s).

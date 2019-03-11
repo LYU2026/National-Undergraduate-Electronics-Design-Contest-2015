@@ -1,0 +1,371 @@
+C51 COMPILER V9.52.0.0   ____                                                              04/01/2015 22:58:43 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE ____
+OBJECT MODULE PLACED IN ..\Outpt\ºÏ²¢.obj
+COMPILER INVOKED BY: C:\Program Files\keil\C51\BIN\C51.EXE ..\Source\ºÏ²¢.c BROWSE DEBUG OBJECTEXTEND PRINT(.\ºÏ²¢.lst) 
+                    -TABS(2) OBJECT(..\Outpt\ºÏ²¢.obj)
+
+line level    source
+
+   1          #include<reg51.h>
+   2          unsigned char code ucInitTime[]={0x50,0x57,0x22,0x01,0x04,0x03,0x15};   //³õÊ¼»¯ºóÉèÖÃÎª:11Äê03ÔÂ23ÈÕÐÇÆÚ4 
+             -03µã46·Ö55Ãë
+   3          
+   4          #define ADDR_SEC_R 0x81 
+   5          #define ADDR_MIN_R 0x83
+   6          #define ADDR_HOUR_R 0x85
+   7          #define ADDR_DAY_R 0x87
+   8          #define ADDR_MONTH_R 0x89
+   9          #define ADDR_YEAR_R 0x8D
+  10          #define ADDR_WEEK_R 0x8B
+  11          
+  12          #define ADDR_SEC_W 0x80 
+  13          #define ADDR_MIN_W 0x82
+  14          #define ADDR_HOUR_W 0x84
+  15          #define ADDR_DAY_W 0x86
+  16          #define ADDR_MONTH_W 0x88
+  17          #define ADDR_YEAR_W 0x8C
+  18          #define ADDR_WEEK_W 0x8A
+  19          
+  20          
+  21          sbit DS1302_CLK = P2^0;
+  22          sbit DS1302_IO = P2^1;
+  23          sbit DS1302_RST = P2^2;
+  24          sbit ACC0=ACC^0;
+  25          sbit ACC7=ACC^7;
+  26          
+  27          void DS1302_WriteOneByte(unsigned char d); //ÏòDS1302ÖÐÐ´ÈëÒ»¸öÊý¾Ý
+  28          unsigned char DS1302_ReadOneByte(void);    //´ÓDS1302¶Á³öÒ»¸öÊý¾Ý
+  29          void DS1302_WriteOneByteAtAddr(unsigned char ucAddr, unsigned char ucDa); //ÔÚÖ¸¶¨µØÖ·Ð´ÈëÒ»¸öÊý¾Ý
+  30          unsigned char DS1302_ReadOneByteAtAddr(unsigned char ucAddr);   //´ÓÖ¸¶¨Ò»¸öÎ»ÖÃ¶ÁÈ¡Ò»¸öÊý¾Ý
+  31          void DS1302_SetInit(unsigned char *pClk);    //³õÊ¼»¯Ê±¼ä
+  32          
+  33          unsigned char  code Data[]={0x04,0x0f,0x12,0x0f,0x0a,0x1f,0x02,0x02,//Äê
+  34                                      0x0f,0x09,0x0f,0x09,0x0f,0x09,0x09,0x13,//ÔÂ
+  35                                      0x1f,0x11,0x11,0x1f,0x11,0x11,0xff,0x00,//ÈÕ
+  36                                      0x0e,0x0a,0x0e,0x00,0x1f,0x11,0x11,0x1f,//ÂÀ
+  37                                      0x04,0x1f,0x08,0x1f,0x09,0x0f,0x09,0x09,
+  38                                      0x02,0x02,0x1f,0x06,0x0a,0x12,0x02,0x06};
+  39          
+  40          sbit LCD1602_RS = P3^6; //Î»¶¨Òå£¬Òº¾§µÄÊý¾Ý/ÃüÁîÑ¡Ôñ
+  41          sbit LCD1602_RW = P3^5; //Î»¶¨Òå£¬Òº¾§µÄ¶ÁÐ´Ñ¡Ôñ
+  42          sbit LCD1602_EN = P3^7; //Î»¶¨Òå£¬Òº¾§Ê¹ÄÜÐÅºÅ
+  43          
+  44          #define LCDPORT P0    //Òº¾§µÄÊý¾Ý¿Ú
+  45          
+  46          unsigned char code ucForum[]=" bbs.cepark.com ";    //ÔÚCODEÇø¶¨ÒåÒ»¸öÓÃÓÚÏÔÊ¾µÄ³£Á¿×Ö·û´®
+  47          
+  48          void Delay(unsigned int uiCount); //ÑÓÊ±º¯Êý
+  49          void LCD1602_CheckBusy(void); //Òº¾§Ã¦¼ì²â
+  50          void LCD1602_WriteInformation(unsigned char ucData,bit bComOrData); //ÔÚÒº¾§ÉÏÐ´Êý¾Ý»òÕßÐ´ÃüÁî£¬0ÎªÃüÁî£¬1
+             -ÎªÊý¾Ý
+  51          void LCD1602_Init(void);  //Òº¾§³õÊ¼»¯
+  52          void LCD1602_MoveToPosition(unsigned char x,unsigned char y); //Òº¾§µÄ×ø±êÒÆ¶¯µ½Ö¸¶¨Î»ÖÃ
+C51 COMPILER V9.52.0.0   ____                                                              04/01/2015 22:58:43 PAGE 2   
+
+  53          void LCD1602_DisplayOneCharOnAddr(unsigned char x,unsigned char y,unsigned char ucData);  //ÔÚÒº¾§Ö¸¶¨Î»ÖÃÏ
+             -ÔÊ¾×Ö·û
+  54          void LCD1602_DisplayString(unsigned char *ucStr); //ÔÚÒº¾§ÉÏÏÔÊ¾×Ö·û´®
+  55          
+  56          
+  57          void main()
+  58          { 
+  59   1         LCD1602_Init();    //Òº¾§³õÊ¼»¯
+  60   1         DS1302_WriteOneByteAtAddr(0x8e,0x80);  
+  61   1         //DS1302_SetInit(ucInitTime);  
+  62   1        while(1)
+  63   1        {
+  64   2      
+  65   2          LCD1602_DisplayOneCharOnAddr(0,0,('D'));
+  66   2          LCD1602_DisplayOneCharOnAddr(0,1,('a'));
+  67   2          LCD1602_DisplayOneCharOnAddr(0,2,'t');
+  68   2          LCD1602_DisplayOneCharOnAddr(0,3,'a');
+  69   2          LCD1602_DisplayOneCharOnAddr(0,4,':');
+  70   2          LCD1602_DisplayOneCharOnAddr(0,5,'2');
+  71   2          LCD1602_DisplayOneCharOnAddr(0,6,'0');
+  72   2          LCD1602_DisplayOneCharOnAddr(0,7,('0'+DS1302_ReadOneByteAtAddr(ADDR_YEAR_R)/16));     //Äê
+  73   2          LCD1602_DisplayOneCharOnAddr(0,8,('0'+DS1302_ReadOneByteAtAddr(ADDR_YEAR_R)%16));
+  74   2          LCD1602_DisplayOneCharOnAddr(0,9,(0x00));
+  75   2          LCD1602_DisplayOneCharOnAddr(0,10,('0'+DS1302_ReadOneByteAtAddr(ADDR_MONTH_R)/16));     //ÔÂ
+  76   2          LCD1602_DisplayOneCharOnAddr(0,11,('0'+DS1302_ReadOneByteAtAddr(ADDR_MONTH_R)%16));
+  77   2          LCD1602_DisplayOneCharOnAddr(0,12,(0x01));
+  78   2          LCD1602_DisplayOneCharOnAddr(0,13,('0'+DS1302_ReadOneByteAtAddr(ADDR_DAY_R)/16));     //ÈÕ
+  79   2          LCD1602_DisplayOneCharOnAddr(0,14,('0'+DS1302_ReadOneByteAtAddr(ADDR_DAY_R)%16)); 
+  80   2          LCD1602_DisplayOneCharOnAddr(0,15,0x02);
+  81   2          LCD1602_DisplayOneCharOnAddr(1,0,('0'+DS1302_ReadOneByteAtAddr(ADDR_HOUR_R)/16));       //Ê±
+  82   2          LCD1602_DisplayOneCharOnAddr(1,1,('0'+DS1302_ReadOneByteAtAddr(ADDR_HOUR_R)%16));        
+  83   2          LCD1602_DisplayOneCharOnAddr(1,2,(':'));
+  84   2          LCD1602_DisplayOneCharOnAddr(1,3,('0'+DS1302_ReadOneByteAtAddr(ADDR_MIN_R)/16));        //·Ö
+  85   2          LCD1602_DisplayOneCharOnAddr(1,4,('0'+DS1302_ReadOneByteAtAddr(ADDR_MIN_R)%16));  
+  86   2          LCD1602_DisplayOneCharOnAddr(1,5,(':'));
+  87   2          LCD1602_DisplayOneCharOnAddr(1,6,('0'+DS1302_ReadOneByteAtAddr(ADDR_SEC_R)/16));        //Ãë
+  88   2          LCD1602_DisplayOneCharOnAddr(1,7,('0'+DS1302_ReadOneByteAtAddr(ADDR_SEC_R)%16));
+  89   2          LCD1602_DisplayOneCharOnAddr(1,10,('0'+DS1302_ReadOneByteAtAddr(ADDR_WEEK_R)%16));  //ÐÇÆÚ    
+  90   2         LCD1602_DisplayOneCharOnAddr(1,13,0x03);
+  91   2         LCD1602_DisplayOneCharOnAddr(1,14,0x04);
+  92   2         LCD1602_DisplayOneCharOnAddr(1,15,0x05);  
+  93   2      }
+  94   1      }
+  95          
+  96          /******************************************************************************
+  97          º¯ÊýÃû³Æ£ºDS1302_WriteOneByte
+  98          º¯Êý¹¦ÄÜ£ºÏòDS1302Ð´ÈëÒ»¸ö×Ö·û
+  99          Èë¿Ú²ÎÊý£ºucData-Êý¾Ý
+ 100          ·µ»ØÖµ£ºÎÞ
+ 101          ±¸×¢£ºÎÞ
+ 102          *******************************************************************************/
+ 103          void DS1302_WriteOneByte(unsigned char ucData) 
+ 104          { 
+ 105   1          unsigned char i;
+ 106   1          ACC = ucData;
+ 107   1          DS1302_RST = 1;
+ 108   1          for(i=8; i>0; i--)
+ 109   1          {
+ 110   2              DS1302_IO = ACC0;         
+ 111   2              DS1302_CLK = 0;
+ 112   2              DS1302_CLK = 1;       //ÏÈÐ´Èë×îµÍÎ»£¬ÉÏÉýÑØÐ´Èë
+ 113   2              ACC = ACC >> 1; 
+C51 COMPILER V9.52.0.0   ____                                                              04/01/2015 22:58:43 PAGE 3   
+
+ 114   2          } 
+ 115   1      }
+ 116          
+ 117          /******************************************************************************
+ 118          º¯ÊýÃû³Æ£ºDS1302_ReadOneByte
+ 119          º¯Êý¹¦ÄÜ£º´ÓDS1302¶ÁÈ¡Ò»¸öÊý¾Ý
+ 120          Èë¿Ú²ÎÊý£ºÎÞ
+ 121          ·µ»ØÖµ£º¶ÁÈ¡µÄÊý¾Ý
+ 122          ±¸×¢£ºÎÞ
+ 123          *******************************************************************************/
+ 124          unsigned char DS1302_ReadOneByte(void) 
+ 125          { 
+ 126   1          unsigned char i;
+ 127   1          DS1302_RST = 1;
+ 128   1          for(i=8; i>0; i--)
+ 129   1          {
+ 130   2              ACC = ACC >>1;         //Ïàµ±ÓÚ»ã±àÖÐµÄ RRC 
+ 131   2              DS1302_IO = 1;
+ 132   2              DS1302_CLK = 1;
+ 133   2              DS1302_CLK = 0;        //ÏÂ½µÑØ¶ÁÈ¡£¬ÏÈ¶Á×îµÍÎ»
+ 134   2              ACC7 = DS1302_IO;
+ 135   2          } 
+ 136   1          return(ACC); 
+ 137   1      }
+ 138          
+ 139          /******************************************************************************
+ 140          º¯ÊýÃû³Æ£ºDS1302_WriteOneByteAtAddr
+ 141          º¯Êý¹¦ÄÜ£ºÔÚDS1302µÄÖ¸¶¨Î»ÖÃÐ´ÈëÒ»¸öÊý¾Ý
+ 142          Èë¿Ú²ÎÊý£ºucAddr-µØÖ·   £»  ucData-Êý¾Ý
+ 143          ·µ»ØÖµ£ºÎÞ
+ 144          ±¸×¢£ºÎÞ
+ 145          *******************************************************************************/
+ 146          void DS1302_WriteOneByteAtAddr(unsigned char ucAddr, unsigned char ucData)
+ 147          {
+ 148   1          DS1302_RST = 0;
+ 149   1          DS1302_CLK = 0;
+ 150   1          DS1302_RST = 1;
+ 151   1          DS1302_WriteOneByte(ucAddr);      
+ 152   1          DS1302_WriteOneByte(ucData);      
+ 153   1          DS1302_CLK = 1;
+ 154   1          DS1302_RST = 0;
+ 155   1          DS1302_IO = 0;
+ 156   1      }
+ 157          
+ 158          /******************************************************************************
+ 159          º¯ÊýÃû³Æ£ºDS1302_ReadOneByteAtAddr
+ 160          º¯Êý¹¦ÄÜ£ºÔÚÖ¸¶¨µÄÎ»ÖÃ¶ÁÈ¡Ò»¸öÊý¾Ý
+ 161          Èë¿Ú²ÎÊý£ºucAddr-µØÖ·
+ 162          ·µ»ØÖµ£º¶ÁÈ¡µÄÊý¾Ý
+ 163          ±¸×¢£ºÎÞ
+ 164          *******************************************************************************/
+ 165          unsigned char DS1302_ReadOneByteAtAddr(unsigned char ucAddr)
+ 166          {
+ 167   1          unsigned char ucBackValue;
+ 168   1          DS1302_RST = 0;
+ 169   1          DS1302_CLK = 0;
+ 170   1          DS1302_RST = 1;
+ 171   1          DS1302_WriteOneByte(ucAddr);             
+ 172   1          ucBackValue = DS1302_ReadOneByte();         
+ 173   1          DS1302_CLK = 1;
+ 174   1          DS1302_RST = 0;
+ 175   1          return(ucBackValue);
+C51 COMPILER V9.52.0.0   ____                                                              04/01/2015 22:58:43 PAGE 4   
+
+ 176   1      }
+ 177          
+ 178          /******************************************************************************
+ 179          º¯ÊýÃû³Æ£ºDS1302_SetInit
+ 180          º¯Êý¹¦ÄÜ£ºÉèÖÃ³õÊ¼»¯
+ 181          Èë¿Ú²ÎÊý£ºpClk-³õÊ¼»¯Êý×éµÄÖ¸Õë
+ 182          ·µ»ØÖµ£ºÎÞ
+ 183          ±¸×¢£ºÎÞ
+ 184          *******************************************************************************/
+ 185          void DS1302_SetInit(unsigned char *pClk) 
+ 186          {
+ 187   1          unsigned char i;
+ 188   1          unsigned char ucAddr = 0x80; 
+ 189   1          DS1302_WriteOneByteAtAddr(0x8e,0x00);           /* ¿ØÖÆÃüÁî,WP=0,Ð´²Ù×÷*/
+ 190   1          for(i =7; i>0; i--)
+ 191   1          { 
+ 192   2              DS1302_WriteOneByteAtAddr(ucAddr,*pClk);  /* Ãë ·Ö Ê± ÈÕ ÔÂ ÐÇÆÚ Äê */ 
+ 193   2              pClk++;
+ 194   2              ucAddr +=2;
+ 195   2          }
+ 196   1          DS1302_WriteOneByteAtAddr(0x8e,0x80);           /* ¿ØÖÆÃüÁî,WP=1,Ð´±£»¤*/
+ 197   1      }
+ 198          
+ 199          /******************************************************************************
+ 200          º¯ÊýÃû³Æ£ºLCD1602_CheckBusy
+ 201          º¯Êý¹¦ÄÜ£ºÃ¦¼ì²â
+ 202          Èë¿Ú²ÎÊý£ºÎÞ
+ 203          ·µ»ØÖµ£ºÎÞ
+ 204          ±¸×¢£ºÃ¦¼ì²â²ÉÓÃÁË¶à¼ÓÒ»¸öÑÓÊ±Ìõ¼þµÄ°ì·¨£¬·ÅÖÃ³ÌÐò¿¨ÔÚ¼ì²âº¯ÊýÖÐ
+ 205          *******************************************************************************/
+ 206          void LCD1602_CheckBusy(void)    
+ 207          {
+ 208   1        unsigned char i = 255;
+ 209   1        LCDPORT = 0xFF;  //¶ÁÖ®Ç°ÏÈÖÃÎ»£¬×¼±¸¶ÁÈ¡IO¿ÚÊý¾Ý
+ 210   1        LCD1602_RS = 0;
+ 211   1        LCD1602_RW = 1;  //Ê¹Òº¾§´¦ÓÚ¶ÁÊý¾Ý×´Ì¬
+ 212   1        LCD1602_EN = 1;  //Ê¹ÄÜÒº¾§£¬¸ßµçÆ½ÓÐÐ§
+ 213   1        while((i--) && (LCDPORT & 0x80)); //Ã¦¼ì²â
+ 214   1        LCD1602_EN = 0;
+ 215   1      }
+ 216          
+ 217          /******************************************************************************
+ 218          º¯ÊýÃû³Æ£ºLCD1602_WriteInformation
+ 219          º¯Êý¹¦ÄÜ£ºÏòLCD1602Òº¾§Ð´ÈëÊý¾Ý»òÕßÃüÁî
+ 220          Èë¿Ú²ÎÊý£ºucData-ÒªÐ´ÈëµÄÊý¾Ý»òÕßÃüÁî²ÎÊý
+ 221                bComOrData-Îª0Ê±Ð´ÈëµÄÊ±ÃüÁî£¬Îª1Ê±Ð´ÈëµÄÊ±Êý¾Ý
+ 222          ·µ»ØÖµ£ºÎÞ
+ 223          ±¸×¢£ºÎÞ
+ 224          *******************************************************************************/
+ 225          void LCD1602_WriteInformation(unsigned char ucData,bit bComOrData)   
+ 226          {
+ 227   1        LCD1602_CheckBusy();   //ÔÚÐ´ÈëÊý¾Ý»òÕßÃüÁîÇ°ÏÈ½øÐÐÃ¦¼ì²â
+ 228   1        LCDPORT = ucData;    //ÏÈ½«Êý¾Ý»òÕßÃüÁîËÍÖÁIO
+ 229   1        LCD1602_RS = bComOrData;  //È·¶¨ÊÇÐ´ÈëÊý¾Ý»¹ÊÇÐ´ÃüÁî
+ 230   1        LCD1602_RW = 0;   //Ê¹Òº¾§´¦ÓÚÐ´ÈëÐÅÏ¢×´Ì¬
+ 231   1        LCD1602_EN = 1;   //Ê¹ÄÜÒº¾§£¬¸ßµçÆ½ÓÐÐ§
+ 232   1        LCD1602_EN = 0;
+ 233   1      }
+ 234          
+ 235          /******************************************************************************
+ 236          º¯ÊýÃû³Æ£ºLCD1602_Init
+ 237          º¯Êý¹¦ÄÜ£ºÒº¾§³õÊ¼»¯º¯Êý
+C51 COMPILER V9.52.0.0   ____                                                              04/01/2015 22:58:43 PAGE 5   
+
+ 238          Èë¿Ú²ÎÊý£ºÎÞ
+ 239          ·µ»ØÖµ£ºÎÞ
+ 240          ±¸×¢£ºÎÞ
+ 241          *******************************************************************************/
+ 242          void LCD1602_Init(void)    
+ 243          {
+ 244   1        unsigned char i;
+ 245   1        LCD1602_WriteInformation(0x38,0);
+ 246   1        Delay(300);
+ 247   1        LCD1602_WriteInformation(0x38,0);
+ 248   1        Delay(100);
+ 249   1        LCD1602_WriteInformation(0x38,0);
+ 250   1        Delay(100);
+ 251   1        LCD1602_WriteInformation(0x38,0);   //Ð´ÈëÃüÁî£¬5x7µãÕó¹¤×÷·½Ê½£¬8Î»Êý¾Ý½Ó¿Ú
+ 252   1        Delay(100);
+ 253   1        LCD1602_WriteInformation(0x0c,0); //ÏÔÊ¾ÉèÖÃ£¬¿ªÏÔÊ¾£¬¹â±ê²»ÏÔÊ¾£¬²»ÉÁË¸
+ 254   1        Delay(20);
+ 255   1        LCD1602_WriteInformation(0x01,0); //ÇåÆÁÖ¸Áî
+ 256   1        Delay(20);
+ 257   1        LCD1602_WriteInformation(0x40,0); 
+ 258   1        for(i=0;i<64;i++)
+ 259   1        {
+ 260   2            LCD1602_WriteInformation(Data[i],1);  
+ 261   2        }
+ 262   1      }
+ 263            
+ 264          /******************************************************************************
+ 265          º¯ÊýÃû³Æ£ºLCD1602_MoveToPosition
+ 266          º¯Êý¹¦ÄÜ£º½«Òº¾§µÄ¹â±êÒÆ¶¯µ½Ö¸¶¨µÄÎ»ÖÃ
+ 267          Èë¿Ú²ÎÊý£ºx-Òº¾§ÏÔÊ¾µÄÐÐÊý£¬·¶Î§0-1
+ 268                x = 0:ÔÚÒº¾§µÄµÚÒ»ÐÐ
+ 269                x = 1:ÔÚÒº¾§µÄµÚ¶þÐÐ
+ 270                y-Òº¾§ÏÔÊ¾µÄÁÐÊý£¬·¶Î§0-15
+ 271                  y = 0:ÔÚÒº¾§µÄµÚÒ»ÁÐ
+ 272                y = 1:ÔÚÒº¾§µÄµÚ¶þÁÐ
+ 273                ......
+ 274                y = 15:ÔÚÒº¾§µÄµÚÊ®ÁùÁÐ
+ 275          ·µ»ØÖµ£ºÎÞ
+ 276          ±¸×¢£ºÍ¨¹ýÖ¸¶¨x,yµÄÖµ¿ÉÒÔ½«Òº¾§µÄ¹â±êÒÆ¶¯µ½Ö¸¶¨µÄÎ»ÖÃ
+ 277          *******************************************************************************/
+ 278          void LCD1602_MoveToPosition(unsigned char x,unsigned char y)  
+ 279          {
+ 280   1        if(0 == x)
+ 281   1          LCD1602_WriteInformation((0x80 | y),0);    //¹â±ê¶¨Î»µ½µÚÒ»ÐÐµÄyÁÐ
+ 282   1        if(1 == x)
+ 283   1          LCD1602_WriteInformation((0xC0 | y),0);    //¹â±ê¶¨Òåµ½µÚ¶þÐÐµÄyÁÐ
+ 284   1      }
+ 285          
+ 286          /******************************************************************************
+ 287          º¯ÊýÃû³Æ£ºLCD1602_DisplayOneCharOnAddr
+ 288          º¯Êý¹¦ÄÜ£ºÔÚÖ¸¶¨µÄÎ»ÖÃÉÏÏÔÊ¾Ö¸¶¨µÄ×Ö·û
+ 289          Èë¿Ú²ÎÊý£ºx-Òº¾§ÏÔÊ¾µÄÐÐÊý£¬·¶Î§0-1
+ 290                x = 0:ÔÚÒº¾§µÄµÚÒ»ÐÐ
+ 291                x = 1:ÔÚÒº¾§µÄµÚ¶þÐÐ
+ 292                y-Òº¾§ÏÔÊ¾µÄÁÐÊý£¬·¶Î§0-15
+ 293                  y = 0:ÔÚÒº¾§µÄµÚÒ»ÁÐ
+ 294                y = 1:ÔÚÒº¾§µÄµÚ¶þÁÐ
+ 295                ......
+ 296                y = 15:ÔÚÒº¾§µÄµÚÊ®ÁùÁÐ
+ 297                ucData-ÒªÏÔÊ¾µÄ×Ö·ûÊý¾Ý
+ 298          ·µ»ØÖµ£ºÎÞ
+ 299          ±¸×¢£ºÈ·±£x,yµÄÈ¡ÖµÒªÔÚÖ¸¶¨µÄ·¶Î§ÄÚ
+C51 COMPILER V9.52.0.0   ____                                                              04/01/2015 22:58:43 PAGE 6   
+
+ 300          *******************************************************************************/
+ 301          void LCD1602_DisplayOneCharOnAddr(unsigned char x,unsigned char y,unsigned char ucData)
+ 302          {
+ 303   1        LCD1602_MoveToPosition(x,y);   //¹â±êÎ»ÖÃ
+ 304   1        LCD1602_WriteInformation(ucData,1);   //Ð´ÈëÊý¾Ý
+ 305   1      }
+ 306          
+ 307          /******************************************************************************
+ 308          º¯ÊýÃû³Æ£ºLCD1602_DisplayString
+ 309          º¯Êý¹¦ÄÜ£ºÏÔÊ¾×Ö·û´®
+ 310          Èë¿Ú²ÎÊý£ºucStr-×Ö·û´®µÄÊ×µØÖ·
+ 311          ·µ»ØÖµ£ºÎÞ
+ 312          ±¸×¢£ºÎÞ
+ 313          *******************************************************************************/
+ 314          void LCD1602_DisplayString(unsigned char *ucStr)  
+ 315          {
+ 316   1        while(*ucStr != '\0')    //×Ö·û´®½áÊøÖ®Ç°£¬Ñ­»·ÏÔÊ¾
+ 317   1        {
+ 318   2           LCD1602_WriteInformation(*ucStr,1);   //ÒÀ´ÎÐ´ÈëÃ¿Ò»¸ö×Ö·û
+ 319   2           ucStr++;                //Ö¸ÕëÔö¼Ó
+ 320   2        }
+ 321   1      }
+ 322          
+ 323          /******************************************************************************
+ 324          º¯ÊýÃû³Æ£ºDelay
+ 325          º¯Êý¹¦ÄÜ£ºÑÓÊ±º¯Êý
+ 326          Èë¿Ú²ÎÊý£ºuiCount-ÑÓÊ±²ÎÊý£¬Ã¿¼Ó1Ôö¼Ó0.5ms
+ 327          ·µ»ØÖµ£ºÎÞ
+ 328          ±¸×¢£ºÎÞ
+ 329          *******************************************************************************/
+ 330          void Delay(unsigned int uiCount)
+ 331          {
+ 332   1        unsigned char j = 244;
+ 333   1        for(;uiCount > 0;uiCount--) while(--j); 
+ 334   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    705    ----
+   CONSTANT SIZE    =     72    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----       1
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

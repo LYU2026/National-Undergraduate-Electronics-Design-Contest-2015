@@ -1,0 +1,89 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+D:\Study\单片机\电子设计大赛\电子称\program\test\test.uvproj
+Project File Date:  07/18/2015
+
+<h2>Output:</h2>
+compiling main.c...
+main.c(1): warning C318: can't open file 'main.h'
+main.c(3): warning C318: can't open file 'HX711.h'
+main.c(21): warning C206: 'Delay_ms': missing function-prototype
+main.c(21): error C267: 'Delay_ms': requires ANSI-style prototype
+main.c - 1 Error(s), 3 Warning(s).
+compiling main.c...
+main.c(1): warning C318: can't open file 'main.h'
+main.c(21): warning C206: 'Delay_ms': missing function-prototype
+main.c(21): error C267: 'Delay_ms': requires ANSI-style prototype
+main.c - 1 Error(s), 2 Warning(s).
+compiling main.c...
+main.c(1): warning C318: can't open file 'main.h'
+main.c(18): error C141: syntax error near '}'
+main.c - 1 Error(s), 1 Warning(s).
+compiling main.c...
+main.c(18): error C141: syntax error near '}'
+main.c - 1 Error(s), 0 Warning(s).
+compiling main.c...
+main.c(46): warning C206: 'Get_Maopi': missing function-prototype
+main.c(52): warning C206: 'Get_Weight': missing function-prototype
+main.c(63): warning C206: 'KEY_Scan': missing function-prototype
+main.c(157): error C231: 'KEY_Scan': redefinition
+main.c(191): error C231: 'KEY_Scan': redefinition
+main.c(197): error C231: 'Get_Weight': redefinition
+main.c(211): error C202: 'Buzzer': undefined identifier
+main.c(224): error C202: 'Buzzer': undefined identifier
+main.c(228): error C202: 'Buzzer': undefined identifier
+main.c(232): error C231: 'Get_Weight': redefinition
+main.c(238): error C231: 'Get_Maopi': redefinition
+main.c(241): error C231: 'Get_Maopi': redefinition
+main.c(251): error C237: '_Delay_ms': function already has a body
+main.c - 10 Error(s), 3 Warning(s).
+compiling main.c...
+main.c(59): warning C206: 'KEY_Scan': missing function-prototype
+main.c(153): error C231: 'KEY_Scan': redefinition
+main.c(187): error C231: 'KEY_Scan': redefinition
+main.c(207): error C202: 'Buzzer': undefined identifier
+main.c(220): error C202: 'Buzzer': undefined identifier
+main.c(224): error C202: 'Buzzer': undefined identifier
+main.c - 5 Error(s), 1 Warning(s).
+compiling main.c...
+main.c(59): warning C206: 'KEY_Scan': missing function-prototype
+main.c(153): error C231: 'KEY_Scan': redefinition
+main.c(187): error C231: 'KEY_Scan': redefinition
+main.c(207): error C202: 'Buzzer': undefined identifier
+main.c - 3 Error(s), 1 Warning(s).
+compiling main.c...
+main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling lcd.c...
+lcd.c(1): error C141: syntax error near '1602.'
+lcd.c(1): error C129: missing ';' before '?'
+compiling HX711.c...
+Target not created
+compiling lcd.c...
+lcd.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: data=33.1 xdata=0 code=2324
+"test" - 0 Error(s), 0 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+compiling lcd.c...
+compiling HX711.c...
+linking...
+Program Size: data=33.1 xdata=0 code=2324
+creating hex file from "test"...
+"test" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=33.1 xdata=0 code=2324
+creating hex file from "test"...
+"test" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: data=33.1 xdata=0 code=2324
+creating hex file from "test"...
+"test" - 0 Error(s), 0 Warning(s).

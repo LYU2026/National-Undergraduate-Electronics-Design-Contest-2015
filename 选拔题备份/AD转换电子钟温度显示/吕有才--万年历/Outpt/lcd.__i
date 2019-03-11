@@ -1,0 +1,1 @@
+"..\Source\lcd.c" BROWSE DEBUG OBJECTEXTEND PRINT(.\lcd.lst) TABS (2) OBJECT(..\Outpt\lcd.obj)

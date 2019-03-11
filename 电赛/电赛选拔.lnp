@@ -1,0 +1,6 @@
+"main1.obj",
+"lcd.obj",
+"18B20.obj",
+"ds1302.obj" 
+TO "µÁ»¸—°∞Œ" 
+RAMSIZE(256) 

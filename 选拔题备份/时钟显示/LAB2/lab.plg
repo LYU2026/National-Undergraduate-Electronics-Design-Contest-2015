@@ -1,0 +1,225 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+D:\Study\单片机\电子设计大赛\LAB2\lab.uvproj
+Project File Date:  05/29/2015
+
+<h2>Output:</h2>
+compiling mian.c...
+mian.c(7): warning C206: 'delay_mian': missing function-prototype
+mian.c(7): error C267: 'delay_mian': requires ANSI-style prototype
+mian.c(17): error C231: 'delay_mian': redefinition
+mian.c(29): error C231: 'delay_mian': redefinition
+mian.c - 3 Error(s), 1 Warning(s).
+compiling mian.c...
+mian.c(3): warning C318: can't open file 'main.h'
+mian.c(8): warning C206: 'delay_mian': missing function-prototype
+mian.c(8): error C267: 'delay_mian': requires ANSI-style prototype
+mian.c(18): error C231: 'delay_mian': redefinition
+mian.c(30): error C231: 'delay_mian': redefinition
+mian.c - 3 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling mian.c...
+mian.c(3): warning C318: can't open file 'main.h'
+mian.c(8): warning C206: 'delay_mian': missing function-prototype
+mian.c(8): error C267: 'delay_mian': requires ANSI-style prototype
+mian.c(18): error C231: 'delay_mian': redefinition
+mian.c(30): error C231: 'delay_mian': redefinition
+compiling 12864.c...
+Target not created
+compiling mian.c...
+mian.c(3): warning C318: can't open file 'main.h'
+mian.c(8): warning C206: 'delay_mian': missing function-prototype
+mian.c(8): error C267: 'delay_mian': requires ANSI-style prototype
+mian.c(18): error C231: 'delay_mian': redefinition
+mian.c(30): error C231: 'delay_mian': redefinition
+mian.c - 3 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling mian.c...
+mian.c(3): warning C318: can't open file 'main.h'
+mian.c(8): warning C206: 'delay_mian': missing function-prototype
+mian.c(8): error C267: 'delay_mian': requires ANSI-style prototype
+mian.c(18): error C231: 'delay_mian': redefinition
+mian.c(30): error C231: 'delay_mian': redefinition
+Target not created
+compiling mian.c...
+mian.c(3): warning C318: can't open file 'main.h'
+mian.c(8): warning C206: 'delay_mian': missing function-prototype
+mian.c(8): error C267: 'delay_mian': requires ANSI-style prototype
+mian.c(18): error C231: 'delay_mian': redefinition
+mian.c(30): error C231: 'delay_mian': redefinition
+mian.c - 3 Error(s), 2 Warning(s).
+compiling mian.c...
+mian.c(3): warning C318: can't open file 'main.h'
+mian.c(8): warning C206: 'delay_mian': missing function-prototype
+mian.c(8): error C267: 'delay_mian': requires ANSI-style prototype
+mian.c(18): error C231: 'delay_mian': redefinition
+mian.c(30): error C231: 'delay_mian': redefinition
+mian.c - 3 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling mian.c...
+mian.c(3): warning C318: can't open file 'main.h'
+mian.c(8): warning C206: 'delay_mian': missing function-prototype
+mian.c(8): error C267: 'delay_mian': requires ANSI-style prototype
+mian.c(18): error C231: 'delay_mian': redefinition
+mian.c(30): error C231: 'delay_mian': redefinition
+Target not created
+compiling mian.c...
+mian.c(3): warning C318: can't open file 'main.h'
+mian.c(8): warning C206: 'delay_main': missing function-prototype
+mian.c(8): error C267: 'delay_main': requires ANSI-style prototype
+mian.c(18): error C231: 'delay_main': redefinition
+mian.c(30): error C231: 'delay_main': redefinition
+mian.c - 3 Error(s), 2 Warning(s).
+compiling main.c...
+main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_POS?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+Program Size: data=15.1 xdata=0 code=598
+"lab" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling 12864.c...
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_POS?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+Program Size: data=9.1 xdata=6 code=650
+creating hex file from "lab"...
+"lab" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling 12864.c...
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_POS?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+Program Size: data=9.1 xdata=6 code=650
+creating hex file from "lab"...
+"lab" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_POS?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+Program Size: data=9.1 xdata=6 code=650
+creating hex file from "lab"...
+"lab" - 0 Error(s), 4 Warning(s).
+compiling main.c...
+main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling ds1302.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAY
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAY
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0050H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAY
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0105H
+Program Size: data=9.1 xdata=15 code=1219
+creating hex file from "lab"...
+"lab" - 0 Error(s), 7 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling ds1302.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAY
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAY
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0050H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAY
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0105H
+Program Size: data=9.1 xdata=15 code=1219
+creating hex file from "lab"...
+"lab" - 0 Error(s), 7 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAY
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAY
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0050H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAY
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0105H
+Program Size: data=9.1 xdata=15 code=1214
+creating hex file from "lab"...
+"lab" - 0 Error(s), 7 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=9.1 xdata=16 code=1214
+creating hex file from "lab"...
+"lab" - 0 Error(s), 4 Warning(s).

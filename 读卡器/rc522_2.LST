@@ -1,0 +1,508 @@
+C51 COMPILER V9.52.0.0   RC522_2                                                           07/22/2015 08:30:42 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE RC522_2
+OBJECT MODULE PLACED IN rc522_2.OBJ
+COMPILER INVOKED BY: C:\Program Files\keil\C51\BIN\C51.EXE rc522_2.c BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          /*-----------------------------------------------.c??-----------------------------------------*/ 
+   2          #include"rc522.h" 
+   3          #include<reg52.h>  \
+   4          #include<intrins.h>
+   5          /*void delay_ns(uint16 ns) {    uint16 xdata i;   for(i=0;i<ns;i++)   {      nop();     nop();     nop(); 
+             -  } }*/ 
+   6          void delay10us(void)   //?? 0us
+   7          {   
+   8   1          unsigned char a,b;     
+   9   1          for(b=1;b>0;b--)          
+  10   1          for(a=2;a>0;a--);
+  11   1      }  
+  12          void delay1ms(void)   //?? 0us 
+  13          {    
+  14   1        unsigned char a,b,c;   
+  15   1        for(c=1;c>0;c--)          
+  16   1        for(b=142;b>0;b--)   
+  17   1        for(a=2;a>0;a--); 
+  18   1      } 
+  19          void delay1ms500us(void)   //?? 0us
+  20          {     
+  21   1        uint xdata a,b;
+  22   1        for(b=115;b>0;b--)
+  23   1        for(a=5;a>0;a--);
+  24   1        
+  25   1      } 
+  26          uint SPIReadByte(void) 
+  27          { 
+  28   1        uint xdata SPICount;                                       // Counter used to clock out the data 
+  29   1        uint xdata SPIData;  
+  30   1        SPIData = 0;
+  31   1        for (SPICount = 0;SPICount < 8; SPICount++)                  // Prepare to clock in the data to be read  
+             - 
+  32   1        {
+  33   2          SPIData <<=1;                                               // Rotate the data    
+  34   2          CLR_SPI_CK;
+  35   2          nop();
+  36   2          nop();    
+  37   2          // Raise the clock to clock the data out of the MAX7456
+  38   2          if(SET_SPI_MISO)
+  39   2          { 
+  40   3            SPIData|=0x01;
+  41   3          }
+  42   2          SET_SPI_CK; 
+  43   2          _nop_();
+  44   2          _nop_();                                               // Drop the clock ready for the next bit
+  45   2         }                                                             // and loop back   
+  46   1         return (SPIData);                              // Finally return the read data  
+  47   1      }  
+  48          void SPIWriteByte(uint SPIData) 
+  49          {  
+  50   1        uint xdata SPICount;                                       // Counter used to clock out the data 
+  51   1        for (SPICount = 0; SPICount < 8; SPICount++) 
+  52   1        {  
+  53   2          if (SPIData & 0x80)
+C51 COMPILER V9.52.0.0   RC522_2                                                           07/22/2015 08:30:42 PAGE 2   
+
+  54   2           {        SET_SPI_MOSI;     } 
+  55   2          else     {        CLR_SPI_MOSI;     } 
+  56   2          _nop_();
+  57   2          _nop_();
+  58   2          CLR_SPI_CK;
+  59   2          nop();
+  60   2          nop(); 
+  61   2          SET_SPI_CK;nop();
+  62   2          nop(); 
+  63   2          SPIData <<= 1; 
+  64   2        }             
+  65   1       }      
+  66           /////////////////////////////////////////////////////////////////////
+  67           //?    ?:??  
+  68           //????: req_code[IN]:????  
+  69           //                0x52 = ?????????14443A???? 
+  70           //                0x26 = ??????????
+  71           //          pTagType[OUT]:??????
+  72           //                0x4400 = Mifare_UltraLight
+  73           //                0x0400 = Mifare_One(S50) 
+  74           //                0x0200 = Mifare_One(S70) 
+  75           //                0x0800 = Mifare_Pro(X) 
+  76              //                0x4403 = Mifare_DESFire 
+  77           //?    ?: ????MI_OK 
+  78           ///////////////////////////////////////////////////////////////////// 
+  79           char PcdRequest(uint8 req_code,uint8 *pTagType)
+*** ERROR C141 IN LINE 79 OF rc522_2.c: syntax error near 'req_code', expected ')'
+  80           {  
+*** ERROR C231 IN LINE 80 OF rc522_2.c: '_PcdRequest': redefinition
+  81   1         char xdata status;   
+  82   1         uint xdata unLen;
+  83   1         uint xdata ucComMF522Buf[MAXRLEN];
+  84   1         ClearBitMask(Status2Reg,0x08);
+  85   1         WriteRawRC(BitFramingReg,0x07);
+  86   1         SetBitMask(TxControlReg,0x03); 
+  87   1         ucComMF522Buf[0] = req_code; 
+*** ERROR C202 IN LINE 87 OF rc522_2.c: 'req_code': undefined identifier
+  88   1         status = PcdComMF522(PCD_TRANSCEIVE,ucComMF522Buf,1,ucComMF522Buf,&unLen); 
+  89   1         if ((status == MI_OK) && (unLen == 0x10))
+  90   1        {       *pTagType     = ucComMF522Buf[0];   *(pTagType+1) = ucComMF522Buf[1];  } 
+*** ERROR C202 IN LINE 90 OF rc522_2.c: 'pTagType': undefined identifier
+*** ERROR C202 IN LINE 90 OF rc522_2.c: 'pTagType': undefined identifier
+  91   1         else  {   status = MI_ERR;   } 
+  92   1           return status; 
+  93   1      }  
+*** ERROR C231 IN LINE 93 OF rc522_2.c: '_PcdRequest': redefinition
+  94          ///////////////////////////////////////////////////////////////////// 
+  95          //?    ?:???  
+  96          //????: pSnr[OUT]:?????,4?? 
+  97          //?    ?: ????MI_OK  
+  98          /////////////////////////////////////////////////////////////////////   
+  99          char PcdAnticoll(uint *pSnr)
+ 100          {    
+*** ERROR C231 IN LINE 100 OF rc522_2.c: '_PcdAnticoll': redefinition
+ 101   1        char xdata status; 
+ 102   1        uint xdata i,snr_check=0;  
+ 103   1        uint xdata unLen;  
+ 104   1        uint xdata ucComMF522Buf[MAXRLEN];
+ 105   1        ClearBitMask(Status2Reg,0x08); 
+ 106   1        WriteRawRC(BitFramingReg,0x00);  
+ 107   1        ClearBitMask(CollReg,0x80); 
+ 108   1         ucComMF522Buf[0] = PICC_ANTICOLL1;  
+C51 COMPILER V9.52.0.0   RC522_2                                                           07/22/2015 08:30:42 PAGE 3   
+
+ 109   1        ucComMF522Buf[1] = 0x20;  
+ 110   1        status = PcdComMF522(PCD_TRANSCEIVE,ucComMF522Buf,2,ucComMF522Buf,&unLen); 
+ 111   1        if (status == MI_OK)
+ 112   1        {      
+ 113   2          for (i=0; i<4; i++) 
+ 114   2          {       
+ 115   3                 *(pSnr+i)  = ucComMF522Buf[i];  
+ 116   3                  snr_check ^= ucComMF522Buf[i];
+ 117   3            }  
+ 118   2               if (snr_check != ucComMF522Buf[i])
+ 119   2                {   status = MI_ERR;    } 
+ 120   2          }  
+ 121   1               SetBitMask(CollReg,0x80); 
+ 122   1          return status; 
+ 123   1      }   
+*** ERROR C231 IN LINE 123 OF rc522_2.c: '_PcdAnticoll': redefinition
+ 124          ///////////////////////////////////////////////////////////////////// 
+ 125          //?    ?:????  //????: pSnr[IN]:?????,4?? 
+ 126          //?    ?: ????MI_OK  
+ 127          ///////////////////////////////////////////////////////////////////// 
+ 128          char PcdSelect(uint8 *pSnr) 
+*** ERROR C141 IN LINE 128 OF rc522_2.c: syntax error near '*', expected ')'
+ 129          {    
+*** ERROR C231 IN LINE 129 OF rc522_2.c: '_PcdSelect': redefinition
+ 130   1        char xdata status;   
+ 131   1        uint xdata i;   
+ 132   1        uint xdata unLen;  
+ 133   1        uint xdata ucComMF522Buf[MAXRLEN];      
+ 134   1        ucComMF522Buf[0] = PICC_ANTICOLL1;   
+ 135   1        ucComMF522Buf[1] = 0x70;    
+ 136   1        ucComMF522Buf[6] = 0;    
+ 137   1        for (i=0; i<4; i++)  
+ 138   1          {   
+ 139   2         ucComMF522Buf[i+2] = *(pSnr+i); 
+*** ERROR C202 IN LINE 139 OF rc522_2.c: 'pSnr': undefined identifier
+ 140   2           ucComMF522Buf[6]  ^= *(pSnr+i); 
+*** ERROR C202 IN LINE 140 OF rc522_2.c: 'pSnr': undefined identifier
+ 141   2          } 
+ 142   1          CalulateCRC(ucComMF522Buf,7,&ucComMF522Buf[7]); 
+ 143   1          ClearBitMask(Status2Reg,0x08);
+ 144   1          status = PcdComMF522(PCD_TRANSCEIVE,ucComMF522Buf,9,ucComMF522Buf,&unLen); 
+ 145   1                if ((status == MI_OK) && (unLen == 0x18))     {   status = MI_OK;  } 
+ 146   1          else      {   status = MI_ERR;    }    
+ 147   1         return status;
+ 148   1       }  
+*** ERROR C231 IN LINE 148 OF rc522_2.c: '_PcdSelect': redefinition
+ 149           ///////////////////////////////////////////////////////////////////// 
+ 150           //?    ?:??????  //????: auth_mode[IN]: ?????? //                 0x60 = ??A?? //                 0x61 = 
+             -??B??  
+ 151           //          addr[IN]:??? //          pKey[IN]:??  //          pSnr[IN]:?????,4?? //?    ?: ????MI_OK  
+ 152           /////////////////////////////////////////////////////////////////////  
+ 153           char PcdAuthState(uint8 auth_mode,uint8 addr,uint8 *pKey,uint8 *pSnr) 
+*** ERROR C141 IN LINE 153 OF rc522_2.c: syntax error near 'auth_mode', expected ')'
+ 154           {    
+*** ERROR C231 IN LINE 154 OF rc522_2.c: '_PcdAuthState': redefinition
+ 155   1         char xdata status; 
+ 156   1         uint xdata unLen;
+ 157   1         uint xdata i,ucComMF522Buf[MAXRLEN];  
+ 158   1         ucComMF522Buf[0] = auth_mode;   
+*** ERROR C202 IN LINE 158 OF rc522_2.c: 'auth_mode': undefined identifier
+ 159   1        ucComMF522Buf[1] = addr;
+*** ERROR C202 IN LINE 159 OF rc522_2.c: 'addr': undefined identifier
+C51 COMPILER V9.52.0.0   RC522_2                                                           07/22/2015 08:30:42 PAGE 4   
+
+ 160   1           for (i=0; i<6; i++)  
+ 161   1         {    ucComMF522Buf[i+2] = *(pKey+i);   }   
+*** ERROR C202 IN LINE 161 OF rc522_2.c: 'pKey': undefined identifier
+ 162   1        for (i=0; i<6; i++)    
+ 163   1        {    ucComMF522Buf[i+8] = *(pSnr+i);  } 
+*** ERROR C202 IN LINE 163 OF rc522_2.c: 'pSnr': undefined identifier
+ 164   1        //   memcpy(&ucComMF522Buf[2], pKey, 6);  
+ 165   1        //   memcpy(&ucComMF522Buf[8], pSnr, 4);       
+ 166   1        status = PcdComMF522(PCD_AUTHENT,ucComMF522Buf,12,ucComMF522Buf,&unLen);  
+ 167   1         if ((status != MI_OK) || (!(ReadRawRC(Status2Reg) & 0x08))) 
+ 168   1          {   status = MI_ERR;   }        
+ 169   1         return status; 
+ 170   1      } 
+*** ERROR C231 IN LINE 170 OF rc522_2.c: '_PcdAuthState': redefinition
+ 171          /////////////////////////////////////////////////////////////////////
+ 172                       
+ 173                       //?    ?:??M1????? //????: addr[IN]:???  //          pData[OUT]:?????,16?? //?    ?: ????MI_OK 
+ 174          /////////////////////////////////////////////////////////////////////  
+ 175          char PcdRead(uint8 addr,uint8 *pData) 
+*** ERROR C141 IN LINE 175 OF rc522_2.c: syntax error near 'addr', expected ')'
+ 176          {   
+*** ERROR C231 IN LINE 176 OF rc522_2.c: '_PcdRead': redefinition
+ 177   1        char xdata status;  
+ 178   1        uint16 xdata unLen; 
+*** ERROR C202 IN LINE 178 OF rc522_2.c: 'uint16': undefined identifier
+*** ERROR C141 IN LINE 178 OF rc522_2.c: syntax error near 'xdata'
+ 179   1        uint8 xdata i,ucComMF522Buf[MAXRLEN];  
+*** ERROR C141 IN LINE 179 OF rc522_2.c: syntax error near 'xdata'
+*** ERROR C202 IN LINE 179 OF rc522_2.c: 'i': undefined identifier
+ 180   1        ucComMF522Buf[0] = PICC_READ;
+*** ERROR C202 IN LINE 180 OF rc522_2.c: 'ucComMF522Buf': undefined identifier
+ 181   1        ucComMF522Buf[1] = addr; 
+*** ERROR C202 IN LINE 181 OF rc522_2.c: 'ucComMF522Buf': undefined identifier
+ 182   1        CalulateCRC(ucComMF522Buf,2,&ucComMF522Buf[2]); 
+*** ERROR C202 IN LINE 182 OF rc522_2.c: 'ucComMF522Buf': undefined identifier
+ 183   1        status = PcdComMF522(PCD_TRANSCEIVE,ucComMF522Buf,4,ucComMF522Buf,&unLen); 
+*** ERROR C202 IN LINE 183 OF rc522_2.c: 'ucComMF522Buf': undefined identifier
+ 184   1        if ((status == MI_OK) && (unLen == 0x90))   //   {   memcpy(pData, ucComMF522Buf, 16);   } 
+*** ERROR C202 IN LINE 184 OF rc522_2.c: 'unLen': undefined identifier
+ 185   1          {         
+ 186   2              for (i=0; i<16; i++) 
+*** ERROR C202 IN LINE 186 OF rc522_2.c: 'i': undefined identifier
+ 187   2               {   
+ 188   3                  *(pData+i) = ucComMF522Buf[i];
+*** ERROR C202 IN LINE 188 OF rc522_2.c: 'pData': undefined identifier
+ 189   3               } 
+ 190   2          }    
+ 191   1        else      {   status = MI_ERR;   } 
+ 192   1                return status; 
+ 193   1      }  
+*** ERROR C231 IN LINE 193 OF rc522_2.c: '_PcdRead': redefinition
+ 194          ///////////////////////////////////////////////////////////////////// //?    ?:????M1??? 
+ 195          //????: addr[IN]:???  //          pData[IN]:?????,16?? //?    ?: ????MI_OK 
+ 196          /////////////////////////////////////////////////////////////////////            
+ 197          char PcdWrite(uint addr,uint *pData)
+ 198          {      
+*** ERROR C231 IN LINE 198 OF rc522_2.c: '_PcdWrite': redefinition
+ 199   1        char xdata status;
+ 200   1        uint xdata unLen; 
+ 201   1        uint xdata i,ucComMF522Buf[MAXRLEN];  
+ 202   1        ucComMF522Buf[0] = PICC_WRITE;  
+ 203   1        ucComMF522Buf[1] = addr;
+C51 COMPILER V9.52.0.0   RC522_2                                                           07/22/2015 08:30:42 PAGE 5   
+
+ 204   1        CalulateCRC(ucComMF522Buf,2,&ucComMF522Buf[2]);
+ 205   1        status = PcdComMF522(PCD_TRANSCEIVE,ucComMF522Buf,4,ucComMF522Buf,&unLen);
+ 206   1        if ((status != MI_OK) || (unLen != 4) || ((ucComMF522Buf[0] & 0x0F) != 0x0A)) 
+ 207   1          {   status = MI_ERR;   }              
+ 208   1        if (status == MI_OK)   
+ 209   1          {          //memcpy(ucComMF522Buf, pData, 16);     
+ 210   2            for (i=0; i<16; i++)     
+ 211   2            {              ucComMF522Buf[i] = *(pData+i);            }      
+ 212   2            CalulateCRC(ucComMF522Buf,16,&ucComMF522Buf[16]);  
+ 213   2            status = PcdComMF522(PCD_TRANSCEIVE,ucComMF522Buf,18,ucComMF522Buf,&unLen);  
+ 214   2              if ((status != MI_OK) || (unLen != 4) || ((ucComMF522Buf[0] & 0x0F) != 0x0A))   
+ 215   2            {   status = MI_ERR;   }  
+ 216   2         }           
+ 217   1          return status;
+ 218   1       }  
+*** ERROR C231 IN LINE 218 OF rc522_2.c: '_PcdWrite': redefinition
+ 219           ///////////////////////////////////////////////////////////////////// 
+ 220           //?    ?:?????????? //?    ?: ????MI_OK  
+ 221           ///////////////////////////////////////////////////////////////////// 
+ 222          char PcdHalt(void) 
+ 223           {      
+*** ERROR C231 IN LINE 223 OF rc522_2.c: 'PcdHalt': redefinition
+ 224   1         char xdata status;  
+ 225   1         uint xdata unLen;  
+ 226   1         uint xdata ucComMF522Buf[MAXRLEN]; 
+ 227   1         ucComMF522Buf[0] = PICC_HALT;   
+ 228   1        ucComMF522Buf[1] = 0;     
+ 229   1       CalulateCRC(ucComMF522Buf,2,&ucComMF522Buf[2]);   
+ 230   1           status = PcdComMF522(PCD_TRANSCEIVE,ucComMF522Buf,4,ucComMF522Buf,&unLen); 
+ 231   1            return MI_OK; 
+ 232   1      }  
+*** ERROR C231 IN LINE 232 OF rc522_2.c: 'PcdHalt': redefinition
+ 233          ///////////////////////////////////////////////////////////////////// 
+ 234          //?MF522??CRC16??
+ 235                   ///////////////////////////////////////////////////////////////////// 
+ 236          void CalulateCRC(uint *pIndata,uint len,uint *pOutData)
+ 237          {    
+ 238   1        uint xdata i,n;    
+ 239   1        ClearBitMask(DivIrqReg,0x04);  
+ 240   1        WriteRawRC(CommandReg,PCD_IDLE);
+ 241   1        SetBitMask(FIFOLevelReg,0x80); 
+ 242   1        for (i=0; i<len; i++)  
+ 243   1        {   WriteRawRC(FIFODataReg, *(pIndata+i));   } 
+ 244   1        WriteRawRC(CommandReg, PCD_CALCCRC); 
+ 245   1        i = 0xFF;  
+ 246   1        do      
+ 247   1          {          n = ReadRawRC(DivIrqReg);         i--;     }    
+ 248   1        while ((i!=0) && !(n&0x04));     
+ 249   1        pOutData[0] = ReadRawRC(CRCResultRegL);   
+ 250   1        pOutData[1] = ReadRawRC(CRCResultRegM); 
+ 251   1      }   
+ 252          /////////////////////////////////////////////////////////////////////  
+ 253          //?    ?:??RC522 //?    ?: ????MI_OK  
+ 254          ///////////////////////////////////////////////////////////////////// 
+ 255          char PcdReset(void) 
+ 256          {  //PORTD|=(1<<RC522RST); 
+*** ERROR C231 IN LINE 256 OF rc522_2.c: 'PcdReset': redefinition
+ 257   1        SET_RC522RST;   
+ 258   1        delay10us(); 
+ 259   1        //PORTD&=~(1<<RC522RST);  
+ 260   1        CLR_RC522RST;     
+ 261   1        delay10us();  
+C51 COMPILER V9.52.0.0   RC522_2                                                           07/22/2015 08:30:42 PAGE 6   
+
+ 262   1        //PORTD|=(1<<RC522RST); 
+ 263   1        SET_RC522RST;    
+ 264   1        delay10us();     
+ 265   1        WriteRawRC(CommandReg,PCD_RESETPHASE); 
+ 266   1        delay10us();         
+ 267   1        WriteRawRC(ModeReg,0x3D);   
+ 268   1        //?Mifare???,CRC???0x6363  
+ 269   1        WriteRawRC(TReloadRegL,30);  
+ 270   1        WriteRawRC(TReloadRegH,0);    
+ 271   1        WriteRawRC(TModeReg,0x8D);  
+ 272   1        WriteRawRC(TPrescalerReg,0x3E);        
+ 273   1        WriteRawRC(TxAutoReg,0x40);//???      
+ 274   1        return MI_OK; 
+ 275   1      } 
+*** ERROR C231 IN LINE 275 OF rc522_2.c: 'PcdReset': redefinition
+ 276          //////////////////////////////////////////////////////////////////////
+ 277          //??RC632?????  
+ 278          ////////////////////////////////////////////////////////////////////// 
+ 279          char M500PcdConfigISOType(uint type) 
+ 280          {     if (type == 'A')        //ISO14443_A   
+*** ERROR C231 IN LINE 280 OF rc522_2.c: '_M500PcdConfigISOType': redefinition
+ 281   1        {        
+ 282   2          ClearBitMask(Status2Reg,0x08);    
+ 283   2          WriteRawRC(ModeReg,0x3D);//3F 
+ 284   2          WriteRawRC(RxSelReg,0x86);//84     
+ 285   2          WriteRawRC(RFCfgReg,0x7F);   //4F   
+ 286   2          WriteRawRC(TReloadRegL,30);
+ 287   2          //tmoLength);
+ 288   2          // TReloadVal = 'h6a =tmoLength(dec) 
+ 289   2          WriteRawRC(TReloadRegH,0);    
+ 290   2          WriteRawRC(TModeReg,0x8D);    
+ 291   2          WriteRawRC(TPrescalerReg,0x3E);  
+ 292   2         delay1ms();     
+ 293   2          PcdAntennaOn(); 
+ 294   2         }    
+ 295   1       else{ return -1; }     
+ 296   1          return MI_OK;
+ 297   1       } 
+*** ERROR C231 IN LINE 297 OF rc522_2.c: '_M500PcdConfigISOType': redefinition
+ 298           ///////////////////////////////////////////////////////////////////// 
+ 299           //?    ?:?RC632???  //????:Address[IN]:????? //?    ?:????  
+ 300           ///////////////////////////////////////////////////////////////////// 
+ 301           uint ReadRawRC(uint Address) 
+ 302          {     
+ 303   1          uint xdata ucAddr;  
+ 304   1          uint xdata ucResult=0; 
+ 305   1          CLR_SPI_CS;
+ 306   1          ucAddr = ((Address<<1)&0x7E)|0x80;  
+ 307   1          SPIWriteByte(ucAddr);
+ 308   1          ucResult=SPIReadByte(); 
+ 309   1          SET_SPI_CS; 
+ 310   1          return ucResult; 
+ 311   1      }
+ 312          ///////////////////////////////////////////////////////////////////
+ 313          //?    ?:?RC632???  //????:Address[IN]:????? //          value[IN]:???? 
+ 314          ///////////////////////////////////////////////////////////////////// 
+ 315          void WriteRawRC(uint Address, uint value)
+ 316          {      
+ 317   1        uint xdata ucAddr; 
+ 318   1        CLR_SPI_CS;  
+ 319   1        ucAddr = ((Address<<1)&0x7E); 
+ 320   1        SPIWriteByte(ucAddr);
+C51 COMPILER V9.52.0.0   RC522_2                                                           07/22/2015 08:30:42 PAGE 7   
+
+ 321   1        SPIWriteByte(value); 
+ 322   1        SET_SPI_CS;
+ 323   1      }  
+ 324          
+ 325           ///////////////////////////////////////////////////////////////////// //????    //?????????????????1ms???
+ 326                       ///////////////////////////////////////////////////////////////////// 
+ 327           void PcdAntennaOn(void)
+ 328           {      uint xdata i;  
+ 329   1          i = ReadRawRC(TxControlReg);   
+ 330   1        if (!(i & 0x03))    
+ 331   1         {         
+ 332   2              SetBitMask(TxControlReg, 0x03);   
+ 333   2        }
+ 334   1       }  
+ 335           /////////////////////////////////////////////////////////////////////
+ 336           //???? 
+ 337           ///////////////////////////////////////////////////////////////////// 
+ 338           void PcdAntennaOff(void)
+ 339           {  ClearBitMask(TxControlReg, 0x03); }
+ 340           ///////////////////////////////////////////////////////////////////// 
+ 341           //rc522??? 
+ 342           ///////////////////////////////////////////////////////////////////// 
+ 343           void InitRc522(void)
+ 344           {    PcdReset();   
+ 345   1          PcdAntennaOff();
+ 346   1          delay1ms500us();
+ 347   1          PcdAntennaOn();  
+ 348   1           M500PcdConfigISOType( 'A' ); 
+ 349   1      }
+ 350          
+ 351          ///////////////////////////////////////////////////////////////////// 
+ 352          //?    ?:?RC522???? //????:reg[IN]:????? //          mask[IN]:???  
+ 353          /////////////////////////////////////////////////////////////////////
+ 354          void SetBitMask(uint8 reg,uint8 mask) 
+*** ERROR C141 IN LINE 354 OF rc522_2.c: syntax error near 'reg', expected ')'
+ 355          {     
+*** ERROR C236 IN LINE 355 OF rc522_2.c: '_SetBitMask': different length of parameter lists
+ 356   1        char xdata tmp = 0x0;  
+ 357   1        tmp = ReadRawRC(reg);
+*** ERROR C202 IN LINE 357 OF rc522_2.c: 'reg': undefined identifier
+ 358   1        WriteRawRC(reg,tmp | mask);  // set bit mask 
+*** ERROR C202 IN LINE 358 OF rc522_2.c: 'reg': undefined identifier
+ 359   1        }  
+ 360          ///////////////////////////////////////////////////////////////////// 
+ 361          //?    ?:?RC522???? //????:reg[IN]:????? //          mask[IN]:???  
+ 362          /////////////////////////////////////////////////////////////////////
+ 363          void ClearBitMask(uint reg,uint mask)   
+ 364          {     
+ 365   1        char xdata tmp = 0x0;
+ 366   1        tmp = ReadRawRC(reg); 
+ 367   1        WriteRawRC(reg, tmp & ~mask);  // clear bit mask 
+ 368   1        }
+ 369          /////////////////////////////////////////////////////////////////////
+ 370          //?    ?:??RC522?ISO14443??? //????:Command[IN]:RC522??? 
+ 371                       
+ 372                       //          pInData[IN]:??RC522???????? 
+ 373          //          InLenByte[IN]:????????? 
+ 374          //          pOutData[OUT]:??????????
+ 375          //          *pOutLenBit[OUT]:????????  
+ 376          ///////////////////////////////////////////////////////////////////// 
+ 377          char PcdComMF522(uint Command,uint *pInData,uint InLenByte,uint *pOutData,uint *pOutLenBit)
+ 378          {     
+C51 COMPILER V9.52.0.0   RC522_2                                                           07/22/2015 08:30:42 PAGE 8   
+
+*** ERROR C231 IN LINE 378 OF rc522_2.c: '_PcdComMF522': redefinition
+ 379   1        char xdata status = MI_ERR;   
+ 380   1        uint xdata irqEn   = 0x00;   
+ 381   1        uint xdata waitFor = 0x00;    
+ 382   1        uint xdata lastBits;   
+ 383   1        uint xdata n;  
+ 384   1        uint xdata i;   
+ 385   1        switch (Command)   
+ 386   1        {          case PCD_AUTHENT:    irqEn   = 0x12;    waitFor = 0x10;    break;  
+ 387   2                   case PCD_TRANSCEIVE:    irqEn   = 0x77;    waitFor = 0x30;    break;  
+ 388   2                    default:    break;  
+ 389   2         }    
+ 390   1         WriteRawRC(ComIEnReg,irqEn|0x80);    
+ 391   1         ClearBitMask(ComIrqReg,0x80);   
+ 392   1         WriteRawRC(CommandReg,PCD_IDLE);    
+ 393   1         SetBitMask(FIFOLevelReg,0x80);  
+*** ERROR C208 IN LINE 393 OF rc522_2.c: '_SetBitMask': too many actual parameters
+ 394   1         for (i=0; i<InLenByte; i++)
+ 395   1            {   WriteRawRC(FIFODataReg, pInData[i]);    } 
+ 396   1          WriteRawRC(CommandReg, Command);   
+ 397   1            if (Command == PCD_TRANSCEIVE) 
+ 398   1          {    SetBitMask(BitFramingReg,0x80);  }           //i = 600;//????????,??M1???????25ms 
+*** ERROR C208 IN LINE 398 OF rc522_2.c: '_SetBitMask': too many actual parameters
+ 399   1          i = 2000;   
+ 400   1          do 
+ 401   1             {    
+ 402   2                 n = ReadRawRC(ComIrqReg);   
+ 403   2                 i--;    
+ 404   2               }  
+ 405   1          while ((i!=0) && !(n&0x01) && !(n&waitFor));  
+ 406   1               ClearBitMask(BitFramingReg,0x80);   
+ 407   1          if (i!=0)   
+ 408   1            {          
+ 409   2              if(!(ReadRawRC(ErrorReg)&0x1B))     
+ 410   2                {              status = MI_OK;            
+ 411   3                          if (n & irqEn & 0x01)      
+ 412   3                            {   status = MI_NOTAGERR;   }   
+ 413   3                            if (Command == PCD_TRANSCEIVE)    
+ 414   3                            {   n = ReadRawRC(FIFOLevelReg);     
+ 415   4                              lastBits = ReadRawRC(ControlReg) & 0x07;           
+ 416   4                              if (lastBits)                
+ 417   4                                        {   *pOutLenBit = (n-1)*8 + lastBits;   }  
+ 418   4                              else      {   *pOutLenBit = n*8;   }      
+ 419   4                               if (n == 0)                  {   n = 1;    }          
+ 420   4                                  if (n > MAXRLEN)                  {   n = MAXRLEN;   }         
+ 421   4                                for (i=0; i<n; i++)             
+ 422   4                                 {   pOutData[i] = ReadRawRC(FIFODataReg);    }    
+ 423   4                               }}      
+ 424   2                   else          {   status = MI_ERR;   }            
+ 425   2        }         
+ 426   1        SetBitMask(ControlReg,0x80);          // stop timer now     
+*** ERROR C208 IN LINE 426 OF rc522_2.c: '_SetBitMask': too many actual parameters
+ 427   1        WriteRawRC(CommandReg,PCD_IDLE);    
+ 428   1        return status;
+ 429   1       }   
+*** ERROR C231 IN LINE 429 OF rc522_2.c: '_PcdComMF522': redefinition
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  51 ERROR(S)

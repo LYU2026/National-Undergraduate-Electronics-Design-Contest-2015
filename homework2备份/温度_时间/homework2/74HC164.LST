@@ -1,0 +1,83 @@
+C51 COMPILER V9.52.0.0   74HC164                                                           06/17/2015 07:13:24 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE 74HC164
+OBJECT MODULE PLACED IN 74HC164.OBJ
+COMPILER INVOKED BY: C:\Program Files\keil\C51\BIN\C51.EXE 74HC164.c BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #include<reg52.h> 
+   2          #include"hc164.h"
+   3          
+   4          
+   5          
+   6          /*------------------------------------------------
+   7                             延时子程序
+   8          ------------------------------------------------*/
+   9          void delay(unsigned int cnt) 
+  10          {
+  11   1       while(--cnt);
+  12   1      }
+  13          
+  14          void HC164(unsigned char temp)
+  15          {
+  16   1        unsigned char i;
+  17   1        for(i=0;i<8;i++)
+  18   1             {
+  19   2               INPUT=temp&0x01;//取最后一位赋值
+  20   2             temp>>=1;       //右移
+  21   2             CLK=0;          //上升沿作用
+  22   2             CLK=1;
+  23   2            }
+  24   1      }
+  25          /*------------------------------------------------
+  26                              主函数
+  27          ------------------------------------------------*/
+  28          /*main()
+  29          {
+  30           unsigned char temp;        //作为测试数据
+  31           unsigned char i;
+  32           A=1;//悬空的一端要置高电平
+  33             
+  34           while(1)
+  35                {
+  36                     temp=0xc0;    //共阳数码管0
+  37              for(i=0;i<8;i++)
+  38                 {
+  39                   INPUT=temp&0x01;//取最后一位赋值
+  40                 temp>>=1;       //右移
+  41                 CLK=0;          //上升沿作用
+  42                 CLK=1;
+  43                }
+  44                 delay(30000); 
+  45                 delay(30000);  //演示有助于观察效果
+  46                temp=0xf9;    //共阳数码管1
+  47                for(i=0;i<8;i++)
+  48                 {
+  49                   INPUT=temp&0x01;//取最后一位赋值
+  50                 temp>>=1;       //右移
+  51                 CLK=0;          //上升沿作用
+  52                 CLK=1;
+  53                }
+  54                delay(30000); 
+  55                 delay(30000);  //演示有助于观察效果
+C51 COMPILER V9.52.0.0   74HC164                                                           06/17/2015 07:13:24 PAGE 2   
+
+  56                }
+  57          }
+  58          */
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     29    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

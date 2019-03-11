@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=Net5.0_2 Pin=S1-1
+Removed Pin From Net: NetName=VCC Pin=S1-3
+Added Component: Designator=P2(½ÓÏß¶Ë×Ó2P)
+Added Pin To Net: NetName=Net5.0_3 Pin=P2-1
+Added Member To Class: ClassName=main Member=Component P2 Header 2
+Added Room: Name=main

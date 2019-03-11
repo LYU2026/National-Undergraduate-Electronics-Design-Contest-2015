@@ -1,0 +1,264 @@
+C51 COMPILER V9.52.0.0   MAIN                                                              07/19/2015 12:26:03 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: C:\Program Files\keil\C51\BIN\C51.EXE main.c BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          //#include "main.h"
+   2          #include "LCD1602.h"
+   3          #include "HX711.h"
+   4          
+   5          unsigned long HX711_Buffer = 0;
+   6          unsigned long Weight_Maopi = 0,Weight_Shiwu = 0;
+   7          char Price_Count = 0;
+   8          unsigned char KEY_NUM = 0;
+   9          unsigned char Price_Buffer[3] = {0x00,0x00,0x00};
+  10          unsigned long Money = 0;
+  11          bit Flag_OK = 0;
+  12          void Get_Weight();
+  13          void Get_Maopi();
+  14          void Delay_ms(unsigned int n);
+  15          unsigned char KEY_Scan()
+  16          {
+  17   1        unsigned char temp = 0;
+  18   1        unsigned char com = 0x55 , com1 = 0 , com2 = 0;
+  19   1        P1=0xf0;
+  20   1        if(P1!=0xf0)
+  21   1        {
+  22   2          com1=P1;
+  23   2          P1=0x0f;
+  24   2          com2=P1;        
+  25   2        }
+  26   1        P1=0xf0;
+  27   1          while(P1!=0xf0);    
+  28   1        temp=com1|com2;
+  29   1        if(temp==0xee)com=1;//??1
+  30   1        if(temp==0xed)com=4;//??4
+  31   1        if(temp==0xeb)com=7;//??7
+  32   1        if(temp==0xe7)com=11;//???*??
+  33   1        if(temp==0xd7)com=0;//??0
+  34   1        if(temp==0xb7)com=14;//???*??
+  35   1        
+  36   1      
+  37   1        if(temp==0xde)com=2; //??2
+  38   1        if(temp==0xdd)com=5; //??5
+  39   1        if(temp==0xdb)com=8;//??8
+  40   1      
+  41   1        if(temp==0xbe)com=3;//??3
+  42   1        if(temp==0xbd)com=6; //??6
+  43   1        if(temp==0xbb)com=9;//??9
+  44   1      
+  45   1        if(temp==0x7e)com=16;//??A?,????   
+  46   1        if(temp==0x7d)com=15;//??B????,????
+  47   1        if(temp==0x7b)com=12;//??C????????????
+  48   1        if(temp==0x77)com=13;//??D?,????   
+  49   1        return(com);
+  50   1      }
+  51          
+  52          
+  53          void main()
+  54          {
+  55   1        Init_LCD1602();                 //???LCD1602
+C51 COMPILER V9.52.0.0   MAIN                                                              07/19/2015 12:26:03 PAGE 2   
+
+  56   1      
+  57   1        LCD1602_write_com(0x80);            //????
+  58   1        LCD1602_write_word("Welcome to use! ");     //???????
+  59   1      
+  60   1      
+  61   1        Delay_ms(2000);    //??2s
+  62   1      
+  63   1      
+  64   1      loop:Price_Count = 0;
+  65   1        Price_Buffer[0] = 0;
+  66   1        Price_Buffer[1] = 0;
+  67   1        Price_Buffer[2] = 0;
+  68   1        Flag_OK = 0;
+  69   1      
+  70   1        LCD1602_write_com(0x80);            //????
+  71   1        LCD1602_write_word("+WEI |PRI | MON ");
+  72   1        LCD1602_write_com(0x80+0x40);       //????
+  73   1        LCD1602_write_word("0.000|  . |   . ");
+  74   1      
+  75   1        
+  76   1      
+  77   1        
+  78   1        Get_Maopi();        //?????
+  79   1      
+  80   1        while(1)
+  81   1        {
+  82   2          if( Flag_OK == 0)
+  83   2          {
+  84   3            Get_Weight();     //??
+  85   3        
+  86   3            //??????
+  87   3            LCD1602_write_com(0x80+0x40);
+  88   3            LCD1602_write_data(Weight_Shiwu/1000 + 0x30);
+  89   3            LCD1602_write_data('.');
+  90   3            LCD1602_write_data(Weight_Shiwu%1000/100 + 0x30);
+  91   3            LCD1602_write_data(Weight_Shiwu%100/10 + 0x30);
+  92   3            LCD1602_write_data(Weight_Shiwu%10 + 0x30);
+  93   3          }
+  94   2      
+  95   2          KEY_NUM = KEY_Scan();
+  96   2      
+  97   2          if( KEY_NUM != 0x55)      //??????????,???????
+  98   2          {
+  99   3            if(KEY_NUM == 16)     //??A?,????
+ 100   3            {
+ 101   4              Get_Maopi();      //??  
+ 102   4            }
+ 103   3      
+ 104   3            if(KEY_NUM == 15)     //??B????,????
+ 105   3            {
+ 106   4              goto loop;  
+ 107   4            }
+ 108   3      
+ 109   3            if(KEY_NUM == 12)     //??C????????????
+ 110   3            {
+ 111   4              Price_Count--;
+ 112   4              if( Price_Count < 0)
+ 113   4              {
+ 114   5                Price_Count = 0;
+ 115   5              }
+ 116   4              
+ 117   4              Price_Buffer[Price_Count] = 0;         //??????????
+C51 COMPILER V9.52.0.0   MAIN                                                              07/19/2015 12:26:03 PAGE 3   
+
+ 118   4      
+ 119   4              switch(Price_Count)
+ 120   4              {
+ 121   5                case 0:
+ 122   5                    LCD1602_write_com(0x80+0x40+6);
+ 123   5                    LCD1602_write_data(' ');
+ 124   5                    break;
+ 125   5                case 1:
+ 126   5                    LCD1602_write_com(0x80+0x40+7);
+ 127   5                    LCD1602_write_data(' ');
+ 128   5                    break;
+ 129   5                case 2:
+ 130   5                    LCD1602_write_com(0x80+0x40+9);
+ 131   5                    LCD1602_write_data(' ');
+ 132   5                    break;
+ 133   5                default : break;
+ 134   5              } 
+ 135   4            }
+ 136   3      
+ 137   3            if(KEY_NUM == 13)     //??D?,????
+ 138   3            {
+ 139   4              Money = Price_Buffer[0] * 100 + Price_Buffer[1] * 10 + Price_Buffer[2]; 
+ 140   4              Money = Money * Weight_Shiwu / 1000;
+ 141   4              LCD1602_write_com(0x80+0x40+11);
+ 142   4              LCD1602_write_data(Money/1000 + 0x30);      
+ 143   4              LCD1602_write_data(Money%1000/100 + 0x30);
+ 144   4              LCD1602_write_data(Money%100/10 + 0x30);
+ 145   4              LCD1602_write_data('.');
+ 146   4              LCD1602_write_data(Money%10 + 0x30);
+ 147   4              
+ 148   4              Flag_OK = 1;          
+ 149   4            }
+ 150   3      
+ 151   3            if(KEY_NUM >= 0 && KEY_NUM <= 9)            //???????
+ 152   3            {
+ 153   4              Price_Buffer[Price_Count] = KEY_NUM;
+ 154   4        
+ 155   4              switch(Price_Count)
+ 156   4              {
+ 157   5                case 0:
+ 158   5                    LCD1602_write_com(0x80+0x40+6);
+ 159   5                    LCD1602_write_data(Price_Buffer[0] + 0x30);
+ 160   5                    break;
+ 161   5                case 1:
+ 162   5                    LCD1602_write_com(0x80+0x40+7);
+ 163   5                    LCD1602_write_data(Price_Buffer[1] + 0x30);
+ 164   5                    break;
+ 165   5                case 2:
+ 166   5                    LCD1602_write_com(0x80+0x40+9);
+ 167   5                    LCD1602_write_data(Price_Buffer[2] + 0x30);
+ 168   5                    break;
+ 169   5                default : break;
+ 170   5              }
+ 171   4        
+ 172   4              Price_Count++;
+ 173   4        
+ 174   4              if( Price_Count >= 3)
+ 175   4              {
+ 176   5                Price_Count = 3;
+ 177   5              }
+ 178   4            }
+ 179   3      
+C51 COMPILER V9.52.0.0   MAIN                                                              07/19/2015 12:26:03 PAGE 4   
+
+ 180   3          }
+ 181   2      
+ 182   2        }
+ 183   1      }
+ 184          
+ 185          //****************************************************
+ 186          //??????
+ 187          //****************************************************
+ 188          
+ 189          //****************************************************
+ 190          //??
+ 191          //****************************************************
+ 192          void Get_Weight()
+ 193          {
+ 194   1        HX711_Buffer = HX711_Read();
+ 195   1        HX711_Buffer = HX711_Buffer/100;
+ 196   1        if(HX711_Buffer > Weight_Maopi)     
+ 197   1        {
+ 198   2          Weight_Shiwu = HX711_Buffer;
+ 199   2          Weight_Shiwu = Weight_Shiwu - Weight_Maopi;       //?????AD?????
+ 200   2        
+ 201   2          Weight_Shiwu = (unsigned int)((float)Weight_Shiwu/4.22+0.05);   //?????????
+ 202   2        }
+ 203   1      //  else if(HX711_Buffer < Weight_Maopi - 30)
+ 204   1      //  {
+ 205   1      //    Buzzer = 0;       //?????
+ 206   1      //  }
+ 207   1      //  else if(HX711_Buffer > Weight_Maopi + 24970)    //??5Kg?????,?? 
+ 208   1      //  {
+ 209   1      //    Buzzer = 0;
+ 210   1      //  }
+ 211   1      
+ 212   1      
+ 213   1      }
+ 214          
+ 215          //****************************************************
+ 216          //??????
+ 217          //****************************************************
+ 218          void Get_Maopi()
+ 219          {
+ 220   1        HX711_Buffer = HX711_Read();
+ 221   1        Weight_Maopi = HX711_Buffer/100;    
+ 222   1      } 
+ 223          
+ 224          //****************************************************
+ 225          //MS????(12M?????)
+ 226          //****************************************************
+ 227          void Delay_ms(unsigned int n)
+ 228          {
+ 229   1        unsigned int  i,j;
+ 230   1        for(i=0;i<n;i++)
+ 231   1          for(j=0;j<123;j++);
+ 232   1      }
+ 233          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    933    ----
+   CONSTANT SIZE    =     51    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     21    ----
+C51 COMPILER V9.52.0.0   MAIN                                                              07/19/2015 12:26:03 PAGE 5   
+
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =      1    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

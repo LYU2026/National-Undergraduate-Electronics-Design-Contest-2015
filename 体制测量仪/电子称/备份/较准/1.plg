@@ -1,0 +1,39 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+D:\Study\单片机\电子设计大赛\电子称\program\1.uvproj
+Project File Date:  07/19/2015
+
+<h2>Output:</h2>
+Rebuild target 'Target 1'
+compiling lcd.c...
+compiling main1.c...
+main1.c(79): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+Program Size: data=35.1 xdata=0 code=2312
+creating hex file from "1"...
+"1" - 0 Error(s), 2 Warning(s).
+Rebuild target 'Target 1'
+compiling lcd.c...
+compiling main1.c...
+main1.c(79): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+Program Size: data=35.1 xdata=0 code=2312
+creating hex file from "1"...
+"1" - 0 Error(s), 2 Warning(s).
+Rebuild target 'Target 1'
+compiling lcd.c...
+compiling main1.c...
+main1.c(79): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD1602_DISPLAYSTRING?LCD
+Program Size: data=35.1 xdata=0 code=2312
+creating hex file from "1"...
+"1" - 0 Error(s), 2 Warning(s).

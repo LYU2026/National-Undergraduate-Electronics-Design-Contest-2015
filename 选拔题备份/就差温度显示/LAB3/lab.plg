@@ -1,0 +1,210 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+D:\Study\单片机\电子设计大赛\LAB3\lab.uvproj
+Project File Date:  05/30/2015
+
+<h2>Output:</h2>
+compiling main3.c...
+main.h(40): error C132: 'checkday': not in formal parameter list
+main.h(40): error C141: syntax error near '{'
+main.h(41): error C132: 'day': not in formal parameter list
+main.h(42): error C132: 'year': not in formal parameter list
+main.h(43): error C244: 'year': can't initialize, bad type or class
+main.h(43): error C132: 'year': not in formal parameter list
+main.h(45): error C141: syntax error near 'if'
+main.h(45): error C141: syntax error near '', expected ')'
+main.h(45): error C141: syntax error near '', expected ')'
+main.h(45): error C141: syntax error near '', expected ')'
+main.h(48): error C129: missing ';' before '{'
+main3.c - 11 Error(s), 0 Warning(s).
+compiling main3.c...
+main3.c(591): error C221: non-constant case/dim expression
+main3.c(600): error C220: illegal constant expression
+main3.c(609): error C220: illegal constant expression
+main3.c(618): error C220: illegal constant expression
+main3.c(627): error C220: illegal constant expression
+main3.c(636): error C220: illegal constant expression
+main3.c(645): error C220: illegal constant expression
+main3.c(654): error C220: illegal constant expression
+main3.c(669): error C141: syntax error near 'case'
+main3.c(669): error C172: 'case': missing enclosing switch
+main3.c(670): error C171: 'break': missing enclosing loop
+main3.c(671): error C172: 'case': missing enclosing switch
+main3.c(672): error C171: 'break': missing enclosing loop
+main3.c(673): error C141: syntax error near ')'
+main3.c - 14 Error(s), 0 Warning(s).
+compiling main3.c...
+main3.c(591): error C221: non-constant case/dim expression
+main3.c(600): error C221: non-constant case/dim expression
+main3.c(609): error C221: non-constant case/dim expression
+main3.c(618): error C221: non-constant case/dim expression
+main3.c(627): error C221: non-constant case/dim expression
+main3.c(636): error C221: non-constant case/dim expression
+main3.c(645): error C221: non-constant case/dim expression
+main3.c(654): error C221: non-constant case/dim expression
+main3.c(669): error C141: syntax error near 'case'
+main3.c(669): error C172: 'case': missing enclosing switch
+main3.c(670): error C171: 'break': missing enclosing loop
+main3.c(671): error C172: 'case': missing enclosing switch
+main3.c(672): error C171: 'break': missing enclosing loop
+main3.c(673): error C141: syntax error near ')'
+main3.c - 14 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main3.c...
+main3.c(591): error C221: non-constant case/dim expression
+main3.c(600): error C221: non-constant case/dim expression
+main3.c(609): error C221: non-constant case/dim expression
+main3.c(618): error C221: non-constant case/dim expression
+main3.c(627): error C221: non-constant case/dim expression
+main3.c(636): error C221: non-constant case/dim expression
+main3.c(645): error C221: non-constant case/dim expression
+main3.c(654): error C221: non-constant case/dim expression
+main3.c(669): error C141: syntax error near 'case'
+main3.c(669): error C172: 'case': missing enclosing switch
+main3.c(670): error C171: 'break': missing enclosing loop
+main3.c(671): error C172: 'case': missing enclosing switch
+main3.c(672): error C171: 'break': missing enclosing loop
+main3.c(673): error C141: syntax error near ')'
+Target not created
+compiling main3.c...
+main3.c(591): error C221: non-constant case/dim expression
+main3.c(600): error C221: non-constant case/dim expression
+main3.c(609): error C221: non-constant case/dim expression
+main3.c(618): error C221: non-constant case/dim expression
+main3.c(627): error C221: non-constant case/dim expression
+main3.c(636): error C221: non-constant case/dim expression
+main3.c(645): error C221: non-constant case/dim expression
+main3.c(654): error C221: non-constant case/dim expression
+main3.c(669): error C141: syntax error near 'case'
+main3.c(669): error C172: 'case': missing enclosing switch
+main3.c(670): error C171: 'break': missing enclosing loop
+main3.c(671): error C172: 'case': missing enclosing switch
+main3.c(672): error C171: 'break': missing enclosing loop
+main3.c(673): error C141: syntax error near ')'
+main3.c - 14 Error(s), 0 Warning(s).
+compiling main3.c...
+main3.c(594): error C267: 'relaywork': requires ANSI-style prototype
+main3.c(645): error C141: syntax error near ':'
+main3.c(654): error C141: syntax error near '}'
+main3.c(659): error C141: syntax error near 'case'
+main3.c(659): error C172: 'case': missing enclosing switch
+main3.c(660): error C171: 'break': missing enclosing loop
+main3.c(661): error C172: 'case': missing enclosing switch
+main3.c(662): error C171: 'break': missing enclosing loop
+main3.c(663): error C141: syntax error near ')'
+main3.c - 9 Error(s), 0 Warning(s).
+compiling main3.c...
+main.h(121): warning C236: '_relaywork': different length of parameter lists
+main3.c(645): error C141: syntax error near ':'
+main3.c(654): error C141: syntax error near '}'
+main3.c(659): error C141: syntax error near 'case'
+main3.c(659): error C172: 'case': missing enclosing switch
+main3.c(660): error C171: 'break': missing enclosing loop
+main3.c(661): error C172: 'case': missing enclosing switch
+main3.c(662): error C171: 'break': missing enclosing loop
+main3.c(663): error C141: syntax error near ')'
+main3.c - 8 Error(s), 1 Warning(s).
+compiling main3.c...
+main.h(122): warning C236: '_relaywork': different length of parameter lists
+main3.c(592): error C141: syntax error near 'case'
+main3.c(592): error C172: 'case': missing enclosing switch
+main3.c(593): error C171: 'break': missing enclosing loop
+main3.c(594): error C172: 'case': missing enclosing switch
+main3.c(595): error C171: 'break': missing enclosing loop
+main3.c(596): error C141: syntax error near ')'
+main3.c(657): error C141: syntax error near ':'
+main3.c(666): error C141: syntax error near '}'
+main3.c - 8 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main3.c...
+main.h(122): warning C236: '_relaywork': different length of parameter lists
+main3.c(592): error C141: syntax error near 'case'
+main3.c(592): error C172: 'case': missing enclosing switch
+main3.c(593): error C171: 'break': missing enclosing loop
+main3.c(594): error C172: 'case': missing enclosing switch
+main3.c(595): error C171: 'break': missing enclosing loop
+main3.c(596): error C141: syntax error near ')'
+main3.c(657): error C141: syntax error near ':'
+main3.c(666): error C141: syntax error near '}'
+Target not created
+compiling main3.c...
+main.h(122): warning C236: '_relaywork': different length of parameter lists
+main3.c(592): error C141: syntax error near 'case'
+main3.c(592): error C172: 'case': missing enclosing switch
+main3.c(593): error C171: 'break': missing enclosing loop
+main3.c(594): error C172: 'case': missing enclosing switch
+main3.c(595): error C171: 'break': missing enclosing loop
+main3.c(596): error C141: syntax error near ')'
+main3.c(657): error C141: syntax error near ':'
+main3.c(666): error C141: syntax error near '}'
+main3.c - 8 Error(s), 1 Warning(s).
+compiling main3.c...
+main3.c(657): error C141: syntax error near ':'
+main3.c(666): error C141: syntax error near '}'
+main3.c - 2 Error(s), 0 Warning(s).
+compiling main3.c...
+main3.c(673): warning C206: 'relay_work': missing function-prototype
+main3.c(673): error C267: 'relay_work': requires ANSI-style prototype
+main3.c - 1 Error(s), 1 Warning(s).
+compiling main3.c...
+main3.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD12864_DISPLAYONECHARONADDR?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN3
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY0?MAIN3
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCK?MAIN3
+Program Size: data=9.2 xdata=160 code=5903
+creating hex file from "lab"...
+"lab" - 0 Error(s), 7 Warning(s).
+compiling main3.c...
+main3.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD12864_DISPLAYONECHARONADDR?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN3
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY0?MAIN3
+Program Size: data=9.2 xdata=160 code=5906
+creating hex file from "lab"...
+"lab" - 0 Error(s), 6 Warning(s).
+compiling main3.c...
+main3.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD12864_DISPLAYONECHARONADDR?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN3
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY0?MAIN3
+Program Size: data=9.2 xdata=160 code=5791
+creating hex file from "lab"...
+"lab" - 0 Error(s), 6 Warning(s).

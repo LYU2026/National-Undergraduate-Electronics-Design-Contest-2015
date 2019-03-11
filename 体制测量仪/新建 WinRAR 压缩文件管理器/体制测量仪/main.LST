@@ -1,0 +1,454 @@
+C51 COMPILER V9.52.0.0   MAIN                                                              07/31/2015 09:28:08 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: C:\Program Files\keil\C51\BIN\C51.EXE main.c BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #include<reg52.h>
+   2          #include"lcd12864.h"
+   3          #include"uart.h"
+   4          #include"74HC165.h"
+   5          #include"mfrc522.h"
+   6          sbit key=P2^0;
+   7          sbit sendkey=P2^1;
+   8          sbit senddx=P2^2;
+   9          sbit SEG_DS = P3^4; //74HC595芯片的数据引脚
+  10          sbit SEG_SHCP = P3^6; //74HC595芯片的控制引脚，上升沿移入数据
+  11          sbit SEG_STCP = P3^5; //74HC595芯片的控制引脚，上升沿更新数据
+  12          
+  13          unsigned char xdata name[]="姓名:";
+  14          unsigned char xdata height[]="身高:";
+  15          unsigned char xdata sex[]="性别:";
+  16          unsigned char xdata num[]="序号:";
+  17          unsigned char xdata lung[]="肺活量:";
+  18          unsigned char xdata weight[]="体重:";
+  19          unsigned char xdata result[]="优秀良好及格不及格极差";
+  20          unsigned char xdata welcome[]="欢迎使用请刷卡";
+  21          unsigned char xdata message[3][19]={{"杨成  男13090041066"},
+  22                                           {"李智勤男13090041031"},
+  23                               {"吕有才男13090041039"}
+  24                                          };
+  25          unsigned char xdata cardcode[][4]={0xE8,0xBF,0x75,0xB9,
+  26                                      0xDC,0x57,0x84,0x12,
+  27                        0x0C,0xC7,0x8D,0x12
+  28                        };
+  29          unsigned char xdata phonenumber[]={"15966841805"};
+  30          unsigned char sgg[4];
+  31          unsigned char tzz[4];
+  32          unsigned char fhll[4];
+  33          unsigned char xdata english[]="Height:Weight:Lung volume:result:";
+  34          unsigned char count;
+  35          unsigned char k;
+  36          unsigned char receiveData[5];
+  37          unsigned char j=0;
+  38          unsigned char i;
+  39          unsigned char l;
+  40          unsigned int a,b,c,d;
+  41          int fhl=0;//肺活量
+  42          float tz=0;  //体重
+  43          int sg=0,bl=70;
+  44          bit showready=1;
+  45          bit card=0;
+  46          bit sd=0;
+  47          bit message_key=0;
+  48          unsigned char UID[5],Temp[4];
+  49          void scankey();
+  50          void InitializeSystem();
+  51          void Auto_Reader(void);
+  52          void sendandroid();
+  53          void sendshortmessage();
+  54          void keboardscan();
+  55          void main()
+C51 COMPILER V9.52.0.0   MAIN                                                              07/31/2015 09:28:08 PAGE 2   
+
+  56          {
+  57   1        LCD12864_Init();
+  58   1        InitializeSystem();
+  59   1        while(!card)
+  60   1        {
+  61   2          LCD12864_SetWindow(0,2);
+  62   2          for(i=0;i<8;i++)
+  63   2            LCD12864_WriteData(welcome[i]);
+  64   2        LCD12864_SetWindow(1,3);
+  65   2        for(i=8;i<14;i++)
+  66   2            LCD12864_WriteData(welcome[i]);
+  67   2        Auto_Reader();
+  68   2        }
+  69   1        LCD12864_WriteCmd(0x01);
+  70   1        while(1)
+  71   1        {
+  72   2         scankey();
+  73   2         if(count==0)
+  74   2         {
+  75   3            Auto_Reader();
+  76   3             LCD12864_SetWindow(0,0);
+  77   3             for(i=0;i<5;i++)
+  78   3            {
+  79   4              LCD12864_WriteData(name[i]);
+  80   4            }
+  81   3          LCD12864_WriteData(' ');
+  82   3             LCD12864_SetWindow(1,0);
+  83   3            for(i=0;i<5;i++)
+  84   3            {
+  85   4          LCD12864_WriteData(sex[i]);
+  86   4            }
+  87   3          LCD12864_WriteData(' ');
+  88   3            LCD12864_SetWindow(2,0);
+  89   3          scankey();
+  90   3            Auto_Reader();
+  91   3            for(i=0;i<5;i++)
+  92   3           {
+  93   4          LCD12864_WriteData(num[i]);
+  94   4            }
+  95   3          LCD12864_WriteData(' ');
+  96   3          if(card&&sd==0)
+  97   3          {
+  98   4              InitUart();
+  99   4             for(i=0;i<4;i++)
+ 100   4           {
+ 101   5            if(cardcode[i][0]==UID[0])
+ 102   5              {
+ 103   6                k=i;
+ 104   6                LCD12864_SetWindow(0,3);
+ 105   6                for(l=0;l<6;l++)
+ 106   6                {
+ 107   7                  LCD12864_WriteData(message[i][l]);
+ 108   7      //            SendData(message[i][l]);
+ 109   7                }
+ 110   6                LCD12864_SetWindow(1,3);
+ 111   6      //          SendData(0x0a);
+ 112   6                for(l=6;l<8;l++)
+ 113   6                {
+ 114   7                  LCD12864_WriteData(message[i][l]);
+ 115   7      //            SendData(message[i][l]);  
+ 116   7                }
+ 117   6                LCD12864_SetWindow(3,0);
+C51 COMPILER V9.52.0.0   MAIN                                                              07/31/2015 09:28:08 PAGE 3   
+
+ 118   6      //          SendData(0x0a);
+ 119   6                for(l=8;l<19;l++)
+ 120   6                {
+ 121   7                  LCD12864_WriteData(message[i][l]);
+ 122   7                  SendData(message[i][l]);  
+ 123   7                }
+ 124   6                SendData(0x0a);
+ 125   6              } 
+ 126   5           }
+ 127   4           sd=1;
+ 128   4          }
+ 129   3         }
+ 130   2        scankey();
+ 131   2          if(count==1)
+ 132   2         {
+ 133   3        LCD12864_SetWindow(0,0);
+ 134   3          for(i=0;i<5;i++)
+ 135   3           {
+ 136   4          LCD12864_WriteData(height[i]);
+ 137   4           }
+ 138   3         LCD12864_WriteData(' ');
+ 139   3        LCD12864_SetWindow(1,0);
+ 140   3          for(i=0;i<5;i++)
+ 141   3           {
+ 142   4          LCD12864_WriteData(weight[i]);
+ 143   4           }
+ 144   3         LCD12864_SetWindow(2,0);
+ 145   3          for(i=0;i<7;i++)
+ 146   3           {
+ 147   4          LCD12864_WriteData(lung[i]);
+ 148   4           }
+ 149   3         LCD12864_WriteData(' ');
+ 150   3         scankey();
+ 151   3         if(!showready)
+ 152   3         {
+ 153   4          if(receiveData[0]=='@')
+ 154   4          {
+ 155   5            LCD12864_SetWindow(0,3);
+ 156   5            for(i=1;i<4;i++)
+ 157   5            {
+ 158   6              LCD12864_WriteData(receiveData[i]);
+ 159   6              sgg[i-1]=receiveData[i];
+ 160   6            }
+ 161   5            LCD12864_WriteData('.');
+ 162   5            LCD12864_WriteData(receiveData[4]);
+ 163   5            sgg[3]=receiveData[4];
+ 164   5            LCD12864_WriteData('c');
+ 165   5            LCD12864_WriteData('m');
+ 166   5              
+ 167   5          }
+ 168   4          if(receiveData[0]=='#')
+ 169   4          {
+ 170   5            LCD12864_SetWindow(1,3);
+ 171   5            for(i=1;i<3;i++)
+ 172   5            {
+ 173   6              LCD12864_WriteData(receiveData[i]);
+ 174   6              tzz[i-1]=receiveData[i];
+ 175   6            }
+ 176   5            tzz[2]=receiveData[3];
+ 177   5            tzz[3]=receiveData[4];
+ 178   5            LCD12864_WriteData('.');
+ 179   5            LCD12864_WriteData(receiveData[3]);
+C51 COMPILER V9.52.0.0   MAIN                                                              07/31/2015 09:28:08 PAGE 4   
+
+ 180   5            LCD12864_WriteData(receiveData[4]);
+ 181   5            LCD12864_WriteData('K');
+ 182   5            LCD12864_WriteData('g');    
+ 183   5          }
+ 184   4          if(receiveData[0]=='$')
+ 185   4          {
+ 186   5            LCD12864_SetWindow(2,4);
+ 187   5            for(i=1;i<5;i++)
+ 188   5            {
+ 189   6              LCD12864_WriteData(receiveData[i]);
+ 190   6              fhll[i-1]=receiveData[i];
+ 191   6            }
+ 192   5            LCD12864_WriteData('m');
+ 193   5            LCD12864_WriteData('l');  
+ 194   5          }
+ 195   4          showready=1;    
+ 196   4         }
+ 197   3         if(sendkey==0)
+ 198   3         {
+ 199   4          sendandroid();
+ 200   4          if(bl>=78)
+ 201   4          {
+ 202   5            LCD12864_SetWindow(3,3);
+ 203   5            for(i=0;i<4;i++)
+ 204   5              LCD12864_WriteData(result[i]);
+ 205   5          }
+ 206   4          else if(bl>=66)
+ 207   4          {
+ 208   5            LCD12864_SetWindow(3,3);
+ 209   5            for(i=4;i<8;i++)
+ 210   5              LCD12864_WriteData(result[i]);
+ 211   5          }
+ 212   4          else if(bl>=55)
+ 213   4          {
+ 214   5            LCD12864_SetWindow(3,3);
+ 215   5            for(i=8;i<12;i++)
+ 216   5              LCD12864_WriteData(result[i]);
+ 217   5          }
+ 218   4          else if(bl>=47)
+ 219   4          {
+ 220   5            LCD12864_SetWindow(3,3);
+ 221   5            for(i=12;i<18;i++)
+ 222   5              LCD12864_WriteData(result[i]);
+ 223   5          }
+ 224   4          else if(bl<47)
+ 225   4          {
+ 226   5            LCD12864_SetWindow(3,3);
+ 227   5            for(i=18;i<22;i++)
+ 228   5              LCD12864_WriteData(result[i]);
+ 229   5          }     
+ 230   4         }
+ 231   3         if(senddx==0)
+ 232   3         {
+ 233   4           message_key=1;
+ 234   4           while(message_key)
+ 235   4           {
+ 236   5             for(i=0;i<11;)
+ 237   5             {
+ 238   6               switch(hc74_165())
+ 239   6               {
+ 240   7                 case 0x77: {phonenumber[i]=0;i++;break;}
+ 241   7                 case 0x7b: {phonenumber[i]=1;i++;break;}
+C51 COMPILER V9.52.0.0   MAIN                                                              07/31/2015 09:28:08 PAGE 5   
+
+ 242   7                 case 0x7d: {phonenumber[i]=2;i++;break;}
+ 243   7                 case 0x7e: {phonenumber[i]=3;i++;break;}
+ 244   7                 case 0xb7: {phonenumber[i]=4;i++;break;}
+ 245   7                 case 0xbb: {phonenumber[i]=5;i++;break;}
+ 246   7                 case 0xbd: {phonenumber[i]=6;i++;break;}
+ 247   7                 case 0xbe: {phonenumber[i]=7;i++;break;}
+ 248   7                 case 0xdb: {phonenumber[i]=8;i++;break;}
+ 249   7                 case 0xde: {phonenumber[i]=9;i++;break;}
+ 250   7               }
+ 251   6             }
+ 252   5             if(i==11) {message_key=0;break;}
+ 253   5           }
+ 254   4          sendshortmessage();
+ 255   4          sendandroid();
+ 256   4         }    
+ 257   3         }
+ 258   2        }
+ 259   1      }
+ 260          
+ 261          void scankey()
+ 262          { 
+ 263   1        if(key==0)
+ 264   1        {LCD12864_WriteCmd(0x01);
+ 265   2           do{}while(key==0);
+ 266   2           count++;
+ 267   2           if(count>1)
+ 268   2         {
+ 269   3          count=0;
+ 270   3      
+ 271   3         }
+ 272   2        }
+ 273   1        
+ 274   1      }
+ 275          void Usart() interrupt 4
+ 276          {
+ 277   1        if(RI==1)
+ 278   1        {
+ 279   2          if(showready)
+ 280   2          {
+ 281   3            receiveData[j]=SBUF;
+ 282   3            RI = 0;
+ 283   3            j++;
+ 284   3            if(j>=5)
+ 285   3            {
+ 286   4              j=0;
+ 287   4              showready=0;
+ 288   4            }
+ 289   3          }
+ 290   2          else
+ 291   2            RI=0;
+ 292   2        } 
+ 293   1      }
+ 294          void Auto_Reader(void)
+ 295          {
+ 296   1          if(PcdRequest(0x52,Temp)==MI_OK)  //寻卡，成功后Temp数组为卡类型
+ 297   1          {
+ 298   2            if(PcdAnticoll(UID)==MI_OK)   //防冲突，UID数组数据为卡序列号
+ 299   2            { 
+ 300   3              card=1;            
+ 301   3            }
+ 302   2          } 
+ 303   1      }
+C51 COMPILER V9.52.0.0   MAIN                                                              07/31/2015 09:28:08 PAGE 6   
+
+ 304          
+ 305          void InitializeSystem()
+ 306          {
+ 307   1        TMOD=0x20;
+ 308   1        TH1=0xfd;
+ 309   1        TL1=0xfd;
+ 310   1        TR1=1;
+ 311   1        REN=1;
+ 312   1        SM0=0;
+ 313   1        SM1=1;  
+ 314   1        EA=1;
+ 315   1        ES=1;
+ 316   1          PcdReset();
+ 317   1          PcdAntennaOff(); 
+ 318   1          PcdAntennaOn();  
+ 319   1        M500PcdConfigISOType( 'A' );
+ 320   1      }
+ 321          void sendandroid()
+ 322          {
+ 323   1          a=fhll[0]-'0';
+ 324   1          b=fhll[1]-'0';
+ 325   1          c=fhll[2]-'0';
+ 326   1          d=fhll[3]-'0';
+ 327   1          fhl=a*1000+b*100+c*10+d;
+ 328   1          a=tzz[0]-'0';
+ 329   1          b=tzz[1]-'0';
+ 330   1          c=tzz[2]-'0';
+ 331   1          d=tzz[3]-'0';
+ 332   1          tz=a*10+b+c*0.1+d*0.01;
+ 333   1          bl=fhl/tz;
+ 334   1          for(i=26;i<33;i++)
+ 335   1          {
+ 336   2            SendData(english[i]);
+ 337   2          }
+ 338   1          if(bl>=78)
+ 339   1          {
+ 340   2            SendData('A');
+ 341   2          }
+ 342   1          else if(bl>=66)
+ 343   1          {
+ 344   2            SendData('B');
+ 345   2          }
+ 346   1          else if(bl>=55)
+ 347   1          {
+ 348   2            SendData('C');
+ 349   2          }
+ 350   1          else if(bl>=47)
+ 351   1          {
+ 352   2            SendData('D');
+ 353   2          }
+ 354   1          else if(bl<47)
+ 355   1          {
+ 356   2            SendData('E');
+ 357   2          }
+ 358   1          SendData(0x0a);
+ 359   1          SendData('0'+bl/10);
+ 360   1          SendData('0'+bl%10);
+ 361   1          for(i=0;i<7;i++)
+ 362   1          {
+ 363   2            SendData(english[i]);
+ 364   2          }
+ 365   1          for(i=0;i<4;i++)
+C51 COMPILER V9.52.0.0   MAIN                                                              07/31/2015 09:28:08 PAGE 7   
+
+ 366   1          {
+ 367   2            SendData(sgg[i]);
+ 368   2          }
+ 369   1          SendData(0x0a);
+ 370   1          for(i=7;i<14;i++)
+ 371   1          {
+ 372   2            SendData(english[i]);
+ 373   2          }
+ 374   1          for(i=0;i<4;i++)
+ 375   1          {
+ 376   2            SendData(tzz[i]);
+ 377   2          }
+ 378   1          SendData(0x0a);
+ 379   1          for(i=14;i<26;i++)
+ 380   1          {
+ 381   2            SendData(english[i]);
+ 382   2          }
+ 383   1          for(i=0;i<4;i++)
+ 384   1          {
+ 385   2            SendData(fhll[i]);
+ 386   2          }
+ 387   1          SendData(0x0a); 
+ 388   1      }
+ 389          void sendshortmessage()
+ 390          {
+ 391   1          SendData('D');
+ 392   1          SendData('X');
+ 393   1          for(i=0;i<11;i++)
+ 394   1          {
+ 395   2            SendData(phonenumber[i]);
+ 396   2          }
+ 397   1          for(l=0;l<6;l++)
+ 398   1          {
+ 399   2            SendData(message[k][l]);
+ 400   2          }
+ 401   1          SendData(0x0a);
+ 402   1          for(l=6;l<8;l++)
+ 403   1          {
+ 404   2            SendData(message[k][l]);  
+ 405   2          }
+ 406   1          LCD12864_SetWindow(3,0);
+ 407   1          SendData(0x0a);
+ 408   1          for(l=8;l<19;l++)
+ 409   1          {
+ 410   2            SendData(message[k][l]);  
+ 411   2          }
+ 412   1          SendData(0x0a);
+ 413   1      }
+ 414          void keyboardscan()
+ 415          {
+ 416   1        
+ 417   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   2243    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =    191    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     49    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =      4    ----
+C51 COMPILER V9.52.0.0   MAIN                                                              07/31/2015 09:28:08 PAGE 8   
+
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

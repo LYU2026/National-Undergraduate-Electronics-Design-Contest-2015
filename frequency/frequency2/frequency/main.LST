@@ -1,0 +1,633 @@
+C51 COMPILER V9.52.0.0   MAIN                                                              08/18/2015 04:34:06 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: D:\Program Files\keil4\C51\BIN\C51.EXE main.c BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          #include<intrins.h>
+   3          #include "lcd12864.h"
+   4          #include "hc165.h"
+   5          #include "uart.h"
+   6          /**************************************************************************/
+   7          sbit mod1=P1^0;//mod1:frequency , period
+   8          sbit mod2=P1^1;//mod2:interval
+   9          sbit mod3=P1^2;//mod3:duty
+  10          sbit start=P1^3;//send start signal
+  11          sbit sendbutton=P1^4;
+  12          sbit startout=P2^0;
+  13          sbit clrout=P2^1;
+  14          bit startflag=0;
+  15          bit read=0;
+  16          bit sendflag=0;
+  17          unsigned char keyvalue=0;
+  18          unsigned char counter=0;
+  19          unsigned long frequency11=0;
+  20          unsigned long time11=0;
+  21          unsigned long duty11=0;
+  22          extern unsigned long recievedat[4];
+  23          unsigned char dat[9]={0};
+  24          /**************************************************************************/
+  25          /**************************************************************************/
+  26          unsigned char code Photo[]={
+  27          0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+  28          0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+  29          0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+  30          0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+  31          0x00,0x00,0x00,0x00,0x00,0x10,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+  32          0x00,0x00,0xDE,0xC0,0x00,0x38,0x00,0x06,0xFF,0x00,0x06,0x00,0x06,0x0C,0x00,0x00,
+  33          0x00,0x00,0xFE,0xC0,0x00,0x18,0x00,0x16,0xFF,0x01,0xFF,0xF0,0x07,0x0C,0x00,0x00,
+  34          0x00,0x00,0x7D,0xF8,0x07,0xFF,0xC0,0x17,0xB0,0x01,0xFF,0xF0,0x03,0x0C,0x00,0x00,
+  35          0x00,0x00,0xFF,0xF8,0x06,0x00,0xC0,0x16,0xFE,0x00,0xCD,0xB0,0x00,0x0C,0x00,0x00,
+  36          0x00,0x00,0x7F,0xB0,0x07,0xFF,0xC0,0x3F,0xFE,0x00,0xFF,0xF0,0x0F,0x7F,0xC0,0x00,
+  37          0x00,0x00,0xFF,0xB0,0x00,0x0F,0x00,0x3F,0xD6,0x00,0x7F,0x60,0x0F,0x7F,0xC0,0x00,
+  38          0x00,0x00,0xBD,0xB0,0x00,0x1C,0x00,0x16,0xD6,0x00,0xFF,0xF0,0x03,0x0C,0x00,0x00,
+  39          0x00,0x00,0xFC,0xF0,0x07,0xFF,0xC0,0x1F,0xD6,0x01,0xDF,0xB8,0x03,0x0C,0x00,0x00,
+  40          0x00,0x00,0xFC,0xE0,0x07,0xFF,0xC0,0x37,0xD6,0x00,0x06,0x80,0x03,0x0C,0x00,0x00,
+  41          0x00,0x00,0xEC,0x60,0x00,0x18,0x00,0x37,0xFE,0x01,0xFF,0xF8,0x03,0x4C,0x00,0x00,
+  42          0x00,0x00,0x7D,0xF0,0x00,0x18,0x00,0x2E,0x7C,0x00,0x06,0x00,0x03,0xCC,0x00,0x00,
+  43          0x00,0x00,0xFF,0xB8,0x00,0xF8,0x00,0x3D,0xEF,0x00,0x06,0x00,0x03,0x8C,0x00,0x00,
+  44          0x00,0x00,0xE3,0x18,0x00,0xF0,0x00,0x39,0x83,0x00,0x06,0x00,0x02,0x0C,0x00,0x00,
+  45          0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+  46          0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+  47          0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+  48          0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+  49          0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+  50          0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+  51          0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+  52          0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+  53          0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x80,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+  54          0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x90,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+  55          0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x04,0x90,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+C51 COMPILER V9.52.0.0   MAIN                                                              08/18/2015 04:34:06 PAGE 2   
+
+  56          0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x04,0x90,0x02,0x00,0x00,0x00,0x00,0x00,0x00,
+  57          0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x04,0x90,0x02,0x00,0x00,0x00,0x00,0x00,0x00,
+  58          0x00,0x00,0x00,0x00,0x00,0x00,0x40,0x05,0xB0,0x02,0x00,0x00,0x00,0x00,0x00,0x00,
+  59          0x00,0x00,0x00,0x00,0x00,0x00,0x41,0x05,0xB0,0x42,0x00,0x00,0x00,0x00,0x00,0x00,
+  60          0x00,0x00,0x00,0x00,0x00,0x00,0x41,0x05,0xB0,0x43,0x00,0x00,0x00,0x00,0x00,0x00,
+  61          0x00,0x00,0x00,0x00,0x00,0x20,0x41,0x05,0xB0,0x43,0x02,0x00,0x00,0x00,0x00,0x00,
+  62          0x00,0x00,0x00,0x00,0x00,0x20,0x41,0x05,0xB4,0xC3,0x02,0x00,0x00,0x00,0x00,0x00,
+  63          0x00,0x00,0x00,0x00,0x08,0x21,0x49,0x0D,0xB6,0xDB,0x86,0x10,0x00,0x00,0x00,0x00,
+  64          0x00,0x00,0x00,0x00,0x08,0x21,0x6B,0x0D,0xB6,0xDB,0x86,0x10,0x00,0x00,0x00,0x00,
+  65          0x00,0x00,0x00,0x20,0x08,0x61,0x6B,0x0D,0xB6,0xDB,0x86,0x18,0x02,0x00,0x00,0x00,
+  66          0x00,0x00,0x00,0x00,0x08,0x61,0x6B,0x0D,0xB6,0xDB,0xC6,0x18,0x00,0x00,0x00,0x00,
+  67          0x00,0x00,0x00,0x62,0x1C,0x61,0xEF,0x2D,0xB6,0xDB,0xC6,0x18,0x42,0x00,0x00,0x00,
+  68          0x00,0x00,0x00,0x62,0x1C,0x65,0xEF,0xAF,0xF6,0xDB,0xD6,0x18,0x46,0x00,0x00,0x00,
+  69          0x00,0x00,0x00,0x72,0x1D,0x65,0xEF,0xEF,0xF6,0xFB,0xD7,0xD8,0x66,0x00,0x00,0x00,
+  70          0x00,0x01,0x08,0x53,0x57,0xFD,0xFF,0xEF,0xF6,0xFB,0xF7,0xDF,0x6F,0x18,0x00,0x00,
+  71          0x00,0x00,0x59,0x53,0x57,0xFF,0xBE,0xFF,0xFE,0xEB,0xF5,0xDF,0x6B,0x5A,0x08,0x00,
+  72          0x00,0x01,0x5D,0x5F,0xF6,0xFF,0xBE,0xFB,0x7F,0xAF,0xFD,0xF7,0xE9,0xDB,0x40,0x00,
+  73          0x00,0x01,0x17,0xCF,0xF6,0x9B,0xB6,0xDB,0x7F,0xAF,0xFD,0x75,0xA9,0xDA,0x00,0x00,
+  74          0x00,0x00,0x04,0xCD,0xB6,0x1B,0xB6,0xDB,0x6D,0xAD,0xDC,0x25,0xB9,0x50,0x00,0x00,
+  75          0x00,0x00,0x00,0x0D,0x86,0x1B,0xB2,0xDB,0x6D,0x2D,0xD8,0x21,0xB0,0x00,0x00,0x00,
+  76          0x00,0x00,0x00,0x04,0x86,0x18,0xB0,0xDB,0x69,0x0C,0x88,0x20,0xB0,0x00,0x00,0x00,
+  77          0x00,0x00,0x00,0x00,0x86,0x18,0xB0,0xDB,0x69,0x0C,0x88,0x20,0x00,0x00,0x00,0x00,
+  78          0x00,0x00,0x00,0x04,0x04,0x18,0xB0,0xDA,0x69,0x0C,0x88,0x00,0x00,0x00,0x00,0x00,
+  79          0x00,0x00,0x00,0x00,0x04,0x18,0xB0,0x92,0x49,0x04,0x88,0x00,0x00,0x00,0x00,0x00,
+  80          0x00,0x00,0x00,0x00,0x00,0x18,0x30,0x12,0x49,0x04,0x08,0x00,0x00,0x00,0x00,0x00,
+  81          0x00,0x00,0x00,0x00,0x00,0x10,0x30,0x12,0x41,0x04,0x00,0x00,0x00,0x00,0x00,0x00,
+  82          0x00,0x00,0x00,0x00,0x00,0x00,0x30,0x02,0x40,0x04,0x00,0x00,0x00,0x00,0x00,0x00,
+  83          0x00,0x00,0x00,0x00,0x00,0x00,0x20,0x02,0x40,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+  84          0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x02,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+  85          0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+  86          0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+  87          0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+  88          0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+  89          0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+  90          0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00};
+  91          unsigned char code show1[]={"模式: "};
+  92          unsigned char code show2[]={"周期频率"};
+  93          unsigned char code show3[]={"时间间隔"};
+  94          unsigned char code show4[]={"占空比  "};
+  95          unsigned char code show5[]={"停止测量"};
+  96          unsigned char code show6[]={"开始测量"};
+  97          unsigned char code unit1[]={"Hz"};
+  98          /**************************************************************************/
+  99          void delay1s(void);
+ 100          void display1(unsigned char k);//mod display
+ 101          void display2(unsigned char k);//unit state display
+ 102          void display3(unsigned char k);//data dispaly
+ 103          void keyscan();
+ 104          void timedisplay();
+ 105          void frequencydisplay();
+ 106          void dutydisplay();
+ 107          void datatrans(unsigned char k);
+ 108          void FPGA_Init();
+ 109          void sendmessage(unsigned char k);
+ 110          void main()
+ 111          {
+ 112   1        LCD12864_DrowPic(&Photo[0]);
+ 113   1        delay1s();
+ 114   1        FPGA_Init();
+ 115   1        LCD12864_Init();  
+ 116   1        InitUart();
+ 117   1        while(1)
+C51 COMPILER V9.52.0.0   MAIN                                                              08/18/2015 04:34:06 PAGE 3   
+
+ 118   1        {
+ 119   2          keyscan();
+ 120   2          display1(keyvalue);
+ 121   2          display2(keyvalue);
+ 122   2          if(startflag)
+ 123   2          {
+ 124   3            clrout=1;
+ 125   3            _nop_();
+ 126   3            _nop_();
+ 127   3            _nop_();
+ 128   3            clrout=0;
+ 129   3            startout=1;
+ 130   3            delay1s();
+ 131   3            startout=0;
+ 132   3            HC165();
+ 133   3            read=1;
+ 134   3            if(read)
+ 135   3            {
+ 136   4              display3(keyvalue);
+ 137   4              read=0;
+ 138   4            }
+ 139   3          }
+ 140   2        }
+ 141   1        /********************************test***********************//*
+ 142   1          FPGA_Init();
+ 143   1        LCD12864_Init();
+ 144   1          while(1)
+ 145   1        {
+ 146   1          clrout=1;
+ 147   1          _nop_();
+ 148   1          _nop_();
+ 149   1          _nop_();
+ 150   1          clrout=0;
+ 151   1          startout=1;
+ 152   1          delay1s();
+ 153   1          startout=0;
+ 154   1          HC165();
+ 155   1          datatrans(0);
+ 156   1          LCD12864_SetWindow(0,0);
+ 157   1          for(i=0;i<10;i++)
+ 158   1          {
+ 159   1            LCD12864_WriteData('0'+dat[i]);
+ 160   1          }
+ 161   1          LCD12864_WriteData('a');
+ 162   1        }
+ 163   1        /********************************test***********************/
+ 164   1      }
+ 165          void display1(unsigned char k)
+ 166          {
+ 167   1        unsigned char i;
+ 168   1        LCD12864_SetWindow(0,0);
+ 169   1        for(i=0;show1[i]!='\0';i++)//show1[]={"模式:"};
+ 170   1        {
+ 171   2          LCD12864_WriteData(show1[i]);
+ 172   2        }
+ 173   1        switch(k)
+ 174   1        {
+ 175   2          case 2:
+ 176   2          {
+ 177   3            LCD12864_SetWindow(0,3);
+ 178   3              for(i=0;show3[i]!='\0';i++)//show3[]={"时间间隔"};
+ 179   3              {
+C51 COMPILER V9.52.0.0   MAIN                                                              08/18/2015 04:34:06 PAGE 4   
+
+ 180   4                LCD12864_WriteData(show3[i]);
+ 181   4              }
+ 182   3          }break;
+ 183   2          case 3:
+ 184   2          {
+ 185   3            LCD12864_SetWindow(0,3);
+ 186   3              for(i=0;show4[i]!='\0';i++)//show4[]={"占空比"};
+ 187   3              {
+ 188   4                LCD12864_WriteData(show4[i]);
+ 189   4              }
+ 190   3          }break;
+ 191   2          default:
+ 192   2          {
+ 193   3            LCD12864_SetWindow(0,3);
+ 194   3              for(i=0;show2[i]!='\0';i++)//show2[]={"周期频率"};
+ 195   3              {
+ 196   4                LCD12864_WriteData(show2[i]);
+ 197   4              }
+ 198   3          }
+ 199   2        }
+ 200   1      }
+ 201          void display2(unsigned char k)
+ 202          {
+ 203   1        unsigned char i;
+ 204   1        if(startflag)
+ 205   1        {
+ 206   2          LCD12864_SetWindow(1,2);
+ 207   2          for(i=0;show6[i]!='\0';i++)//show5[]={"开始测量"};
+ 208   2          {
+ 209   3            LCD12864_WriteData(show6[i]);
+ 210   3          }
+ 211   2          switch(k)
+ 212   2          {
+ 213   3            case 2:
+ 214   3            {
+ 215   4              LCD12864_SetWindow(2,7);
+ 216   4              LCD12864_WriteData(' ');
+ 217   4              LCD12864_WriteData(' ');
+ 218   4            }break;
+ 219   3            case 3:
+ 220   3            {
+ 221   4              LCD12864_SetWindow(2,7);
+ 222   4                LCD12864_WriteData('%');
+ 223   4              LCD12864_WriteData(' ');
+ 224   4              LCD12864_SetWindow(3,7);
+ 225   4              LCD12864_WriteData(' ');
+ 226   4              LCD12864_WriteData(' ');
+ 227   4            }break;
+ 228   3            default:
+ 229   3            {
+ 230   4              LCD12864_SetWindow(2,7);
+ 231   4              for(i=0;unit1[i]!='\0';i++)//unit1[]={"Hz"};
+ 232   4              {
+ 233   5                LCD12864_WriteData(unit1[i]);
+ 234   5              }
+ 235   4            }
+ 236   3          }
+ 237   2        }
+ 238   1        if(!startflag)
+ 239   1        {
+ 240   2          LCD12864_SetWindow(1,2);
+ 241   2          for(i=0;show5[i]!='\0';i++)//show5[]={"停止测量"};
+C51 COMPILER V9.52.0.0   MAIN                                                              08/18/2015 04:34:06 PAGE 5   
+
+ 242   2          {
+ 243   3            LCD12864_WriteData(show5[i]);
+ 244   3          }
+ 245   2        }
+ 246   1      }
+ 247          void display3(unsigned char k)
+ 248          {
+ 249   1        LCD12864_SetWindow(2,0);
+ 250   1        datatrans(k);
+ 251   1          switch(k)
+ 252   1        {
+ 253   2          case 2://ms
+ 254   2          {
+ 255   3            timedisplay();
+ 256   3          }break;
+ 257   2          case 3:
+ 258   2          {
+ 259   3            dutydisplay();
+ 260   3          }break;
+ 261   2          default:
+ 262   2          {
+ 263   3            frequencydisplay();
+ 264   3            timedisplay();
+ 265   3          }
+ 266   2        }
+ 267   1      }
+ 268          void timedisplay()
+ 269          {
+ 270   1          unsigned char i;
+ 271   1          unsigned char dat[10];
+ 272   1          bit zeroflag=0;
+ 273   1          dat[0]=time11/100000000;
+ 274   1          dat[1]=time11%100000000/10000000;
+ 275   1          dat[2]=time11%10000000/1000000;
+ 276   1          dat[3]=time11%1000000/100000;
+ 277   1          dat[4]=time11%100000/10000;
+ 278   1          dat[5]=time11%10000/1000;
+ 279   1          dat[6]=time11%1000/100;
+ 280   1          dat[7]=time11%100/10;
+ 281   1          dat[8]=time11%10;
+ 282   1          LCD12864_SetWindow(3,0);
+ 283   1            if(time11>=100000000)
+ 284   1            {zeroflag=0;
+ 285   2              for(i=0;i<1;i++)
+ 286   2              {
+ 287   3                if(dat[i]==0&&!zeroflag)
+ 288   3                  {
+ 289   4                    LCD12864_WriteData(' ');
+ 290   4                  }
+ 291   3                  else
+ 292   3                  {
+ 293   4                    LCD12864_WriteData('0'+dat[i]);
+ 294   4                    zeroflag=1;
+ 295   4                  }
+ 296   3              }
+ 297   2              LCD12864_WriteData('.');
+ 298   2              for(i=1;i<9;i++)
+ 299   2              {
+ 300   3                LCD12864_WriteData('0'+dat[i]);
+ 301   3              }
+ 302   2              LCD12864_SetWindow(3,7);
+ 303   2              LCD12864_WriteData(' ');
+C51 COMPILER V9.52.0.0   MAIN                                                              08/18/2015 04:34:06 PAGE 6   
+
+ 304   2              LCD12864_WriteData('s');
+ 305   2            }
+ 306   1            if((time11<100000000)&&(time11>=100000))
+ 307   1            {
+ 308   2              zeroflag=0;
+ 309   2              for(i=1;i<4;i++)
+ 310   2              {
+ 311   3                if(dat[i]==0&&!zeroflag)
+ 312   3                  {
+ 313   4                    LCD12864_WriteData(' ');
+ 314   4                  }
+ 315   3                  else
+ 316   3                  {
+ 317   4                    LCD12864_WriteData('0'+dat[i]);
+ 318   4                    zeroflag=1;
+ 319   4                  }
+ 320   3              }
+ 321   2              LCD12864_WriteData('.');
+ 322   2              for(i=4;i<9;i++)
+ 323   2              {
+ 324   3                LCD12864_WriteData('0'+dat[i]);
+ 325   3              }
+ 326   2              LCD12864_SetWindow(3,7);
+ 327   2              LCD12864_WriteData('m');
+ 328   2              LCD12864_WriteData('s');
+ 329   2            }
+ 330   1            if(time11<100000&&(time11>=100))
+ 331   1            {
+ 332   2              zeroflag=0;
+ 333   2              for(i=4;i<7;i++)
+ 334   2              {
+ 335   3                  if(dat[i]==0&&!zeroflag)
+ 336   3                  {
+ 337   4                    LCD12864_WriteData(' ');
+ 338   4                  }
+ 339   3                  else
+ 340   3                  {
+ 341   4                    LCD12864_WriteData('0'+dat[i]);
+ 342   4                    zeroflag=1;
+ 343   4                  }
+ 344   3              }
+ 345   2              LCD12864_WriteData('.');
+ 346   2              for(i=7;i<9;i++)
+ 347   2              {
+ 348   3                LCD12864_WriteData('0'+dat[i]);
+ 349   3              }
+ 350   2              LCD12864_SetWindow(3,7);
+ 351   2              LCD12864_WriteData('u');
+ 352   2              LCD12864_WriteData('s');
+ 353   2            }
+ 354   1            if(time11<100)
+ 355   1            {
+ 356   2              zeroflag=0;
+ 357   2              for(i=7;i<9;i++)
+ 358   2              {
+ 359   3                    LCD12864_WriteData('0'+dat[i]);
+ 360   3              }
+ 361   2              LCD12864_WriteData('0');
+ 362   2              LCD12864_SetWindow(3,7);
+ 363   2              LCD12864_WriteData('n');
+ 364   2              LCD12864_WriteData('s');
+ 365   2            }
+C51 COMPILER V9.52.0.0   MAIN                                                              08/18/2015 04:34:06 PAGE 7   
+
+ 366   1      }
+ 367          void frequencydisplay()
+ 368          {
+ 369   1            unsigned char i;
+ 370   1            bit zeroflag=0;
+ 371   1            LCD12864_SetWindow(2,0);
+ 372   1              if(frequency11<1000)
+ 373   1              {
+ 374   2                zeroflag=0;
+ 375   2                for(i=6;i<9;i++)
+ 376   2                {
+ 377   3                  if(dat[i]==0&&!zeroflag)
+ 378   3                  {
+ 379   4                    LCD12864_WriteData(' ');
+ 380   4                  }
+ 381   3                  else
+ 382   3                  {
+ 383   4                    LCD12864_WriteData('0'+dat[i]);
+ 384   4                    if(sendflag)
+ 385   4                    {
+ 386   5                      SendData('0'+dat[i]);
+ 387   5                    }
+ 388   4                    zeroflag=1;
+ 389   4                  }
+ 390   3                }
+ 391   2                LCD12864_SetWindow(2,6);
+ 392   2                LCD12864_WriteData(' ');
+ 393   2                LCD12864_WriteData(' ');
+ 394   2              }
+ 395   1              if((frequency11>=1000)&&(frequency11<1000000))
+ 396   1              {
+ 397   2                zeroflag=0;
+ 398   2                for(i=3;i<6;i++)
+ 399   2                {
+ 400   3                  if(dat[i]==0&&!zeroflag)
+ 401   3                  {
+ 402   4                    LCD12864_WriteData(' ');
+ 403   4                  }
+ 404   3                  else
+ 405   3                  {
+ 406   4                    LCD12864_WriteData('0'+dat[i]);
+ 407   4                    if(sendflag)
+ 408   4                    {
+ 409   5                      SendData('0'+dat[i]);
+ 410   5                    }
+ 411   4                    zeroflag=1;
+ 412   4                  }
+ 413   3                }
+ 414   2                LCD12864_WriteData('.');
+ 415   2                if(sendflag)
+ 416   2                    {
+ 417   3                      SendData('.');
+ 418   3                    }
+ 419   2                for(i=6;i<9;i++)
+ 420   2                {
+ 421   3                   LCD12864_WriteData('0'+dat[i]);
+ 422   3                  if(sendflag)
+ 423   3                    {
+ 424   4                      SendData('0'+dat[i]);
+ 425   4                    }
+ 426   3                }
+ 427   2                LCD12864_SetWindow(2,6);
+C51 COMPILER V9.52.0.0   MAIN                                                              08/18/2015 04:34:06 PAGE 8   
+
+ 428   2                LCD12864_WriteData(' ');
+ 429   2                LCD12864_WriteData('K');
+ 430   2                if(sendflag)
+ 431   2                    {
+ 432   3                      SendData('K');
+ 433   3                    }
+ 434   2              }
+ 435   1              if(frequency11>=1000000)
+ 436   1              {
+ 437   2                zeroflag=0;
+ 438   2                for(i=0;i<3;i++)
+ 439   2                {
+ 440   3                  if(dat[i]==0&&!zeroflag)
+ 441   3                  {
+ 442   4                    LCD12864_WriteData(' ');
+ 443   4                  }
+ 444   3                  else
+ 445   3                  {
+ 446   4                    LCD12864_WriteData('0'+dat[i]);
+ 447   4                    if(sendflag)
+ 448   4                    {
+ 449   5                      SendData('0'+dat[i]);
+ 450   5                    }
+ 451   4                    zeroflag=1;
+ 452   4                  }
+ 453   3                }
+ 454   2                LCD12864_WriteData('.');
+ 455   2                if(sendflag)
+ 456   2                    {
+ 457   3                      SendData('.');
+ 458   3                    }
+ 459   2                for(i=3;i<9;i++)
+ 460   2                {
+ 461   3                  LCD12864_WriteData('0'+dat[i]);
+ 462   3                  if(sendflag)
+ 463   3                    {
+ 464   4                      SendData('0'+dat[i]);
+ 465   4                    }
+ 466   3                }
+ 467   2                LCD12864_SetWindow(2,6);
+ 468   2                LCD12864_WriteData(' ');
+ 469   2                LCD12864_WriteData('M');
+ 470   2                if(sendflag)
+ 471   2                    {
+ 472   3                      SendData('M');
+ 473   3                    }
+ 474   2              }
+ 475   1                if(sendflag)
+ 476   1                    {
+ 477   2                      SendData('H');
+ 478   2                      SendData('z');
+ 479   2                    }
+ 480   1      }
+ 481          void dutydisplay()
+ 482          {
+ 483   1        unsigned char i;
+ 484   1        bit zeroflag=0;
+ 485   1        LCD12864_SetWindow(2,4);
+ 486   1        for(i=0;i<3;i++)
+ 487   1        {
+ 488   2          if(dat[i]==0&&!zeroflag)
+ 489   2          {
+C51 COMPILER V9.52.0.0   MAIN                                                              08/18/2015 04:34:06 PAGE 9   
+
+ 490   3            LCD12864_WriteData(' ');
+ 491   3          }
+ 492   2          else
+ 493   2          {
+ 494   3            LCD12864_WriteData('0'+dat[i]);
+ 495   3            zeroflag=1;
+ 496   3          }
+ 497   2        }
+ 498   1        LCD12864_WriteData('.');
+ 499   1        for(i=3;i<4;i++)
+ 500   1        {
+ 501   2          if(dat[i]==0&&!zeroflag)
+ 502   2          {
+ 503   3            LCD12864_WriteData(' ');
+ 504   3          }
+ 505   2          else
+ 506   2          {
+ 507   3            LCD12864_WriteData('0'+dat[i]);
+ 508   3            zeroflag=1;
+ 509   3          }
+ 510   2        }
+ 511   1      }
+ 512          void datatrans(unsigned char k)
+ 513          {
+ 514   1        switch(k)
+ 515   1          {
+ 516   2            case 2://unit2[]={"ms"};
+ 517   2            {
+ 518   3              time11=((float)(recievedat[0])/(float)(recievedat[2]))/2;
+ 519   3            }break;
+ 520   2            case 3://duty
+ 521   2            {
+ 522   3              duty11=((float)(recievedat[3])/(float)(recievedat[1]))*10000;
+ 523   3                dat[0]=duty11/10000;
+ 524   3                dat[1]=duty11%10000/1000;
+ 525   3                dat[2]=duty11%1000/100;
+ 526   3                dat[3]=duty11%100/10;
+ 527   3            }break;
+ 528   2            default://Hz
+ 529   2            {
+ 530   3              frequency11=((float)(recievedat[2])/(float)(recievedat[1]))*100000000;
+ 531   3                dat[0]=frequency11/100000000;
+ 532   3                dat[1]=frequency11%100000000/10000000;
+ 533   3                dat[2]=frequency11%10000000/1000000;
+ 534   3                dat[3]=frequency11%1000000/100000;
+ 535   3                dat[4]=frequency11%100000/10000;
+ 536   3                dat[5]=frequency11%10000/1000;
+ 537   3                dat[6]=frequency11%1000/100;
+ 538   3                dat[7]=frequency11%100/10;
+ 539   3                dat[8]=frequency11%10;
+ 540   3              time11=((float)(recievedat[1])/(float)(recievedat[2]))+1;
+ 541   3            }
+ 542   2          }
+ 543   1      }
+ 544          void keyscan()
+ 545          {
+ 546   1        if(!mod1)
+ 547   1        {
+ 548   2          while(!mod1);
+ 549   2            keyvalue=1;
+ 550   2        }
+ 551   1        if(!mod2)
+C51 COMPILER V9.52.0.0   MAIN                                                              08/18/2015 04:34:06 PAGE 10  
+
+ 552   1        {
+ 553   2          while(!mod2);
+ 554   2            keyvalue=2;
+ 555   2        }
+ 556   1        if(!mod3)
+ 557   1        {
+ 558   2          while(!mod3);
+ 559   2            keyvalue=3;
+ 560   2        }
+ 561   1        if(!start)
+ 562   1        {
+ 563   2          while(!start);
+ 564   2            startflag=!startflag;
+ 565   2          LCD12864_WriteCmd(0x01);
+ 566   2            if(startflag)
+ 567   2            {
+ 568   3                startout=1;
+ 569   3            }
+ 570   2        }
+ 571   1        if(!sendbutton)
+ 572   1        {
+ 573   2          while(!sendbutton);
+ 574   2          sendflag=!sendflag;
+ 575   2          LCD12864_WriteCmd(0x01);
+ 576   2        }
+ 577   1      }
+ 578          void FPGA_Init()
+ 579          {
+ 580   1        clrout=0;
+ 581   1        startout=0;
+ 582   1        HC165_nPL=1;
+ 583   1        HC165_OUT=1;
+ 584   1        HC165_CK=0;
+ 585   1      }
+ 586          void delay1s(void)   //?? -0.000000000056us
+ 587          {
+ 588   1          unsigned char a,b,c;
+ 589   1          for(c=71;c>0;c--)
+ 590   1              for(b=168;b>0;b--)
+ 591   1                  for(a=250;a>0;a--);
+ 592   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   2458    ----
+   CONSTANT SIZE    =   1079    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     23      18
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =      3       3
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

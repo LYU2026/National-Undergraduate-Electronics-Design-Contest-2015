@@ -1,0 +1,654 @@
+C51 COMPILER V9.52.0.0   MAIN                                                              05/29/2015 16:25:46 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: C:\Program Files\keil\C51\BIN\C51.EXE main.c LARGE BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #include<reg52.h>
+   2          #include<intrins.h>
+   3          #include"main.h"
+   4          #include"12864.h"
+   5          #include"ds1302.h"
+   6          #include"74HC165.h"
+   7          #include"temp.h"
+   8          #include"I2C.h"
+   9          
+  10          #include"ad8591.h"
+  11          //void ADDisplay();
+  12          extern   int  Ds18b20ReadTemp();  //∂¡»°Œ¬∂»
+  13          void ADDisplay()
+  14          {int i;
+  15   1        ISendByte(PCF8591,0x41);
+  16   1        D[0]=IRcvByte(PCF8591)*2;  //ADC0 ƒ£ ˝◊™ªª1  ∑≈¥Û2±∂œ‘ æ
+  17   1        LedOut[0]=Disp_Tab[D[0]%10000/1000];
+  18   1           LedOut[1]=Disp_Tab[D[0]%1000/100];
+  19   1           LedOut[2]=Disp_Tab[D[0]%100/10];
+  20   1           LedOut[3]=Disp_Tab[D[0]%10];
+  21   1        lcd_pos(3,0);             //…Ë÷√œ‘ æŒª÷√Œ™µ⁄“ª––
+  22   1           for(i=0;i<5;i++)
+  23   1           {
+  24   2             lcd_wdat(DIS4[i]);
+  25   2             delay(30);
+  26   2           }
+  27   1           lcd_wcmd(0x98); 
+  28   1          //lcd_wdat(LedOut[0]);
+  29   1           lcd_wdat(LedOut[1]);
+  30   1          //     lcd_wdat(DIS6[0]);
+  31   1           lcd_wdat(DIS6[1]);
+  32   1           lcd_wdat(LedOut[2]);
+  33   1           lcd_wdat(0x2e);//.
+  34   1           lcd_wdat(LedOut[3]);
+  35   1           lcd_wdat(0x56);//V
+  36   1      
+  37   1      }
+  38          
+  39          
+  40          void main()
+  41          {
+  42   1         Time0[7]=0x20;
+  43   1         delay(100);                 //…œµÁ£¨µ»¥˝Œ»∂®
+  44   1         lcd_init();                 //≥ı ºªØLCD
+  45   1         while(1)
+  46   1         {
+  47   2        /*    ClockPlay();
+  48   2           delay(500);  
+  49   2           clr_screen(); */
+  50   2      LcdDisplayTemp0(Ds18b20ReadTemp());//œ‘ æŒ¬∂» //   Lcd12864DisplayTemp0(Ds18b20ReadTemp());
+  51   2        //   ADDisplay();
+  52   2        /*    if(hc74_165()==0xee)
+  53   2            {
+  54   2      
+  55   2              timesetting();
+C51 COMPILER V9.52.0.0   MAIN                                                              05/29/2015 16:25:46 PAGE 2   
+
+  56   2            }
+  57   2          */
+  58   2       }
+  59   1      /*
+  60   1         while(1);
+  61   1      
+  62   1           delay(1000);
+  63   1           lcdflag();
+  64   1           clr_screen();             //«Â∆¡        
+  65   1           photodisplay(Photo1);     //œ‘ æÕº∆¨1
+  66   1           delay(2000);    
+  67   1           clr_screen();             //«Â∆¡
+  68   1           photodisplay(Photo2);     //œ‘ æÕº∆¨2
+  69   1           delay(2000);
+  70   1           bytecode();               //œ‘ æ◊÷∑˚±Ì¥˙¬Î
+  71   1           delay(2000);
+  72   1           clr_screen();  */
+  73   1         
+  74   1      }
+  75          void readtime()
+  76          {
+  77   1           Time0[0]= (DS1302_ReadOneByteAtAddr(ADDR_SEC_R));
+  78   1           Time0[1]= (DS1302_ReadOneByteAtAddr(ADDR_MIN_R));
+  79   1           Time0[2]= (DS1302_ReadOneByteAtAddr(ADDR_HOUR_R));
+  80   1           Time0[3]= (DS1302_ReadOneByteAtAddr(ADDR_DAY_R));
+  81   1           Time0[4]= (DS1302_ReadOneByteAtAddr(ADDR_MONTH_R));
+  82   1           Time0[5]= (DS1302_ReadOneByteAtAddr(ADDR_WEEK_R));
+  83   1           Time0[6]= (DS1302_ReadOneByteAtAddr(ADDR_YEAR_R));
+  84   1      }
+  85          void ClockPlay()
+  86          {   uchar i;
+  87   1        
+  88   1            if((Time0[7]&0x0a)==0x0a)    
+  89   1            {   
+  90   2                Time0[7]=(Time0[7]&0xf0);
+  91   2                Time0[7]+=0x10;
+  92   2            }
+  93   1            if((Time0[7]&0x0f)==0x0f)
+  94   1            {   
+  95   2                Time0[7]=(Time0[7]&0xf0);
+  96   2                Time0[7]+=0x09;
+  97   2            }
+  98   1          readtime();
+  99   1           lcd_pos(1,0);             //…Ë÷√œ‘ æŒª÷√Œ™µ⁄“ª––
+ 100   1           for(i=0;i<5;i++)
+ 101   1           {
+ 102   2             lcd_wdat(DIS1[i]);
+ 103   2             delay(30);
+ 104   2           }
+ 105   1           lcd_wcmd(0x91); 
+ 106   1           lcd_wdat(0x30+Time0[7]/16);
+ 107   1           lcd_wdat(0x30+Time0[7]%16);
+ 108   1           lcd_wdat(0x30+Time0[6]/16);
+ 109   1           lcd_wdat(0x30+Time0[6]%16);
+ 110   1           lcd_wdat(0xc4);
+ 111   1           lcd_wdat(0xea);
+ 112   1           lcd_wdat(0x30+Time0[4]/16);
+ 113   1           lcd_wdat(0x30+Time0[4]%16);
+ 114   1           lcd_wdat(0xd4);
+ 115   1           lcd_wdat(0xc2);
+ 116   1           lcd_wdat(0x30+Time0[3]/16);
+ 117   1           lcd_wdat(0x30+Time0[3]%16);
+C51 COMPILER V9.52.0.0   MAIN                                                              05/29/2015 16:25:46 PAGE 3   
+
+ 118   1           lcd_wdat(0xc8);
+ 119   1           lcd_wdat(0xd5);
+ 120   1           lcd_pos(3,0);           
+ 121   1           for(i=0;i<5;i++)
+ 122   1           {
+ 123   2             lcd_wdat(DIS2[i]);
+ 124   2             delay(30);
+ 125   2           }
+ 126   1           //lcd_pos(4,0); 
+ 127   1           lcd_wcmd(0x9C); 
+ 128   1           lcd_wdat(0x30+Time0[2]/16);
+ 129   1           lcd_wdat(0x30+Time0[2]%16);
+ 130   1           lcd_wdat(':');
+ 131   1           lcd_wdat(0x30+Time0[1]/16);
+ 132   1           lcd_wdat(0x30+Time0[1]%16);
+ 133   1           lcd_wdat(':');
+ 134   1           lcd_wdat(0x30+Time0[0]/16);
+ 135   1           lcd_wdat(0x30+Time0[0]%16);
+ 136   1      }
+ 137          
+ 138          void timesetting()
+ 139          {
+ 140   1        unsigned char k=0;  
+ 141   1        if(hc74_165()==0x77) 
+ 142   1        {   
+ 143   2          k++;
+ 144   2          //P1=0xfe;
+ 145   2          if(k==7) k=1;
+ 146   2        }
+ 147   1        switch(k)
+ 148   1        {
+ 149   2            case 1:     //∞¥œ¬∞¥º¸1£¨Ω¯»Îµ˜ ‘ƒÍ
+ 150   2            {//P1=0xfd;
+ 151   3              while(1){   switch(hc74_165())
+ 152   4                  {
+ 153   5                    case 0x7b://∞¥œ¬K9£¨Ω¯»Îº”1
+ 154   5                     { //P1=0xfc;
+ 155   6                        year(0);break;}
+ 156   5                    case 0xbb:
+ 157   5                      {year(1);break;}
+ 158   5                      default:
+ 159   5                      {
+ 160   6                        DS1302_WriteOneByteAtAddr(0x8e,0x00);               
+ 161   6                        DS1302_SetInit(Time0);                 //∂‘ ±÷”Ω¯––…Ë÷√
+ 162   6                        DS1302_WriteOneByteAtAddr(0x8e,0x80);
+ 163   6                        ClockPlay();
+ 164   6                      }
+ 165   5                  }
+ 166   4            }}
+ 167   2            case 2://Ω¯»Îµ˜ ‘‘¬
+ 168   2            {
+ 169   3                  switch(hc74_165())
+ 170   3                  {
+ 171   4                    case 0xf7://∞¥œ¬K9£¨Ω¯»Îº”1
+ 172   4                        {   month(0);break; }
+ 173   4                    case 0xfb:
+ 174   4                       {month(1);break;}
+ 175   4                       default:
+ 176   4                      {
+ 177   5                        DS1302_WriteOneByteAtAddr(0x8e,0x00);               
+ 178   5                        DS1302_SetInit(Time0);                 //∂‘ ±÷”Ω¯––…Ë÷√
+ 179   5                        DS1302_WriteOneByteAtAddr(0x8e,0x80);
+C51 COMPILER V9.52.0.0   MAIN                                                              05/29/2015 16:25:46 PAGE 4   
+
+ 180   5                        ClockPlay();
+ 181   5                      }
+ 182   4                  }
+ 183   3            }
+ 184   2            case 3:// Ω¯»Îµ˜ ‘day
+ 185   2            {
+ 186   3                  switch(hc74_165())
+ 187   3                  {
+ 188   4                     case 0xf7://∞¥œ¬K9£¨Ω¯»Îº”1
+ 189   4                        {  day(0);break;  }
+ 190   4                     case 0xfb://K13
+ 191   4                        {day(1);break;}
+ 192   4                        default:
+ 193   4                      {
+ 194   5                        DS1302_WriteOneByteAtAddr(0x8e,0x00);               
+ 195   5                        DS1302_SetInit(Time0);                 //∂‘ ±÷”Ω¯––…Ë÷√
+ 196   5                        DS1302_WriteOneByteAtAddr(0x8e,0x80);
+ 197   5                        ClockPlay();
+ 198   5                      }
+ 199   4                  }
+ 200   3            }
+ 201   2            case 4://∞¥œ¬K4 Ω¯»Îµ˜ ‘hour
+ 202   2            {
+ 203   3                  switch(hc74_165())
+ 204   3                  {
+ 205   4                      case 0xf7://∞¥œ¬K9£¨Ω¯»Îº”1
+ 206   4                          {  hour(0);break;}
+ 207   4                      case 0xfb:
+ 208   4                         {hour(1);break;}
+ 209   4                         default:
+ 210   4                      {
+ 211   5                        DS1302_WriteOneByteAtAddr(0x8e,0x00);               
+ 212   5                        DS1302_SetInit(Time0);                 //∂‘ ±÷”Ω¯––…Ë÷√
+ 213   5                        DS1302_WriteOneByteAtAddr(0x8e,0x80);
+ 214   5                        ClockPlay();
+ 215   5                      }
+ 216   4                  }
+ 217   3            }
+ 218   2            case 5://∞¥œ¬K5 Ω¯»Îµ˜ ‘min
+ 219   2            {
+ 220   3                  switch(hc74_165())
+ 221   3                  {
+ 222   4                      case 0xf7://∞¥œ¬K9£¨Ω¯»Îº”1
+ 223   4                         {  min(0);break; }
+ 224   4                      case 0xfb:
+ 225   4                         {min(1);break;}
+ 226   4                         default:
+ 227   4                      {
+ 228   5                        DS1302_WriteOneByteAtAddr(0x8e,0x00);               
+ 229   5                        DS1302_SetInit(Time0);                 //∂‘ ±÷”Ω¯––…Ë÷√
+ 230   5                        DS1302_WriteOneByteAtAddr(0x8e,0x80);
+ 231   5                        ClockPlay();
+ 232   5                      }
+ 233   4                  }
+ 234   3            }
+ 235   2            case 6://∞¥œ¬K6 Ω¯»Îµ˜sec
+ 236   2            {
+ 237   3                  switch(hc74_165())
+ 238   3                  {
+ 239   4                       case 0xf7://∞¥œ¬K9£¨Ω¯»Îº”1
+ 240   4                         { sec(0);break;  }
+ 241   4                       case 0xfb:
+C51 COMPILER V9.52.0.0   MAIN                                                              05/29/2015 16:25:46 PAGE 5   
+
+ 242   4                         {sec(1);break;}
+ 243   4                         default:
+ 244   4                      {
+ 245   5                        DS1302_WriteOneByteAtAddr(0x8e,0x00);               
+ 246   5                        DS1302_SetInit(Time0);                 //∂‘ ±÷”Ω¯––…Ë÷√
+ 247   5                        DS1302_WriteOneByteAtAddr(0x8e,0x80);
+ 248   5                        ClockPlay();
+ 249   5                      }
+ 250   4                  }
+ 251   3            }
+ 252   2      
+ 253   2         }
+ 254   1      }
+ 255          void year(unsigned char k)
+ 256          {
+ 257   1        if(k==0)                //º”“ª
+ 258   1        { 
+ 259   2          Time0[6]+=0x01;
+ 260   2          if(Time0[6]==0x9a)
+ 261   2          {
+ 262   3              Time0[6]=0x00;
+ 263   3              Time0[7]+=0x01;
+ 264   3              if((Time0[7]&0x0a)==0x0a)
+ 265   3              {   
+ 266   4                  Time0[7]=(Time0[7]&0xf0);
+ 267   4                  Time0[7]+=0x10;
+ 268   4              }
+ 269   3          }
+ 270   2          if((Time0[6]&0x0a)==0x0a)
+ 271   2          {   
+ 272   3              Time0[6]=(Time0[6]&0xf0);
+ 273   3              Time0[6]+=0x10;
+ 274   3           }  
+ 275   2        }
+ 276   1        if(k==1)                 //ºı“ª
+ 277   1        {
+ 278   2           Time0[6]-=0x01;
+ 279   2           if((Time0[6]&0x0f)==0x0f)
+ 280   2            {   
+ 281   3                Time0[6]=(Time0[6]&0xf0);
+ 282   3                Time0[6]+=0x09;
+ 283   3            }
+ 284   2            if(Time0[6]==0x00)
+ 285   2            {   
+ 286   3                Time0[6]=0x99;
+ 287   3                Time0[7]-=0x01;
+ 288   3                if((Time0[7]&0x0f)==0x0f)
+ 289   3                {   
+ 290   4                     Time0[7]=(Time0[7]&0xf0);
+ 291   4                     Time0[7]+=0x09;
+ 292   4                }
+ 293   3            } 
+ 294   2        }
+ 295   1      }
+ 296          
+ 297          void month(unsigned char k)
+ 298          {
+ 299   1        if(k==0)
+ 300   1        {
+ 301   2          Time0[4]+=0x01;
+ 302   2          if(Time0[4]==0x13)
+ 303   2          {
+C51 COMPILER V9.52.0.0   MAIN                                                              05/29/2015 16:25:46 PAGE 6   
+
+ 304   3              Time0[4]=0x01;
+ 305   3          }
+ 306   2          if((Time0[4]&0x0a)==0x0a)
+ 307   2          {   
+ 308   3            Time0[4]=(Time0[4]&0xf0);
+ 309   3            Time0[4]+=0x10;
+ 310   3          }
+ 311   2         }
+ 312   1        if(k==1)
+ 313   1        {
+ 314   2          Time0[4]-=0x01;
+ 315   2          if(Time0[4]==0x00)
+ 316   2          {   
+ 317   3              Time0[4]=0x12;
+ 318   3          } 
+ 319   2         if((Time0[4]&0x0f)==0x0f)
+ 320   2          {   
+ 321   3              Time0[4]=(Time0[4]&0xf0);
+ 322   3              Time0[4]+=0x09;
+ 323   3          }
+ 324   2        }
+ 325   1      }
+ 326          
+ 327          void day(unsigned char k)
+ 328          {
+ 329   1         if(k==0)
+ 330   1         {        
+ 331   2           if(Time0[3]==checkday())
+ 332   2           {    
+ 333   3              Time0[3]=0x00;
+ 334   3           }  
+ 335   2          Time0[3]+=0x01;
+ 336   2          if((Time0[3]&0x0a)==0x0a)
+ 337   2          {   
+ 338   3              Time0[3]=(Time0[3]&0xf0);
+ 339   3              Time0[3]+=0x10;
+ 340   3              DS1302_SetInit(Time0);
+ 341   3          }
+ 342   2        }
+ 343   1        if(k==1)
+ 344   1        {
+ 345   2           if(Time0[3]==0x01)
+ 346   2            {   
+ 347   3                Time0[3]=checkday()+0x01;
+ 348   3            } 
+ 349   2            Time0[3]-=0x01;
+ 350   2            if((Time0[3]&0x0f)==0x0f)
+ 351   2            {   
+ 352   3                Time0[3]=(Time0[3]&0xf0);
+ 353   3                Time0[3]+=0x09;
+ 354   3            }
+ 355   2        }
+ 356   1      }
+ 357          void hour(unsigned char k)
+ 358          {
+ 359   1         if(k==0)
+ 360   1         {
+ 361   2           Time0[2]+=0x01;
+ 362   2           if(Time0[2]==0x24)
+ 363   2           {
+ 364   3              Time0[2]=0x00;
+ 365   3           }
+C51 COMPILER V9.52.0.0   MAIN                                                              05/29/2015 16:25:46 PAGE 7   
+
+ 366   2          if((Time0[2]&0x0a)==0x0a)
+ 367   2          {   
+ 368   3              Time0[2]=(Time0[2]&0xf0);
+ 369   3              Time0[2]+=0x10;
+ 370   3           }
+ 371   2         }
+ 372   1         if(k==1) 
+ 373   1          {
+ 374   2            if(Time0[2]==0x00)
+ 375   2            {   
+ 376   3                Time0[2]=0x24;
+ 377   3            } 
+ 378   2            Time0[2]-=0x01;
+ 379   2            if((Time0[2]&0x0f)==0x0f)
+ 380   2            {   
+ 381   3                Time0[2]=(Time0[2]&0xf0);
+ 382   3                Time0[2]+=0x09;
+ 383   3            } 
+ 384   2          }
+ 385   1      }
+ 386          
+ 387          void min(unsigned char k)
+ 388          {
+ 389   1        if(k==0)
+ 390   1        {
+ 391   2          Time0[1]+=0x01;
+ 392   2          if((Time0[1]&0x0a)==0x0a)
+ 393   2          {   
+ 394   3             Time0[1]=(Time0[1]&0xf0);
+ 395   3             Time0[1]+=0x10;
+ 396   3          }
+ 397   2          if(Time0[1]==0x60)
+ 398   2          {
+ 399   3              Time0[1]=0x00;
+ 400   3          }
+ 401   2        }
+ 402   1        if(k==1)
+ 403   1        {
+ 404   2          if(Time0[1]==0x00)
+ 405   2          {   
+ 406   3              Time0[1]=0x60;
+ 407   3          }
+ 408   2          Time0[1]-=0x01;
+ 409   2          if((Time0[1]&0x0f)==0x0f)
+ 410   2          {   
+ 411   3              Time0[1]=(Time0[1]&0xf0);
+ 412   3              Time0[1]+=0x09;
+ 413   3          } 
+ 414   2        }
+ 415   1      }
+ 416          void sec(unsigned char k)
+ 417          {
+ 418   1        if(k==0)
+ 419   1        {
+ 420   2          Time0[0]+=0x01;
+ 421   2          if((Time0[0]&0x0a)==0x0a)
+ 422   2          {   
+ 423   3             Time0[0]=(Time0[0]&0xf0);
+ 424   3            Time0[0]+=0x10;
+ 425   3          }
+ 426   2          if(Time0[0]==0x60)
+ 427   2          {
+C51 COMPILER V9.52.0.0   MAIN                                                              05/29/2015 16:25:46 PAGE 8   
+
+ 428   3                Time0[0]=0x00;
+ 429   3          }
+ 430   2        }
+ 431   1        if(k==1)
+ 432   1        {
+ 433   2          if(Time0[0]==0x00)
+ 434   2          {   
+ 435   3              Time0[0]=0x60;
+ 436   3          } 
+ 437   2          Time0[0]-=0x01;
+ 438   2          if((Time0[0]&0x0f)==0x0f)
+ 439   2          {   
+ 440   3                Time0[0]=(Time0[0]&0xf0);
+ 441   3                Time0[0]+=0x09;
+ 442   3          } 
+ 443   2        }
+ 444   1      }
+ 445          void delay0(unsigned int n)
+ 446          {
+ 447   1        unsigned int k;
+ 448   1        for(k=2;k>0;k--)
+ 449   1        {
+ 450   2          while(n--){_nop_();}
+ 451   2        }
+ 452   1      }
+ 453          void LcdDisplayTemp0(int temp)   //lcdœ‘ æ
+ 454          {
+ 455   1        unsigned char i; unsigned char T[5];
+ 456   1          float tp;  
+ 457   1        if(temp< 0)       //µ±Œ¬∂»÷µŒ™∏∫ ˝
+ 458   1          {
+ 459   2          DisplayData[0] = 0x40; 
+ 460   2          //“ÚŒ™∂¡»°µƒŒ¬∂» « µº Œ¬∂»µƒ≤π¬Î£¨À˘“‘ºı1£¨‘Ÿ»°∑¥«Û≥ˆ‘≠¬Î
+ 461   2          temp=temp-1;
+ 462   2          temp=~temp;
+ 463   2          tp=temp;
+ 464   2          temp=tp*0.0625*100+0.5; 
+ 465   2          //¡Ù¡Ω∏ˆ–° ˝µ„æÕ*100£¨+0.5 «Àƒ…·ŒÂ»Î£¨“ÚŒ™C”Ô—‘∏°µ„ ˝◊™ªªŒ™’˚–Õµƒ ±∫Ú∞—–° ˝µ„
+ 466   2          //∫Û√Êµƒ ˝◊‘∂Ø»•µÙ£¨≤ªπ‹ «∑Ò¥Û”⁄0.5£¨∂¯+0.5÷Æ∫Û¥Û”⁄0.5µƒæÕ «Ω¯1¡À£¨–°”⁄0.5µƒæÕ
+ 467   2          //À„”…œ0.5£¨ªπ «‘⁄–° ˝µ„∫Û√Ê°£
+ 468   2       
+ 469   2          }
+ 470   1        else
+ 471   1          {     
+ 472   2          DisplayData[0] = 0x00;
+ 473   2          tp=temp;//“ÚŒ™ ˝æ›¥¶¿Ì”––° ˝µ„À˘“‘Ω´Œ¬∂»∏≥∏¯“ª∏ˆ∏°µ„–Õ±‰¡ø
+ 474   2          //»Áπ˚Œ¬∂» «’˝µƒƒ«√¥£¨ƒ«√¥’˝ ˝µƒ‘≠¬ÎæÕ «≤π¬ÎÀ¸±æ…Ì
+ 475   2          temp=tp*0.0625*100+0.5; 
+ 476   2          //¡Ù¡Ω∏ˆ–° ˝µ„æÕ*100£¨+0.5 «Àƒ…·ŒÂ»Î£¨“ÚŒ™C”Ô—‘∏°µ„ ˝◊™ªªŒ™’˚–Õµƒ ±∫Ú∞—–° ˝µ„
+ 477   2          //∫Û√Êµƒ ˝◊‘∂Ø»•µÙ£¨≤ªπ‹ «∑Ò¥Û”⁄0.5£¨∂¯+0.5÷Æ∫Û¥Û”⁄0.5µƒæÕ «Ω¯1¡À£¨–°”⁄0.5µƒæÕ
+ 478   2          //À„º”…œ0.5£¨ªπ «‘⁄–° ˝µ„∫Û√Ê°£
+ 479   2        }
+ 480   1        //P3=tp;
+ 481   1      
+ 482   1        Data0[0] = temp / 10000;
+ 483   1        Data0[1] = temp % 10000 / 1000;
+ 484   1        Data0[2] = temp % 1000 / 100 ;
+ 485   1        Data0[3] = temp % 100 / 10;
+ 486   1        Data0[4] = temp % 10;
+ 487   1        
+ 488   1        for(i=0;i<=4;i++)
+ 489   1        {
+C51 COMPILER V9.52.0.0   MAIN                                                              05/29/2015 16:25:46 PAGE 9   
+
+ 490   2          switch(Seg_Data[Data0[i]])
+ 491   2          {
+ 492   3            case 0xc0:
+ 493   3            {T[i]=0x30;break;}
+ 494   3            case 0xF9:
+ 495   3            {T[i]=0x31;break;}
+ 496   3            case 0xA4:
+ 497   3            {T[i]=0x32;break;}
+ 498   3            case 0xB0:
+ 499   3            {T[i]=0x33;break;}
+ 500   3            case 0x99:
+ 501   3            {T[i]=0x34;break;}
+ 502   3            case 0x92:
+ 503   3            { T[i]=0x35;break;}
+ 504   3            case 0x82:
+ 505   3            { T[i]=0x36;break;}
+ 506   3            case 0xF8:
+ 507   3            {T[i]=0x37;break;}
+ 508   3            case 0x80:
+ 509   3            {T[i]=0x38;break;}
+ 510   3            case 0x90:
+ 511   3            {T[i]=0x39;break;}      
+ 512   3          }
+ 513   2        }
+ 514   1        lcd_wcmd(0x80); 
+ 515   1         for(i=0;i<5;i++)
+ 516   1           {
+ 517   2             lcd_wdat(T[i]);
+ 518   2             delay0(30);
+ 519   2           }
+ 520   1      
+ 521   1      }
+ 522          /*void Lcd12864DisplayTemp0(int temp)    //lcdœ‘ æ
+ 523          {
+ 524            unsigned char i; 
+ 525            unsigned char code  p2[]= "TEMP:";
+ 526              float tp;  
+ 527            if(temp< 0)       //µ±Œ¬∂»÷µŒ™∏∫ ˝
+ 528              {
+ 529              DisplayData[0] = 0x40; 
+ 530              //“ÚŒ™∂¡»°µƒŒ¬∂» « µº Œ¬∂»µƒ≤π¬Î£¨À˘“‘ºı1£¨‘Ÿ»°∑¥«Û≥ˆ‘≠¬Î
+ 531              temp=temp-1;
+ 532              temp=~temp;
+ 533              tp=temp;
+ 534              temp=tp*0.0625*100+0.5; 
+ 535              //¡Ù¡Ω∏ˆ–° ˝µ„æÕ*100£¨+0.5 «Àƒ…·ŒÂ»Î£¨“ÚŒ™C”Ô—‘∏°µ„ ˝◊™ªªŒ™’˚–Õµƒ ±∫Ú∞—–° ˝µ„
+ 536              //∫Û√Êµƒ ˝◊‘∂Ø»•µÙ£¨≤ªπ‹ «∑Ò¥Û”⁄0.5£¨∂¯+0.5÷Æ∫Û¥Û”⁄0.5µƒæÕ «Ω¯1¡À£¨–°”⁄0.5µƒæÕ
+ 537              //À„”…œ0.5£¨ªπ «‘⁄–° ˝µ„∫Û√Ê°£
+ 538           
+ 539              }
+ 540            else
+ 541              {     
+ 542              DisplayData[0] = 0x00;
+ 543              tp=temp;//“ÚŒ™ ˝æ›¥¶¿Ì”––° ˝µ„À˘“‘Ω´Œ¬∂»∏≥∏¯“ª∏ˆ∏°µ„–Õ±‰¡ø
+ 544              //»Áπ˚Œ¬∂» «’˝µƒƒ«√¥£¨ƒ«√¥’˝ ˝µƒ‘≠¬ÎæÕ «≤π¬ÎÀ¸±æ…Ì
+ 545              temp=tp*0.0625*100+0.5; 
+ 546              //¡Ù¡Ω∏ˆ–° ˝µ„æÕ*100£¨+0.5 «Àƒ…·ŒÂ»Î£¨“ÚŒ™C”Ô—‘∏°µ„ ˝◊™ªªŒ™’˚–Õµƒ ±∫Ú∞—–° ˝µ„
+ 547              //∫Û√Êµƒ ˝◊‘∂Ø»•µÙ£¨≤ªπ‹ «∑Ò¥Û”⁄0.5£¨∂¯+0.5÷Æ∫Û¥Û”⁄0.5µƒæÕ «Ω¯1¡À£¨–°”⁄0.5µƒæÕ
+ 548              //À„º”…œ0.5£¨ªπ «‘⁄–° ˝µ„∫Û√Ê°£
+ 549            }
+ 550            //P3=tp;
+ 551          
+C51 COMPILER V9.52.0.0   MAIN                                                              05/29/2015 16:25:46 PAGE 10  
+
+ 552            Data0[0] = temp / 10000;
+ 553            Data0[1] = temp % 10000 / 1000;
+ 554            Data0[2] = temp % 1000 / 100 ;
+ 555            Data0[3] = temp % 100 / 10;
+ 556            Data0[4] = temp % 10;
+ 557            
+ 558            for(i=0;i<=4;i++)
+ 559            {
+ 560              switch(Seg_Data[Data0[i]])
+ 561              {
+ 562                case 0xc0:
+ 563                {T[i]=0x30;break;}
+ 564                case 0xF9:
+ 565                {T[i]=0x31;break;}
+ 566                case 0xA4:
+ 567                {T[i]=0x32;break;}
+ 568                case 0xB0:
+ 569                {T[i]=0x33;break;}
+ 570                case 0x99:
+ 571                {T[i]=0x34;break;}
+ 572                case 0x92:
+ 573                { T[i]=0x35;break;}
+ 574                case 0x82:
+ 575                { T[i]=0x30;break;}
+ 576                case 0xF8:
+ 577                {T[i]=0x36;break;}
+ 578                case 0x80:
+ 579                {T[i]=0x37;break;}
+ 580                case 0x90:
+ 581                {T[i]=0x38;break;}      
+ 582              }
+ 583            }
+ 584            lcd_pos(1,0);             //…Ë÷√œ‘ æŒª÷√Œ™µ⁄“ª––
+ 585            
+ 586              for(i=0;i<5;i++)
+ 587               {
+ 588                 lcd_wdat(DIS3[i]);
+ 589                 delay(30);
+ 590               }
+ 591              // lcd_wcmd(0x91); 
+ 592               lcd_pos(2,0); 
+ 593            // lcd_wdat(T[2]);
+ 594             for(i=1;i<4;i++)
+ 595               {
+ 596                 lcd_wdat(T[i]);
+ 597               }
+ 598            //   lcd_wdat("°„c");
+ 599            //   lcd_wdat(0xa1);
+ 600            //   lcd_wdat(0xe3);
+ 601            // lcd_wdat(0x63);
+ 602            /*     LCD1602_WriteInformation(0x01,0);  //«Â∆¡÷∏¡Ó
+ 603            LCD1602_MoveToPosition(0,0);
+ 604                     LCD1602_DisplayString(p2);
+ 605                 LCD1602_DisplayOneCharOnAddr(0,6,T[1]);
+ 606                LCD1602_DisplayOneCharOnAddr(0,7,T[2]);
+ 607                LCD1602_DisplayOneCharOnAddr(0,8,0x2e);//.
+ 608                LCD1602_DisplayOneCharOnAddr(0,9,T[3]);
+ 609                 LCD1602_DisplayOneCharOnAddr(0,10,0x06); //°„c
+ 610            */
+ 611          //}*/
+
+
+C51 COMPILER V9.52.0.0   MAIN                                                              05/29/2015 16:25:46 PAGE 11  
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   2684    ----
+   CONSTANT SIZE    =   2091    ----
+   XDATA SIZE       =    134      22
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

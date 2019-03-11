@@ -1,0 +1,4 @@
+"adc.obj",
+"uart.obj" 
+TO "adc" 
+RAMSIZE(256) 

@@ -1,0 +1,383 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\Administrator\Desktop\2015年电子大赛培训\c51例程\LCD1602-74HC164\pro.uvproj
+Project File Date:  06/14/2015
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling main.c...
+compiling lcd.c...
+LCD.C(87): error C141: syntax error near ''
+compiling 74hc164.c...
+Target not created
+Build target 'Target 1'
+compiling main.c...
+C:\KEIL\C51\INC\ATMEL\REG51.H(13): error C231: 'P0': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(14): error C231: 'P1': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(15): error C231: 'P2': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(16): error C231: 'P3': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(17): error C231: 'PSW': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(18): error C231: 'ACC': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(19): error C231: 'B': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(20): error C231: 'SP': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(21): error C231: 'DPL': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(22): error C231: 'DPH': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(23): error C231: 'PCON': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(24): error C231: 'TCON': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(25): error C231: 'TMOD': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(26): error C231: 'TL0': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(27): error C231: 'TL1': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(28): error C231: 'TH0': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(29): error C231: 'TH1': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(30): error C231: 'IE': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(31): error C231: 'IP': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(32): error C231: 'SCON': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(33): error C231: 'SBUF': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(38): error C231: 'CY': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(39): error C231: 'AC': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(40): error C231: 'F0': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(41): error C231: 'RS1': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(42): error C231: 'RS0': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(43): error C231: 'OV': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(44): error C231: 'P': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(47): error C231: 'TF1': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(48): error C231: 'TR1': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(49): error C231: 'TF0': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(50): error C231: 'TR0': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(51): error C231: 'IE1': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(52): error C231: 'IT1': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(53): error C231: 'IE0': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(54): error C231: 'IT0': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(57): error C231: 'EA': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(58): error C231: 'ES': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(59): error C231: 'ET1': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(60): error C231: 'EX1': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(61): error C231: 'ET0': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(62): error C231: 'EX0': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(65): error C231: 'PS': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(66): error C231: 'PT1': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(67): error C231: 'PX1': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(68): error C231: 'PT0': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(69): error C231: 'PX0': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(72): error C231: 'RD': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(73): error C231: 'WR': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(74): error C231: 'T1': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(75): error C231: 'T0': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(76): error C231: 'INT1': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(77): error C231: 'INT0': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(78): error C231: 'TXD': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(79): error C231: 'RXD': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(82): error C231: 'SM0': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(83): error C231: 'SM1': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(84): error C231: 'SM2': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(85): error C231: 'REN': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(86): error C231: 'TB8': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(87): error C231: 'RB8': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(88): error C231: 'TI': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(89): error C231: 'RI': redefinition
+LCD.H(14): error C141: syntax error near 'c', expected ')'
+LCD.H(16): error C141: syntax error near 'com', expected ')'
+LCD.H(18): error C141: syntax error near 'dat', expected ')'
+compiling lcd.c...
+LCD.H(14): error C141: syntax error near 'c', expected ')'
+LCD.H(16): error C141: syntax error near 'com', expected ')'
+LCD.H(18): error C141: syntax error near 'dat', expected ')'
+compiling 74hc164.c...
+Target not created
+Build target 'Target 1'
+compiling main.c...
+C:\KEIL\C51\INC\ATMEL\REG51.H(13): error C231: 'P0': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(14): error C231: 'P1': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(15): error C231: 'P2': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(16): error C231: 'P3': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(17): error C231: 'PSW': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(18): error C231: 'ACC': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(19): error C231: 'B': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(20): error C231: 'SP': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(21): error C231: 'DPL': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(22): error C231: 'DPH': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(23): error C231: 'PCON': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(24): error C231: 'TCON': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(25): error C231: 'TMOD': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(26): error C231: 'TL0': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(27): error C231: 'TL1': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(28): error C231: 'TH0': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(29): error C231: 'TH1': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(30): error C231: 'IE': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(31): error C231: 'IP': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(32): error C231: 'SCON': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(33): error C231: 'SBUF': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(38): error C231: 'CY': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(39): error C231: 'AC': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(40): error C231: 'F0': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(41): error C231: 'RS1': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(42): error C231: 'RS0': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(43): error C231: 'OV': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(44): error C231: 'P': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(47): error C231: 'TF1': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(48): error C231: 'TR1': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(49): error C231: 'TF0': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(50): error C231: 'TR0': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(51): error C231: 'IE1': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(52): error C231: 'IT1': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(53): error C231: 'IE0': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(54): error C231: 'IT0': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(57): error C231: 'EA': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(58): error C231: 'ES': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(59): error C231: 'ET1': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(60): error C231: 'EX1': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(61): error C231: 'ET0': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(62): error C231: 'EX0': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(65): error C231: 'PS': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(66): error C231: 'PT1': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(67): error C231: 'PX1': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(68): error C231: 'PT0': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(69): error C231: 'PX0': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(72): error C231: 'RD': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(73): error C231: 'WR': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(74): error C231: 'T1': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(75): error C231: 'T0': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(76): error C231: 'INT1': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(77): error C231: 'INT0': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(78): error C231: 'TXD': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(79): error C231: 'RXD': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(82): error C231: 'SM0': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(83): error C231: 'SM1': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(84): error C231: 'SM2': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(85): error C231: 'REN': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(86): error C231: 'TB8': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(87): error C231: 'RB8': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(88): error C231: 'TI': redefinition
+C:\KEIL\C51\INC\ATMEL\REG51.H(89): error C231: 'RI': redefinition
+LCD.H(14): error C141: syntax error near 'c', expected ')'
+LCD.H(16): error C141: syntax error near 'com', expected ')'
+LCD.H(18): error C141: syntax error near 'dat', expected ')'
+compiling lcd.c...
+lcd.c(1): warning C318: can't open file 'reg52.c'
+LCD.H(14): error C141: syntax error near 'c', expected ')'
+LCD.H(16): error C141: syntax error near 'com', expected ')'
+LCD.H(18): error C141: syntax error near 'dat', expected ')'
+compiling 74hc164.c...
+Target not created
+Build target 'Target 1'
+compiling main.c...
+LCD.H(8): error C141: syntax error near 'c', expected ')'
+LCD.H(10): error C141: syntax error near 'com', expected ')'
+LCD.H(12): error C141: syntax error near 'dat', expected ')'
+compiling lcd.c...
+lcd.c(1): warning C318: can't open file 'reg52.c'
+LCD.H(8): error C141: syntax error near 'c', expected ')'
+LCD.H(10): error C141: syntax error near 'com', expected ')'
+LCD.H(12): error C141: syntax error near 'dat', expected ')'
+74HC164.H(2): error C202: 'P1': undefined identifier
+74HC164.H(3): error C202: 'P1': undefined identifier
+LCD.C(9): error C202: 'P1': undefined identifier
+LCD.C(10): error C202: 'P1': undefined identifier
+LCD.C(11): error C202: 'P1': undefined identifier
+compiling 74hc164.c...
+Target not created
+Build target 'Target 1'
+compiling main.c...
+compiling lcd.c...
+lcd.c(1): warning C318: can't open file 'reg52.c'
+74HC164.H(2): error C202: 'P1': undefined identifier
+74HC164.H(3): error C202: 'P1': undefined identifier
+LCD.C(9): error C202: 'P1': undefined identifier
+LCD.C(10): error C202: 'P1': undefined identifier
+LCD.C(11): error C202: 'P1': undefined identifier
+LCD.C(25): error C202: 'uchar': undefined identifier
+LCD.C(25): error C141: syntax error near 'a'
+LCD.C(28): error C202: 'b': undefined identifier
+LCD.C(30): error C202: 'a': undefined identifier
+LCD.C(44): error C202: 'LCD_E': undefined identifier
+LCD.C(45): error C202: 'LCD_RS': undefined identifier
+LCD.C(46): error C202: 'LCD_RW': undefined identifier
+LCD.C(50): error C202: 'LCD_E': undefined identifier
+LCD.C(52): error C202: 'LCD_E': undefined identifier
+LCD.C(64): error C202: 'LCD_E': undefined identifier
+LCD.C(65): error C202: 'LCD_RS': undefined identifier
+LCD.C(66): error C202: 'LCD_RW': undefined identifier
+LCD.C(70): error C202: 'LCD_E': undefined identifier
+LCD.C(72): error C202: 'LCD_E': undefined identifier
+compiling 74hc164.c...
+Target not created
+Build target 'Target 1'
+compiling main.c...
+compiling lcd.c...
+LCD.C(25): error C202: 'uchar': undefined identifier
+LCD.C(25): error C141: syntax error near 'a'
+LCD.C(28): error C202: 'b': undefined identifier
+LCD.C(30): error C202: 'a': undefined identifier
+compiling 74hc164.c...
+Target not created
+Build target 'Target 1'
+compiling main.c...
+compiling lcd.c...
+compiling 74hc164.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DISP_LINE?LCD
+Program Size: data=30.0 xdata=0 code=581
+creating hex file from "pro"...
+"pro" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling lcd.c...
+compiling 74hc164.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DEMO?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DISP_LINE?LCD
+Program Size: data=32.0 xdata=0 code=662
+creating hex file from "pro"...
+"pro" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling lcd.c...
+compiling 74hc164.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DEMO?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DISP_LINE?LCD
+Program Size: data=32.0 xdata=0 code=661
+creating hex file from "pro"...
+"pro" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling lcd.c...
+compiling 74hc164.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DEMO?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DISP_LINE?LCD
+Program Size: data=32.0 xdata=0 code=666
+creating hex file from "pro"...
+"pro" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling lcd.c...
+compiling 74hc164.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DEMO?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DISP_LINE?LCD
+Program Size: data=32.0 xdata=0 code=666
+creating hex file from "pro"...
+"pro" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling lcd.c...
+compiling 74hc164.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DEMO?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DISP_LINE?LCD
+Program Size: data=32.0 xdata=0 code=666
+creating hex file from "pro"...
+"pro" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(14): warning C318: can't open file '74hc165.h'
+compiling lcd.c...
+lcd.c(5): warning C318: can't open file '74hc165.h'
+LCD.C(15): error C247: non-address/-constant initializer
+LCD.C(159): error C202: 'key': undefined identifier
+LCD.C(160): error C202: 'key': undefined identifier
+compiling 74hc164.c...
+74HC164.C(7): error C231: 'hc164_sdat': redefinition
+74HC164.C(8): error C231: 'hc164_sclk': redefinition
+compiling 74hc165.c...
+74hc165.c(5): warning C318: can't open file '74hc165.h'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+compiling lcd.c...
+LCD.C(15): error C247: non-address/-constant initializer
+compiling 74hc164.c...
+74HC164.C(7): error C231: 'hc164_sdat': redefinition
+74HC164.C(8): error C231: 'hc164_sclk': redefinition
+compiling 74hc165.c...
+Target not created
+Build target 'Target 1'
+compiling main.c...
+compiling lcd.c...
+compiling 74hc164.c...
+74HC164.C(7): error C231: 'hc164_sdat': redefinition
+74HC164.C(8): error C231: 'hc164_sclk': redefinition
+compiling 74hc165.c...
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(77): error C202: 'hc164_sclk': undefined identifier
+compiling lcd.c...
+compiling 74hc164.c...
+compiling 74hc165.c...
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(77): warning C206: 'hc164_init': missing function-prototype
+MAIN.C(78): warning C206: 'hc165_init': missing function-prototype
+compiling lcd.c...
+compiling 74hc164.c...
+compiling 74hc165.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DEMO?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DISP_DEMO?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?READ_HC165?74HC165
+Program Size: data=50.0 xdata=0 code=819
+creating hex file from "pro"...
+"pro" - 0 Error(s), 5 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling lcd.c...
+compiling 74hc164.c...
+compiling 74hc165.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DEMO?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DISP_DEMO?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?READ_HC165?74HC165
+Program Size: data=50.0 xdata=0 code=819
+creating hex file from "pro"...
+"pro" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling lcd.c...
+compiling 74hc164.c...
+compiling 74hc165.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DEMO?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DISP_DEMO?LCD
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?READ_HC165?74HC165
+Program Size: data=33.0 xdata=0 code=814
+creating hex file from "pro"...
+"pro" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling lcd.c...
+compiling 74hc164.c...
+compiling 74hc165.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DEMO?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DISP_DEMO?LCD
+Program Size: data=33.0 xdata=0 code=827
+creating hex file from "pro"...
+"pro" - 0 Error(s), 2 Warning(s).

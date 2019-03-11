@@ -1,0 +1,133 @@
+C51 COMPILER V9.52.0.0   ________                                                          07/24/2015 11:39:00 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE ________
+OBJECT MODULE PLACED IN 简单易行.OBJ
+COMPILER INVOKED BY: C:\Program Files\keil\C51\BIN\C51.EXE 简单易行.c BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #include<reg52.h>
+   2          #include<intrins.h>
+   3          #include"main.h"
+   4          #include "uart.h"
+   5          sbit P0_0=P0^0;
+   6          sbit P0_1=P0^1;
+   7          bit key=0;
+   8          void main()
+   9          {
+  10   1      
+  11   1        InitUart();
+  12   1        Get_Maopi(); 
+  13   1        showdata[0]='#';
+  14   1          while(1)
+  15   1         { 
+  16   2              if(P0_0==0)
+  17   2              {//break;
+  18   3                  while(P0_0==0);
+  19   3                key=~key;
+  20   3                  //break;
+  21   3                
+  22   3                }
+  23   2                if(key)
+  24   2                {
+  25   3                  Get_Weight() ;
+  26   3                  for(i=0;i<5;i++)
+  27   3                  {SendData(showdata[i]);}
+  28   3                }
+  29   2              } 
+  30   1      }         
+  31                
+  32                  /*switch(key)
+  33                  {
+  34                  case 1:
+  35                   {   qq=1;
+  36                    for(i=0;i<5;i++)
+  37                    {SendData(showdata[i]);}
+  38                     
+  39                    break;
+  40                   }
+  41                    case 0:
+  42                   {qq=0;
+  43                    break;
+  44                  }
+  45               
+  46                 }
+  47                 if(qq==1)
+  48                {
+  49                  if(P0_0==0)
+  50                  {
+  51                      delay_main(1);
+  52                      if(P0_0==0)
+  53                      {
+  54                          qq=0;key=0;
+  55                      }
+C51 COMPILER V9.52.0.0   ________                                                          07/24/2015 11:39:00 PAGE 2   
+
+  56                      
+  57                    }
+  58                }
+  59                 
+  60                 */
+  61                
+  62          
+  63           void Get_Maopi() 
+  64          {  
+  65   1        for(i=0;i<10;i++)
+  66   1        {
+  67   2          HX711_Buffer =ReadCount();  
+  68   2          HX711_Buffer=HX711_Buffer>>8;
+  69   2          Weight_Maopi +=HX711_Buffer;
+  70   2        }
+  71   1        Weight_Maopi=Weight_Maopi/10;  
+  72   1      } 
+  73           void Get_Weight() 
+  74          {
+  75   1        for(i=0;i<10;i++)
+  76   1        {
+  77   2          HX711_Buffer =ReadCount();  
+  78   2          HX711_Buffer=HX711_Buffer>>8;
+  79   2          Weight_Shiwu +=HX711_Buffer;
+  80   2        }
+  81   1        Weight_Shiwu=Weight_Shiwu/10;
+  82   1        Weight_Shiwu=Weight_Shiwu-Weight_Maopi;
+  83   1        if(Weight_Shiwu>0x1770)
+  84   1          {Weight_Shiwu = (unsigned int)((float)Weight_Shiwu *1.04+0.007); }
+  85   1        if(Weight_Shiwu<=0x1770&&Weight_Shiwu>0x03e8)
+  86   1        {Weight_Shiwu = (unsigned int)((float)Weight_Shiwu *1.04+0.006); }
+  87   1        if(Weight_Shiwu<=0x03e8&&Weight_Shiwu>0x0190)
+  88   1          {Weight_Shiwu=(unsigned int)((float)Weight_Shiwu+0x26);}
+  89   1          if(Weight_Shiwu<=0x0190&&Weight_Shiwu>0x0064)
+  90   1        {Weight_Shiwu=(unsigned int)((float)Weight_Shiwu+3.8);}
+  91   1        if(Weight_Shiwu<0x0064&&Weight_Shiwu>0x0002)
+  92   1        {Weight_Shiwu=(unsigned int)((float)Weight_Shiwu+0.15);}
+  93   1        if(Weight_Shiwu<=0x0002)
+  94   1        {Weight_Shiwu=0;}
+  95   1        k=Weight_Shiwu;
+  96   1        showdata[1]=(k%10000/1000 + 0x30);
+  97   1        showdata[2]=(k%1000/100 + 0x30);
+  98   1        showdata[3]=(k%100/10 + 0x30);
+  99   1        showdata[4]=(k%10 + 0x30);
+ 100   1      }
+ 101          void Usart() interrupt 4
+ 102          {
+ 103   1        receiveData=SBUF;//出去接收到的数据
+ 104   1        RI = 0;//清除接收中断标志位
+ 105   1      }
+*** WARNING C316 IN LINE 105 OF 简单易行.c: unterminated conditionals
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    884    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     35    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =      1    ----
+END OF MODULE INFORMATION.
+
+C51 COMPILER V9.52.0.0   ________                                                          07/24/2015 11:39:00 PAGE 3   
+
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)

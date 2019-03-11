@@ -1,0 +1,1 @@
+"..\Source\ds1302.c" BROWSE DEBUG OBJECTEXTEND PRINT(.\ds1302.lst) TABS (2) OBJECT(..\Outpt\ds1302.obj)

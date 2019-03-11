@@ -1,0 +1,1087 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+D:\Study\单片机\电子设计大赛\读卡器\1.uvproj
+Project File Date:  07/21/2015
+
+<h2>Output:</h2>
+compiling main.c...
+main.c(1): error C202: 'P1': undefined identifier
+main.c(2): error C202: 'P1': undefined identifier
+main.c(3): error C202: 'P1': undefined identifier
+main.c(4): error C202: 'P1': undefined identifier
+main.c(5): error C202: 'P1': undefined identifier
+main.c(21): error C141: syntax error near '{'
+main.c - 6 Error(s), 0 Warning(s).
+compiling main.c...
+main.c(1): error C202: 'P1': undefined identifier
+main.c(2): error C202: 'P1': undefined identifier
+main.c(3): error C202: 'P1': undefined identifier
+main.c(4): error C202: 'P1': undefined identifier
+main.c(5): error C202: 'P1': undefined identifier
+main.c - 5 Error(s), 0 Warning(s).
+compiling main.c...
+main.c(1): warning C315: unknown #directive 'inlcude'
+main.c(2): error C202: 'P1': undefined identifier
+main.c(3): error C202: 'P1': undefined identifier
+main.c(4): error C202: 'P1': undefined identifier
+main.c(5): error C202: 'P1': undefined identifier
+main.c(6): error C202: 'P1': undefined identifier
+main.c - 5 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(1): warning C315: unknown #directive 'inlcude'
+main.c(2): error C202: 'P1': undefined identifier
+main.c(3): error C202: 'P1': undefined identifier
+main.c(4): error C202: 'P1': undefined identifier
+main.c(5): error C202: 'P1': undefined identifier
+main.c(6): error C202: 'P1': undefined identifier
+Target not created
+compiling main.c...
+main.c(1): warning C318: can't open file 'rig52.h'
+main.c(2): error C202: 'P1': undefined identifier
+main.c(3): error C202: 'P1': undefined identifier
+main.c(4): error C202: 'P1': undefined identifier
+main.c(5): error C202: 'P1': undefined identifier
+main.c(6): error C202: 'P1': undefined identifier
+main.c - 5 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(1): warning C318: can't open file 'rig52.h'
+main.c(2): error C202: 'P1': undefined identifier
+main.c(3): error C202: 'P1': undefined identifier
+main.c(4): error C202: 'P1': undefined identifier
+main.c(5): error C202: 'P1': undefined identifier
+main.c(6): error C202: 'P1': undefined identifier
+Target not created
+compiling main.c...
+main.c(23): warning C206: 'nop': missing function-prototype
+main.c(18): warning C280: 'ns': unreferenced local variable
+main.c(69): error C202: 'MAXRLEN': undefined identifier
+main.c(69): error C136: invalid dimension size: [0]
+main.c(71): error C202: 'Status2Reg': undefined identifier
+main.c(72): error C202: 'BitFramingReg': undefined identifier
+main.c(73): error C202: 'TxControlReg': undefined identifier
+main.c(77): error C202: 'PCD_TRANSCEIVE': undefined identifier
+main.c(79): error C202: 'MI_OK': undefined identifier
+main.c(85): error C202: 'MI_ERR': undefined identifier
+main.c(94): error C202: 'MAXRLEN': undefined identifier
+main.c(94): error C136: invalid dimension size: [0]
+main.c(96): error C202: 'PICC_ANTICOLL1': undefined identifier
+main.c - 11 Error(s), 2 Warning(s).
+compiling main.c...
+main.c(24): warning C206: 'nop': missing function-prototype
+main.c(19): warning C280: 'ns': unreferenced local variable
+main.c(70): error C202: 'MAXRLEN': undefined identifier
+main.c(70): error C136: invalid dimension size: [0]
+main.c(72): error C202: 'Status2Reg': undefined identifier
+main.c(73): error C202: 'BitFramingReg': undefined identifier
+main.c(74): error C202: 'TxControlReg': undefined identifier
+main.c(78): error C202: 'PCD_TRANSCEIVE': undefined identifier
+main.c(80): error C202: 'MI_OK': undefined identifier
+main.c(86): error C202: 'MI_ERR': undefined identifier
+main.c(95): error C202: 'MAXRLEN': undefined identifier
+main.c(95): error C136: invalid dimension size: [0]
+main.c(97): error C202: 'PICC_ANTICOLL1': undefined identifier
+main.c - 11 Error(s), 2 Warning(s).
+compiling main.c...
+main.c(24): warning C206: '_nop': missing function-prototype
+main.c(24): error C141: syntax error near '_'
+main.c(24): error C202: '_': undefined identifier
+main.c(25): error C141: syntax error near '_'
+main.c(25): error C202: '_': undefined identifier
+main.c(26): error C141: syntax error near '_'
+main.c(26): error C202: '_': undefined identifier
+main.c(39): error C141: syntax error near '_'
+main.c(39): error C202: '_': undefined identifier
+main.c(39): error C141: syntax error near '_'
+main.c(39): error C202: '_': undefined identifier
+main.c(44): error C141: syntax error near '_'
+main.c(44): error C202: '_': undefined identifier
+main.c(44): error C141: syntax error near '_'
+main.c(44): error C202: '_': undefined identifier
+main.c(61): error C141: syntax error near '_'
+main.c(61): error C202: '_': undefined identifier
+main.c(61): error C141: syntax error near '_'
+main.c(61): error C202: '_': undefined identifier
+main.c(62): error C141: syntax error near '_'
+main.c(62): error C202: '_': undefined identifier
+main.c(62): error C141: syntax error near '_'
+main.c(62): error C202: '_': undefined identifier
+main.c(63): error C141: syntax error near '_'
+main.c(63): error C202: '_': undefined identifier
+main.c(63): error C141: syntax error near '_'
+main.c(63): error C202: '_': undefined identifier
+main.c(70): error C202: 'MAXRLEN': undefined identifier
+main.c(70): error C136: invalid dimension size: [0]
+main.c(72): error C202: 'Status2Reg': undefined identifier
+main.c(73): error C202: 'BitFramingReg': undefined identifier
+main.c(74): error C202: 'TxControlReg': undefined identifier
+main.c(78): error C202: 'PCD_TRANSCEIVE': undefined identifier
+main.c(80): error C202: 'MI_OK': undefined identifier
+main.c(86): error C202: 'MI_ERR': undefined identifier
+main.c(95): error C202: 'MAXRLEN': undefined identifier
+main.c(95): error C136: invalid dimension size: [0]
+main.c(97): error C202: 'PICC_ANTICOLL1': undefined identifier
+main.c - 37 Error(s), 1 Warning(s).
+compiling main.c...
+main.c(24): warning C275: expression with possibly no effect
+main.c(25): warning C275: expression with possibly no effect
+main.c(26): warning C275: expression with possibly no effect
+main.c(19): warning C280: 'ns': unreferenced local variable
+main.c(39): warning C275: expression with possibly no effect
+main.c(39): warning C275: expression with possibly no effect
+main.c(44): warning C275: expression with possibly no effect
+main.c(44): warning C275: expression with possibly no effect
+main.c(61): warning C275: expression with possibly no effect
+main.c(61): warning C275: expression with possibly no effect
+main.c(62): warning C275: expression with possibly no effect
+main.c(62): warning C275: expression with possibly no effect
+main.c(63): warning C275: expression with possibly no effect
+main.c(63): warning C275: expression with possibly no effect
+main.c(70): error C202: 'MAXRLEN': undefined identifier
+main.c(70): error C136: invalid dimension size: [0]
+main.c(72): error C202: 'Status2Reg': undefined identifier
+main.c(73): error C202: 'BitFramingReg': undefined identifier
+main.c(74): error C202: 'TxControlReg': undefined identifier
+main.c(78): error C202: 'PCD_TRANSCEIVE': undefined identifier
+main.c(80): error C202: 'MI_OK': undefined identifier
+main.c(86): error C202: 'MI_ERR': undefined identifier
+main.c(95): error C202: 'MAXRLEN': undefined identifier
+main.c(95): error C136: invalid dimension size: [0]
+main.c(97): error C202: 'PICC_ANTICOLL1': undefined identifier
+main.c - 11 Error(s), 14 Warning(s).
+compiling main.c...
+main.c(19): warning C280: 'ns': unreferenced local variable
+main.c(70): error C202: 'MAXRLEN': undefined identifier
+main.c(70): error C136: invalid dimension size: [0]
+main.c(72): error C202: 'Status2Reg': undefined identifier
+main.c(73): error C202: 'BitFramingReg': undefined identifier
+main.c(74): error C202: 'TxControlReg': undefined identifier
+main.c(78): error C202: 'PCD_TRANSCEIVE': undefined identifier
+main.c(80): error C202: 'MI_OK': undefined identifier
+main.c(86): error C202: 'MI_ERR': undefined identifier
+main.c(95): error C202: 'MAXRLEN': undefined identifier
+main.c(95): error C136: invalid dimension size: [0]
+main.c(97): error C202: 'PICC_ANTICOLL1': undefined identifier
+main.c - 11 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(19): warning C280: 'ns': unreferenced local variable
+main.c(70): error C202: 'MAXRLEN': undefined identifier
+main.c(70): error C136: invalid dimension size: [0]
+main.c(72): error C202: 'Status2Reg': undefined identifier
+main.c(73): error C202: 'BitFramingReg': undefined identifier
+main.c(74): error C202: 'TxControlReg': undefined identifier
+main.c(78): error C202: 'PCD_TRANSCEIVE': undefined identifier
+main.c(80): error C202: 'MI_OK': undefined identifier
+main.c(86): error C202: 'MI_ERR': undefined identifier
+main.c(95): error C202: 'MAXRLEN': undefined identifier
+main.c(95): error C136: invalid dimension size: [0]
+main.c(97): error C202: 'PICC_ANTICOLL1': undefined identifier
+Target not created
+compiling main.c...
+main.c(19): warning C280: 'ns': unreferenced local variable
+main.c(70): error C202: 'MAXRLEN': undefined identifier
+main.c(70): error C136: invalid dimension size: [0]
+main.c(71): error C202: 'Status2Reg': undefined identifier
+main.c(72): error C202: 'BitFramingReg': undefined identifier
+main.c(73): error C202: 'TxControlReg': undefined identifier
+main.c(75): error C202: 'PCD_TRANSCEIVE': undefined identifier
+main.c(76): error C202: 'MI_OK': undefined identifier
+main.c(83): error C202: 'MI_ERR': undefined identifier
+main.c(91): error C202: 'MAXRLEN': undefined identifier
+main.c(91): error C136: invalid dimension size: [0]
+main.c(92): error C202: 'PICC_ANTICOLL1': undefined identifier
+main.c - 11 Error(s), 1 Warning(s).
+compiling main.c...
+main.c(19): warning C280: 'ns': unreferenced local variable
+main.c(70): error C202: 'MAXRLEN': undefined identifier
+main.c(70): error C136: invalid dimension size: [0]
+main.c(71): error C202: 'Status2Reg': undefined identifier
+main.c(72): error C202: 'BitFramingReg': undefined identifier
+main.c(73): error C202: 'TxControlReg': undefined identifier
+main.c(75): error C202: 'PCD_TRANSCEIVE': undefined identifier
+main.c(76): error C202: 'MI_OK': undefined identifier
+main.c(83): error C202: 'MI_ERR': undefined identifier
+main.c(91): error C202: 'MAXRLEN': undefined identifier
+main.c(91): error C136: invalid dimension size: [0]
+main.c(92): error C202: 'PICC_ANTICOLL1': undefined identifier
+main.c - 11 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L10: CANNOT DETERMINE ROOT SEGMENT
+Program Size: data=0.0 xdata=0 code=0
+creating hex file from "1"...
+"1" - 0 Error(s), 1 Warning(s).
+compiling main.c...
+rc522.h(122): error C129: missing ';' before 'SPIReadByte'
+main.c - 1 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+rc522.h(122): error C129: missing ';' before '8'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+rc522.h(122): error C141: syntax error near '8'
+rc522.h(123): error C141: syntax error near 'SPIData', expected ')'
+rc522.h(124): error C141: syntax error near 'req_code', expected ')'
+rc522.h(125): error C141: syntax error near '*', expected ')'
+rc522.h(127): error C141: syntax error near 'auth_mode', expected ')'
+rc522.h(128): error C141: syntax error near 'addr', expected ')'
+rc522.h(129): error C141: syntax error near 'addr', expected ')'
+rc522.h(131): error C141: syntax error near '*', expected ')'
+rc522.h(133): error C141: syntax error near 'type', expected ')'
+rc522.h(134): error C129: missing ';' before 'ReadRawRC'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+rc522.h(122): error C141: syntax error near '8'
+rc522.h(123): error C141: syntax error near 'SPIData', expected ')'
+rc522.h(124): error C141: syntax error near 'req_code', expected ')'
+rc522.h(125): error C141: syntax error near '*', expected ')'
+rc522.h(127): error C141: syntax error near 'auth_mode', expected ')'
+rc522.h(128): error C141: syntax error near 'addr', expected ')'
+rc522.h(129): error C141: syntax error near 'addr', expected ')'
+rc522.h(131): error C141: syntax error near '*', expected ')'
+rc522.h(133): error C141: syntax error near 'type', expected ')'
+rc522.h(134): error C141: syntax error near '8'
+rc522.h(134): error C141: syntax error near 'Address', expected ')'
+rc522.h(135): error C141: syntax error near 'Address', expected ')'
+rc522.h(136): error C141: syntax error near 'reg', expected ')'
+rc522.h(137): error C141: syntax error near 'reg', expected ')'
+rc522.h(138): error C141: syntax error near 'Command', expected ')'
+main.c(7): error C141: syntax error near 'void'
+Target not created
+compiling main.c...
+rc522.h(122): error C141: syntax error near '8'
+rc522.h(123): error C141: syntax error near 'SPIData', expected ')'
+rc522.h(124): error C141: syntax error near 'req_code', expected ')'
+rc522.h(125): error C141: syntax error near '*', expected ')'
+rc522.h(127): error C141: syntax error near 'auth_mode', expected ')'
+rc522.h(128): error C141: syntax error near 'addr', expected ')'
+rc522.h(129): error C141: syntax error near 'addr', expected ')'
+rc522.h(131): error C141: syntax error near '*', expected ')'
+rc522.h(133): error C141: syntax error near 'type', expected ')'
+rc522.h(134): error C141: syntax error near '8'
+rc522.h(134): error C141: syntax error near 'Address', expected ')'
+rc522.h(135): error C141: syntax error near 'Address', expected ')'
+rc522.h(136): error C141: syntax error near 'reg', expected ')'
+rc522.h(137): error C141: syntax error near 'reg', expected ')'
+rc522.h(138): error C141: syntax error near 'Command', expected ')'
+main.c - 15 Error(s), 0 Warning(s).
+compiling main.c...
+rc522.h(124): error C141: syntax error near '8'
+rc522.h(125): error C141: syntax error near '8'
+rc522.h(126): error C141: syntax error near '8'
+rc522.h(128): error C141: syntax error near '8'
+rc522.h(129): error C141: syntax error near '8'
+rc522.h(130): error C141: syntax error near '8'
+rc522.h(132): error C141: syntax error near '8'
+rc522.h(134): error C141: syntax error near '8'
+rc522.h(135): error C141: syntax error near '8'
+rc522.h(136): error C141: syntax error near '8'
+rc522.h(137): error C141: syntax error near '8'
+rc522.h(138): error C141: syntax error near '8'
+rc522.h(139): error C141: syntax error near '8'
+main.c - 13 Error(s), 0 Warning(s).
+compiling main.c...
+rc522.h(124): error C141: syntax error near '88'
+rc522.h(125): error C141: syntax error near '88'
+rc522.h(126): error C141: syntax error near '88'
+rc522.h(128): error C141: syntax error near '88'
+rc522.h(129): error C141: syntax error near '88'
+rc522.h(130): error C141: syntax error near '88'
+rc522.h(132): error C141: syntax error near '88'
+rc522.h(134): error C141: syntax error near '88'
+rc522.h(135): error C141: syntax error near '88'
+rc522.h(136): error C141: syntax error near '88'
+rc522.h(137): error C141: syntax error near '88'
+rc522.h(138): error C141: syntax error near '88'
+rc522.h(139): error C141: syntax error near '88'
+main.c - 13 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+rc522.h(124): error C141: syntax error near '88'
+rc522.h(125): error C141: syntax error near 'req_code', expected ')'
+rc522.h(126): error C141: syntax error near '*', expected ')'
+rc522.h(128): error C141: syntax error near 'auth_mode', expected ')'
+rc522.h(129): error C141: syntax error near 'addr', expected ')'
+rc522.h(130): error C141: syntax error near 'addr', expected ')'
+rc522.h(132): error C141: syntax error near '*', expected ')'
+rc522.h(134): error C141: syntax error near 'type', expected ')'
+rc522.h(135): error C141: syntax error near 'Address', expected ')'
+rc522.h(136): error C141: syntax error near 'Address', expected ')'
+rc522.h(137): error C141: syntax error near 'reg', expected ')'
+rc522.h(138): error C141: syntax error near 'reg', expected ')'
+rc522.h(139): error C141: syntax error near 'Command', expected ')'
+Target not created
+compiling main.c...
+rc522.h(124): error C141: syntax error near '88'
+rc522.h(125): error C141: syntax error near '88'
+rc522.h(126): error C141: syntax error near '88'
+rc522.h(128): error C141: syntax error near '88'
+rc522.h(129): error C141: syntax error near '88'
+rc522.h(130): error C141: syntax error near '88'
+rc522.h(132): error C141: syntax error near '*', expected ')'
+rc522.h(134): error C141: syntax error near '88'
+rc522.h(135): error C141: syntax error near '88'
+rc522.h(136): error C141: syntax error near '88'
+rc522.h(137): error C141: syntax error near '88'
+rc522.h(138): error C141: syntax error near 'reg', expected ')'
+rc522.h(139): error C141: syntax error near '88'
+main.c - 13 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+rc522.h(124): error C141: syntax error near '88'
+rc522.h(125): error C141: syntax error near '88'
+rc522.h(126): error C141: syntax error near '88'
+rc522.h(128): error C141: syntax error near '88'
+rc522.h(129): error C141: syntax error near '88'
+rc522.h(130): error C141: syntax error near '88'
+rc522.h(132): error C141: syntax error near '*', expected ')'
+rc522.h(134): error C141: syntax error near '88'
+rc522.h(135): error C141: syntax error near '88'
+rc522.h(136): error C141: syntax error near '88'
+rc522.h(137): error C141: syntax error near '88'
+rc522.h(138): error C141: syntax error near '88'
+rc522.h(139): error C141: syntax error near '88'
+Target not created
+compiling main.c...
+rc522.h(124): error C141: syntax error near '88'
+rc522.h(125): error C141: syntax error near '88'
+rc522.h(126): error C141: syntax error near '88'
+rc522.h(128): error C141: syntax error near '88'
+rc522.h(129): error C141: syntax error near '88'
+rc522.h(130): error C141: syntax error near '88'
+rc522.h(132): error C141: syntax error near '88'
+rc522.h(134): error C141: syntax error near '88'
+rc522.h(135): error C141: syntax error near '88'
+rc522.h(136): error C141: syntax error near '88'
+rc522.h(137): error C141: syntax error near '88'
+rc522.h(138): error C141: syntax error near '88'
+rc522.h(139): error C141: syntax error near '88'
+main.c - 13 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+rc522.h(124): error C141: syntax error near '88'
+rc522.h(125): error C141: syntax error near '88'
+rc522.h(126): error C141: syntax error near '88'
+rc522.h(128): error C141: syntax error near '88'
+rc522.h(129): error C141: syntax error near '88'
+rc522.h(130): error C141: syntax error near '88'
+rc522.h(132): error C141: syntax error near '88'
+rc522.h(134): error C141: syntax error near '88'
+rc522.h(135): error C141: syntax error near '88'
+rc522.h(136): error C141: syntax error near '88'
+rc522.h(137): error C141: syntax error near '88'
+rc522.h(138): error C141: syntax error near '88'
+rc522.h(139): error C141: syntax error near '88'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+rc522.h(124): error C141: syntax error near '88'
+rc522.h(125): error C141: syntax error near '88'
+rc522.h(126): error C141: syntax error near '88'
+rc522.h(128): error C141: syntax error near '88'
+rc522.h(129): error C141: syntax error near '88'
+rc522.h(130): error C141: syntax error near '88'
+rc522.h(132): error C141: syntax error near '88'
+rc522.h(134): error C141: syntax error near '88'
+rc522.h(135): error C141: syntax error near '88'
+rc522.h(136): error C141: syntax error near '88'
+rc522.h(137): error C141: syntax error near '88'
+rc522.h(138): error C141: syntax error near '88'
+rc522.h(139): error C141: syntax error near '88'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  INITRC522
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  INITRC522
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0010H
+Program Size: data=9.0 xdata=0 code=18
+creating hex file from "1"...
+"1" - 0 Error(s), 2 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  INITRC522
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  INITRC522
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0010H
+Program Size: data=9.0 xdata=0 code=18
+creating hex file from "1"...
+"1" - 0 Error(s), 2 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  INITRC522
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  INITRC522
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0010H
+Program Size: data=9.0 xdata=0 code=18
+creating hex file from "1"...
+"1" - 0 Error(s), 2 Warning(s).
+compiling main.c...
+main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  INITRC522
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  INITRC522
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0010H
+Program Size: data=9.0 xdata=0 code=18
+creating hex file from "1"...
+"1" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  INITRC522
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  INITRC522
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0010H
+Program Size: data=9.0 xdata=0 code=18
+creating hex file from "1"...
+"1" - 0 Error(s), 2 Warning(s).
+compiling main.c...
+main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling rc522_2.c...
+rc522.h(144): error C202: 'P1': undefined identifier
+rc522.h(145): error C202: 'P1': undefined identifier
+rc522.h(146): error C202: 'P1': undefined identifier
+rc522.h(147): error C202: 'P1': undefined identifier
+rc522.h(148): error C202: 'P1': undefined identifier
+rc522_2.c(19): error C202: 'uint8': undefined identifier
+rc522_2.c(19): error C141: syntax error near 'xdata'
+rc522_2.c(20): error C202: 'b': undefined identifier
+rc522_2.c(21): error C202: 'a': undefined identifier
+rc522_2.c(24): error C129: missing ';' before 'SPIReadByte'
+Target not created
+compiling main.c...
+main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling rc522_2.c...
+rc522.h(144): error C202: 'P1': undefined identifier
+rc522.h(145): error C202: 'P1': undefined identifier
+rc522.h(146): error C202: 'P1': undefined identifier
+rc522.h(147): error C202: 'P1': undefined identifier
+rc522.h(148): error C202: 'P1': undefined identifier
+rc522_2.c(24): error C129: missing ';' before 'SPIReadByte'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+rc522.h(2): warning C315: unknown #directive 'inlude'
+compiling rc522_2.c...
+rc522.h(2): warning C315: unknown #directive 'inlude'
+rc522.h(145): error C202: 'P1': undefined identifier
+rc522.h(146): error C202: 'P1': undefined identifier
+rc522.h(147): error C202: 'P1': undefined identifier
+rc522.h(148): error C202: 'P1': undefined identifier
+rc522.h(149): error C202: 'P1': undefined identifier
+rc522_2.c(24): error C129: missing ';' before 'SPIReadByte'
+Target not created
+Build target 'Target 1'
+compiling rc522_2.c...
+rc522.h(2): warning C315: unknown #directive 'inlude'
+rc522.h(145): error C202: 'P1': undefined identifier
+rc522.h(146): error C202: 'P1': undefined identifier
+rc522.h(147): error C202: 'P1': undefined identifier
+rc522.h(148): error C202: 'P1': undefined identifier
+rc522.h(149): error C202: 'P1': undefined identifier
+rc522_2.c(32): error C202: 'SPI_CK': undefined identifier
+rc522_2.c(235): error C236: '_CalulateCRC': different length of parameter lists
+rc522_2.c(236): error C141: syntax error near 'xdata'
+rc522_2.c(236): error C202: 'i': undefined identifier
+rc522_2.c(240): error C202: 'i': undefined identifier
+rc522_2.c(241): error C202: 'pIndata': undefined identifier
+rc522_2.c(243): error C202: 'i': undefined identifier
+rc522_2.c(245): error C202: 'n': undefined identifier
+rc522_2.c(245): error C202: 'i': undefined identifier
+rc522_2.c(246): error C202: 'i': undefined identifier
+rc522_2.c(248): error C202: 'pOutData': undefined identifier
+rc522_2.c(254): error C231: 'PcdReset': redefinition
+rc522_2.c(255): error C202: 'SPI_RST': undefined identifier
+rc522_2.c(258): error C202: 'SPI_RST': undefined identifier
+rc522_2.c(261): error C202: 'SPI_RST': undefined identifier
+rc522_2.c(273): error C231: 'PcdReset': redefinition
+rc522_2.c(277): error C141: syntax error near 'type', expected ')'
+rc522_2.c(278): error C231: '_M500PcdConfigISOType': redefinition
+rc522_2.c(278): error C202: 'type': undefined identifier
+rc522_2.c(295): error C231: '_M500PcdConfigISOType': redefinition
+rc522_2.c(299): error C129: missing ';' before 'ReadRawRC'
+Target not created
+compiling rc522_2.c...
+rc522.h(2): warning C315: unknown #directive 'inlude'
+rc522.h(145): error C202: 'P1': undefined identifier
+rc522.h(146): error C202: 'P1': undefined identifier
+rc522.h(147): error C202: 'P1': undefined identifier
+rc522.h(148): error C202: 'P1': undefined identifier
+rc522.h(149): error C202: 'P1': undefined identifier
+rc522_2.c(32): error C202: 'SPI_CK': undefined identifier
+rc522_2.c(235): error C236: '_CalulateCRC': different length of parameter lists
+rc522_2.c(236): error C141: syntax error near 'xdata'
+rc522_2.c(236): error C202: 'i': undefined identifier
+rc522_2.c(240): error C202: 'i': undefined identifier
+rc522_2.c(241): error C202: 'pIndata': undefined identifier
+rc522_2.c(243): error C202: 'i': undefined identifier
+rc522_2.c(245): error C202: 'n': undefined identifier
+rc522_2.c(245): error C202: 'i': undefined identifier
+rc522_2.c(246): error C202: 'i': undefined identifier
+rc522_2.c(248): error C202: 'pOutData': undefined identifier
+rc522_2.c(254): error C231: 'PcdReset': redefinition
+rc522_2.c(255): error C202: 'SPI_RST': undefined identifier
+rc522_2.c(258): error C202: 'SPI_RST': undefined identifier
+rc522_2.c(261): error C202: 'SPI_RST': undefined identifier
+rc522_2.c(273): error C231: 'PcdReset': redefinition
+rc522_2.c(277): error C141: syntax error near 'type', expected ')'
+rc522_2.c(278): error C231: '_M500PcdConfigISOType': redefinition
+rc522_2.c(278): error C202: 'type': undefined identifier
+rc522_2.c(295): error C231: '_M500PcdConfigISOType': redefinition
+rc522_2.c(303): error C202: 'SPI_CS': undefined identifier
+rc522_2.c(307): error C202: 'SPI_CS': undefined identifier
+rc522_2.c(316): error C202: 'SPI_CS': undefined identifier
+rc522_2.c(320): error C202: 'SPI_CS': undefined identifier
+rc522_2.c(325): error C141: syntax error near 'reg', expected ')'
+rc522_2.c(326): error C236: '_SetBitMask': different length of parameter lists
+rc522_2.c(328): error C202: 'reg': undefined identifier
+rc522_2.c(329): error C202: 'reg': undefined identifier
+rc522_2.c(349): error C231: '_PcdComMF522': redefinition
+rc522_2.c(351): error C202: 'uint8': undefined identifier
+rc522_2.c(351): error C141: syntax error near 'xdata'
+rc522_2.c(352): error C202: 'uint8': undefined identifier
+rc522_2.c(352): error C141: syntax error near 'xdata'
+rc522_2.c(353): error C202: 'uint8': undefined identifier
+rc522_2.c(353): error C141: syntax error near 'xdata'
+rc522_2.c(354): error C202: 'uint8': undefined identifier
+rc522_2.c(354): error C141: syntax error near 'xdata'
+rc522_2.c(355): error C202: 'uint16': undefined identifier
+rc522_2.c(355): error C141: syntax error near 'xdata'
+rc522_2.c(357): error C202: 'irqEn': undefined identifier
+rc522_2.c(357): error C202: 'waitFor': undefined identifier
+rc522_2.c(358): error C202: 'irqEn': undefined identifier
+rc522_2.c(358): error C202: 'waitFor': undefined identifier
+rc522_2.c(361): error C202: 'irqEn': undefined identifier
+rc522_2.c(364): error C208: '_SetBitMask': too many actual parameters
+rc522_2.c(365): error C202: 'i': undefined identifier
+rc522_2.c(366): error C202: 'i': undefined identifier
+rc522_2.c(369): error C208: '_SetBitMask': too many actual parameters
+rc522_2.c(370): error C202: 'i': undefined identifier
+rc522_2.c(373): error C202: 'n': undefined identifier
+rc522_2.c(374): error C202: 'i': undefined identifier
+rc522_2.c(376): error C202: 'i': undefined identifier
+rc522_2.c(378): error C202: 'i': undefined identifier
+rc522_2.c(382): error C202: 'n': undefined identifier
+rc522_2.c(385): error C202: 'n': undefined identifier
+rc522_2.c(386): error C202: 'lastBits': undefined identifier
+rc522_2.c(387): error C202: 'lastBits': undefined identifier
+rc522_2.c(388): error C202: 'n': undefined identifier
+rc522_2.c(389): error C202: 'n': undefined identifier
+rc522_2.c(390): error C202: 'n': undefined identifier
+rc522_2.c(390): error C202: 'n': undefined identifier
+rc522_2.c(391): error C202: 'n': undefined identifier
+rc522_2.c(391): error C202: 'n': undefined identifier
+rc522_2.c(392): error C202: 'i': undefined identifier
+rc522_2.c(393): error C202: 'i': undefined identifier
+rc522_2.c(397): error C208: '_SetBitMask': too many actual parameters
+rc522_2.c(400): error C231: '_PcdComMF522': redefinition
+rc522_2.c(404): error C202: 'uint8': undefined identifier
+rc522_2.c(404): error C141: syntax error near 'xdata'
+rc522_2.c(405): error C202: 'i': undefined identifier
+rc522_2.c(406): error C202: 'i': undefined identifier
+rc522_2.c(408): error C208: '_SetBitMask': too many actual parameters
+rc522_2.c - 77 Error(s), 1 Warning(s).
+Rebuild target 'Target 1'
+compiling main.c...
+rc522.h(2): warning C315: unknown #directive 'inlude'
+compiling rc522_2.c...
+rc522.h(2): warning C315: unknown #directive 'inlude'
+rc522.h(145): error C202: 'P1': undefined identifier
+rc522.h(146): error C202: 'P1': undefined identifier
+rc522.h(147): error C202: 'P1': undefined identifier
+rc522.h(148): error C202: 'P1': undefined identifier
+rc522.h(149): error C202: 'P1': undefined identifier
+rc522_2.c(32): error C202: 'SPI_CK': undefined identifier
+rc522_2.c(235): error C236: '_CalulateCRC': different length of parameter lists
+rc522_2.c(236): error C141: syntax error near 'xdata'
+rc522_2.c(236): error C202: 'i': undefined identifier
+rc522_2.c(240): error C202: 'i': undefined identifier
+rc522_2.c(241): error C202: 'pIndata': undefined identifier
+rc522_2.c(243): error C202: 'i': undefined identifier
+rc522_2.c(245): error C202: 'n': undefined identifier
+rc522_2.c(245): error C202: 'i': undefined identifier
+rc522_2.c(246): error C202: 'i': undefined identifier
+rc522_2.c(248): error C202: 'pOutData': undefined identifier
+rc522_2.c(254): error C231: 'PcdReset': redefinition
+rc522_2.c(255): error C202: 'SPI_RST': undefined identifier
+rc522_2.c(258): error C202: 'SPI_RST': undefined identifier
+rc522_2.c(261): error C202: 'SPI_RST': undefined identifier
+rc522_2.c(273): error C231: 'PcdReset': redefinition
+rc522_2.c(277): error C141: syntax error near 'type', expected ')'
+rc522_2.c(278): error C231: '_M500PcdConfigISOType': redefinition
+rc522_2.c(278): error C202: 'type': undefined identifier
+rc522_2.c(295): error C231: '_M500PcdConfigISOType': redefinition
+rc522_2.c(303): error C202: 'SPI_CS': undefined identifier
+rc522_2.c(307): error C202: 'SPI_CS': undefined identifier
+rc522_2.c(316): error C202: 'SPI_CS': undefined identifier
+rc522_2.c(320): error C202: 'SPI_CS': undefined identifier
+rc522_2.c(325): error C141: syntax error near 'reg', expected ')'
+rc522_2.c(326): error C236: '_SetBitMask': different length of parameter lists
+rc522_2.c(328): error C202: 'reg': undefined identifier
+rc522_2.c(329): error C202: 'reg': undefined identifier
+rc522_2.c(349): error C231: '_PcdComMF522': redefinition
+rc522_2.c(364): error C208: '_SetBitMask': too many actual parameters
+rc522_2.c(369): error C208: '_SetBitMask': too many actual parameters
+rc522_2.c(397): error C208: '_SetBitMask': too many actual parameters
+rc522_2.c(400): error C231: '_PcdComMF522': redefinition
+rc522_2.c(404): error C202: 'uint8': undefined identifier
+rc522_2.c(404): error C141: syntax error near 'xdata'
+rc522_2.c(405): error C202: 'i': undefined identifier
+rc522_2.c(406): error C202: 'i': undefined identifier
+rc522_2.c(408): error C208: '_SetBitMask': too many actual parameters
+Target not created
+compiling rc522_2.c...
+rc522.h(2): warning C315: unknown #directive 'inlude'
+rc522.h(145): error C202: 'P1': undefined identifier
+rc522.h(146): error C202: 'P1': undefined identifier
+rc522.h(147): error C202: 'P1': undefined identifier
+rc522.h(148): error C202: 'P1': undefined identifier
+rc522.h(149): error C202: 'P1': undefined identifier
+rc522_2.c(32): error C202: 'SPI_CK': undefined identifier
+rc522_2.c(326): error C236: '_SetBitMask': different length of parameter lists
+rc522_2.c(328): error C202: 'reg': undefined identifier
+rc522_2.c(329): error C202: 'reg': undefined identifier
+rc522_2.c(349): error C231: '_PcdComMF522': redefinition
+rc522_2.c(364): error C208: '_SetBitMask': too many actual parameters
+rc522_2.c(369): error C208: '_SetBitMask': too many actual parameters
+rc522_2.c(397): error C208: '_SetBitMask': too many actual parameters
+rc522_2.c(400): error C231: '_PcdComMF522': redefinition
+rc522_2.c(408): error C208: '_SetBitMask': too many actual parameters
+rc522_2.c - 15 Error(s), 1 Warning(s).
+compiling main.c...
+rc522.h(2): warning C315: unknown #directive 'inlude'
+main.c - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling rc522_2.c...
+rc522.h(2): warning C315: unknown #directive 'inlude'
+rc522.h(145): error C202: 'P1': undefined identifier
+rc522.h(146): error C202: 'P1': undefined identifier
+rc522.h(147): error C202: 'P1': undefined identifier
+rc522.h(148): error C202: 'P1': undefined identifier
+rc522.h(149): error C202: 'P1': undefined identifier
+rc522_2.c(32): error C202: 'SPI_CK': undefined identifier
+rc522_2.c(326): error C236: '_SetBitMask': different length of parameter lists
+rc522_2.c(328): error C202: 'reg': undefined identifier
+rc522_2.c(329): error C202: 'reg': undefined identifier
+rc522_2.c(349): error C231: '_PcdComMF522': redefinition
+rc522_2.c(364): error C208: '_SetBitMask': too many actual parameters
+rc522_2.c(369): error C208: '_SetBitMask': too many actual parameters
+rc522_2.c(397): error C208: '_SetBitMask': too many actual parameters
+rc522_2.c(400): error C231: '_PcdComMF522': redefinition
+rc522_2.c(408): error C208: '_SetBitMask': too many actual parameters
+Target not created
+Build target 'Target 1'
+compiling main.c...
+compiling rc522_2.c...
+rc522_2.c(33): warning C206: 'nop': missing function-prototype
+rc522_2.c(77): error C141: syntax error near 'req_code', expected ')'
+rc522_2.c(78): error C231: '_PcdRequest': redefinition
+rc522_2.c(85): error C202: 'req_code': undefined identifier
+rc522_2.c(88): error C202: 'pTagType': undefined identifier
+rc522_2.c(88): error C202: 'pTagType': undefined identifier
+rc522_2.c(91): error C231: '_PcdRequest': redefinition
+rc522_2.c(98): error C231: '_PcdAnticoll': redefinition
+rc522_2.c(121): error C231: '_PcdAnticoll': redefinition
+rc522_2.c(126): error C141: syntax error near '*', expected ')'
+rc522_2.c(127): error C231: '_PcdSelect': redefinition
+rc522_2.c(137): error C202: 'pSnr': undefined identifier
+rc522_2.c(138): error C202: 'pSnr': undefined identifier
+rc522_2.c(146): error C231: '_PcdSelect': redefinition
+rc522_2.c(151): error C141: syntax error near 'auth_mode', expected ')'
+rc522_2.c(152): error C231: '_PcdAuthState': redefinition
+rc522_2.c(156): error C202: 'auth_mode': undefined identifier
+rc522_2.c(157): error C202: 'addr': undefined identifier
+rc522_2.c(159): error C202: 'pKey': undefined identifier
+rc522_2.c(161): error C202: 'pSnr': undefined identifier
+rc522_2.c(168): error C231: '_PcdAuthState': redefinition
+rc522_2.c(173): error C141: syntax error near 'addr', expected ')'
+rc522_2.c(174): error C231: '_PcdRead': redefinition
+rc522_2.c(176): error C202: 'uint16': undefined identifier
+rc522_2.c(176): error C141: syntax error near 'xdata'
+rc522_2.c(177): error C141: syntax error near 'xdata'
+rc522_2.c(177): error C202: 'i': undefined identifier
+rc522_2.c(178): error C202: 'ucComMF522Buf': undefined identifier
+rc522_2.c(179): error C202: 'ucComMF522Buf': undefined identifier
+rc522_2.c(180): error C202: 'ucComMF522Buf': undefined identifier
+rc522_2.c(181): error C202: 'ucComMF522Buf': undefined identifier
+rc522_2.c(182): error C202: 'unLen': undefined identifier
+rc522_2.c(184): error C202: 'i': undefined identifier
+rc522_2.c(186): error C202: 'pData': undefined identifier
+rc522_2.c(191): error C231: '_PcdRead': redefinition
+rc522_2.c(196): error C231: '_PcdWrite': redefinition
+rc522_2.c(216): error C231: '_PcdWrite': redefinition
+rc522_2.c(221): error C231: 'PcdHalt': redefinition
+rc522_2.c(230): error C231: 'PcdHalt': redefinition
+rc522_2.c(254): error C231: 'PcdReset': redefinition
+rc522_2.c(273): error C231: 'PcdReset': redefinition
+rc522_2.c(278): error C231: '_M500PcdConfigISOType': redefinition
+rc522_2.c(295): error C231: '_M500PcdConfigISOType': redefinition
+rc522_2.c(325): error C141: syntax error near 'reg', expected ')'
+rc522_2.c(326): error C236: '_SetBitMask': different length of parameter lists
+rc522_2.c(328): error C202: 'reg': undefined identifier
+rc522_2.c(329): error C202: 'reg': undefined identifier
+rc522_2.c(349): error C231: '_PcdComMF522': redefinition
+rc522_2.c(364): error C208: '_SetBitMask': too many actual parameters
+rc522_2.c(369): error C208: '_SetBitMask': too many actual parameters
+rc522_2.c(397): error C208: '_SetBitMask': too many actual parameters
+rc522_2.c(400): error C231: '_PcdComMF522': redefinition
+rc522_2.c(408): error C208: '_SetBitMask': too many actual parameters
+Target not created
+Build target 'Target 1'
+compiling rc522_2.c...
+rc522_2.c(33): warning C206: 'nop': missing function-prototype
+rc522_2.c(77): error C141: syntax error near 'req_code', expected ')'
+rc522_2.c(78): error C231: '_PcdRequest': redefinition
+rc522_2.c(85): error C202: 'req_code': undefined identifier
+rc522_2.c(88): error C202: 'pTagType': undefined identifier
+rc522_2.c(88): error C202: 'pTagType': undefined identifier
+rc522_2.c(91): error C231: '_PcdRequest': redefinition
+rc522_2.c(98): error C231: '_PcdAnticoll': redefinition
+rc522_2.c(121): error C231: '_PcdAnticoll': redefinition
+rc522_2.c(126): error C141: syntax error near '*', expected ')'
+rc522_2.c(127): error C231: '_PcdSelect': redefinition
+rc522_2.c(137): error C202: 'pSnr': undefined identifier
+rc522_2.c(138): error C202: 'pSnr': undefined identifier
+rc522_2.c(146): error C231: '_PcdSelect': redefinition
+rc522_2.c(151): error C141: syntax error near 'auth_mode', expected ')'
+rc522_2.c(152): error C231: '_PcdAuthState': redefinition
+rc522_2.c(156): error C202: 'auth_mode': undefined identifier
+rc522_2.c(157): error C202: 'addr': undefined identifier
+rc522_2.c(159): error C202: 'pKey': undefined identifier
+rc522_2.c(161): error C202: 'pSnr': undefined identifier
+rc522_2.c(168): error C231: '_PcdAuthState': redefinition
+rc522_2.c(173): error C141: syntax error near 'addr', expected ')'
+rc522_2.c(174): error C231: '_PcdRead': redefinition
+rc522_2.c(176): error C202: 'uint16': undefined identifier
+rc522_2.c(176): error C141: syntax error near 'xdata'
+rc522_2.c(177): error C141: syntax error near 'xdata'
+rc522_2.c(177): error C202: 'i': undefined identifier
+rc522_2.c(178): error C202: 'ucComMF522Buf': undefined identifier
+rc522_2.c(179): error C202: 'ucComMF522Buf': undefined identifier
+rc522_2.c(180): error C202: 'ucComMF522Buf': undefined identifier
+rc522_2.c(181): error C202: 'ucComMF522Buf': undefined identifier
+rc522_2.c(182): error C202: 'unLen': undefined identifier
+rc522_2.c(184): error C202: 'i': undefined identifier
+rc522_2.c(186): error C202: 'pData': undefined identifier
+rc522_2.c(191): error C231: '_PcdRead': redefinition
+rc522_2.c(196): error C231: '_PcdWrite': redefinition
+rc522_2.c(216): error C231: '_PcdWrite': redefinition
+rc522_2.c(221): error C231: 'PcdHalt': redefinition
+rc522_2.c(230): error C231: 'PcdHalt': redefinition
+rc522_2.c(254): error C231: 'PcdReset': redefinition
+rc522_2.c(273): error C231: 'PcdReset': redefinition
+rc522_2.c(278): error C231: '_M500PcdConfigISOType': redefinition
+rc522_2.c(295): error C231: '_M500PcdConfigISOType': redefinition
+rc522_2.c(325): error C141: syntax error near 'reg', expected ')'
+rc522_2.c(326): error C236: '_SetBitMask': different length of parameter lists
+rc522_2.c(328): error C202: 'reg': undefined identifier
+rc522_2.c(329): error C202: 'reg': undefined identifier
+rc522_2.c(349): error C231: '_PcdComMF522': redefinition
+rc522_2.c(364): error C208: '_SetBitMask': too many actual parameters
+rc522_2.c(369): error C208: '_SetBitMask': too many actual parameters
+rc522_2.c(397): error C208: '_SetBitMask': too many actual parameters
+rc522_2.c(400): error C231: '_PcdComMF522': redefinition
+rc522_2.c(408): error C208: '_SetBitMask': too many actual parameters
+Target not created
+compiling rc522_2.c...
+rc522_2.c(33): warning C206: 'nop': missing function-prototype
+rc522_2.c(77): error C141: syntax error near 'req_code', expected ')'
+rc522_2.c(78): error C231: '_PcdRequest': redefinition
+rc522_2.c(85): error C202: 'req_code': undefined identifier
+rc522_2.c(88): error C202: 'pTagType': undefined identifier
+rc522_2.c(88): error C202: 'pTagType': undefined identifier
+rc522_2.c(91): error C231: '_PcdRequest': redefinition
+rc522_2.c(98): error C231: '_PcdAnticoll': redefinition
+rc522_2.c(121): error C231: '_PcdAnticoll': redefinition
+rc522_2.c(126): error C141: syntax error near '*', expected ')'
+rc522_2.c(127): error C231: '_PcdSelect': redefinition
+rc522_2.c(137): error C202: 'pSnr': undefined identifier
+rc522_2.c(138): error C202: 'pSnr': undefined identifier
+rc522_2.c(146): error C231: '_PcdSelect': redefinition
+rc522_2.c(151): error C141: syntax error near 'auth_mode', expected ')'
+rc522_2.c(152): error C231: '_PcdAuthState': redefinition
+rc522_2.c(156): error C202: 'auth_mode': undefined identifier
+rc522_2.c(157): error C202: 'addr': undefined identifier
+rc522_2.c(159): error C202: 'pKey': undefined identifier
+rc522_2.c(161): error C202: 'pSnr': undefined identifier
+rc522_2.c(168): error C231: '_PcdAuthState': redefinition
+rc522_2.c(173): error C141: syntax error near 'addr', expected ')'
+rc522_2.c(174): error C231: '_PcdRead': redefinition
+rc522_2.c(176): error C202: 'uint16': undefined identifier
+rc522_2.c(176): error C141: syntax error near 'xdata'
+rc522_2.c(177): error C141: syntax error near 'xdata'
+rc522_2.c(177): error C202: 'i': undefined identifier
+rc522_2.c(178): error C202: 'ucComMF522Buf': undefined identifier
+rc522_2.c(179): error C202: 'ucComMF522Buf': undefined identifier
+rc522_2.c(180): error C202: 'ucComMF522Buf': undefined identifier
+rc522_2.c(181): error C202: 'ucComMF522Buf': undefined identifier
+rc522_2.c(182): error C202: 'unLen': undefined identifier
+rc522_2.c(184): error C202: 'i': undefined identifier
+rc522_2.c(186): error C202: 'pData': undefined identifier
+rc522_2.c(191): error C231: '_PcdRead': redefinition
+rc522_2.c(196): error C231: '_PcdWrite': redefinition
+rc522_2.c(216): error C231: '_PcdWrite': redefinition
+rc522_2.c(221): error C231: 'PcdHalt': redefinition
+rc522_2.c(230): error C231: 'PcdHalt': redefinition
+rc522_2.c(254): error C231: 'PcdReset': redefinition
+rc522_2.c(273): error C231: 'PcdReset': redefinition
+rc522_2.c(278): error C231: '_M500PcdConfigISOType': redefinition
+rc522_2.c(295): error C231: '_M500PcdConfigISOType': redefinition
+rc522_2.c(352): error C141: syntax error near 'reg', expected ')'
+rc522_2.c(353): error C236: '_SetBitMask': different length of parameter lists
+rc522_2.c(355): error C202: 'reg': undefined identifier
+rc522_2.c(356): error C202: 'reg': undefined identifier
+rc522_2.c(376): error C231: '_PcdComMF522': redefinition
+rc522_2.c(391): error C208: '_SetBitMask': too many actual parameters
+rc522_2.c(396): error C208: '_SetBitMask': too many actual parameters
+rc522_2.c(424): error C208: '_SetBitMask': too many actual parameters
+rc522_2.c(427): error C231: '_PcdComMF522': redefinition
+rc522_2.c - 51 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling rc522_2.c...
+rc522_2.c(33): warning C206: 'nop': missing function-prototype
+rc522_2.c(77): error C141: syntax error near 'req_code', expected ')'
+rc522_2.c(78): error C231: '_PcdRequest': redefinition
+rc522_2.c(85): error C202: 'req_code': undefined identifier
+rc522_2.c(88): error C202: 'pTagType': undefined identifier
+rc522_2.c(88): error C202: 'pTagType': undefined identifier
+rc522_2.c(91): error C231: '_PcdRequest': redefinition
+rc522_2.c(98): error C231: '_PcdAnticoll': redefinition
+rc522_2.c(121): error C231: '_PcdAnticoll': redefinition
+rc522_2.c(126): error C141: syntax error near '*', expected ')'
+rc522_2.c(127): error C231: '_PcdSelect': redefinition
+rc522_2.c(137): error C202: 'pSnr': undefined identifier
+rc522_2.c(138): error C202: 'pSnr': undefined identifier
+rc522_2.c(146): error C231: '_PcdSelect': redefinition
+rc522_2.c(151): error C141: syntax error near 'auth_mode', expected ')'
+rc522_2.c(152): error C231: '_PcdAuthState': redefinition
+rc522_2.c(156): error C202: 'auth_mode': undefined identifier
+rc522_2.c(157): error C202: 'addr': undefined identifier
+rc522_2.c(159): error C202: 'pKey': undefined identifier
+rc522_2.c(161): error C202: 'pSnr': undefined identifier
+rc522_2.c(168): error C231: '_PcdAuthState': redefinition
+rc522_2.c(173): error C141: syntax error near 'addr', expected ')'
+rc522_2.c(174): error C231: '_PcdRead': redefinition
+rc522_2.c(176): error C202: 'uint16': undefined identifier
+rc522_2.c(176): error C141: syntax error near 'xdata'
+rc522_2.c(177): error C141: syntax error near 'xdata'
+rc522_2.c(177): error C202: 'i': undefined identifier
+rc522_2.c(178): error C202: 'ucComMF522Buf': undefined identifier
+rc522_2.c(179): error C202: 'ucComMF522Buf': undefined identifier
+rc522_2.c(180): error C202: 'ucComMF522Buf': undefined identifier
+rc522_2.c(181): error C202: 'ucComMF522Buf': undefined identifier
+rc522_2.c(182): error C202: 'unLen': undefined identifier
+rc522_2.c(184): error C202: 'i': undefined identifier
+rc522_2.c(186): error C202: 'pData': undefined identifier
+rc522_2.c(191): error C231: '_PcdRead': redefinition
+rc522_2.c(196): error C231: '_PcdWrite': redefinition
+rc522_2.c(216): error C231: '_PcdWrite': redefinition
+rc522_2.c(221): error C231: 'PcdHalt': redefinition
+rc522_2.c(230): error C231: 'PcdHalt': redefinition
+rc522_2.c(254): error C231: 'PcdReset': redefinition
+rc522_2.c(273): error C231: 'PcdReset': redefinition
+rc522_2.c(278): error C231: '_M500PcdConfigISOType': redefinition
+rc522_2.c(295): error C231: '_M500PcdConfigISOType': redefinition
+rc522_2.c(352): error C141: syntax error near 'reg', expected ')'
+rc522_2.c(353): error C236: '_SetBitMask': different length of parameter lists
+rc522_2.c(355): error C202: 'reg': undefined identifier
+rc522_2.c(356): error C202: 'reg': undefined identifier
+rc522_2.c(376): error C231: '_PcdComMF522': redefinition
+rc522_2.c(391): error C208: '_SetBitMask': too many actual parameters
+rc522_2.c(396): error C208: '_SetBitMask': too many actual parameters
+rc522_2.c(424): error C208: '_SetBitMask': too many actual parameters
+rc522_2.c(427): error C231: '_PcdComMF522': redefinition
+Target not created
+compiling rc522_2.c...
+rc522_2.c(34): warning C206: 'nop': missing function-prototype
+rc522_2.c(78): error C141: syntax error near 'req_code', expected ')'
+rc522_2.c(79): error C231: '_PcdRequest': redefinition
+rc522_2.c(86): error C202: 'req_code': undefined identifier
+rc522_2.c(89): error C202: 'pTagType': undefined identifier
+rc522_2.c(89): error C202: 'pTagType': undefined identifier
+rc522_2.c(92): error C231: '_PcdRequest': redefinition
+rc522_2.c(99): error C231: '_PcdAnticoll': redefinition
+rc522_2.c(122): error C231: '_PcdAnticoll': redefinition
+rc522_2.c(127): error C141: syntax error near '*', expected ')'
+rc522_2.c(128): error C231: '_PcdSelect': redefinition
+rc522_2.c(138): error C202: 'pSnr': undefined identifier
+rc522_2.c(139): error C202: 'pSnr': undefined identifier
+rc522_2.c(147): error C231: '_PcdSelect': redefinition
+rc522_2.c(152): error C141: syntax error near 'auth_mode', expected ')'
+rc522_2.c(153): error C231: '_PcdAuthState': redefinition
+rc522_2.c(157): error C202: 'auth_mode': undefined identifier
+rc522_2.c(158): error C202: 'addr': undefined identifier
+rc522_2.c(160): error C202: 'pKey': undefined identifier
+rc522_2.c(162): error C202: 'pSnr': undefined identifier
+rc522_2.c(169): error C231: '_PcdAuthState': redefinition
+rc522_2.c(174): error C141: syntax error near 'addr', expected ')'
+rc522_2.c(175): error C231: '_PcdRead': redefinition
+rc522_2.c(177): error C202: 'uint16': undefined identifier
+rc522_2.c(177): error C141: syntax error near 'xdata'
+rc522_2.c(178): error C141: syntax error near 'xdata'
+rc522_2.c(178): error C202: 'i': undefined identifier
+rc522_2.c(179): error C202: 'ucComMF522Buf': undefined identifier
+rc522_2.c(180): error C202: 'ucComMF522Buf': undefined identifier
+rc522_2.c(181): error C202: 'ucComMF522Buf': undefined identifier
+rc522_2.c(182): error C202: 'ucComMF522Buf': undefined identifier
+rc522_2.c(183): error C202: 'unLen': undefined identifier
+rc522_2.c(185): error C202: 'i': undefined identifier
+rc522_2.c(187): error C202: 'pData': undefined identifier
+rc522_2.c(192): error C231: '_PcdRead': redefinition
+rc522_2.c(197): error C231: '_PcdWrite': redefinition
+rc522_2.c(217): error C231: '_PcdWrite': redefinition
+rc522_2.c(222): error C231: 'PcdHalt': redefinition
+rc522_2.c(231): error C231: 'PcdHalt': redefinition
+rc522_2.c(255): error C231: 'PcdReset': redefinition
+rc522_2.c(274): error C231: 'PcdReset': redefinition
+rc522_2.c(279): error C231: '_M500PcdConfigISOType': redefinition
+rc522_2.c(296): error C231: '_M500PcdConfigISOType': redefinition
+rc522_2.c(353): error C141: syntax error near 'reg', expected ')'
+rc522_2.c(354): error C236: '_SetBitMask': different length of parameter lists
+rc522_2.c(356): error C202: 'reg': undefined identifier
+rc522_2.c(357): error C202: 'reg': undefined identifier
+rc522_2.c(377): error C231: '_PcdComMF522': redefinition
+rc522_2.c(392): error C208: '_SetBitMask': too many actual parameters
+rc522_2.c(397): error C208: '_SetBitMask': too many actual parameters
+rc522_2.c(425): error C208: '_SetBitMask': too many actual parameters
+rc522_2.c(428): error C231: '_PcdComMF522': redefinition
+rc522_2.c - 51 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling rc522_2.c...
+rc522_2.c(34): warning C206: 'nop': missing function-prototype
+rc522_2.c(78): error C141: syntax error near 'req_code', expected ')'
+rc522_2.c(79): error C231: '_PcdRequest': redefinition
+rc522_2.c(86): error C202: 'req_code': undefined identifier
+rc522_2.c(89): error C202: 'pTagType': undefined identifier
+rc522_2.c(89): error C202: 'pTagType': undefined identifier
+rc522_2.c(92): error C231: '_PcdRequest': redefinition
+rc522_2.c(99): error C231: '_PcdAnticoll': redefinition
+rc522_2.c(122): error C231: '_PcdAnticoll': redefinition
+rc522_2.c(127): error C141: syntax error near '*', expected ')'
+rc522_2.c(128): error C231: '_PcdSelect': redefinition
+rc522_2.c(138): error C202: 'pSnr': undefined identifier
+rc522_2.c(139): error C202: 'pSnr': undefined identifier
+rc522_2.c(147): error C231: '_PcdSelect': redefinition
+rc522_2.c(152): error C141: syntax error near 'auth_mode', expected ')'
+rc522_2.c(153): error C231: '_PcdAuthState': redefinition
+rc522_2.c(157): error C202: 'auth_mode': undefined identifier
+rc522_2.c(158): error C202: 'addr': undefined identifier
+rc522_2.c(160): error C202: 'pKey': undefined identifier
+rc522_2.c(162): error C202: 'pSnr': undefined identifier
+rc522_2.c(169): error C231: '_PcdAuthState': redefinition
+rc522_2.c(174): error C141: syntax error near 'addr', expected ')'
+rc522_2.c(175): error C231: '_PcdRead': redefinition
+rc522_2.c(177): error C202: 'uint16': undefined identifier
+rc522_2.c(177): error C141: syntax error near 'xdata'
+rc522_2.c(178): error C141: syntax error near 'xdata'
+rc522_2.c(178): error C202: 'i': undefined identifier
+rc522_2.c(179): error C202: 'ucComMF522Buf': undefined identifier
+rc522_2.c(180): error C202: 'ucComMF522Buf': undefined identifier
+rc522_2.c(181): error C202: 'ucComMF522Buf': undefined identifier
+rc522_2.c(182): error C202: 'ucComMF522Buf': undefined identifier
+rc522_2.c(183): error C202: 'unLen': undefined identifier
+rc522_2.c(185): error C202: 'i': undefined identifier
+rc522_2.c(187): error C202: 'pData': undefined identifier
+rc522_2.c(192): error C231: '_PcdRead': redefinition
+rc522_2.c(197): error C231: '_PcdWrite': redefinition
+rc522_2.c(217): error C231: '_PcdWrite': redefinition
+rc522_2.c(222): error C231: 'PcdHalt': redefinition
+rc522_2.c(231): error C231: 'PcdHalt': redefinition
+rc522_2.c(255): error C231: 'PcdReset': redefinition
+rc522_2.c(274): error C231: 'PcdReset': redefinition
+rc522_2.c(279): error C231: '_M500PcdConfigISOType': redefinition
+rc522_2.c(296): error C231: '_M500PcdConfigISOType': redefinition
+rc522_2.c(353): error C141: syntax error near 'reg', expected ')'
+rc522_2.c(354): error C236: '_SetBitMask': different length of parameter lists
+rc522_2.c(356): error C202: 'reg': undefined identifier
+rc522_2.c(357): error C202: 'reg': undefined identifier
+rc522_2.c(377): error C231: '_PcdComMF522': redefinition
+rc522_2.c(392): error C208: '_SetBitMask': too many actual parameters
+rc522_2.c(397): error C208: '_SetBitMask': too many actual parameters
+rc522_2.c(425): error C208: '_SetBitMask': too many actual parameters
+rc522_2.c(428): error C231: '_PcdComMF522': redefinition
+Target not created
+Build target 'Target 1'
+compiling main.c...
+compiling rc522_2.c...
+rc522_2.c(79): error C141: syntax error near 'req_code', expected ')'
+rc522_2.c(80): error C231: '_PcdRequest': redefinition
+rc522_2.c(87): error C202: 'req_code': undefined identifier
+rc522_2.c(90): error C202: 'pTagType': undefined identifier
+rc522_2.c(90): error C202: 'pTagType': undefined identifier
+rc522_2.c(93): error C231: '_PcdRequest': redefinition
+rc522_2.c(100): error C231: '_PcdAnticoll': redefinition
+rc522_2.c(123): error C231: '_PcdAnticoll': redefinition
+rc522_2.c(128): error C141: syntax error near '*', expected ')'
+rc522_2.c(129): error C231: '_PcdSelect': redefinition
+rc522_2.c(139): error C202: 'pSnr': undefined identifier
+rc522_2.c(140): error C202: 'pSnr': undefined identifier
+rc522_2.c(148): error C231: '_PcdSelect': redefinition
+rc522_2.c(153): error C141: syntax error near 'auth_mode', expected ')'
+rc522_2.c(154): error C231: '_PcdAuthState': redefinition
+rc522_2.c(158): error C202: 'auth_mode': undefined identifier
+rc522_2.c(159): error C202: 'addr': undefined identifier
+rc522_2.c(161): error C202: 'pKey': undefined identifier
+rc522_2.c(163): error C202: 'pSnr': undefined identifier
+rc522_2.c(170): error C231: '_PcdAuthState': redefinition
+rc522_2.c(175): error C141: syntax error near 'addr', expected ')'
+rc522_2.c(176): error C231: '_PcdRead': redefinition
+rc522_2.c(178): error C202: 'uint16': undefined identifier
+rc522_2.c(178): error C141: syntax error near 'xdata'
+rc522_2.c(179): error C141: syntax error near 'xdata'
+rc522_2.c(179): error C202: 'i': undefined identifier
+rc522_2.c(180): error C202: 'ucComMF522Buf': undefined identifier
+rc522_2.c(181): error C202: 'ucComMF522Buf': undefined identifier
+rc522_2.c(182): error C202: 'ucComMF522Buf': undefined identifier
+rc522_2.c(183): error C202: 'ucComMF522Buf': undefined identifier
+rc522_2.c(184): error C202: 'unLen': undefined identifier
+rc522_2.c(186): error C202: 'i': undefined identifier
+rc522_2.c(188): error C202: 'pData': undefined identifier
+rc522_2.c(193): error C231: '_PcdRead': redefinition
+rc522_2.c(198): error C231: '_PcdWrite': redefinition
+rc522_2.c(218): error C231: '_PcdWrite': redefinition
+rc522_2.c(223): error C231: 'PcdHalt': redefinition
+rc522_2.c(232): error C231: 'PcdHalt': redefinition
+rc522_2.c(256): error C231: 'PcdReset': redefinition
+rc522_2.c(275): error C231: 'PcdReset': redefinition
+rc522_2.c(280): error C231: '_M500PcdConfigISOType': redefinition
+rc522_2.c(297): error C231: '_M500PcdConfigISOType': redefinition
+rc522_2.c(354): error C141: syntax error near 'reg', expected ')'
+rc522_2.c(355): error C236: '_SetBitMask': different length of parameter lists
+rc522_2.c(357): error C202: 'reg': undefined identifier
+rc522_2.c(358): error C202: 'reg': undefined identifier
+rc522_2.c(378): error C231: '_PcdComMF522': redefinition
+rc522_2.c(393): error C208: '_SetBitMask': too many actual parameters
+rc522_2.c(398): error C208: '_SetBitMask': too many actual parameters
+rc522_2.c(426): error C208: '_SetBitMask': too many actual parameters
+rc522_2.c(429): error C231: '_PcdComMF522': redefinition
+Target not created

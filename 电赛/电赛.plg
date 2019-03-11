@@ -1,0 +1,166 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\York\Desktop\电赛\电赛.uvproj
+Project File Date:  05/17/2015
+
+<h2>Output:</h2>
+compiling main.c...
+main.c(2): warning C318: can't open file 'lcd.h'
+main.c(4): error C141: syntax error near '{'
+main.c(7): error C141: syntax error near 'while'
+main.c(7): error C141: syntax error near '1'
+main.c(9): error C141: syntax error near '0'
+main.c(11): error C141: syntax error near ';'
+main.c(11): error C141: syntax error near '0x01'
+main.c(12): error C141: syntax error near '1'
+main.c(13): error C141: syntax error near '}'
+main.c - 8 Error(s), 1 Warning(s).
+compiling main.c...
+main.c(2): warning C318: can't open file 'lcd.h'
+main.c(4): error C141: syntax error near '{'
+main.c(7): error C141: syntax error near 'while'
+main.c(7): error C141: syntax error near '1'
+main.c(9): error C141: syntax error near '0'
+main.c(12): error C141: syntax error near '1'
+main.c(13): error C141: syntax error near '}'
+main.c - 6 Error(s), 1 Warning(s).
+compiling main.c...
+main.c(2): warning C318: can't open file 'lcd.h'
+main.c(6): warning C206: 'LCD1602_Init': missing function-prototype
+main.c(9): warning C206: 'LCD1602_MoveToPosition': missing function-prototype
+main.c(9): error C267: 'LCD1602_MoveToPosition': requires ANSI-style prototype
+main.c - 1 Error(s), 3 Warning(s).
+compiling main.c...
+main.c(2): warning C318: can't open file 'lcd.h'
+main.c(6): warning C206: 'LCD1602_Init': missing function-prototype
+main.c(9): warning C206: 'LCD1602_MoveToPosition': missing function-prototype
+main.c(9): error C267: 'LCD1602_MoveToPosition': requires ANSI-style prototype
+main.c - 1 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(2): warning C318: can't open file 'lcd.h'
+main.c(6): warning C206: 'LCD1602_Init': missing function-prototype
+main.c(9): warning C206: 'LCD1602_MoveToPosition': missing function-prototype
+main.c(9): error C267: 'LCD1602_MoveToPosition': requires ANSI-style prototype
+compiling lcd.c...
+Target not created
+compiling main.c...
+main.c(2): warning C318: can't open file 'lcd.h'
+main.c(6): warning C206: 'LCD1602_Init': missing function-prototype
+main.c(9): warning C206: 'LCD1602_MoveToPosition': missing function-prototype
+main.c(9): error C267: 'LCD1602_MoveToPosition': requires ANSI-style prototype
+main.c - 1 Error(s), 3 Warning(s).
+compiling main.c...
+main.c(2): warning C318: can't open file 'lcd.h'
+main.c(6): warning C206: 'LCD1602_Init': missing function-prototype
+main.c(9): warning C206: 'LCD1602_MoveToPosition': missing function-prototype
+main.c(9): error C267: 'LCD1602_MoveToPosition': requires ANSI-style prototype
+main.c - 1 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(2): warning C318: can't open file 'lcd.h'
+main.c(6): warning C206: 'LCD1602_Init': missing function-prototype
+main.c(9): warning C206: 'LCD1602_MoveToPosition': missing function-prototype
+main.c(9): error C267: 'LCD1602_MoveToPosition': requires ANSI-style prototype
+compiling lcd.c...
+Target not created
+compiling main.c...
+main.c(2): warning C318: can't open file 'lcd.h'
+main.c(6): warning C206: 'LCD1602_Init': missing function-prototype
+main.c(9): warning C206: 'LCD1602_MoveToPosition': missing function-prototype
+main.c(9): error C267: 'LCD1602_MoveToPosition': requires ANSI-style prototype
+main.c - 1 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(2): warning C318: can't open file 'lcd.h'
+main.c(6): warning C206: 'LCD1602_Init': missing function-prototype
+main.c(12): warning C206: 'LCD1602_DisplayOneCharOnAddr': missing function-prototype
+main.c(12): error C267: 'LCD1602_DisplayOneCharOnAddr': requires ANSI-style prototype
+Target not created
+compiling main.c...
+main.c(2): warning C318: can't open file 'lcd.h'
+main.c(6): warning C206: 'LCD1602_Init': missing function-prototype
+main.c(12): warning C206: 'LCD1602_DisplayOneCharOnAddr': missing function-prototype
+main.c(12): error C267: 'LCD1602_DisplayOneCharOnAddr': requires ANSI-style prototype
+main.c - 1 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(2): warning C318: can't open file 'lcd.h'
+main.c(6): warning C206: 'LCD1602_Init': missing function-prototype
+main.c(12): warning C206: 'LCD1602_DisplayOneCharOnAddr': missing function-prototype
+main.c(12): error C267: 'LCD1602_DisplayOneCharOnAddr': requires ANSI-style prototype
+Target not created
+compiling main.c...
+main.c(2): warning C318: can't open file 'lcd.h'
+main.c(6): warning C206: 'LCD1602_Init': missing function-prototype
+main.c(12): warning C206: 'LCD1602_DisplayOneCharOnAddr': missing function-prototype
+main.c(12): error C267: 'LCD1602_DisplayOneCharOnAddr': requires ANSI-style prototype
+main.c - 1 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(2): warning C318: can't open file 'lcd.h'
+main.c(6): warning C206: 'LCD1602_Init': missing function-prototype
+main.c(12): warning C206: 'LCD1602_DisplayOneCharOnAddr': missing function-prototype
+main.c(12): error C267: 'LCD1602_DisplayOneCharOnAddr': requires ANSI-style prototype
+Target not created
+compiling main.c...
+main.c(2): warning C318: can't open file 'lcd.h'
+main.c(6): warning C206: 'LCD1602_Init': missing function-prototype
+main.c(12): warning C206: 'LCD1602_DisplayOneCharOnAddr': missing function-prototype
+main.c(12): error C267: 'LCD1602_DisplayOneCharOnAddr': requires ANSI-style prototype
+main.c - 1 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(2): warning C318: can't open file 'lcd.h'
+main.c(6): warning C206: 'LCD1602_Init': missing function-prototype
+main.c(12): warning C206: 'LCD1602_DisplayOneCharOnAddr': missing function-prototype
+main.c(12): error C267: 'LCD1602_DisplayOneCharOnAddr': requires ANSI-style prototype
+Target not created
+compiling main.c...
+main.c(2): warning C318: can't open file 'lcd.h'
+main.c(6): warning C206: 'LCD1602_Init': missing function-prototype
+main.c(12): warning C206: 'LCD1602_DisplayOneCharOnAddr': missing function-prototype
+main.c(12): error C267: 'LCD1602_DisplayOneCharOnAddr': requires ANSI-style prototype
+main.c - 1 Error(s), 3 Warning(s).
+compiling main.c...
+main.c(2): warning C318: can't open file 'lcd.h'
+main.c(6): warning C206: 'LCD1602_Init': missing function-prototype
+main.c(12): warning C206: 'LCD1602_DisplayOneCharOnAddr': missing function-prototype
+main.c(12): error C267: 'LCD1602_DisplayOneCharOnAddr': requires ANSI-style prototype
+main.c - 1 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(2): warning C318: can't open file 'lcd.h'
+main.c(6): warning C206: 'LCD1602_Init': missing function-prototype
+main.c(12): warning C206: 'LCD1602_DisplayOneCharOnAddr': missing function-prototype
+main.c(12): error C267: 'LCD1602_DisplayOneCharOnAddr': requires ANSI-style prototype
+Target not created
+compiling main.c...
+main.c(2): warning C318: can't open file 'lcd.h'
+main.c(6): warning C206: 'LCD1602_Init': missing function-prototype
+main.c(12): warning C206: 'LCD1602_DisplayOneCharOnAddr': missing function-prototype
+main.c(12): error C267: 'LCD1602_DisplayOneCharOnAddr': requires ANSI-style prototype
+main.c - 1 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(2): warning C318: can't open file 'lcd.h'
+main.c(6): warning C206: 'LCD1602_Init': missing function-prototype
+main.c(12): warning C206: 'LCD1602_DisplayOneCharOnAddr': missing function-prototype
+main.c(12): error C267: 'LCD1602_DisplayOneCharOnAddr': requires ANSI-style prototype
+Target not created
+compiling main.c...
+main.c(2): warning C318: can't open file 'lcd.h'
+main.c(6): warning C206: 'LCD1602_Init': missing function-prototype
+main.c(12): warning C206: 'LCD1602_DisplayOneCharOnAddr': missing function-prototype
+main.c(12): error C267: 'LCD1602_DisplayOneCharOnAddr': requires ANSI-style prototype
+main.c - 1 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(2): warning C318: can't open file 'lcd.h'
+main.c(6): warning C206: 'LCD1602_Init': missing function-prototype
+main.c(12): warning C206: 'LCD1602_DisplayOneCharOnAddr': missing function-prototype
+main.c(12): error C267: 'LCD1602_DisplayOneCharOnAddr': requires ANSI-style prototype
+Target not created

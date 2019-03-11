@@ -1,0 +1,43 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\xck\Desktop\74HC595¥Æ–– ˝æ› ‰≥ˆ\C”Ô—‘\LEDæÿ’Û.uvproj
+Project File Date:  10/10/2013
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling LED_Num.c...
+LED_NUM.C(188): warning C280: 'i': unreferenced local variable
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DEMO?LED_NUM
+Program Size: data=42.0 xdata=0 code=1263
+creating hex file from "LEDæÿ’Û"...
+"LEDæÿ’Û" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling LED_Num.c...
+LED_NUM.C(188): warning C280: 'i': unreferenced local variable
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DEMO?LED_NUM
+Program Size: data=42.0 xdata=0 code=1263
+creating hex file from "LEDæÿ’Û"...
+"LEDæÿ’Û" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DEMO?LED_NUM
+Program Size: data=42.0 xdata=0 code=1263
+creating hex file from "LEDæÿ’Û"...
+"LEDæÿ’Û" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling LED_Num.c...
+LED_NUM.C(188): warning C280: 'i': unreferenced local variable
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DEMO?LED_NUM
+Program Size: data=42.0 xdata=0 code=1263
+creating hex file from "LEDæÿ’Û"...
+"LEDæÿ’Û" - 0 Error(s), 2 Warning(s).

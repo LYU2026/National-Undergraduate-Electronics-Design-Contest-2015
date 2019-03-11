@@ -1,0 +1,3 @@
+"74hc164.obj" 
+TO "74hc164-test" 
+RAMSIZE(256) 

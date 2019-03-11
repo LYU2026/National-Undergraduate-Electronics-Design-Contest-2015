@@ -1,0 +1,4 @@
+"main1.obj",
+"uart.obj" 
+TO "1" 
+RAMSIZE(256) 

@@ -1,0 +1,5 @@
+"main.obj",
+"lcd.obj",
+"74hc164.obj",
+"74hc165.obj" 
+TO "pro" 

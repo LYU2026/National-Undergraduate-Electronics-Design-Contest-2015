@@ -1,0 +1,62 @@
+C51 COMPILER V7.06   FOLW                                                                  05/08/2012 08:19:48 PAGE 1   
+
+
+C51 COMPILER V7.06, COMPILATION OF MODULE FOLW
+OBJECT MODULE PLACED IN folw.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE folw.c BROWSE DEBUG OBJECTEXTEND
+
+stmt level    source
+
+   1          /*======================================================
+   2                       青岛通宇达电子科技有限公司开发
+   3                               硬件：TYD-51-1
+   4                    功能：8位发光管闪烁两次，然后依次亮
+   5                    有问题请致电技术支持杨工：18764250687
+   6          ======================================================*/
+   7          
+   8          #include "reg51.h"
+   9          
+  10          #define DLY_TIME 50000
+  11          
+  12          void delay(long dly)            //延时子程序
+  13          {
+  14   1              while(dly--);   
+  15   1      }
+  16          
+  17          void main(void)
+  18          {
+  19   1              char i;
+  20   1              unsigned char x;
+  21   1              while(1)
+  22   1              {
+  23   2                      P1=0x00;                //8位发光管全不亮
+  24   2                      delay(DLY_TIME);           //延时约1秒
+  25   2                  P1=0xff;                //8位发光管全亮
+  26   2                      delay(DLY_TIME);
+  27   2                      P1=0x00;
+  28   2                      delay(DLY_TIME);
+  29   2                  P1=0xff;
+  30   2                      delay(DLY_TIME);
+  31   2                      x=1;                     //置显示初值
+  32   2                      for(i=0;i<8;i++)         //发光管依次点亮
+  33   2                      {
+  34   3                              P1=~x;
+  35   3                              delay(DLY_TIME);
+  36   3                              x=x<<1;
+  37   3                      }
+  38   2              }
+  39   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     84    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       4
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

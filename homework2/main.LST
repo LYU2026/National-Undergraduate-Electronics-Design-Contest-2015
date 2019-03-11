@@ -1,0 +1,547 @@
+C51 COMPILER V9.52.0.0   MAIN                                                              06/18/2015 19:33:24 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: C:\Program Files\keil\C51\BIN\C51.EXE main.c BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #include<reg52.h> 
+   2          #include"hc164.h"
+   3          #include"LCD1602.h"
+   4          #include"ds1302.h"
+   5          #include"74HC165.h"
+   6          #include"18B20.h"
+   7          #include"main.h"
+   8          void main()
+   9          {
+  10   1        LCD1602_Init();
+  11   1        //DS1302_SetInit(ucInitTime);
+  12   1        Time0[7]=0X20;
+  13   1        readtime();x=0;
+  14   1        //LCD1602_DisplayOneCharOnAddr(0,0,'0');
+  15   1        while(1)
+  16   1        {
+  17   2          /*while(1)
+  18   2            {readtime();
+  19   2            //  year(0);month(1);day(1);min(1);hour(1);sec(1);weekset(1);
+  20   2              LcdDisplay();}  */
+  21   2          switch(x)
+  22   2          {
+  23   3            case 0:
+  24   3            {//year(0);month(1);day(1);min(1);hour(1);sec(1);weekset(1);
+  25   4              readtime();
+  26   4              LcdDisplay();
+  27   4              LcdDisplayTemp(Ds18b20ReadTemp());
+  28   4              break;
+  29   4            }
+  30   3            case 1:
+  31   3            {
+  32   4              timesetting();
+  33   4              break;
+  34   4            }
+  35   3          }
+  36   2          if(hc74_165()==0x7f)
+  37   2          {
+  38   3            x++;
+  39   3            if(x==2) x=0;
+  40   3          }
+  41   2        }
+  42   1      }
+  43          
+  44          void delay_main(unsigned int cnt) 
+  45          {
+  46   1       while(--cnt);
+  47   1      }
+  48          void readtime()
+  49          {    //DS1302_SetInit();
+  50   1           Time0[0]= (DS1302_ReadOneByteAtAddr(ADDR_SEC_R));delay_main(1);
+  51   1           Time0[1]= (DS1302_ReadOneByteAtAddr(ADDR_MIN_R));delay_main(1);
+  52   1           Time0[2]= (DS1302_ReadOneByteAtAddr(ADDR_HOUR_R));delay_main(1);
+  53   1           Time0[3]= (DS1302_ReadOneByteAtAddr(ADDR_DAY_R));delay_main(1);
+  54   1           Time0[4]= (DS1302_ReadOneByteAtAddr(ADDR_MONTH_R));delay_main(1);
+  55   1           Time0[5]= (DS1302_ReadOneByteAtAddr(ADDR_WEEK_R));delay_main(1);
+C51 COMPILER V9.52.0.0   MAIN                                                              06/18/2015 19:33:24 PAGE 2   
+
+  56   1           Time0[6]= (DS1302_ReadOneByteAtAddr(ADDR_YEAR_R));delay_main(1);
+  57   1      }
+  58          
+  59          void LcdDisplay()
+  60          {  
+  61   1            if((Time0[7]&0x0a)==0x0a)    
+  62   1            {   
+  63   2                Time0[7]=(Time0[7]&0xf0);
+  64   2                Time0[7]+=0x10;
+  65   2            }
+  66   1            if((Time0[7]&0x0f)==0x0f)
+  67   1            {   
+  68   2                Time0[7]=(Time0[7]&0xf0);
+  69   2                Time0[7]+=0x09;
+  70   2            }
+  71   1                  //œ‘ æ –«∆⁄
+  72   1            week0=('0'+Time0[5]%16);
+  73   1            switch(week0)
+  74   1            {
+  75   2              case 0x31:
+  76   2                {week[0]=0x4d;week[1]=0x4f;week[2]=0x4e;break;}//"MON";
+  77   2              case 0x32:
+  78   2                {week[0]=0x54;  week[1]=0x55; week[2]=0x45;break;}  //"TUE"
+  79   2              case 0x33:
+  80   2                {week[0]=0x57; week[1]=0x45; week[2]=0x44;break;}   //"WED"
+  81   2              case 0x34:
+  82   2                {week[0]=0x54;week[1]=0x48;week[2]=0x55;break;}   //"THU"
+  83   2              case 0x35:
+  84   2                {week[0]=0x46;week[1]=0x52;week[2]=0x49;break;}  //"FRI"
+  85   2              case 0x36:
+  86   2                {week[0]=0x53;week[1]=0x41;week[2]=0x54; break;}  //"SAT"
+  87   2              case 0x37:  
+  88   2                {week[0]=0x53;week[1]=0x55;week[2]=0x4e;break;} //"SUN"
+  89   2            }
+  90   1            LCD1602_DisplayOneCharOnAddr(0,13,week[0]); //–«∆⁄    
+  91   1            LCD1602_DisplayOneCharOnAddr(0,14,week[1]); 
+  92   1            LCD1602_DisplayOneCharOnAddr(0,15,week[2]);  
+  93   1            //LCD1602_DisplayOneCharOnAddr(0,12,week[0]);
+  94   1            LCD1602_DisplayOneCharOnAddr(0,0,'0'+Time0[7]/16);
+  95   1            LCD1602_DisplayOneCharOnAddr(0,1,'0'+Time0[7]%16);
+  96   1            LCD1602_DisplayOneCharOnAddr(0,2,('0'+Time0[6]/16));      //ƒÍ
+  97   1            LCD1602_DisplayOneCharOnAddr(0,3,('0'+Time0[6]%16));
+  98   1            LCD1602_DisplayOneCharOnAddr(0,4,(0x00));
+  99   1            LCD1602_DisplayOneCharOnAddr(0,5,('0'+Time0[4]/16));      //‘¬
+ 100   1            LCD1602_DisplayOneCharOnAddr(0,6,('0'+Time0[4]%16));
+ 101   1            LCD1602_DisplayOneCharOnAddr(0,7,(0x01));
+ 102   1            LCD1602_DisplayOneCharOnAddr(0,8,('0'+Time0[3]/16));      //»’
+ 103   1            LCD1602_DisplayOneCharOnAddr(0,9,('0'+Time0[3]%16));  
+ 104   1            LCD1602_DisplayOneCharOnAddr(0,10,0x02);
+ 105   1            LCD1602_DisplayOneCharOnAddr(1,0,('0'+Time0[2]/16));        // ±
+ 106   1            LCD1602_DisplayOneCharOnAddr(1,1,('0'+Time0[2]%16));         
+ 107   1            LCD1602_DisplayOneCharOnAddr(1,2,(':'));
+ 108   1            LCD1602_DisplayOneCharOnAddr(1,3,('0'+Time0[1]/16));        //∑÷
+ 109   1            LCD1602_DisplayOneCharOnAddr(1,4,('0'+Time0[1]%16));  
+ 110   1            LCD1602_DisplayOneCharOnAddr(1,5,(':'));
+ 111   1            LCD1602_DisplayOneCharOnAddr(1,6,('0'+Time0[0]/16));        //√Î
+ 112   1            LCD1602_DisplayOneCharOnAddr(1,7,('0'+Time0[0]%16));
+ 113   1      }
+ 114          
+ 115          void LcdDisplayTemp(int temp)    //lcdœ‘ æ
+ 116          {
+ 117   1        unsigned char i; unsigned char T[5];
+C51 COMPILER V9.52.0.0   MAIN                                                              06/18/2015 19:33:24 PAGE 3   
+
+ 118   1          float tp;  
+ 119   1        if(temp< 0)       //µ±Œ¬∂»÷µŒ™∏∫ ˝
+ 120   1          {
+ 121   2          DisplayData[0] = 0x40; 
+ 122   2          //“ÚŒ™∂¡»°µƒŒ¬∂» « µº Œ¬∂»µƒ≤π¬Î£¨À˘“‘ºı1£¨‘Ÿ»°∑¥«Û≥ˆ‘≠¬Î
+ 123   2          temp=temp-1;
+ 124   2          temp=~temp;
+ 125   2          tp=temp;
+ 126   2          temp=tp*0.0625*100+0.5; 
+ 127   2          //¡Ù¡Ω∏ˆ–° ˝µ„æÕ*100£¨+0.5 «Àƒ…·ŒÂ»Î£¨“ÚŒ™C”Ô—‘∏°µ„ ˝◊™ªªŒ™’˚–Õµƒ ±∫Ú∞—–° ˝µ„
+ 128   2          //∫Û√Êµƒ ˝◊‘∂Ø»•µÙ£¨≤ªπ‹ «∑Ò¥Û”⁄0.5£¨∂¯+0.5÷Æ∫Û¥Û”⁄0.5µƒæÕ «Ω¯1¡À£¨–°”⁄0.5µƒæÕ
+ 129   2          //À„”…œ0.5£¨ªπ «‘⁄–° ˝µ„∫Û√Ê°£
+ 130   2       
+ 131   2          }
+ 132   1        else
+ 133   1          {     
+ 134   2          DisplayData[0] = 0x00;
+ 135   2          tp=temp;//“ÚŒ™ ˝æ›¥¶¿Ì”––° ˝µ„À˘“‘Ω´Œ¬∂»∏≥∏¯“ª∏ˆ∏°µ„–Õ±‰¡ø
+ 136   2          //»Áπ˚Œ¬∂» «’˝µƒƒ«√¥£¨ƒ«√¥’˝ ˝µƒ‘≠¬ÎæÕ «≤π¬ÎÀ¸±æ…Ì
+ 137   2          temp=tp*0.0625*100+0.5; 
+ 138   2          //¡Ù¡Ω∏ˆ–° ˝µ„æÕ*100£¨+0.5 «Àƒ…·ŒÂ»Î£¨“ÚŒ™C”Ô—‘∏°µ„ ˝◊™ªªŒ™’˚–Õµƒ ±∫Ú∞—–° ˝µ„
+ 139   2          //∫Û√Êµƒ ˝◊‘∂Ø»•µÙ£¨≤ªπ‹ «∑Ò¥Û”⁄0.5£¨∂¯+0.5÷Æ∫Û¥Û”⁄0.5µƒæÕ «Ω¯1¡À£¨–°”⁄0.5µƒæÕ
+ 140   2          //À„º”…œ0.5£¨ªπ «‘⁄–° ˝µ„∫Û√Ê°£
+ 141   2        }
+ 142   1        //P3=tp;
+ 143   1      
+ 144   1        Data0[0] = temp / 10000;
+ 145   1        Data0[1] = temp % 10000 / 1000;
+ 146   1        Data0[2] = temp % 1000 / 100 ;
+ 147   1        Data0[3] = temp % 100 / 10;
+ 148   1        Data0[4] = temp % 10;
+ 149   1        
+ 150   1        for(i=0;i<=4;i++)
+ 151   1        {
+ 152   2          switch(Seg_Data[Data0[i]])
+ 153   2          {
+ 154   3            case 0xc0:
+ 155   3            {T[i]=0x30;break;}
+ 156   3            case 0xF9:
+ 157   3            {T[i]=0x31;break;}
+ 158   3            case 0xA4:
+ 159   3            {T[i]=0x32;break;}
+ 160   3            case 0xB0:
+ 161   3            {T[i]=0x33;break;}
+ 162   3            case 0x99:
+ 163   3            {T[i]=0x34;break;}
+ 164   3            case 0x92:
+ 165   3            { T[i]=0x35;break;}
+ 166   3            case 0x82:
+ 167   3            { T[i]=0x36;break;}
+ 168   3            case 0xF8:
+ 169   3            {T[i]=0x37;break;}
+ 170   3            case 0x80:
+ 171   3            {T[i]=0x38;break;}
+ 172   3            case 0x90:
+ 173   3            {T[i]=0x39;break;}      
+ 174   3          }
+ 175   2        }
+ 176   1        /*lcd_wcmd(0x80); 
+ 177   1         for(i=0;i<5;i++)
+ 178   1           {
+ 179   1             lcd_wdat(T[i]);
+C51 COMPILER V9.52.0.0   MAIN                                                              06/18/2015 19:33:24 PAGE 4   
+
+ 180   1             delay0(30);
+ 181   1           }*/
+ 182   1             LCD1602_DisplayOneCharOnAddr(1,11,T[1]);
+ 183   1            LCD1602_DisplayOneCharOnAddr(1,12,T[2]);
+ 184   1            LCD1602_DisplayOneCharOnAddr(1,13,0x2e);//.
+ 185   1            LCD1602_DisplayOneCharOnAddr(1,14,T[3]);
+ 186   1             LCD1602_DisplayOneCharOnAddr(1,15,0x06); //°„c
+ 187   1      }
+ 188          
+ 189          void year(unsigned char k)
+ 190          {
+ 191   1        if(k==0)                //º”“ª
+ 192   1        { 
+ 193   2          Time0[6]+=0x01;
+ 194   2          if(Time0[6]==0x9a)
+ 195   2          {
+ 196   3              Time0[6]=0x00;
+ 197   3              Time0[7]+=0x01;
+ 198   3              if((Time0[7]&0x0a)==0x0a)
+ 199   3              {   
+ 200   4                  Time0[7]=(Time0[7]&0xf0);
+ 201   4                  Time0[7]+=0x10;
+ 202   4              }
+ 203   3          }
+ 204   2          if((Time0[6]&0x0a)==0x0a)
+ 205   2          {   
+ 206   3              Time0[6]=(Time0[6]&0xf0);
+ 207   3              Time0[6]+=0x10;
+ 208   3           }  
+ 209   2        }
+ 210   1        if(k==1)                 //ºı“ª
+ 211   1        {
+ 212   2           Time0[6]-=0x01;
+ 213   2           if((Time0[6]&0x0f)==0x0f)
+ 214   2            {   
+ 215   3                Time0[6]=(Time0[6]&0xf0);
+ 216   3                Time0[6]+=0x09;
+ 217   3            }
+ 218   2            if(Time0[6]==0x00)
+ 219   2            {   
+ 220   3                Time0[6]=0x99;
+ 221   3                Time0[7]-=0x01;
+ 222   3                if((Time0[7]&0x0f)==0x0f)
+ 223   3                {   
+ 224   4                     Time0[7]=(Time0[7]&0xf0);
+ 225   4                     Time0[7]+=0x09;
+ 226   4                }
+ 227   3            } 
+ 228   2        }
+ 229   1      /*  DS1302_WriteOneByteAtAddr(0x8e,0x00);               
+ 230   1        DS1302_SetInit(Time0);                 //∂‘ ±÷”Ω¯––…Ë÷√
+ 231   1        DS1302_WriteOneByteAtAddr(0x8e,0x80);
+ 232   1         LcdDisplay();
+ 233   1        LCD1602_MoveToPosition(0,3);           //‘⁄ƒÍµƒ ˝◊÷…œ…¡À∏
+ 234   1        LCD1602_WriteInformation(0x0f,0); */
+ 235   1      }
+ 236          
+ 237          void month(unsigned char k)
+ 238          {
+ 239   1        if(k==0)
+ 240   1        {
+ 241   2          Time0[4]+=0x01;
+C51 COMPILER V9.52.0.0   MAIN                                                              06/18/2015 19:33:24 PAGE 5   
+
+ 242   2          if(Time0[4]==0x13)
+ 243   2          {
+ 244   3              Time0[4]=0x01;
+ 245   3          }
+ 246   2          if((Time0[4]&0x0a)==0x0a)
+ 247   2          {   
+ 248   3            Time0[4]=(Time0[4]&0xf0);
+ 249   3            Time0[4]+=0x10;
+ 250   3          }
+ 251   2         }
+ 252   1        if(k==1)
+ 253   1        {
+ 254   2          Time0[4]-=0x01;
+ 255   2          if(Time0[4]==0x00)
+ 256   2          {   
+ 257   3              Time0[4]=0x12;
+ 258   3          } 
+ 259   2         if((Time0[4]&0x0f)==0x0f)
+ 260   2          {   
+ 261   3              Time0[4]=(Time0[4]&0xf0);
+ 262   3              Time0[4]+=0x09;
+ 263   3          }
+ 264   2        }
+ 265   1      /*  DS1302_WriteOneByteAtAddr(0x8e,0x00); 
+ 266   1        DS1302_SetInit(Time0);
+ 267   1        DS1302_WriteOneByteAtAddr(0x8e,0x80);
+ 268   1        LcdDisplay();
+ 269   1         LCD1602_MoveToPosition(0,6);
+ 270   1         LCD1602_WriteInformation(0x0f,0);*/
+ 271   1      }
+ 272          
+ 273          void day(unsigned char k)
+ 274          {
+ 275   1         if(k==0)
+ 276   1         {        
+ 277   2           if(Time0[3]==checkday())
+ 278   2           {    
+ 279   3              Time0[3]=0x00;
+ 280   3           }  
+ 281   2          Time0[3]+=0x01;
+ 282   2          if((Time0[3]&0x0a)==0x0a)
+ 283   2          {   
+ 284   3              Time0[3]=(Time0[3]&0xf0);
+ 285   3              Time0[3]+=0x10;
+ 286   3              DS1302_SetInit(Time0);
+ 287   3          }
+ 288   2        }
+ 289   1        if(k==1)
+ 290   1        {
+ 291   2           if(Time0[3]==0x01)
+ 292   2            {   
+ 293   3                Time0[3]=checkday()+0x01;
+ 294   3            } 
+ 295   2            Time0[3]-=0x01;
+ 296   2            if((Time0[3]&0x0f)==0x0f)
+ 297   2            {   
+ 298   3                Time0[3]=(Time0[3]&0xf0);
+ 299   3                Time0[3]+=0x09;
+ 300   3            }
+ 301   2        }
+ 302   1      /*  DS1302_WriteOneByteAtAddr(0x8e,0x00); 
+ 303   1        DS1302_SetInit(Time0);
+C51 COMPILER V9.52.0.0   MAIN                                                              06/18/2015 19:33:24 PAGE 6   
+
+ 304   1        DS1302_WriteOneByteAtAddr(0x8e,0x80);
+ 305   1        LcdDisplay();
+ 306   1        LCD1602_MoveToPosition(0,9);
+ 307   1        LCD1602_WriteInformation(0x0f,0);*/
+ 308   1      }
+ 309          void hour(unsigned char k)
+ 310          {
+ 311   1         if(k==0)
+ 312   1         {
+ 313   2           Time0[2]+=0x01;
+ 314   2           if(Time0[2]==0x24)
+ 315   2           {
+ 316   3              Time0[2]=0x00;
+ 317   3           }
+ 318   2          if((Time0[2]&0x0a)==0x0a)
+ 319   2          {   
+ 320   3              Time0[2]=(Time0[2]&0xf0);
+ 321   3              Time0[2]+=0x10;
+ 322   3           }
+ 323   2         }
+ 324   1         if(k==1) 
+ 325   1          {
+ 326   2            if(Time0[2]==0x00)
+ 327   2            {   
+ 328   3                Time0[2]=0x24;
+ 329   3            } 
+ 330   2            Time0[2]-=0x01;
+ 331   2            if((Time0[2]&0x0f)==0x0f)
+ 332   2            {   
+ 333   3                Time0[2]=(Time0[2]&0xf0);
+ 334   3                Time0[2]+=0x09;
+ 335   3            } 
+ 336   2          }       
+ 337   1      /*    DS1302_SetInit(Time0);
+ 338   1          DS1302_WriteOneByteAtAddr(0x8e,0x80);
+ 339   1          LcdDisplay();
+ 340   1          LCD1602_MoveToPosition(1,1);
+ 341   1          LCD1602_WriteInformation(0x0f,0);*/
+ 342   1      }
+ 343          
+ 344          void min(unsigned char k)
+ 345          {
+ 346   1        if(k==0)
+ 347   1        {
+ 348   2          Time0[1]+=0x01;
+ 349   2          if((Time0[1]&0x0a)==0x0a)
+ 350   2          {   
+ 351   3             Time0[1]=(Time0[1]&0xf0);
+ 352   3             Time0[1]+=0x10;
+ 353   3          }
+ 354   2          if(Time0[1]==0x60)
+ 355   2          {
+ 356   3              Time0[1]=0x00;
+ 357   3          }
+ 358   2        }
+ 359   1        if(k==1)
+ 360   1        {
+ 361   2          if(Time0[1]==0x00)
+ 362   2          {   
+ 363   3              Time0[1]=0x60;
+ 364   3          }
+ 365   2          Time0[1]-=0x01;
+C51 COMPILER V9.52.0.0   MAIN                                                              06/18/2015 19:33:24 PAGE 7   
+
+ 366   2          if((Time0[1]&0x0f)==0x0f)
+ 367   2          {   
+ 368   3              Time0[1]=(Time0[1]&0xf0);
+ 369   3              Time0[1]+=0x09;
+ 370   3          } 
+ 371   2        }
+ 372   1      /*  DS1302_WriteOneByteAtAddr(0x8e,0x00); 
+ 373   1        DS1302_SetInit(Time0);
+ 374   1        DS1302_WriteOneByteAtAddr(0x8e,0x80);
+ 375   1        LcdDisplay();
+ 376   1        LCD1602_MoveToPosition(1,4);
+ 377   1        LCD1602_WriteInformation(0x0f,0);*/
+ 378   1      }
+ 379          void sec(unsigned char k)
+ 380          {
+ 381   1        if(k==0)
+ 382   1        {
+ 383   2          Time0[0]+=0x01;
+ 384   2          if((Time0[0]&0x0a)==0x0a)
+ 385   2          {   
+ 386   3             Time0[0]=(Time0[0]&0xf0);
+ 387   3            Time0[0]+=0x10;
+ 388   3          }
+ 389   2          if(Time0[0]==0x60)
+ 390   2          {
+ 391   3                Time0[0]=0x00;
+ 392   3          }
+ 393   2        }
+ 394   1        if(k==1)
+ 395   1        {
+ 396   2          if(Time0[0]==0x00)
+ 397   2          {   
+ 398   3              Time0[0]=0x60;
+ 399   3          } 
+ 400   2          Time0[0]-=0x01;
+ 401   2          if((Time0[0]&0x0f)==0x0f)
+ 402   2          {   
+ 403   3                Time0[0]=(Time0[0]&0xf0);
+ 404   3                Time0[0]+=0x09;
+ 405   3          } 
+ 406   2        }
+ 407   1      /*  DS1302_WriteOneByteAtAddr(0x8e,0x00); 
+ 408   1        DS1302_SetInit(Time0);
+ 409   1        DS1302_WriteOneByteAtAddr(0x8e,0x80);
+ 410   1        LcdDisplay();
+ 411   1        LCD1602_MoveToPosition(1,7);
+ 412   1        LCD1602_WriteInformation(0x0f,0);*/
+ 413   1      }
+ 414          
+ 415          void weekset(unsigned char k)
+ 416          {
+ 417   1        if(k==0)
+ 418   1        {
+ 419   2          Time0[5]+=0x01;
+ 420   2          if(Time0[5]==0x08)
+ 421   2          {
+ 422   3              Time0[5]=0x01;
+ 423   3          }
+ 424   2        }
+ 425   1        if(k==1)
+ 426   1        { 
+ 427   2          Time0[5]-=0x01;
+C51 COMPILER V9.52.0.0   MAIN                                                              06/18/2015 19:33:24 PAGE 8   
+
+ 428   2          if(Time0[5]==0x00)
+ 429   2           {    
+ 430   3              Time0[5]=0x07;
+ 431   3          } 
+ 432   2        }
+ 433   1      /*  DS1302_WriteOneByteAtAddr(0x8e,0x00); 
+ 434   1        DS1302_SetInit(Time0);
+ 435   1        DS1302_WriteOneByteAtAddr(0x8e,0x80);
+ 436   1        LcdDisplay();
+ 437   1        LCD1602_MoveToPosition(0,15);
+ 438   1        LCD1602_WriteInformation(0x0f,0);*/
+ 439   1      }
+ 440          
+ 441          void timesetting()
+ 442          {LCD1602_WriteInformation(0x01,0);  
+ 443   1        LCD1602_MoveToPosition(1,13);
+ 444   1        LCD1602_DisplayString("Set");
+ 445   1        if(hc74_165()==0xbf) 
+ 446   1        {
+ 447   2            c++;
+ 448   2            if(c==8) {c=1;}
+ 449   2            switch(c)
+ 450   2            {
+ 451   3              case 1:{LCD1602_MoveToPosition(0,3);break;}
+ 452   3              case 2:{LCD1602_MoveToPosition(0,6);break;}
+ 453   3              case 3:{LCD1602_MoveToPosition(0,9);break;}
+ 454   3              case 4:{LCD1602_MoveToPosition(1,1);break;}
+ 455   3              case 5:{LCD1602_MoveToPosition(1,4);break;}
+ 456   3              case 6:{LCD1602_MoveToPosition(1,7);break;}
+ 457   3              case 7:{LCD1602_MoveToPosition(0,15);break;}
+ 458   3            }
+ 459   2            LCD1602_WriteInformation(0x0e,0);
+ 460   2        }
+ 461   1        
+ 462   1        switch (hc74_165())
+ 463   1        {
+ 464   2          case 0xdf:
+ 465   2          {
+ 466   3            switch(c)
+ 467   3            {
+ 468   4              case 1: {year(1);break;}
+ 469   4              case 2: {month(1);break;}
+ 470   4              case 3: {day(1);break;}
+ 471   4              case 4: {hour(1); break;}
+ 472   4              case 5: {min(1);break;}
+ 473   4              case 6: {sec(1);break;}
+ 474   4              case 7: {weekset(1);break;}
+ 475   4              default: 
+ 476   4              {
+ 477   5                DS1302_WriteOneByteAtAddr(0x8e,0x00); 
+ 478   5                DS1302_SetInit(Time0);
+ 479   5                DS1302_WriteOneByteAtAddr(0x8e,0x80);
+ 480   5                LcdDisplay();
+ 481   5                LCD1602_WriteInformation(0x0f,0);
+ 482   5              }
+ 483   4            }
+ 484   3            break;
+ 485   3          } 
+ 486   2          case 0xef:
+ 487   2          {
+ 488   3            switch(c)
+ 489   3            {
+C51 COMPILER V9.52.0.0   MAIN                                                              06/18/2015 19:33:24 PAGE 9   
+
+ 490   4              case 1: {year(0);break;}
+ 491   4              case 2: {month(0);break;}
+ 492   4              case 3: {day(0);break;}
+ 493   4              case 4: {hour(0); break;}
+ 494   4              case 5: {min(0);break;}
+ 495   4              case 6: {sec(0);break;}
+ 496   4              case 7: {weekset(0);break;}
+ 497   4              default: 
+ 498   4              {
+ 499   5                DS1302_WriteOneByteAtAddr(0x8e,0x00); 
+ 500   5                DS1302_SetInit(Time0);
+ 501   5                DS1302_WriteOneByteAtAddr(0x8e,0x80);
+ 502   5                LcdDisplay();
+ 503   5                LCD1602_WriteInformation(0x0f,0);
+ 504   5              }
+ 505   4            }break;
+ 506   3          }
+ 507   2        }
+ 508   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   2000    ----
+   CONSTANT SIZE    =     21    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     39      11
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

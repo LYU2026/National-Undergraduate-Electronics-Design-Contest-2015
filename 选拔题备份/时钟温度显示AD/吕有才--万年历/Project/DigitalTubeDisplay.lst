@@ -1,0 +1,101 @@
+C51 COMPILER V9.52.0.0   DIGITALTUBEDISPLAY                                                04/02/2015 19:22:37 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE DIGITALTUBEDISPLAY
+OBJECT MODULE PLACED IN ..\Outpt\DigitalTubeDisplay.obj
+COMPILER INVOKED BY: C:\Program Files\keil\C51\BIN\C51.EXE ..\Source\DigitalTubeDisplay.c BROWSE DEBUG OBJECTEXTEND PRIN
+                    -T(.\DigitalTubeDisplay.lst) TABS(2) OBJECT(..\Outpt\DigitalTubeDisplay.obj)
+
+line level    source
+
+   1          #include"DigitalTubeDisplay.h"
+   2          unsigned char code Seg_Data1[]={   //the information is showed in the digital tube,shows 0-F//¹²ÑôÊýÂë¹ÜµÄ±
+             -àÂë£¬²¢½«Êý¾Ý¶¨ÒåÔÚCODEÇø 
+   3          
+   4                            0xc0,/*0*/
+   5                            0xF9,/*1*/
+   6                            0xA4,/*2*/
+   7                            0xB0,/*3*/
+   8                            0x99,/*4*/
+   9                            0x92,/*5*/
+  10                            0x82,/*6*/
+  11                            0xF8,/*7*/
+  12                            0x80,/*8*/
+  13                            0x90,/*9*/          
+  14                            0x88,/*A*/
+  15                            0x83,/*b*/
+  16                            0xC6,/*C*/
+  17                            0xA1,/*d*/
+  18                            0x86,/*E*/
+  19                            0x8E,/*F*/
+  20                           ~0X40 //-/
+  21                        };
+  22          
+  23          unsigned char code Seg_Addr1[]={      //to choose which tube to show the information//ÊýÂë¹ÜÎ»Ñ¡±àÂë£¬¿ØÖÆÏ
+             -ÔÊ¾8Î»ÖÐµÄµÚ¼¸Î»
+  24                        0x01,
+  25                        0x02,
+  26                        0x04,
+  27                        0x08,
+  28                        0x10,
+  29                        0x20,
+  30                        0x40,
+  31                        0x80,
+  32                        0xFF,//ALL ON
+  33                        0x00 //All OFF
+  34                        };
+  35          //send the data to the HC595
+  36          void SEG_Send595OneByte(unsigned char ucData1) //Ïò74HC595Ð´ÈëÒ»¸ö8Î»µÄÊý¾Ý
+  37          {
+  38   1        unsigned char i;
+  39   1        
+  40   1        for(i = 0;i < 8;i++)   //8Î»Êý¾ÝÒÀ´ÎÐ´Èë£¬ÏÈÐ´×îµÍÎ»
+  41   1        {
+  42   2          SEG_DS1 = (ucData1 & 0x80); //ÏÈ¶ÁÈë¸ßÎ»   x&0x80;
+*** ERROR C202 IN LINE 42 OF ..\Source\DigitalTubeDisplay.c: 'SEG_DS1': undefined identifier
+  43   2          SEG_SHCP1 = 0;
+*** ERROR C202 IN LINE 43 OF ..\Source\DigitalTubeDisplay.c: 'SEG_SHCP1': undefined identifier
+  44   2          SEG_SHCP1 = 1;
+*** ERROR C202 IN LINE 44 OF ..\Source\DigitalTubeDisplay.c: 'SEG_SHCP1': undefined identifier
+  45   2          SEG_SHCP1 = 0;     //SHCPÒý½ÅµÄÉÏÉýÑØÒÆÈëÊý¾Ý
+*** ERROR C202 IN LINE 45 OF ..\Source\DigitalTubeDisplay.c: 'SEG_SHCP1': undefined identifier
+  46   2          ucData1 <<=1;    //Êý¾Ý×óÒÆ
+  47   2        }
+  48   1      }
+C51 COMPILER V9.52.0.0   DIGITALTUBEDISPLAY                                                04/02/2015 19:22:37 PAGE 2   
+
+  49          
+  50          /*******************************************************
+  51          º¯Êý¹¦ÄÜ£ºÔÚÖ¸¶¨Î»ÖÃÏÔÊ¾Ò»¸öÊý¾Ý
+  52          ²ÎÊýËµÃ÷£ºDataÊÇÒªÏÔÊ¾µÄÊý¾Ý£¬AddrÊÇÔÚµÚ¼¸Î»ÏÔÊ¾¡£
+  53          
+  54          AddrÈ¡Öµ·¶Î§ÊÇ0~9¡£
+  55          Addr=0~7Ê±£¬Ñ¡ÔñµÄÊÇÏÔÊ¾ÔÚµÚ¼¸Î»ÊýÂë¹ÜÉÏ;
+  56          Addr=8  Ê±£¬Í¬Ê±Ñ¡ÖÐ8Î»ÊýÂë¹Ü£¬¼´´ò¿ªËùÓÐÊýÂë¹Ü
+  57          Addr=9  Ê±£¬¹Ø±Õ8Î»ÊýÂë¹Ü
+  58          
+  59          8Î»ÊýÂë¹Ü£¬×óÊýÒÀ´ÎÎªµÚ0Î»£¬µÚ1Î»...µÚ7Î»¡£
+  60          
+  61          *******************************************************/
+  62          void DisplayOneCharOnAddr(unsigned char uData1,unsigned char uAddr1)     //Addr is the address of tube ,Da
+             -ta is the number that is showed in the tube
+  63          {
+  64   1          SEG_Send595OneByte(Seg_Addr1[uAddr1]);  //send the address of tube which shows information
+  65   1          SEG_Send595OneByte( Seg_Data1[uData1]);  //send the data to the tube
+  66   1          SEG_STCP1 = 0;
+*** ERROR C202 IN LINE 66 OF ..\Source\DigitalTubeDisplay.c: 'SEG_STCP1': undefined identifier
+  67   1          SEG_STCP1 = 1;     //CPU update the data
+*** ERROR C202 IN LINE 67 OF ..\Source\DigitalTubeDisplay.c: 'SEG_STCP1': undefined identifier
+  68   1          SEG_STCP1 = 0;
+*** ERROR C202 IN LINE 68 OF ..\Source\DigitalTubeDisplay.c: 'SEG_STCP1': undefined identifier
+  69   1          
+  70   1        
+  71   1      }
+  72          
+  73          
+  74          
+  75          //main()
+  76          
+  77          
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  7 ERROR(S)

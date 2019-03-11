@@ -1,0 +1,5 @@
+"12864.obj",
+"main.obj",
+"ds1302.obj" 
+TO "lab" 
+RAMSIZE(256) 

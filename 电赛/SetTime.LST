@@ -1,0 +1,453 @@
+C51 COMPILER V9.52.0.0   SETTIME                                                           05/17/2015 15:52:08 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE SETTIME
+OBJECT MODULE PLACED IN SetTime.OBJ
+COMPILER INVOKED BY: C:\Program Files\keil\C51\BIN\C51.EXE SetTime.c COMPACT BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #include<reg52.h>
+   2          #include"lcd.h"
+   3          #include"ds1302.h"
+   4          #include"main1.h"
+*** WARNING C206 IN LINE 27 OF main1.h: 'NOP': missing function-prototype
+   5          #include<intrins.h>
+   6          void daydata()   //设置天数函数
+   7          {
+   8   1        unsigned char day;
+   9   1        switch(Time0[4])
+  10   1        {
+  11   2          case 0x01: day=0x31;break;
+  12   2          case 0x03: day=0x31;break;
+  13   2          case 0x04: day=0x30;break;
+  14   2          case 0x05: day=0x31;break;
+  15   2          case 0x06: day=0x30;break;
+  16   2          case 0x07: day=0x31;break;
+  17   2          case 0x08: day=0x31;break;
+  18   2          case 0x09: day=0x30;break;
+  19   2          case 0x10: day=0x31;break;
+  20   2          case 0x11: day=0x30;break;
+  21   2          case 0x12: day=0x31;break;
+  22   2        }
+  23   1      }
+  24          
+  25          unsigned char checkday()                  //自动检查是否是闰年，并为对应的月份设置天数
+  26          {
+  27   1        unsigned char day;
+  28   1        unsigned int year;
+  29   1        year=Time0[7]/16*1000+Time0[7]%16*100+Time0[6]/16*10+Time0[6]%16;
+  30   1        
+  31   1        if(((year%4==0)&&(year%100==0))||(year%400==0))//判断是否是闰年
+  32   1       {
+  33   2          switch(Time0[4])
+  34   2        {
+  35   3          case 0x01: day=0x31;break;
+  36   3          case 0x02: day=0x29;break;
+  37   3          case 0x03: day=0x31;break;
+  38   3          case 0x04: day=0x30;break;
+  39   3          case 0x05: day=0x31;break;
+  40   3          case 0x06: day=0x30;break;
+  41   3          case 0x07: day=0x31;break;
+  42   3          case 0x08: day=0x31;break;
+  43   3          case 0x09: day=0x30;break;
+  44   3          case 0x10: day=0x31;break;
+  45   3          case 0x11: day=0x30;break;
+  46   3          case 0x12: day=0x31;break;
+  47   3        }
+  48   2       }
+  49   1       else
+  50   1       {
+  51   2       switch(Time0[4])
+  52   2        {
+  53   3          case 0x01: day=0x31;break;
+  54   3          case 0x02: day=0x28;break;
+C51 COMPILER V9.52.0.0   SETTIME                                                           05/17/2015 15:52:08 PAGE 2   
+
+  55   3          case 0x03: day=0x31;break;
+  56   3          case 0x04: day=0x30;break;
+  57   3          case 0x05: day=0x31;break;
+  58   3          case 0x06: day=0x30;break;
+  59   3          case 0x07: day=0x31;break;
+  60   3          case 0x08: day=0x31;break;
+  61   3          case 0x09: day=0x30;break;
+  62   3          case 0x10: day=0x31;break;
+  63   3          case 0x11: day=0x30;break;
+  64   3          case 0x12: day=0x31;break;
+  65   3        }
+  66   2        }
+  67   1       
+  68   1       return(day);
+  69   1      }
+  70          
+  71          
+  72          void timesetting()
+  73          {  
+  74   1        //LcdDisplay();
+  75   1        //LCD1602_MoveToPosition(1,9);
+  76   1        //LCD1602_DisplayString(p);
+  77   1        switch(keyboardscan(1))
+  78   1        {
+  79   2            case 0x77:     //按下按键1，进入调试年
+  80   2            {
+  81   3               LCD1602_MoveToPosition(0,9);
+  82   3               LCD1602_WriteInformation(0x0f,0);
+  83   3               while (1)
+  84   3               {
+  85   4                  switch(keyboardscan(1))
+  86   4                  {
+  87   5                    case 0x7d://按下K9，进入加1
+  88   5                     { year(0);break;}
+  89   5                    case 0x7e:
+  90   5                      {year(1);break;}
+  91   5                  }
+  92   4                 if(keyboardscan(1)==0xed)
+  93   4                 {break;}
+  94   4               }
+  95   3            }
+  96   2            case 0xb7://按下K2 进入调试月
+  97   2            {
+  98   3                LCD1602_MoveToPosition(0,12);
+  99   3                 LCD1602_WriteInformation(0x0f,0);
+ 100   3                while (1)
+ 101   3                {
+ 102   4                  switch(keyboardscan(100))
+ 103   4                  {
+ 104   5                    case 0x7d://按下K9，进入加1
+ 105   5                        {   month(0);break; }
+ 106   5                    case 0x7e:
+ 107   5                       {month(1);break;}
+ 108   5                  }
+ 109   4                 if(keyboardscan(1)==0xed)
+ 110   4                 {break;}
+ 111   4               }
+ 112   3            }
+ 113   2            case 0xd7://按下K3 进入调试day
+ 114   2            {
+ 115   3                LCD1602_MoveToPosition(0,15);
+ 116   3                 LCD1602_WriteInformation(0x0f,0);
+C51 COMPILER V9.52.0.0   SETTIME                                                           05/17/2015 15:52:08 PAGE 3   
+
+ 117   3                while (1)
+ 118   3                {
+ 119   4                  switch(keyboardscan(1))
+ 120   4                  {
+ 121   5                     case 0x7d://按下K9，进入加1
+ 122   5                        {  day(0);break;  }
+ 123   5                     case 0x7e://K13
+ 124   5                        {day(1);break;}
+ 125   5                  }
+ 126   4                 if(keyboardscan(1)==0xed)
+ 127   4                 {break;}
+ 128   4               }
+ 129   3            }
+ 130   2            case 0xe7://按下K4 进入调试hour
+ 131   2            {
+ 132   3                LCD1602_MoveToPosition(1,9);
+ 133   3                 LCD1602_WriteInformation(0x0f,0);
+ 134   3                while (1)
+ 135   3                {
+ 136   4                  switch(keyboardscan(1))
+ 137   4                  {
+ 138   5                      case 0x7d://按下K9，进入加1
+ 139   5                          {  hour(0);break;}
+ 140   5                      case 0x7e:
+ 141   5                         {hour(1);break;}
+ 142   5                  }
+ 143   4                 if(keyboardscan(1)==0xed)
+ 144   4                 {break;}
+ 145   4               }
+ 146   3            }
+ 147   2            case 0x7b://按下K5 进入调试min
+ 148   2            {
+ 149   3                LCD1602_MoveToPosition(1,12);
+ 150   3                 LCD1602_WriteInformation(0x0f,0);
+ 151   3                while (1)
+ 152   3                {
+ 153   4                  switch(keyboardscan(1))
+ 154   4                  {
+ 155   5                      case 0x7d://按下K9，进入加1
+ 156   5                         {  min(0);break; }
+ 157   5                      case 0x7e:
+ 158   5                         {min(1);break;}
+ 159   5                  }
+ 160   4                 if(keyboardscan(1)==0xed)
+ 161   4                 {break;}
+ 162   4               }
+ 163   3            }
+ 164   2            case 0xbb://按下K6 进入调sec
+ 165   2            {
+ 166   3                LCD1602_MoveToPosition(1,15);
+ 167   3                 LCD1602_WriteInformation(0x0f,0);
+ 168   3                while (1)
+ 169   3                {
+ 170   4                  switch(keyboardscan(1))
+ 171   4                  {
+ 172   5                       case 0x7d://按下K9，进入加1
+ 173   5                         { sec(0);break;  }
+ 174   5                       case 0x7e:
+ 175   5                         {sec(1);break;}
+ 176   5                  }
+ 177   4                 if(keyboardscan(1)==0xed)
+ 178   4                 {break;}
+C51 COMPILER V9.52.0.0   SETTIME                                                           05/17/2015 15:52:08 PAGE 4   
+
+ 179   4               }
+ 180   3            }
+ 181   2             
+ 182   2         }
+ 183   1      }
+ 184          
+ 185          
+ 186          void year(unsigned char k)
+ 187          {
+ 188   1        if(k==0)                //加一
+ 189   1        { 
+ 190   2          Time0[6]+=0x01;
+ 191   2          if(Time0[6]==0x9a)
+ 192   2          {
+ 193   3              Time0[6]=0x00;
+ 194   3              Time0[7]+=0x01;
+ 195   3              if((Time0[7]&0x0a)==0x0a)
+ 196   3              {   
+ 197   4                  Time0[7]=(Time0[7]&0xf0);
+ 198   4                  Time0[7]+=0x10;
+ 199   4              }
+ 200   3          }
+ 201   2          if((Time0[6]&0x0a)==0x0a)
+ 202   2          {   
+ 203   3              Time0[6]=(Time0[6]&0xf0);
+ 204   3              Time0[6]+=0x10;
+ 205   3           }  
+ 206   2        }
+ 207   1        if(k==1)                 //减一
+ 208   1        {
+ 209   2           Time0[6]-=0x01;
+ 210   2           if((Time0[6]&0x0f)==0x0f)
+ 211   2            {   
+ 212   3                Time0[6]=(Time0[6]&0xf0);
+ 213   3                Time0[6]+=0x09;
+ 214   3            }
+ 215   2            if(Time0[6]==0x00)
+ 216   2            {   
+ 217   3                Time0[6]=0x99;
+ 218   3                Time0[7]-=0x01;
+ 219   3                if((Time0[7]&0x0f)==0x0f)
+ 220   3                {   
+ 221   4                     Time0[7]=(Time0[7]&0xf0);
+ 222   4                     Time0[7]+=0x09;
+ 223   4                }
+ 224   3            } 
+ 225   2        }
+ 226   1        DS1302_WriteOneByteAtAddr(0x8e,0x00);               
+ 227   1        DS1302_SetInit(Time0);                 //对时钟进行设置
+ 228   1        DS1302_WriteOneByteAtAddr(0x8e,0x80);
+ 229   1         LcdDisplay();
+ 230   1        LCD1602_MoveToPosition(0,9);           //在年的数字上闪烁
+ 231   1        LCD1602_WriteInformation(0x0f,0); 
+ 232   1      }
+ 233          
+ 234          void month(unsigned char k)
+ 235          {
+ 236   1        if(k==0)
+ 237   1        {
+ 238   2          Time0[4]+=0x01;
+ 239   2          if(Time0[4]==0x13)
+ 240   2          {
+C51 COMPILER V9.52.0.0   SETTIME                                                           05/17/2015 15:52:08 PAGE 5   
+
+ 241   3              Time0[4]=0x01;
+ 242   3          }
+ 243   2          if((Time0[4]&0x0a)==0x0a)
+ 244   2          {   
+ 245   3            Time0[4]=(Time0[4]&0xf0);
+ 246   3            Time0[4]+=0x10;
+ 247   3          }
+ 248   2         }
+ 249   1        if(k==1)
+ 250   1        {
+ 251   2          Time0[4]-=0x01;
+ 252   2          if(Time0[4]==0x00)
+ 253   2          {   
+ 254   3              Time0[4]=0x12;
+ 255   3          } 
+ 256   2         if((Time0[4]&0x0f)==0x0f)
+ 257   2          {   
+ 258   3              Time0[4]=(Time0[4]&0xf0);
+ 259   3              Time0[4]+=0x09;
+ 260   3          }
+ 261   2        }
+ 262   1        DS1302_WriteOneByteAtAddr(0x8e,0x00); 
+ 263   1        DS1302_SetInit(Time0);
+ 264   1        DS1302_WriteOneByteAtAddr(0x8e,0x80);
+ 265   1        LcdDisplay();
+ 266   1         LCD1602_MoveToPosition(0,12);
+ 267   1         LCD1602_WriteInformation(0x0f,0);
+ 268   1      }
+ 269          
+ 270          void day(unsigned char k)
+ 271          {
+ 272   1         if(k==0)
+ 273   1         {        
+ 274   2           if(Time0[3]==checkday())
+ 275   2           {    
+ 276   3              Time0[3]=0x00;
+ 277   3           }  
+ 278   2          Time0[3]+=0x01;
+ 279   2          if((Time0[3]&0x0a)==0x0a)
+ 280   2          {   
+ 281   3              Time0[3]=(Time0[3]&0xf0);
+ 282   3              Time0[3]+=0x10;
+ 283   3              DS1302_SetInit(Time0);
+ 284   3          }
+ 285   2        }
+ 286   1        if(k==1)
+ 287   1        {
+ 288   2           if(Time0[3]==0x01)
+ 289   2            {   
+ 290   3                Time0[3]=checkday()+0x01;
+ 291   3            } 
+ 292   2            Time0[3]-=0x01;
+ 293   2            if((Time0[3]&0x0f)==0x0f)
+ 294   2            {   
+ 295   3                Time0[3]=(Time0[3]&0xf0);
+ 296   3                Time0[3]+=0x09;
+ 297   3            }
+ 298   2        }
+ 299   1        DS1302_WriteOneByteAtAddr(0x8e,0x00); 
+ 300   1        DS1302_SetInit(Time0);
+ 301   1        DS1302_WriteOneByteAtAddr(0x8e,0x80);
+ 302   1        LcdDisplay();
+C51 COMPILER V9.52.0.0   SETTIME                                                           05/17/2015 15:52:08 PAGE 6   
+
+ 303   1        LCD1602_MoveToPosition(0,15);
+ 304   1        LCD1602_WriteInformation(0x0f,0);
+ 305   1      }
+ 306          void hour(unsigned char k)
+ 307          {
+ 308   1         if(k==0)
+ 309   1         {
+ 310   2           Time0[2]+=0x01;
+ 311   2           if(Time0[2]==0x24)
+ 312   2           {
+ 313   3              Time0[2]=0x00;
+ 314   3           }
+ 315   2          if((Time0[2]&0x0a)==0x0a)
+ 316   2          {   
+ 317   3              Time0[2]=(Time0[2]&0xf0);
+ 318   3              Time0[2]+=0x10;
+ 319   3           }
+ 320   2         }
+ 321   1         if(k==1) 
+ 322   1          {
+ 323   2            if(Time0[2]==0x00)
+ 324   2            {   
+ 325   3                Time0[2]=0x24;
+ 326   3            } 
+ 327   2            Time0[2]-=0x01;
+ 328   2            if((Time0[2]&0x0f)==0x0f)
+ 329   2            {   
+ 330   3                Time0[2]=(Time0[2]&0xf0);
+ 331   3                Time0[2]+=0x09;
+ 332   3            } 
+ 333   2          }       
+ 334   1          DS1302_WriteOneByteAtAddr(0x8e,0x00); 
+ 335   1          DS1302_SetInit(Time0);
+ 336   1          DS1302_WriteOneByteAtAddr(0x8e,0x80);
+ 337   1          LcdDisplay();
+ 338   1          LCD1602_MoveToPosition(1,9);
+ 339   1          LCD1602_WriteInformation(0x0f,0);
+ 340   1      }
+ 341          
+ 342          void min(unsigned char k)
+ 343          {
+ 344   1        if(k==0)
+ 345   1        {
+ 346   2          Time0[1]+=0x01;
+ 347   2          if((Time0[1]&0x0a)==0x0a)
+ 348   2          {   
+ 349   3             Time0[1]=(Time0[1]&0xf0);
+ 350   3             Time0[1]+=0x10;
+ 351   3          }
+ 352   2          if(Time0[1]==0x60)
+ 353   2          {
+ 354   3              Time0[1]=0x00;
+ 355   3          }
+ 356   2        }
+ 357   1        if(k==1)
+ 358   1        {
+ 359   2          if(Time0[1]==0x00)
+ 360   2          {   
+ 361   3              Time0[1]=0x60;
+ 362   3          }
+ 363   2          Time0[1]-=0x01;
+ 364   2          if((Time0[1]&0x0f)==0x0f)
+C51 COMPILER V9.52.0.0   SETTIME                                                           05/17/2015 15:52:08 PAGE 7   
+
+ 365   2          {   
+ 366   3              Time0[1]=(Time0[1]&0xf0);
+ 367   3              Time0[1]+=0x09;
+ 368   3          } 
+ 369   2        }
+ 370   1        DS1302_WriteOneByteAtAddr(0x8e,0x00); 
+ 371   1        DS1302_SetInit(Time0);
+ 372   1        DS1302_WriteOneByteAtAddr(0x8e,0x80);
+ 373   1        LcdDisplay();
+ 374   1        LCD1602_MoveToPosition(1,12);
+ 375   1        LCD1602_WriteInformation(0x0f,0);
+ 376   1      }
+ 377          void sec(unsigned char k)
+ 378          {
+ 379   1        if(k==0)
+ 380   1        {
+ 381   2          Time0[0]+=0x01;
+ 382   2          if((Time0[0]&0x0a)==0x0a)
+ 383   2          {   
+ 384   3             Time0[0]=(Time0[0]&0xf0);
+ 385   3            Time0[0]+=0x10;
+ 386   3          }
+ 387   2          if(Time0[0]==0x60)
+ 388   2          {
+ 389   3                Time0[0]=0x00;
+ 390   3          }
+ 391   2        }
+ 392   1        if(k==1)
+ 393   1        {
+ 394   2          if(Time0[0]==0x00)
+ 395   2          {   
+ 396   3              Time0[0]=0x60;
+ 397   3          } 
+ 398   2          Time0[0]-=0x01;
+ 399   2          if((Time0[0]&0x0f)==0x0f)
+ 400   2          {   
+ 401   3                Time0[0]=(Time0[0]&0xf0);
+ 402   3                Time0[0]+=0x09;
+ 403   3          } 
+ 404   2        }
+ 405   1        DS1302_WriteOneByteAtAddr(0x8e,0x00); 
+ 406   1        DS1302_SetInit(Time0);
+ 407   1        DS1302_WriteOneByteAtAddr(0x8e,0x80);
+ 408   1        LcdDisplay();
+ 409   1        LCD1602_MoveToPosition(1,15);
+ 410   1        LCD1602_WriteInformation(0x0f,0);
+ 411   1      }
+ 412          
+ 413          
+ 414          
+ 415          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   1496    ----
+   CONSTANT SIZE    =     10    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =     44       8
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+C51 COMPILER V9.52.0.0   SETTIME                                                           05/17/2015 15:52:08 PAGE 8   
+
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)

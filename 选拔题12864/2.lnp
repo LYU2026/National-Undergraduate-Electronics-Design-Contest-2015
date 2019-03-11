@@ -1,0 +1,8 @@
+"main.obj",
+"ds1302.obj",
+"12864.obj",
+"I2C.obj",
+"74HC165.obj",
+"temp.obj" 
+TO "2" 
+RAMSIZE(256) 

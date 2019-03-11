@@ -1,0 +1,1 @@
+"..\Source\main3.c" BROWSE DEBUG OBJECTEXTEND PRINT(.\main3.lst) TABS (2) OBJECT(..\Outpt\main3.obj)

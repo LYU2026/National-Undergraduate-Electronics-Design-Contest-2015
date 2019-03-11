@@ -1,0 +1,5 @@
+"uart.obj",
+"lcd12864.obj",
+"¼òµ¥Ò×ÐÐ.obj" 
+TO "1" 
+RAMSIZE(256) 

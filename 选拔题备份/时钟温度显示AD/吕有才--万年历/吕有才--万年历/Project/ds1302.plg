@@ -1,0 +1,2643 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+D:\Study\µ¥Æ¬»ú\program\²âÊÔ\DS1302\Project\ds1302.uvproj
+Project File Date:  04/01/2015
+
+<h2>Output:</h2>
+compiling main.c...
+C:\Program Files\keil\C51\Inc\reg51.h(13): error C231: 'P0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(14): error C231: 'P1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(15): error C231: 'P2': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(16): error C231: 'P3': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(17): error C231: 'PSW': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(18): error C231: 'ACC': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(19): error C231: 'B': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(20): error C231: 'SP': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(21): error C231: 'DPL': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(22): error C231: 'DPH': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(23): error C231: 'PCON': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(24): error C231: 'TCON': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(25): error C231: 'TMOD': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(26): error C231: 'TL0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(27): error C231: 'TL1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(28): error C231: 'TH0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(29): error C231: 'TH1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(30): error C231: 'IE': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(31): error C231: 'IP': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(32): error C231: 'SCON': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(33): error C231: 'SBUF': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(38): error C231: 'CY': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(39): error C231: 'AC': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(40): error C231: 'F0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(41): error C231: 'RS1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(42): error C231: 'RS0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(43): error C231: 'OV': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(44): error C231: 'P': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(47): error C231: 'TF1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(48): error C231: 'TR1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(49): error C231: 'TF0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(50): error C231: 'TR0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(51): error C231: 'IE1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(52): error C231: 'IT1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(53): error C231: 'IE0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(54): error C231: 'IT0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(57): error C231: 'EA': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(58): error C231: 'ES': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(59): error C231: 'ET1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(60): error C231: 'EX1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(61): error C231: 'ET0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(62): error C231: 'EX0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(65): error C231: 'PS': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(66): error C231: 'PT1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(67): error C231: 'PX1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(68): error C231: 'PT0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(69): error C231: 'PX0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(72): error C231: 'RD': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(73): error C231: 'WR': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(74): error C231: 'T1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(75): error C231: 'T0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(76): error C231: 'INT1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(77): error C231: 'INT0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(78): error C231: 'TXD': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(79): error C231: 'RXD': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(82): error C231: 'SM0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(83): error C231: 'SM1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(84): error C231: 'SM2': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(85): error C231: 'REN': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(86): error C231: 'TB8': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(87): error C231: 'RB8': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(88): error C231: 'TI': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(89): error C231: 'RI': redefinition
+..\Source\main.c(44): error C202: 'TIME': undefined identifier
+..\Source\main.c(46): error C202: 'TIME': undefined identifier
+..\Source\main.c(50): error C202: 'TIME': undefined identifier
+..\Source\main.c(52): error C202: 'TIME': undefined identifier
+..\Source\main.c(57): error C202: 'TIME': undefined identifier
+..\Source\main.c(58): error C202: 'TIME': undefined identifier
+..\Source\main.c(91): error C202: 'TIME': undefined identifier
+..\Source\main.c(92): error C202: 'TIME': undefined identifier
+..\Source\main.c(94): error C202: 'TIME': undefined identifier
+..\Source\main.c(95): error C202: 'TIME': undefined identifier
+..\Source\main.c(97): error C202: 'TIME': undefined identifier
+..\Source\main.c(98): error C202: 'TIME': undefined identifier
+..\Source\main.c(102): error C202: 'TIME': undefined identifier
+..\Source\main.c(103): error C202: 'TIME': undefined identifier
+..\Source\main.c(105): error C202: 'TIME': undefined identifier
+..\Source\main.c(106): error C202: 'TIME': undefined identifier
+..\Source\main.c(108): error C202: 'TIME': undefined identifier
+..\Source\main.c(109): error C202: 'TIME': undefined identifier
+..\Source\main.c(114): error C202: 'TIME': undefined identifier
+..\Source\main.c(116): error C202: 'TIME': undefined identifier
+..\Source\main.c - 83 Error(s), 0 Warning(s).
+compiling main.c...
+C:\Program Files\keil\C51\Inc\reg51.h(13): error C231: 'P0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(14): error C231: 'P1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(15): error C231: 'P2': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(16): error C231: 'P3': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(17): error C231: 'PSW': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(18): error C231: 'ACC': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(19): error C231: 'B': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(20): error C231: 'SP': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(21): error C231: 'DPL': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(22): error C231: 'DPH': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(23): error C231: 'PCON': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(24): error C231: 'TCON': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(25): error C231: 'TMOD': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(26): error C231: 'TL0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(27): error C231: 'TL1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(28): error C231: 'TH0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(29): error C231: 'TH1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(30): error C231: 'IE': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(31): error C231: 'IP': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(32): error C231: 'SCON': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(33): error C231: 'SBUF': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(38): error C231: 'CY': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(39): error C231: 'AC': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(40): error C231: 'F0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(41): error C231: 'RS1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(42): error C231: 'RS0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(43): error C231: 'OV': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(44): error C231: 'P': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(47): error C231: 'TF1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(48): error C231: 'TR1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(49): error C231: 'TF0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(50): error C231: 'TR0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(51): error C231: 'IE1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(52): error C231: 'IT1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(53): error C231: 'IE0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(54): error C231: 'IT0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(57): error C231: 'EA': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(58): error C231: 'ES': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(59): error C231: 'ET1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(60): error C231: 'EX1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(61): error C231: 'ET0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(62): error C231: 'EX0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(65): error C231: 'PS': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(66): error C231: 'PT1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(67): error C231: 'PX1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(68): error C231: 'PT0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(69): error C231: 'PX0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(72): error C231: 'RD': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(73): error C231: 'WR': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(74): error C231: 'T1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(75): error C231: 'T0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(76): error C231: 'INT1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(77): error C231: 'INT0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(78): error C231: 'TXD': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(79): error C231: 'RXD': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(82): error C231: 'SM0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(83): error C231: 'SM1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(84): error C231: 'SM2': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(85): error C231: 'REN': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(86): error C231: 'TB8': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(87): error C231: 'RB8': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(88): error C231: 'TI': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(89): error C231: 'RI': redefinition
+..\Source\main.c(44): error C202: 'TIME': undefined identifier
+..\Source\main.c(46): error C202: 'TIME': undefined identifier
+..\Source\main.c(50): error C202: 'TIME': undefined identifier
+..\Source\main.c(52): error C202: 'TIME': undefined identifier
+..\Source\main.c(57): error C202: 'TIME': undefined identifier
+..\Source\main.c(58): error C202: 'TIME': undefined identifier
+..\Source\main.c(91): error C202: 'TIME': undefined identifier
+..\Source\main.c(92): error C202: 'TIME': undefined identifier
+..\Source\main.c(94): error C202: 'TIME': undefined identifier
+..\Source\main.c(95): error C202: 'TIME': undefined identifier
+..\Source\main.c(97): error C202: 'TIME': undefined identifier
+..\Source\main.c(98): error C202: 'TIME': undefined identifier
+..\Source\main.c(102): error C202: 'TIME': undefined identifier
+..\Source\main.c(103): error C202: 'TIME': undefined identifier
+..\Source\main.c(105): error C202: 'TIME': undefined identifier
+..\Source\main.c(106): error C202: 'TIME': undefined identifier
+..\Source\main.c(108): error C202: 'TIME': undefined identifier
+..\Source\main.c(109): error C202: 'TIME': undefined identifier
+..\Source\main.c(114): error C202: 'TIME': undefined identifier
+..\Source\main.c(116): error C202: 'TIME': undefined identifier
+..\Source\main.c - 83 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+C:\Program Files\keil\C51\Inc\reg51.h(13): error C231: 'P0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(14): error C231: 'P1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(15): error C231: 'P2': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(16): error C231: 'P3': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(17): error C231: 'PSW': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(18): error C231: 'ACC': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(19): error C231: 'B': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(20): error C231: 'SP': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(21): error C231: 'DPL': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(22): error C231: 'DPH': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(23): error C231: 'PCON': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(24): error C231: 'TCON': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(25): error C231: 'TMOD': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(26): error C231: 'TL0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(27): error C231: 'TL1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(28): error C231: 'TH0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(29): error C231: 'TH1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(30): error C231: 'IE': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(31): error C231: 'IP': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(32): error C231: 'SCON': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(33): error C231: 'SBUF': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(38): error C231: 'CY': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(39): error C231: 'AC': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(40): error C231: 'F0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(41): error C231: 'RS1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(42): error C231: 'RS0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(43): error C231: 'OV': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(44): error C231: 'P': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(47): error C231: 'TF1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(48): error C231: 'TR1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(49): error C231: 'TF0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(50): error C231: 'TR0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(51): error C231: 'IE1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(52): error C231: 'IT1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(53): error C231: 'IE0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(54): error C231: 'IT0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(57): error C231: 'EA': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(58): error C231: 'ES': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(59): error C231: 'ET1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(60): error C231: 'EX1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(61): error C231: 'ET0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(62): error C231: 'EX0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(65): error C231: 'PS': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(66): error C231: 'PT1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(67): error C231: 'PX1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(68): error C231: 'PT0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(69): error C231: 'PX0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(72): error C231: 'RD': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(73): error C231: 'WR': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(74): error C231: 'T1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(75): error C231: 'T0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(76): error C231: 'INT1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(77): error C231: 'INT0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(78): error C231: 'TXD': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(79): error C231: 'RXD': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(82): error C231: 'SM0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(83): error C231: 'SM1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(84): error C231: 'SM2': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(85): error C231: 'REN': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(86): error C231: 'TB8': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(87): error C231: 'RB8': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(88): error C231: 'TI': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(89): error C231: 'RI': redefinition
+..\Source\main.c(44): error C202: 'TIME': undefined identifier
+..\Source\main.c(46): error C202: 'TIME': undefined identifier
+..\Source\main.c(50): error C202: 'TIME': undefined identifier
+..\Source\main.c(52): error C202: 'TIME': undefined identifier
+..\Source\main.c(57): error C202: 'TIME': undefined identifier
+..\Source\main.c(58): error C202: 'TIME': undefined identifier
+..\Source\main.c(91): error C202: 'TIME': undefined identifier
+..\Source\main.c(92): error C202: 'TIME': undefined identifier
+..\Source\main.c(94): error C202: 'TIME': undefined identifier
+..\Source\main.c(95): error C202: 'TIME': undefined identifier
+..\Source\main.c(97): error C202: 'TIME': undefined identifier
+..\Source\main.c(98): error C202: 'TIME': undefined identifier
+..\Source\main.c(102): error C202: 'TIME': undefined identifier
+..\Source\main.c(103): error C202: 'TIME': undefined identifier
+..\Source\main.c(105): error C202: 'TIME': undefined identifier
+..\Source\main.c(106): error C202: 'TIME': undefined identifier
+..\Source\main.c(108): error C202: 'TIME': undefined identifier
+..\Source\main.c(109): error C202: 'TIME': undefined identifier
+..\Source\main.c(114): error C202: 'TIME': undefined identifier
+..\Source\main.c(116): error C202: 'TIME': undefined identifier
+compiling ds1302.c...
+..\Source\ds1302.c(23): warning C206: '_nop_': missing function-prototype
+..\Source\ds1302.c(23): error C264: intrinsic '_nop_': declaration/activation error
+..\Source\ds1302.c(32): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(41): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(73): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(83): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(95): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(97): error C202: 'DSIO': undefined identifier
+compiling lcd.c...
+compiling 8DigitalDTubeDisplay.c...
+Target not created
+compiling 8DigitalDTubeDisplay.c...
+..\Source\8DigitalDTubeDisplay.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+C:\Program Files\keil\C51\Inc\reg52.h(13): error C231: 'P0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(14): error C231: 'P1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(15): error C231: 'P2': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(16): error C231: 'P3': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(17): error C231: 'PSW': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(18): error C231: 'ACC': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(19): error C231: 'B': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(20): error C231: 'SP': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(21): error C231: 'DPL': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(22): error C231: 'DPH': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(23): error C231: 'PCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(24): error C231: 'TCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(25): error C231: 'TMOD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(26): error C231: 'TL0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(27): error C231: 'TL1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(28): error C231: 'TH0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(29): error C231: 'TH1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(30): error C231: 'IE': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(31): error C231: 'IP': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(32): error C231: 'SCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(33): error C231: 'SBUF': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(45): error C231: 'CY': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(46): error C231: 'AC': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(47): error C231: 'F0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(48): error C231: 'RS1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(49): error C231: 'RS0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(50): error C231: 'OV': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(51): error C231: 'P': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(54): error C231: 'TF1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(55): error C231: 'TR1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(56): error C231: 'TF0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(57): error C231: 'TR0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(58): error C231: 'IE1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(59): error C231: 'IT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(60): error C231: 'IE0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(61): error C231: 'IT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(64): error C231: 'EA': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(66): error C231: 'ES': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(67): error C231: 'ET1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(68): error C231: 'EX1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(69): error C231: 'ET0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(70): error C231: 'EX0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(74): error C231: 'PS': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(75): error C231: 'PT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(76): error C231: 'PX1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(77): error C231: 'PT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(78): error C231: 'PX0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(81): error C231: 'RD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(82): error C231: 'WR': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(83): error C231: 'T1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(84): error C231: 'T0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(85): error C231: 'INT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(86): error C231: 'INT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(87): error C231: 'TXD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(88): error C231: 'RXD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(91): error C231: 'SM0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(92): error C231: 'SM1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(93): error C231: 'SM2': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(94): error C231: 'REN': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(95): error C231: 'TB8': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(96): error C231: 'RB8': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(97): error C231: 'TI': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(98): error C231: 'RI': redefinition
+..\Source\main.c(44): error C202: 'TIME': undefined identifier
+..\Source\main.c(46): error C202: 'TIME': undefined identifier
+..\Source\main.c(50): error C202: 'TIME': undefined identifier
+..\Source\main.c(52): error C202: 'TIME': undefined identifier
+..\Source\main.c(57): error C202: 'TIME': undefined identifier
+..\Source\main.c(58): error C202: 'TIME': undefined identifier
+..\Source\main.c(91): error C202: 'TIME': undefined identifier
+..\Source\main.c(92): error C202: 'TIME': undefined identifier
+..\Source\main.c(94): error C202: 'TIME': undefined identifier
+..\Source\main.c(95): error C202: 'TIME': undefined identifier
+..\Source\main.c(97): error C202: 'TIME': undefined identifier
+..\Source\main.c(98): error C202: 'TIME': undefined identifier
+..\Source\main.c(102): error C202: 'TIME': undefined identifier
+..\Source\main.c(103): error C202: 'TIME': undefined identifier
+..\Source\main.c(105): error C202: 'TIME': undefined identifier
+..\Source\main.c(106): error C202: 'TIME': undefined identifier
+..\Source\main.c(108): error C202: 'TIME': undefined identifier
+..\Source\main.c(109): error C202: 'TIME': undefined identifier
+..\Source\main.c(114): error C202: 'TIME': undefined identifier
+..\Source\main.c(116): error C202: 'TIME': undefined identifier
+compiling ds1302.c...
+..\Source\ds1302.c(23): warning C206: '_nop_': missing function-prototype
+..\Source\ds1302.c(23): error C264: intrinsic '_nop_': declaration/activation error
+..\Source\ds1302.c(32): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(41): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(73): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(83): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(95): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(97): error C202: 'DSIO': undefined identifier
+Target not created
+compiling ds1302.c...
+..\Source\ds1302.c(23): error C264: intrinsic '__nop_': declaration/activation error
+..\Source\ds1302.c(32): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(41): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(73): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(83): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(95): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(97): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c - 7 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+C:\Program Files\keil\C51\Inc\reg52.h(13): error C231: 'P0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(14): error C231: 'P1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(15): error C231: 'P2': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(16): error C231: 'P3': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(17): error C231: 'PSW': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(18): error C231: 'ACC': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(19): error C231: 'B': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(20): error C231: 'SP': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(21): error C231: 'DPL': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(22): error C231: 'DPH': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(23): error C231: 'PCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(24): error C231: 'TCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(25): error C231: 'TMOD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(26): error C231: 'TL0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(27): error C231: 'TL1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(28): error C231: 'TH0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(29): error C231: 'TH1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(30): error C231: 'IE': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(31): error C231: 'IP': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(32): error C231: 'SCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(33): error C231: 'SBUF': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(45): error C231: 'CY': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(46): error C231: 'AC': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(47): error C231: 'F0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(48): error C231: 'RS1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(49): error C231: 'RS0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(50): error C231: 'OV': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(51): error C231: 'P': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(54): error C231: 'TF1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(55): error C231: 'TR1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(56): error C231: 'TF0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(57): error C231: 'TR0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(58): error C231: 'IE1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(59): error C231: 'IT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(60): error C231: 'IE0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(61): error C231: 'IT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(64): error C231: 'EA': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(66): error C231: 'ES': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(67): error C231: 'ET1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(68): error C231: 'EX1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(69): error C231: 'ET0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(70): error C231: 'EX0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(74): error C231: 'PS': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(75): error C231: 'PT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(76): error C231: 'PX1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(77): error C231: 'PT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(78): error C231: 'PX0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(81): error C231: 'RD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(82): error C231: 'WR': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(83): error C231: 'T1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(84): error C231: 'T0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(85): error C231: 'INT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(86): error C231: 'INT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(87): error C231: 'TXD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(88): error C231: 'RXD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(91): error C231: 'SM0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(92): error C231: 'SM1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(93): error C231: 'SM2': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(94): error C231: 'REN': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(95): error C231: 'TB8': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(96): error C231: 'RB8': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(97): error C231: 'TI': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(98): error C231: 'RI': redefinition
+..\Source\main.c(44): error C202: 'TIME': undefined identifier
+..\Source\main.c(46): error C202: 'TIME': undefined identifier
+..\Source\main.c(50): error C202: 'TIME': undefined identifier
+..\Source\main.c(52): error C202: 'TIME': undefined identifier
+..\Source\main.c(57): error C202: 'TIME': undefined identifier
+..\Source\main.c(58): error C202: 'TIME': undefined identifier
+..\Source\main.c(91): error C202: 'TIME': undefined identifier
+..\Source\main.c(92): error C202: 'TIME': undefined identifier
+..\Source\main.c(94): error C202: 'TIME': undefined identifier
+..\Source\main.c(95): error C202: 'TIME': undefined identifier
+..\Source\main.c(97): error C202: 'TIME': undefined identifier
+..\Source\main.c(98): error C202: 'TIME': undefined identifier
+..\Source\main.c(102): error C202: 'TIME': undefined identifier
+..\Source\main.c(103): error C202: 'TIME': undefined identifier
+..\Source\main.c(105): error C202: 'TIME': undefined identifier
+..\Source\main.c(106): error C202: 'TIME': undefined identifier
+..\Source\main.c(108): error C202: 'TIME': undefined identifier
+..\Source\main.c(109): error C202: 'TIME': undefined identifier
+..\Source\main.c(114): error C202: 'TIME': undefined identifier
+..\Source\main.c(116): error C202: 'TIME': undefined identifier
+compiling ds1302.c...
+..\Source\ds1302.c(23): error C264: intrinsic '__nop_': declaration/activation error
+..\Source\ds1302.c(32): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(41): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(73): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(83): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(95): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(97): error C202: 'DSIO': undefined identifier
+Target not created
+compiling main.c...
+C:\Program Files\keil\C51\Inc\reg52.h(13): error C231: 'P0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(14): error C231: 'P1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(15): error C231: 'P2': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(16): error C231: 'P3': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(17): error C231: 'PSW': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(18): error C231: 'ACC': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(19): error C231: 'B': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(20): error C231: 'SP': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(21): error C231: 'DPL': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(22): error C231: 'DPH': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(23): error C231: 'PCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(24): error C231: 'TCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(25): error C231: 'TMOD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(26): error C231: 'TL0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(27): error C231: 'TL1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(28): error C231: 'TH0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(29): error C231: 'TH1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(30): error C231: 'IE': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(31): error C231: 'IP': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(32): error C231: 'SCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(33): error C231: 'SBUF': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(45): error C231: 'CY': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(46): error C231: 'AC': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(47): error C231: 'F0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(48): error C231: 'RS1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(49): error C231: 'RS0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(50): error C231: 'OV': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(51): error C231: 'P': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(54): error C231: 'TF1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(55): error C231: 'TR1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(56): error C231: 'TF0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(57): error C231: 'TR0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(58): error C231: 'IE1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(59): error C231: 'IT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(60): error C231: 'IE0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(61): error C231: 'IT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(64): error C231: 'EA': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(66): error C231: 'ES': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(67): error C231: 'ET1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(68): error C231: 'EX1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(69): error C231: 'ET0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(70): error C231: 'EX0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(74): error C231: 'PS': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(75): error C231: 'PT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(76): error C231: 'PX1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(77): error C231: 'PT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(78): error C231: 'PX0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(81): error C231: 'RD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(82): error C231: 'WR': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(83): error C231: 'T1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(84): error C231: 'T0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(85): error C231: 'INT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(86): error C231: 'INT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(87): error C231: 'TXD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(88): error C231: 'RXD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(91): error C231: 'SM0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(92): error C231: 'SM1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(93): error C231: 'SM2': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(94): error C231: 'REN': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(95): error C231: 'TB8': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(96): error C231: 'RB8': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(97): error C231: 'TI': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(98): error C231: 'RI': redefinition
+..\Source\main.c(44): error C202: 'TIME': undefined identifier
+..\Source\main.c(46): error C202: 'TIME': undefined identifier
+..\Source\main.c(50): error C202: 'TIME': undefined identifier
+..\Source\main.c(52): error C202: 'TIME': undefined identifier
+..\Source\main.c(57): error C202: 'TIME': undefined identifier
+..\Source\main.c(58): error C202: 'TIME': undefined identifier
+..\Source\main.c(91): error C202: 'TIME': undefined identifier
+..\Source\main.c(92): error C202: 'TIME': undefined identifier
+..\Source\main.c(94): error C202: 'TIME': undefined identifier
+..\Source\main.c(95): error C202: 'TIME': undefined identifier
+..\Source\main.c(97): error C202: 'TIME': undefined identifier
+..\Source\main.c(98): error C202: 'TIME': undefined identifier
+..\Source\main.c(102): error C202: 'TIME': undefined identifier
+..\Source\main.c(103): error C202: 'TIME': undefined identifier
+..\Source\main.c(105): error C202: 'TIME': undefined identifier
+..\Source\main.c(106): error C202: 'TIME': undefined identifier
+..\Source\main.c(108): error C202: 'TIME': undefined identifier
+..\Source\main.c(109): error C202: 'TIME': undefined identifier
+..\Source\main.c(114): error C202: 'TIME': undefined identifier
+..\Source\main.c(116): error C202: 'TIME': undefined identifier
+..\Source\main.c - 83 Error(s), 0 Warning(s).
+compiling main.c...
+C:\Program Files\keil\C51\Inc\reg52.h(13): error C231: 'P0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(14): error C231: 'P1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(15): error C231: 'P2': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(16): error C231: 'P3': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(17): error C231: 'PSW': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(18): error C231: 'ACC': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(19): error C231: 'B': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(20): error C231: 'SP': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(21): error C231: 'DPL': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(22): error C231: 'DPH': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(23): error C231: 'PCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(24): error C231: 'TCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(25): error C231: 'TMOD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(26): error C231: 'TL0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(27): error C231: 'TL1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(28): error C231: 'TH0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(29): error C231: 'TH1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(30): error C231: 'IE': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(31): error C231: 'IP': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(32): error C231: 'SCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(33): error C231: 'SBUF': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(45): error C231: 'CY': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(46): error C231: 'AC': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(47): error C231: 'F0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(48): error C231: 'RS1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(49): error C231: 'RS0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(50): error C231: 'OV': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(51): error C231: 'P': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(54): error C231: 'TF1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(55): error C231: 'TR1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(56): error C231: 'TF0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(57): error C231: 'TR0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(58): error C231: 'IE1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(59): error C231: 'IT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(60): error C231: 'IE0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(61): error C231: 'IT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(64): error C231: 'EA': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(66): error C231: 'ES': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(67): error C231: 'ET1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(68): error C231: 'EX1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(69): error C231: 'ET0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(70): error C231: 'EX0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(74): error C231: 'PS': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(75): error C231: 'PT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(76): error C231: 'PX1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(77): error C231: 'PT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(78): error C231: 'PX0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(81): error C231: 'RD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(82): error C231: 'WR': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(83): error C231: 'T1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(84): error C231: 'T0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(85): error C231: 'INT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(86): error C231: 'INT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(87): error C231: 'TXD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(88): error C231: 'RXD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(91): error C231: 'SM0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(92): error C231: 'SM1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(93): error C231: 'SM2': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(94): error C231: 'REN': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(95): error C231: 'TB8': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(96): error C231: 'RB8': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(97): error C231: 'TI': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(98): error C231: 'RI': redefinition
+..\Source\main.c(44): error C202: 'TIME': undefined identifier
+..\Source\main.c(46): error C202: 'TIME': undefined identifier
+..\Source\main.c(50): error C202: 'TIME': undefined identifier
+..\Source\main.c(52): error C202: 'TIME': undefined identifier
+..\Source\main.c(57): error C202: 'TIME': undefined identifier
+..\Source\main.c(58): error C202: 'TIME': undefined identifier
+..\Source\main.c(91): error C202: 'TIME': undefined identifier
+..\Source\main.c(92): error C202: 'TIME': undefined identifier
+..\Source\main.c(94): error C202: 'TIME': undefined identifier
+..\Source\main.c(95): error C202: 'TIME': undefined identifier
+..\Source\main.c(97): error C202: 'TIME': undefined identifier
+..\Source\main.c(98): error C202: 'TIME': undefined identifier
+..\Source\main.c(102): error C202: 'TIME': undefined identifier
+..\Source\main.c(103): error C202: 'TIME': undefined identifier
+..\Source\main.c(105): error C202: 'TIME': undefined identifier
+..\Source\main.c(106): error C202: 'TIME': undefined identifier
+..\Source\main.c(108): error C202: 'TIME': undefined identifier
+..\Source\main.c(109): error C202: 'TIME': undefined identifier
+..\Source\main.c(114): error C202: 'TIME': undefined identifier
+..\Source\main.c(116): error C202: 'TIME': undefined identifier
+..\Source\main.c - 83 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+C:\Program Files\keil\C51\Inc\reg52.h(13): error C231: 'P0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(14): error C231: 'P1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(15): error C231: 'P2': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(16): error C231: 'P3': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(17): error C231: 'PSW': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(18): error C231: 'ACC': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(19): error C231: 'B': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(20): error C231: 'SP': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(21): error C231: 'DPL': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(22): error C231: 'DPH': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(23): error C231: 'PCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(24): error C231: 'TCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(25): error C231: 'TMOD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(26): error C231: 'TL0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(27): error C231: 'TL1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(28): error C231: 'TH0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(29): error C231: 'TH1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(30): error C231: 'IE': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(31): error C231: 'IP': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(32): error C231: 'SCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(33): error C231: 'SBUF': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(45): error C231: 'CY': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(46): error C231: 'AC': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(47): error C231: 'F0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(48): error C231: 'RS1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(49): error C231: 'RS0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(50): error C231: 'OV': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(51): error C231: 'P': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(54): error C231: 'TF1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(55): error C231: 'TR1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(56): error C231: 'TF0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(57): error C231: 'TR0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(58): error C231: 'IE1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(59): error C231: 'IT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(60): error C231: 'IE0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(61): error C231: 'IT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(64): error C231: 'EA': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(66): error C231: 'ES': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(67): error C231: 'ET1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(68): error C231: 'EX1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(69): error C231: 'ET0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(70): error C231: 'EX0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(74): error C231: 'PS': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(75): error C231: 'PT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(76): error C231: 'PX1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(77): error C231: 'PT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(78): error C231: 'PX0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(81): error C231: 'RD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(82): error C231: 'WR': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(83): error C231: 'T1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(84): error C231: 'T0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(85): error C231: 'INT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(86): error C231: 'INT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(87): error C231: 'TXD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(88): error C231: 'RXD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(91): error C231: 'SM0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(92): error C231: 'SM1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(93): error C231: 'SM2': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(94): error C231: 'REN': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(95): error C231: 'TB8': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(96): error C231: 'RB8': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(97): error C231: 'TI': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(98): error C231: 'RI': redefinition
+..\Source\main.c(44): error C202: 'TIME': undefined identifier
+..\Source\main.c(46): error C202: 'TIME': undefined identifier
+..\Source\main.c(50): error C202: 'TIME': undefined identifier
+..\Source\main.c(52): error C202: 'TIME': undefined identifier
+..\Source\main.c(57): error C202: 'TIME': undefined identifier
+..\Source\main.c(58): error C202: 'TIME': undefined identifier
+..\Source\main.c(91): error C202: 'TIME': undefined identifier
+..\Source\main.c(92): error C202: 'TIME': undefined identifier
+..\Source\main.c(94): error C202: 'TIME': undefined identifier
+..\Source\main.c(95): error C202: 'TIME': undefined identifier
+..\Source\main.c(97): error C202: 'TIME': undefined identifier
+..\Source\main.c(98): error C202: 'TIME': undefined identifier
+..\Source\main.c(102): error C202: 'TIME': undefined identifier
+..\Source\main.c(103): error C202: 'TIME': undefined identifier
+..\Source\main.c(105): error C202: 'TIME': undefined identifier
+..\Source\main.c(106): error C202: 'TIME': undefined identifier
+..\Source\main.c(108): error C202: 'TIME': undefined identifier
+..\Source\main.c(109): error C202: 'TIME': undefined identifier
+..\Source\main.c(114): error C202: 'TIME': undefined identifier
+..\Source\main.c(116): error C202: 'TIME': undefined identifier
+compiling ds1302.c...
+..\Source\ds1302.c(23): error C264: intrinsic '__nop_': declaration/activation error
+..\Source\ds1302.c(32): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(41): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(73): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(83): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(95): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(97): error C202: 'DSIO': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling main.c...
+C:\Program Files\keil\C51\Inc\reg52.h(13): error C231: 'P0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(14): error C231: 'P1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(15): error C231: 'P2': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(16): error C231: 'P3': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(17): error C231: 'PSW': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(18): error C231: 'ACC': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(19): error C231: 'B': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(20): error C231: 'SP': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(21): error C231: 'DPL': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(22): error C231: 'DPH': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(23): error C231: 'PCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(24): error C231: 'TCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(25): error C231: 'TMOD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(26): error C231: 'TL0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(27): error C231: 'TL1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(28): error C231: 'TH0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(29): error C231: 'TH1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(30): error C231: 'IE': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(31): error C231: 'IP': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(32): error C231: 'SCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(33): error C231: 'SBUF': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(45): error C231: 'CY': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(46): error C231: 'AC': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(47): error C231: 'F0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(48): error C231: 'RS1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(49): error C231: 'RS0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(50): error C231: 'OV': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(51): error C231: 'P': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(54): error C231: 'TF1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(55): error C231: 'TR1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(56): error C231: 'TF0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(57): error C231: 'TR0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(58): error C231: 'IE1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(59): error C231: 'IT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(60): error C231: 'IE0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(61): error C231: 'IT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(64): error C231: 'EA': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(66): error C231: 'ES': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(67): error C231: 'ET1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(68): error C231: 'EX1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(69): error C231: 'ET0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(70): error C231: 'EX0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(74): error C231: 'PS': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(75): error C231: 'PT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(76): error C231: 'PX1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(77): error C231: 'PT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(78): error C231: 'PX0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(81): error C231: 'RD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(82): error C231: 'WR': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(83): error C231: 'T1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(84): error C231: 'T0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(85): error C231: 'INT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(86): error C231: 'INT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(87): error C231: 'TXD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(88): error C231: 'RXD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(91): error C231: 'SM0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(92): error C231: 'SM1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(93): error C231: 'SM2': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(94): error C231: 'REN': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(95): error C231: 'TB8': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(96): error C231: 'RB8': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(97): error C231: 'TI': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(98): error C231: 'RI': redefinition
+..\Source\main.c(44): error C202: 'TIME': undefined identifier
+..\Source\main.c(46): error C202: 'TIME': undefined identifier
+..\Source\main.c(50): error C202: 'TIME': undefined identifier
+..\Source\main.c(52): error C202: 'TIME': undefined identifier
+..\Source\main.c(57): error C202: 'TIME': undefined identifier
+..\Source\main.c(58): error C202: 'TIME': undefined identifier
+..\Source\main.c(91): error C202: 'TIME': undefined identifier
+..\Source\main.c(92): error C202: 'TIME': undefined identifier
+..\Source\main.c(94): error C202: 'TIME': undefined identifier
+..\Source\main.c(95): error C202: 'TIME': undefined identifier
+..\Source\main.c(97): error C202: 'TIME': undefined identifier
+..\Source\main.c(98): error C202: 'TIME': undefined identifier
+..\Source\main.c(102): error C202: 'TIME': undefined identifier
+..\Source\main.c(103): error C202: 'TIME': undefined identifier
+..\Source\main.c(105): error C202: 'TIME': undefined identifier
+..\Source\main.c(106): error C202: 'TIME': undefined identifier
+..\Source\main.c(108): error C202: 'TIME': undefined identifier
+..\Source\main.c(109): error C202: 'TIME': undefined identifier
+..\Source\main.c(114): error C202: 'TIME': undefined identifier
+..\Source\main.c(116): error C202: 'TIME': undefined identifier
+compiling ds1302.c...
+..\Source\ds1302.c(23): error C264: intrinsic '__nop_': declaration/activation error
+..\Source\ds1302.c(32): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(41): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(73): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(83): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(95): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(97): error C202: 'DSIO': undefined identifier
+Target not created
+compiling main.c...
+C:\Program Files\keil\C51\Inc\reg52.h(13): error C231: 'P0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(14): error C231: 'P1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(15): error C231: 'P2': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(16): error C231: 'P3': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(17): error C231: 'PSW': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(18): error C231: 'ACC': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(19): error C231: 'B': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(20): error C231: 'SP': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(21): error C231: 'DPL': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(22): error C231: 'DPH': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(23): error C231: 'PCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(24): error C231: 'TCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(25): error C231: 'TMOD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(26): error C231: 'TL0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(27): error C231: 'TL1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(28): error C231: 'TH0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(29): error C231: 'TH1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(30): error C231: 'IE': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(31): error C231: 'IP': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(32): error C231: 'SCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(33): error C231: 'SBUF': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(45): error C231: 'CY': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(46): error C231: 'AC': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(47): error C231: 'F0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(48): error C231: 'RS1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(49): error C231: 'RS0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(50): error C231: 'OV': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(51): error C231: 'P': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(54): error C231: 'TF1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(55): error C231: 'TR1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(56): error C231: 'TF0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(57): error C231: 'TR0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(58): error C231: 'IE1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(59): error C231: 'IT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(60): error C231: 'IE0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(61): error C231: 'IT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(64): error C231: 'EA': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(66): error C231: 'ES': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(67): error C231: 'ET1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(68): error C231: 'EX1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(69): error C231: 'ET0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(70): error C231: 'EX0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(74): error C231: 'PS': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(75): error C231: 'PT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(76): error C231: 'PX1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(77): error C231: 'PT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(78): error C231: 'PX0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(81): error C231: 'RD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(82): error C231: 'WR': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(83): error C231: 'T1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(84): error C231: 'T0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(85): error C231: 'INT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(86): error C231: 'INT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(87): error C231: 'TXD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(88): error C231: 'RXD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(91): error C231: 'SM0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(92): error C231: 'SM1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(93): error C231: 'SM2': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(94): error C231: 'REN': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(95): error C231: 'TB8': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(96): error C231: 'RB8': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(97): error C231: 'TI': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(98): error C231: 'RI': redefinition
+..\Source\main.c(44): error C202: 'TIME': undefined identifier
+..\Source\main.c(46): error C202: 'TIME': undefined identifier
+..\Source\main.c(50): error C202: 'TIME': undefined identifier
+..\Source\main.c(52): error C202: 'TIME': undefined identifier
+..\Source\main.c(57): error C202: 'TIME': undefined identifier
+..\Source\main.c(58): error C202: 'TIME': undefined identifier
+..\Source\main.c(91): error C202: 'TIME': undefined identifier
+..\Source\main.c(92): error C202: 'TIME': undefined identifier
+..\Source\main.c(94): error C202: 'TIME': undefined identifier
+..\Source\main.c(95): error C202: 'TIME': undefined identifier
+..\Source\main.c(97): error C202: 'TIME': undefined identifier
+..\Source\main.c(98): error C202: 'TIME': undefined identifier
+..\Source\main.c(102): error C202: 'TIME': undefined identifier
+..\Source\main.c(103): error C202: 'TIME': undefined identifier
+..\Source\main.c(105): error C202: 'TIME': undefined identifier
+..\Source\main.c(106): error C202: 'TIME': undefined identifier
+..\Source\main.c(108): error C202: 'TIME': undefined identifier
+..\Source\main.c(109): error C202: 'TIME': undefined identifier
+..\Source\main.c(114): error C202: 'TIME': undefined identifier
+..\Source\main.c(116): error C202: 'TIME': undefined identifier
+..\Source\main.c - 83 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+C:\Program Files\keil\C51\Inc\reg52.h(13): error C231: 'P0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(14): error C231: 'P1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(15): error C231: 'P2': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(16): error C231: 'P3': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(17): error C231: 'PSW': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(18): error C231: 'ACC': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(19): error C231: 'B': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(20): error C231: 'SP': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(21): error C231: 'DPL': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(22): error C231: 'DPH': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(23): error C231: 'PCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(24): error C231: 'TCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(25): error C231: 'TMOD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(26): error C231: 'TL0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(27): error C231: 'TL1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(28): error C231: 'TH0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(29): error C231: 'TH1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(30): error C231: 'IE': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(31): error C231: 'IP': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(32): error C231: 'SCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(33): error C231: 'SBUF': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(45): error C231: 'CY': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(46): error C231: 'AC': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(47): error C231: 'F0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(48): error C231: 'RS1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(49): error C231: 'RS0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(50): error C231: 'OV': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(51): error C231: 'P': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(54): error C231: 'TF1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(55): error C231: 'TR1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(56): error C231: 'TF0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(57): error C231: 'TR0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(58): error C231: 'IE1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(59): error C231: 'IT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(60): error C231: 'IE0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(61): error C231: 'IT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(64): error C231: 'EA': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(66): error C231: 'ES': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(67): error C231: 'ET1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(68): error C231: 'EX1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(69): error C231: 'ET0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(70): error C231: 'EX0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(74): error C231: 'PS': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(75): error C231: 'PT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(76): error C231: 'PX1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(77): error C231: 'PT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(78): error C231: 'PX0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(81): error C231: 'RD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(82): error C231: 'WR': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(83): error C231: 'T1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(84): error C231: 'T0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(85): error C231: 'INT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(86): error C231: 'INT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(87): error C231: 'TXD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(88): error C231: 'RXD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(91): error C231: 'SM0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(92): error C231: 'SM1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(93): error C231: 'SM2': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(94): error C231: 'REN': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(95): error C231: 'TB8': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(96): error C231: 'RB8': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(97): error C231: 'TI': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(98): error C231: 'RI': redefinition
+..\Source\main.c(44): error C202: 'TIME': undefined identifier
+..\Source\main.c(46): error C202: 'TIME': undefined identifier
+..\Source\main.c(50): error C202: 'TIME': undefined identifier
+..\Source\main.c(52): error C202: 'TIME': undefined identifier
+..\Source\main.c(57): error C202: 'TIME': undefined identifier
+..\Source\main.c(58): error C202: 'TIME': undefined identifier
+..\Source\main.c(91): error C202: 'TIME': undefined identifier
+..\Source\main.c(92): error C202: 'TIME': undefined identifier
+..\Source\main.c(94): error C202: 'TIME': undefined identifier
+..\Source\main.c(95): error C202: 'TIME': undefined identifier
+..\Source\main.c(97): error C202: 'TIME': undefined identifier
+..\Source\main.c(98): error C202: 'TIME': undefined identifier
+..\Source\main.c(102): error C202: 'TIME': undefined identifier
+..\Source\main.c(103): error C202: 'TIME': undefined identifier
+..\Source\main.c(105): error C202: 'TIME': undefined identifier
+..\Source\main.c(106): error C202: 'TIME': undefined identifier
+..\Source\main.c(108): error C202: 'TIME': undefined identifier
+..\Source\main.c(109): error C202: 'TIME': undefined identifier
+..\Source\main.c(114): error C202: 'TIME': undefined identifier
+..\Source\main.c(116): error C202: 'TIME': undefined identifier
+compiling ds1302.c...
+..\Source\ds1302.c(23): error C264: intrinsic '__nop_': declaration/activation error
+..\Source\ds1302.c(32): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(41): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(73): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(83): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(95): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(97): error C202: 'DSIO': undefined identifier
+Target not created
+compiling main.c...
+C:\Program Files\keil\C51\Inc\reg52.h(13): error C231: 'P0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(14): error C231: 'P1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(15): error C231: 'P2': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(16): error C231: 'P3': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(17): error C231: 'PSW': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(18): error C231: 'ACC': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(19): error C231: 'B': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(20): error C231: 'SP': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(21): error C231: 'DPL': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(22): error C231: 'DPH': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(23): error C231: 'PCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(24): error C231: 'TCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(25): error C231: 'TMOD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(26): error C231: 'TL0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(27): error C231: 'TL1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(28): error C231: 'TH0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(29): error C231: 'TH1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(30): error C231: 'IE': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(31): error C231: 'IP': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(32): error C231: 'SCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(33): error C231: 'SBUF': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(45): error C231: 'CY': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(46): error C231: 'AC': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(47): error C231: 'F0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(48): error C231: 'RS1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(49): error C231: 'RS0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(50): error C231: 'OV': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(51): error C231: 'P': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(54): error C231: 'TF1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(55): error C231: 'TR1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(56): error C231: 'TF0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(57): error C231: 'TR0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(58): error C231: 'IE1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(59): error C231: 'IT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(60): error C231: 'IE0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(61): error C231: 'IT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(64): error C231: 'EA': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(66): error C231: 'ES': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(67): error C231: 'ET1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(68): error C231: 'EX1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(69): error C231: 'ET0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(70): error C231: 'EX0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(74): error C231: 'PS': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(75): error C231: 'PT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(76): error C231: 'PX1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(77): error C231: 'PT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(78): error C231: 'PX0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(81): error C231: 'RD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(82): error C231: 'WR': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(83): error C231: 'T1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(84): error C231: 'T0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(85): error C231: 'INT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(86): error C231: 'INT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(87): error C231: 'TXD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(88): error C231: 'RXD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(91): error C231: 'SM0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(92): error C231: 'SM1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(93): error C231: 'SM2': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(94): error C231: 'REN': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(95): error C231: 'TB8': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(96): error C231: 'RB8': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(97): error C231: 'TI': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(98): error C231: 'RI': redefinition
+..\Source\main.c(44): error C202: 'TIME': undefined identifier
+..\Source\main.c(46): error C202: 'TIME': undefined identifier
+..\Source\main.c(50): error C202: 'TIME': undefined identifier
+..\Source\main.c(52): error C202: 'TIME': undefined identifier
+..\Source\main.c(57): error C202: 'TIME': undefined identifier
+..\Source\main.c(58): error C202: 'TIME': undefined identifier
+..\Source\main.c(91): error C202: 'TIME': undefined identifier
+..\Source\main.c(92): error C202: 'TIME': undefined identifier
+..\Source\main.c(94): error C202: 'TIME': undefined identifier
+..\Source\main.c(95): error C202: 'TIME': undefined identifier
+..\Source\main.c(97): error C202: 'TIME': undefined identifier
+..\Source\main.c(98): error C202: 'TIME': undefined identifier
+..\Source\main.c(102): error C202: 'TIME': undefined identifier
+..\Source\main.c(103): error C202: 'TIME': undefined identifier
+..\Source\main.c(105): error C202: 'TIME': undefined identifier
+..\Source\main.c(106): error C202: 'TIME': undefined identifier
+..\Source\main.c(108): error C202: 'TIME': undefined identifier
+..\Source\main.c(109): error C202: 'TIME': undefined identifier
+..\Source\main.c(114): error C202: 'TIME': undefined identifier
+..\Source\main.c(116): error C202: 'TIME': undefined identifier
+..\Source\main.c - 83 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+C:\Program Files\keil\C51\Inc\reg52.h(13): error C231: 'P0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(14): error C231: 'P1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(15): error C231: 'P2': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(16): error C231: 'P3': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(17): error C231: 'PSW': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(18): error C231: 'ACC': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(19): error C231: 'B': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(20): error C231: 'SP': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(21): error C231: 'DPL': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(22): error C231: 'DPH': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(23): error C231: 'PCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(24): error C231: 'TCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(25): error C231: 'TMOD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(26): error C231: 'TL0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(27): error C231: 'TL1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(28): error C231: 'TH0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(29): error C231: 'TH1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(30): error C231: 'IE': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(31): error C231: 'IP': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(32): error C231: 'SCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(33): error C231: 'SBUF': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(45): error C231: 'CY': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(46): error C231: 'AC': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(47): error C231: 'F0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(48): error C231: 'RS1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(49): error C231: 'RS0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(50): error C231: 'OV': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(51): error C231: 'P': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(54): error C231: 'TF1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(55): error C231: 'TR1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(56): error C231: 'TF0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(57): error C231: 'TR0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(58): error C231: 'IE1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(59): error C231: 'IT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(60): error C231: 'IE0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(61): error C231: 'IT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(64): error C231: 'EA': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(66): error C231: 'ES': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(67): error C231: 'ET1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(68): error C231: 'EX1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(69): error C231: 'ET0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(70): error C231: 'EX0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(74): error C231: 'PS': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(75): error C231: 'PT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(76): error C231: 'PX1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(77): error C231: 'PT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(78): error C231: 'PX0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(81): error C231: 'RD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(82): error C231: 'WR': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(83): error C231: 'T1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(84): error C231: 'T0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(85): error C231: 'INT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(86): error C231: 'INT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(87): error C231: 'TXD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(88): error C231: 'RXD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(91): error C231: 'SM0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(92): error C231: 'SM1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(93): error C231: 'SM2': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(94): error C231: 'REN': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(95): error C231: 'TB8': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(96): error C231: 'RB8': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(97): error C231: 'TI': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(98): error C231: 'RI': redefinition
+..\Source\main.c(44): error C202: 'TIME': undefined identifier
+..\Source\main.c(46): error C202: 'TIME': undefined identifier
+..\Source\main.c(50): error C202: 'TIME': undefined identifier
+..\Source\main.c(52): error C202: 'TIME': undefined identifier
+..\Source\main.c(57): error C202: 'TIME': undefined identifier
+..\Source\main.c(58): error C202: 'TIME': undefined identifier
+..\Source\main.c(91): error C202: 'TIME': undefined identifier
+..\Source\main.c(92): error C202: 'TIME': undefined identifier
+..\Source\main.c(94): error C202: 'TIME': undefined identifier
+..\Source\main.c(95): error C202: 'TIME': undefined identifier
+..\Source\main.c(97): error C202: 'TIME': undefined identifier
+..\Source\main.c(98): error C202: 'TIME': undefined identifier
+..\Source\main.c(102): error C202: 'TIME': undefined identifier
+..\Source\main.c(103): error C202: 'TIME': undefined identifier
+..\Source\main.c(105): error C202: 'TIME': undefined identifier
+..\Source\main.c(106): error C202: 'TIME': undefined identifier
+..\Source\main.c(108): error C202: 'TIME': undefined identifier
+..\Source\main.c(109): error C202: 'TIME': undefined identifier
+..\Source\main.c(114): error C202: 'TIME': undefined identifier
+..\Source\main.c(116): error C202: 'TIME': undefined identifier
+compiling ds1302.c...
+..\Source\ds1302.c(30): error C264: intrinsic '__nop_': declaration/activation error
+..\Source\ds1302.c(39): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(48): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(80): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(90): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(102): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(104): error C202: 'DSIO': undefined identifier
+Target not created
+compiling main.c...
+C:\Program Files\keil\C51\Inc\reg52.h(13): error C231: 'P0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(14): error C231: 'P1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(15): error C231: 'P2': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(16): error C231: 'P3': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(17): error C231: 'PSW': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(18): error C231: 'ACC': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(19): error C231: 'B': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(20): error C231: 'SP': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(21): error C231: 'DPL': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(22): error C231: 'DPH': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(23): error C231: 'PCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(24): error C231: 'TCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(25): error C231: 'TMOD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(26): error C231: 'TL0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(27): error C231: 'TL1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(28): error C231: 'TH0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(29): error C231: 'TH1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(30): error C231: 'IE': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(31): error C231: 'IP': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(32): error C231: 'SCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(33): error C231: 'SBUF': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(45): error C231: 'CY': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(46): error C231: 'AC': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(47): error C231: 'F0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(48): error C231: 'RS1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(49): error C231: 'RS0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(50): error C231: 'OV': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(51): error C231: 'P': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(54): error C231: 'TF1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(55): error C231: 'TR1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(56): error C231: 'TF0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(57): error C231: 'TR0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(58): error C231: 'IE1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(59): error C231: 'IT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(60): error C231: 'IE0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(61): error C231: 'IT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(64): error C231: 'EA': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(66): error C231: 'ES': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(67): error C231: 'ET1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(68): error C231: 'EX1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(69): error C231: 'ET0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(70): error C231: 'EX0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(74): error C231: 'PS': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(75): error C231: 'PT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(76): error C231: 'PX1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(77): error C231: 'PT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(78): error C231: 'PX0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(81): error C231: 'RD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(82): error C231: 'WR': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(83): error C231: 'T1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(84): error C231: 'T0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(85): error C231: 'INT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(86): error C231: 'INT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(87): error C231: 'TXD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(88): error C231: 'RXD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(91): error C231: 'SM0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(92): error C231: 'SM1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(93): error C231: 'SM2': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(94): error C231: 'REN': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(95): error C231: 'TB8': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(96): error C231: 'RB8': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(97): error C231: 'TI': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(98): error C231: 'RI': redefinition
+..\Source\main.c(44): error C202: 'TIME': undefined identifier
+..\Source\main.c(46): error C202: 'TIME': undefined identifier
+..\Source\main.c(50): error C202: 'TIME': undefined identifier
+..\Source\main.c(52): error C202: 'TIME': undefined identifier
+..\Source\main.c(57): error C202: 'TIME': undefined identifier
+..\Source\main.c(58): error C202: 'TIME': undefined identifier
+..\Source\main.c(91): error C202: 'TIME': undefined identifier
+..\Source\main.c(92): error C202: 'TIME': undefined identifier
+..\Source\main.c(94): error C202: 'TIME': undefined identifier
+..\Source\main.c(95): error C202: 'TIME': undefined identifier
+..\Source\main.c(97): error C202: 'TIME': undefined identifier
+..\Source\main.c(98): error C202: 'TIME': undefined identifier
+..\Source\main.c(102): error C202: 'TIME': undefined identifier
+..\Source\main.c(103): error C202: 'TIME': undefined identifier
+..\Source\main.c(105): error C202: 'TIME': undefined identifier
+..\Source\main.c(106): error C202: 'TIME': undefined identifier
+..\Source\main.c(108): error C202: 'TIME': undefined identifier
+..\Source\main.c(109): error C202: 'TIME': undefined identifier
+..\Source\main.c(114): error C202: 'TIME': undefined identifier
+..\Source\main.c(116): error C202: 'TIME': undefined identifier
+..\Source\main.c - 83 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+C:\Program Files\keil\C51\Inc\reg52.h(13): error C231: 'P0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(14): error C231: 'P1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(15): error C231: 'P2': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(16): error C231: 'P3': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(17): error C231: 'PSW': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(18): error C231: 'ACC': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(19): error C231: 'B': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(20): error C231: 'SP': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(21): error C231: 'DPL': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(22): error C231: 'DPH': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(23): error C231: 'PCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(24): error C231: 'TCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(25): error C231: 'TMOD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(26): error C231: 'TL0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(27): error C231: 'TL1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(28): error C231: 'TH0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(29): error C231: 'TH1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(30): error C231: 'IE': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(31): error C231: 'IP': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(32): error C231: 'SCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(33): error C231: 'SBUF': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(45): error C231: 'CY': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(46): error C231: 'AC': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(47): error C231: 'F0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(48): error C231: 'RS1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(49): error C231: 'RS0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(50): error C231: 'OV': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(51): error C231: 'P': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(54): error C231: 'TF1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(55): error C231: 'TR1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(56): error C231: 'TF0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(57): error C231: 'TR0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(58): error C231: 'IE1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(59): error C231: 'IT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(60): error C231: 'IE0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(61): error C231: 'IT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(64): error C231: 'EA': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(66): error C231: 'ES': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(67): error C231: 'ET1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(68): error C231: 'EX1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(69): error C231: 'ET0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(70): error C231: 'EX0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(74): error C231: 'PS': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(75): error C231: 'PT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(76): error C231: 'PX1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(77): error C231: 'PT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(78): error C231: 'PX0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(81): error C231: 'RD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(82): error C231: 'WR': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(83): error C231: 'T1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(84): error C231: 'T0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(85): error C231: 'INT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(86): error C231: 'INT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(87): error C231: 'TXD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(88): error C231: 'RXD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(91): error C231: 'SM0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(92): error C231: 'SM1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(93): error C231: 'SM2': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(94): error C231: 'REN': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(95): error C231: 'TB8': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(96): error C231: 'RB8': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(97): error C231: 'TI': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(98): error C231: 'RI': redefinition
+..\Source\main.c(44): error C202: 'TIME': undefined identifier
+..\Source\main.c(46): error C202: 'TIME': undefined identifier
+..\Source\main.c(50): error C202: 'TIME': undefined identifier
+..\Source\main.c(52): error C202: 'TIME': undefined identifier
+..\Source\main.c(57): error C202: 'TIME': undefined identifier
+..\Source\main.c(58): error C202: 'TIME': undefined identifier
+..\Source\main.c(91): error C202: 'TIME': undefined identifier
+..\Source\main.c(92): error C202: 'TIME': undefined identifier
+..\Source\main.c(94): error C202: 'TIME': undefined identifier
+..\Source\main.c(95): error C202: 'TIME': undefined identifier
+..\Source\main.c(97): error C202: 'TIME': undefined identifier
+..\Source\main.c(98): error C202: 'TIME': undefined identifier
+..\Source\main.c(102): error C202: 'TIME': undefined identifier
+..\Source\main.c(103): error C202: 'TIME': undefined identifier
+..\Source\main.c(105): error C202: 'TIME': undefined identifier
+..\Source\main.c(106): error C202: 'TIME': undefined identifier
+..\Source\main.c(108): error C202: 'TIME': undefined identifier
+..\Source\main.c(109): error C202: 'TIME': undefined identifier
+..\Source\main.c(114): error C202: 'TIME': undefined identifier
+..\Source\main.c(116): error C202: 'TIME': undefined identifier
+compiling ds1302.c...
+..\Source\ds1302.c(30): error C264: intrinsic '__nop_': declaration/activation error
+..\Source\ds1302.c(39): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(48): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(80): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(90): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(102): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(104): error C202: 'DSIO': undefined identifier
+Target not created
+compiling ds1302.c...
+..\Source\ds1302.c(30): error C264: intrinsic '__nop_': declaration/activation error
+..\Source\ds1302.c(39): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(48): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(80): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(90): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(102): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(104): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c - 7 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+C:\Program Files\keil\C51\Inc\reg52.h(13): error C231: 'P0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(14): error C231: 'P1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(15): error C231: 'P2': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(16): error C231: 'P3': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(17): error C231: 'PSW': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(18): error C231: 'ACC': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(19): error C231: 'B': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(20): error C231: 'SP': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(21): error C231: 'DPL': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(22): error C231: 'DPH': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(23): error C231: 'PCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(24): error C231: 'TCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(25): error C231: 'TMOD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(26): error C231: 'TL0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(27): error C231: 'TL1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(28): error C231: 'TH0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(29): error C231: 'TH1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(30): error C231: 'IE': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(31): error C231: 'IP': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(32): error C231: 'SCON': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(33): error C231: 'SBUF': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(45): error C231: 'CY': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(46): error C231: 'AC': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(47): error C231: 'F0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(48): error C231: 'RS1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(49): error C231: 'RS0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(50): error C231: 'OV': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(51): error C231: 'P': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(54): error C231: 'TF1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(55): error C231: 'TR1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(56): error C231: 'TF0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(57): error C231: 'TR0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(58): error C231: 'IE1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(59): error C231: 'IT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(60): error C231: 'IE0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(61): error C231: 'IT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(64): error C231: 'EA': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(66): error C231: 'ES': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(67): error C231: 'ET1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(68): error C231: 'EX1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(69): error C231: 'ET0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(70): error C231: 'EX0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(74): error C231: 'PS': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(75): error C231: 'PT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(76): error C231: 'PX1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(77): error C231: 'PT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(78): error C231: 'PX0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(81): error C231: 'RD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(82): error C231: 'WR': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(83): error C231: 'T1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(84): error C231: 'T0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(85): error C231: 'INT1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(86): error C231: 'INT0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(87): error C231: 'TXD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(88): error C231: 'RXD': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(91): error C231: 'SM0': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(92): error C231: 'SM1': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(93): error C231: 'SM2': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(94): error C231: 'REN': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(95): error C231: 'TB8': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(96): error C231: 'RB8': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(97): error C231: 'TI': redefinition
+C:\Program Files\keil\C51\Inc\reg52.h(98): error C231: 'RI': redefinition
+..\Source\main.c(44): error C202: 'TIME': undefined identifier
+..\Source\main.c(46): error C202: 'TIME': undefined identifier
+..\Source\main.c(50): error C202: 'TIME': undefined identifier
+..\Source\main.c(52): error C202: 'TIME': undefined identifier
+..\Source\main.c(57): error C202: 'TIME': undefined identifier
+..\Source\main.c(58): error C202: 'TIME': undefined identifier
+..\Source\main.c(91): error C202: 'TIME': undefined identifier
+..\Source\main.c(92): error C202: 'TIME': undefined identifier
+..\Source\main.c(94): error C202: 'TIME': undefined identifier
+..\Source\main.c(95): error C202: 'TIME': undefined identifier
+..\Source\main.c(97): error C202: 'TIME': undefined identifier
+..\Source\main.c(98): error C202: 'TIME': undefined identifier
+..\Source\main.c(102): error C202: 'TIME': undefined identifier
+..\Source\main.c(103): error C202: 'TIME': undefined identifier
+..\Source\main.c(105): error C202: 'TIME': undefined identifier
+..\Source\main.c(106): error C202: 'TIME': undefined identifier
+..\Source\main.c(108): error C202: 'TIME': undefined identifier
+..\Source\main.c(109): error C202: 'TIME': undefined identifier
+..\Source\main.c(114): error C202: 'TIME': undefined identifier
+..\Source\main.c(116): error C202: 'TIME': undefined identifier
+compiling ds1302.c...
+..\Source\ds1302.c(30): error C264: intrinsic '__nop_': declaration/activation error
+..\Source\ds1302.c(39): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(48): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(80): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(90): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(102): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(104): error C202: 'DSIO': undefined identifier
+Target not created
+compiling main.c...
+..\Source\main.c(44): error C202: 'TIME': undefined identifier
+..\Source\main.c(46): error C202: 'TIME': undefined identifier
+..\Source\main.c(50): error C202: 'TIME': undefined identifier
+..\Source\main.c(52): error C202: 'TIME': undefined identifier
+..\Source\main.c(57): error C202: 'TIME': undefined identifier
+..\Source\main.c(58): error C202: 'TIME': undefined identifier
+..\Source\main.c(91): error C202: 'TIME': undefined identifier
+..\Source\main.c(92): error C202: 'TIME': undefined identifier
+..\Source\main.c(94): error C202: 'TIME': undefined identifier
+..\Source\main.c(95): error C202: 'TIME': undefined identifier
+..\Source\main.c(97): error C202: 'TIME': undefined identifier
+..\Source\main.c(98): error C202: 'TIME': undefined identifier
+..\Source\main.c(102): error C202: 'TIME': undefined identifier
+..\Source\main.c(103): error C202: 'TIME': undefined identifier
+..\Source\main.c(105): error C202: 'TIME': undefined identifier
+..\Source\main.c(106): error C202: 'TIME': undefined identifier
+..\Source\main.c(108): error C202: 'TIME': undefined identifier
+..\Source\main.c(109): error C202: 'TIME': undefined identifier
+..\Source\main.c(114): error C202: 'TIME': undefined identifier
+..\Source\main.c(116): error C202: 'TIME': undefined identifier
+..\Source\main.c - 20 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+..\Source\main.c(44): error C202: 'TIME': undefined identifier
+..\Source\main.c(46): error C202: 'TIME': undefined identifier
+..\Source\main.c(50): error C202: 'TIME': undefined identifier
+..\Source\main.c(52): error C202: 'TIME': undefined identifier
+..\Source\main.c(57): error C202: 'TIME': undefined identifier
+..\Source\main.c(58): error C202: 'TIME': undefined identifier
+..\Source\main.c(91): error C202: 'TIME': undefined identifier
+..\Source\main.c(92): error C202: 'TIME': undefined identifier
+..\Source\main.c(94): error C202: 'TIME': undefined identifier
+..\Source\main.c(95): error C202: 'TIME': undefined identifier
+..\Source\main.c(97): error C202: 'TIME': undefined identifier
+..\Source\main.c(98): error C202: 'TIME': undefined identifier
+..\Source\main.c(102): error C202: 'TIME': undefined identifier
+..\Source\main.c(103): error C202: 'TIME': undefined identifier
+..\Source\main.c(105): error C202: 'TIME': undefined identifier
+..\Source\main.c(106): error C202: 'TIME': undefined identifier
+..\Source\main.c(108): error C202: 'TIME': undefined identifier
+..\Source\main.c(109): error C202: 'TIME': undefined identifier
+..\Source\main.c(114): error C202: 'TIME': undefined identifier
+..\Source\main.c(116): error C202: 'TIME': undefined identifier
+compiling ds1302.c...
+..\Source\ds1302.c(30): error C264: intrinsic '__nop_': declaration/activation error
+..\Source\ds1302.c(39): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(48): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(80): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(90): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(102): error C202: 'DSIO': undefined identifier
+..\Source\ds1302.c(104): error C202: 'DSIO': undefined identifier
+compiling 8DigitalDTubeDisplay.c...
+Target not created
+compiling main.c...
+..\Source\main.c(44): error C202: 'TIME': undefined identifier
+..\Source\main.c(46): error C202: 'TIME': undefined identifier
+..\Source\main.c(50): error C202: 'TIME': undefined identifier
+..\Source\main.c(52): error C202: 'TIME': undefined identifier
+..\Source\main.c(57): error C202: 'TIME': undefined identifier
+..\Source\main.c(58): error C202: 'TIME': undefined identifier
+..\Source\main.c(91): error C202: 'TIME': undefined identifier
+..\Source\main.c(92): error C202: 'TIME': undefined identifier
+..\Source\main.c(94): error C202: 'TIME': undefined identifier
+..\Source\main.c(95): error C202: 'TIME': undefined identifier
+..\Source\main.c(97): error C202: 'TIME': undefined identifier
+..\Source\main.c(98): error C202: 'TIME': undefined identifier
+..\Source\main.c(102): error C202: 'TIME': undefined identifier
+..\Source\main.c(103): error C202: 'TIME': undefined identifier
+..\Source\main.c(105): error C202: 'TIME': undefined identifier
+..\Source\main.c(106): error C202: 'TIME': undefined identifier
+..\Source\main.c(108): error C202: 'TIME': undefined identifier
+..\Source\main.c(109): error C202: 'TIME': undefined identifier
+..\Source\main.c(114): error C202: 'TIME': undefined identifier
+..\Source\main.c(116): error C202: 'TIME': undefined identifier
+..\Source\main.c - 20 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+..\Source\main.c(44): error C202: 'TIME': undefined identifier
+..\Source\main.c(46): error C202: 'TIME': undefined identifier
+..\Source\main.c(50): error C202: 'TIME': undefined identifier
+..\Source\main.c(52): error C202: 'TIME': undefined identifier
+..\Source\main.c(57): error C202: 'TIME': undefined identifier
+..\Source\main.c(58): error C202: 'TIME': undefined identifier
+..\Source\main.c(91): error C202: 'TIME': undefined identifier
+..\Source\main.c(92): error C202: 'TIME': undefined identifier
+..\Source\main.c(94): error C202: 'TIME': undefined identifier
+..\Source\main.c(95): error C202: 'TIME': undefined identifier
+..\Source\main.c(97): error C202: 'TIME': undefined identifier
+..\Source\main.c(98): error C202: 'TIME': undefined identifier
+..\Source\main.c(102): error C202: 'TIME': undefined identifier
+..\Source\main.c(103): error C202: 'TIME': undefined identifier
+..\Source\main.c(105): error C202: 'TIME': undefined identifier
+..\Source\main.c(106): error C202: 'TIME': undefined identifier
+..\Source\main.c(108): error C202: 'TIME': undefined identifier
+..\Source\main.c(109): error C202: 'TIME': undefined identifier
+..\Source\main.c(114): error C202: 'TIME': undefined identifier
+..\Source\main.c(116): error C202: 'TIME': undefined identifier
+compiling ds1302.c...
+..\Source\ds1302.c(30): error C264: intrinsic '__nop_': declaration/activation error
+Target not created
+compiling main.c...
+..\Source\main.c(42): warning C206: 'Ds1302ReadTime': missing function-prototype
+..\Source\main.c - 0 Error(s), 1 Warning(s).
+compiling main.c...
+..\Source\main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling ds1302.c...
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  UCINITTIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?DS1302
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DISPLAYONECHARONADDR?8DIGITALDTUBEDISPLAY
+Program Size: data=10.0 xdata=0 code=715
+Target not created
+compiling main.c...
+..\Source\main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  UCINITTIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?DS1302
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DISPLAYONECHARONADDR?8DIGITALDTUBEDISPLAY
+Program Size: data=10.0 xdata=0 code=715
+Target not created
+Build target 'Target 1'
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  UCINITTIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?DS1302
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DISPLAYONECHARONADDR?8DIGITALDTUBEDISPLAY
+Program Size: data=10.0 xdata=0 code=715
+Target not created
+Rebuild target 'Target 1'
+compiling main.c...
+compiling ds1302.c...
+compiling lcd.c...
+compiling 8DigitalDTubeDisplay.c...
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  UCINITTIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?DS1302
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DISPLAYONECHARONADDR?8DIGITALDTUBEDISPLAY
+Program Size: data=10.0 xdata=0 code=715
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  UCINITTIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?DS1302
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DISPLAYONECHARONADDR?8DIGITALDTUBEDISPLAY
+Program Size: data=10.0 xdata=0 code=715
+Target not created
+compiling main.c...
+..\Source\ds1302.h(28): warning C206: 'DS1302_ReadOneByteAtAddr': missing function-prototype
+..\Source\ds1302.h(28): error C267: 'DS1302_ReadOneByteAtAddr': requires ANSI-style prototype
+..\Source\ds1302.h(34): error C141: syntax error near '}'
+..\Source\ds1302.h(40): error C231: 'DS1302_ReadOneByteAtAddr': redefinition
+..\Source\main.c - 3 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+..\Source\ds1302.h(28): warning C206: 'DS1302_ReadOneByteAtAddr': missing function-prototype
+..\Source\ds1302.h(28): error C267: 'DS1302_ReadOneByteAtAddr': requires ANSI-style prototype
+..\Source\ds1302.h(34): error C141: syntax error near '}'
+..\Source\ds1302.h(40): error C231: 'DS1302_ReadOneByteAtAddr': redefinition
+compiling ds1302.c...
+..\Source\ds1302.h(28): warning C206: 'DS1302_ReadOneByteAtAddr': missing function-prototype
+..\Source\ds1302.h(28): error C267: 'DS1302_ReadOneByteAtAddr': requires ANSI-style prototype
+..\Source\ds1302.h(34): error C141: syntax error near '}'
+..\Source\ds1302.h(40): error C231: 'DS1302_ReadOneByteAtAddr': redefinition
+..\Source\ds1302.c(73): error C231: 'DS1302_ReadOneByteAtAddr': redefinition
+..\Source\ds1302.c(83): error C231: 'DS1302_ReadOneByteAtAddr': redefinition
+Target not created
+compiling main.c...
+..\Source\ds1302.h(28): warning C206: 'DS1302_ReadOneByteAtAddr': missing function-prototype
+..\Source\ds1302.h(28): error C267: 'DS1302_ReadOneByteAtAddr': requires ANSI-style prototype
+..\Source\ds1302.h(34): error C141: syntax error near '}'
+..\Source\ds1302.h(40): error C231: 'DS1302_ReadOneByteAtAddr': redefinition
+..\Source\main.c - 3 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+..\Source\ds1302.h(36): error C247: non-address/-constant initializer
+..\Source\ds1302.h(42): error C141: syntax error near '}'
+compiling ds1302.c...
+..\Source\ds1302.h(36): error C247: non-address/-constant initializer
+..\Source\ds1302.h(42): error C141: syntax error near '}'
+..\Source\ds1302.c(13): error C231: 'ACC': redefinition
+..\Source\ds1302.c(13): error C202: 'ucData': undefined identifier
+..\Source\ds1302.c(13): error C231: 'ACC': redefinition
+..\Source\ds1302.c(14): error C231: 'DS1302_RST': redefinition
+..\Source\ds1302.c(14): error C231: 'DS1302_RST': redefinition
+..\Source\ds1302.c(15): error C141: syntax error near 'for'
+..\Source\ds1302.c(15): error C141: syntax error near '=', expected ')'
+..\Source\ds1302.c(15): error C129: missing ';' before '>'
+Target not created
+compiling main.c...
+..\Source\ds1302.h(36): error C247: non-address/-constant initializer
+..\Source\ds1302.h(42): error C141: syntax error near '}'
+..\Source\main.c - 2 Error(s), 0 Warning(s).
+compiling main.c...
+..\Source\ds1302.h(36): error C247: non-address/-constant initializer
+..\Source\ds1302.h(42): error C141: syntax error near '}'
+..\Source\main.c - 2 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+..\Source\ds1302.h(36): error C247: non-address/-constant initializer
+..\Source\ds1302.h(42): error C141: syntax error near '}'
+compiling ds1302.c...
+..\Source\ds1302.h(36): error C247: non-address/-constant initializer
+..\Source\ds1302.h(42): error C141: syntax error near '}'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+..\Source\ds1302.h(36): error C247: non-address/-constant initializer
+..\Source\ds1302.h(42): error C141: syntax error near '}'
+compiling ds1302.c...
+..\Source\ds1302.h(36): error C247: non-address/-constant initializer
+..\Source\ds1302.h(42): error C141: syntax error near '}'
+Target not created
+compiling main.c...
+..\Source\main.c(35): error C247: non-address/-constant initializer
+..\Source\main.c(41): error C141: syntax error near '}'
+..\Source\main.c - 2 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+..\Source\main.c(35): error C247: non-address/-constant initializer
+..\Source\main.c(41): error C141: syntax error near '}'
+compiling ds1302.c...
+Target not created
+Build target 'Target 1'
+compiling main.c...
+..\Source\main.c(35): error C247: non-address/-constant initializer
+..\Source\main.c(41): error C141: syntax error near '}'
+Target not created
+compiling main.c...
+..\Source\main.c(35): error C141: syntax error near '['
+..\Source\main.c(41): error C141: syntax error near ']'
+..\Source\main.c - 2 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+..\Source\main.c(35): error C141: syntax error near '['
+..\Source\main.c(41): error C141: syntax error near ']'
+Target not created
+compiling main.c...
+..\Source\main.c(35): error C247: non-address/-constant initializer
+..\Source\main.c(41): error C141: syntax error near '}'
+..\Source\main.c - 2 Error(s), 0 Warning(s).
+compiling main.c...
+..\Source\main.c(43): error C141: syntax error near '{'
+..\Source\main.c(49): error C141: syntax error near '}'
+..\Source\main.c - 2 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+..\Source\main.c(43): error C141: syntax error near '{'
+..\Source\main.c(49): error C141: syntax error near '}'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+..\Source\main.c(43): error C141: syntax error near '{'
+..\Source\main.c(49): error C141: syntax error near '}'
+Target not created
+compiling main.c...
+..\Source\main.c(43): error C141: syntax error near '{'
+..\Source\main.c(49): error C141: syntax error near '}'
+..\Source\main.c - 2 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+..\Source\main.c(43): error C141: syntax error near '{'
+..\Source\main.c(49): error C141: syntax error near '}'
+Target not created
+compiling main.c...
+..\Source\main.c(43): error C141: syntax error near ']'
+..\Source\main.c(49): error C141: syntax error near '}'
+..\Source\main.c - 2 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+..\Source\main.c(43): error C141: syntax error near ']'
+..\Source\main.c(49): error C141: syntax error near '}'
+Target not created
+compiling main.c...
+..\Source\main.c(35): error C163: 'TIME': unknown array size
+..\Source\main.c(43): error C141: syntax error near ']'
+..\Source\main.c(49): error C141: syntax error near '}'
+..\Source\main.c - 3 Error(s), 0 Warning(s).
+compiling main.c...
+..\Source\main.c(58): warning C206: 'Ds1302ReadTime': missing function-prototype
+..\Source\main.c(108): error C202: 'TIME': undefined identifier
+..\Source\main.c(109): error C202: 'TIME': undefined identifier
+..\Source\main.c(111): error C202: 'TIME': undefined identifier
+..\Source\main.c(112): error C202: 'TIME': undefined identifier
+..\Source\main.c(114): error C202: 'TIME': undefined identifier
+..\Source\main.c(115): error C202: 'TIME': undefined identifier
+..\Source\main.c(119): error C202: 'TIME': undefined identifier
+..\Source\main.c(120): error C202: 'TIME': undefined identifier
+..\Source\main.c(122): error C202: 'TIME': undefined identifier
+..\Source\main.c(123): error C202: 'TIME': undefined identifier
+..\Source\main.c(125): error C202: 'TIME': undefined identifier
+..\Source\main.c(126): error C202: 'TIME': undefined identifier
+..\Source\main.c(131): error C202: 'TIME': undefined identifier
+..\Source\main.c - 13 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+..\Source\main.c(58): warning C206: 'Ds1302ReadTime': missing function-prototype
+..\Source\main.c(108): error C202: 'TIME': undefined identifier
+..\Source\main.c(109): error C202: 'TIME': undefined identifier
+..\Source\main.c(111): error C202: 'TIME': undefined identifier
+..\Source\main.c(112): error C202: 'TIME': undefined identifier
+..\Source\main.c(114): error C202: 'TIME': undefined identifier
+..\Source\main.c(115): error C202: 'TIME': undefined identifier
+..\Source\main.c(119): error C202: 'TIME': undefined identifier
+..\Source\main.c(120): error C202: 'TIME': undefined identifier
+..\Source\main.c(122): error C202: 'TIME': undefined identifier
+..\Source\main.c(123): error C202: 'TIME': undefined identifier
+..\Source\main.c(125): error C202: 'TIME': undefined identifier
+..\Source\main.c(126): error C202: 'TIME': undefined identifier
+..\Source\main.c(131): error C202: 'TIME': undefined identifier
+Target not created
+compiling main.c...
+..\Source\main.c(107): error C202: 'TIME': undefined identifier
+..\Source\main.c(108): error C202: 'TIME': undefined identifier
+..\Source\main.c(110): error C202: 'TIME': undefined identifier
+..\Source\main.c(111): error C202: 'TIME': undefined identifier
+..\Source\main.c(113): error C202: 'TIME': undefined identifier
+..\Source\main.c(114): error C202: 'TIME': undefined identifier
+..\Source\main.c(118): error C202: 'TIME': undefined identifier
+..\Source\main.c(119): error C202: 'TIME': undefined identifier
+..\Source\main.c(121): error C202: 'TIME': undefined identifier
+..\Source\main.c(122): error C202: 'TIME': undefined identifier
+..\Source\main.c(124): error C202: 'TIME': undefined identifier
+..\Source\main.c(125): error C202: 'TIME': undefined identifier
+..\Source\main.c(130): error C202: 'TIME': undefined identifier
+..\Source\main.c - 13 Error(s), 0 Warning(s).
+compiling main.c...
+..\Source\main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  UCINITTIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?DS1302
+Program Size: data=23.0 xdata=0 code=824
+Target not created
+compiling main.c...
+..\Source\main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  UCINITTIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?DS1302
+Program Size: data=23.0 xdata=0 code=813
+Target not created
+compiling main.c...
+..\Source\main.c - 0 Error(s), 0 Warning(s).
+compiling main.c...
+..\Source\main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  UCINITTIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?DS1302
+Program Size: data=23.0 xdata=0 code=813
+Target not created
+compiling main.c...
+..\Source\main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  UCINITTIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?DS1302
+Program Size: data=23.0 xdata=0 code=813
+Target not created
+Build target 'Target 1'
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  UCINITTIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?DS1302
+Program Size: data=23.0 xdata=0 code=813
+Target not created
+compiling main.c...
+..\Source\main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  UCINITTIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?DS1302
+Program Size: data=23.0 xdata=0 code=803
+Target not created
+Build target 'Target 1'
+compiling lcd.c...
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  UCINITTIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?DS1302
+Program Size: data=23.0 xdata=0 code=803
+Target not created
+compiling main.c...
+..\Source\main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  UCINITTIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?DS1302
+Program Size: data=23.0 xdata=0 code=803
+Target not created
+compiling main.c...
+..\Source\main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  UCINITTIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?DS1302
+Program Size: data=23.0 xdata=0 code=803
+Target not created
+compiling main.c...
+..\Source\lcd.h(26): error C141: syntax error near 'com', expected ')'
+..\Source\lcd.h(28): error C141: syntax error near 'dat', expected ')'
+..\Source\main.c - 2 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+..\Source\lcd.h(26): error C141: syntax error near 'com', expected ')'
+..\Source\lcd.h(28): error C141: syntax error near 'dat', expected ')'
+compiling lcd.c...
+..\Source\lcd.h(26): error C141: syntax error near 'com', expected ')'
+..\Source\lcd.h(28): error C141: syntax error near 'dat', expected ')'
+..\Source\lcd.c(17): error C202: 'uchar': undefined identifier
+..\Source\lcd.c(17): error C141: syntax error near 'a'
+..\Source\lcd.c(20): error C202: 'b': undefined identifier
+..\Source\lcd.c(22): error C202: 'a': undefined identifier
+..\Source\lcd.c(35): error C141: syntax error near 'com', expected ')'
+..\Source\lcd.c(41): error C202: 'com': undefined identifier
+..\Source\lcd.c(49): error C202: 'com': undefined identifier
+..\Source\lcd.c(64): error C141: syntax error near 'dat', expected ')'
+..\Source\lcd.c(70): error C202: 'dat': undefined identifier
+..\Source\lcd.c(77): error C202: 'dat': undefined identifier
+Target not created
+compiling lcd.c...
+..\Source\lcd.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  UCINITTIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?DS1302
+Program Size: data=23.0 xdata=0 code=803
+Target not created
+Build target 'Target 1'
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  UCINITTIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?DS1302
+Program Size: data=23.0 xdata=0 code=803
+Target not created
+compiling lcd.c...
+..\Source\lcd.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  UCINITTIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?DS1302
+Program Size: data=23.0 xdata=0 code=817
+Target not created
+compiling lcd.c...
+..\Source\lcd.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  UCINITTIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?DS1302
+Program Size: data=23.0 xdata=0 code=815
+Target not created
+compiling lcd.c...
+..\Source\lcd.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  UCINITTIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?DS1302
+Program Size: data=23.0 xdata=0 code=815
+Target not created
+compiling lcd.c...
+..\Source\lcd.c - 0 Error(s), 0 Warning(s).
+compiling lcd.c...
+..\Source\lcd.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  UCINITTIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?DS1302
+Program Size: data=23.0 xdata=0 code=815
+Target not created
+compiling main.c...
+..\Source\main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling lcd.c...
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  UCINITTIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?DS1302
+Program Size: data=23.0 xdata=0 code=815
+Target not created
+compiling lcd.c...
+..\Source\lcd.c(17): error C244: 'a': can't initialize, bad type or class
+..\Source\lcd.c - 1 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling lcd.c...
+..\Source\lcd.c(17): error C244: 'a': can't initialize, bad type or class
+Target not created
+compiling lcd.c...
+..\Source\lcd.c(17): error C244: 'a': can't initialize, bad type or class
+..\Source\lcd.c - 1 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling lcd.c...
+..\Source\lcd.c(17): error C244: 'a': can't initialize, bad type or class
+Target not created
+compiling lcd.c...
+..\Source\lcd.c(17): error C244: 'a': can't initialize, bad type or class
+..\Source\lcd.c - 1 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling lcd.c...
+..\Source\lcd.c(17): error C244: 'a': can't initialize, bad type or class
+Target not created
+Build target 'Target 1'
+compiling lcd.c...
+..\Source\lcd.c(17): error C244: 'a': can't initialize, bad type or class
+Target not created
+compiling lcd.c...
+..\Source\lcd.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  UCINITTIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?DS1302
+Program Size: data=23.0 xdata=0 code=789
+Target not created
+compiling lcd.c...
+..\Source\lcd.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  UCINITTIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?DS1302
+Program Size: data=23.0 xdata=0 code=759
+Target not created
+compiling lcd.c...
+..\Source\lcd.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  UCINITTIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?DS1302
+Program Size: data=23.0 xdata=0 code=789
+Target not created
+compiling lcd.c...
+..\Source\lcd.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  UCINITTIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?DS1302
+Program Size: data=23.0 xdata=0 code=789
+Target not created
+Build target 'Target 1'
+compiling main.c...
+compiling lcd.c...
+compiling 8DigitalDTubeDisplay.c...
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  UCINITTIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?DS1302
+Program Size: data=23.0 xdata=0 code=789
+Target not created
+compiling main.c...
+..\Source\main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling ds1302.c...
+compiling TimeCorrect.c...
+..\Source\TimeCorrect.c(14): warning C206: 'keyboardscan': missing function-prototype
+..\Source\TimeCorrect.c(20): error C202: 'Time': undefined identifier
+..\Source\TimeCorrect.c(27): error C202: 'Time': undefined identifier
+..\Source\TimeCorrect.c(34): error C202: 'Time': undefined identifier
+..\Source\TimeCorrect.c(41): error C202: 'Time': undefined identifier
+..\Source\TimeCorrect.c(48): error C202: 'Time': undefined identifier
+..\Source\TimeCorrect.c(55): error C202: 'Time': undefined identifier
+..\Source\TimeCorrect.c(62): error C202: 'Time': undefined identifier
+..\Source\TimeCorrect.c(69): error C202: 'Time': undefined identifier
+..\Source\TimeCorrect.c(76): error C202: 'Time': undefined identifier
+..\Source\TimeCorrect.c(83): error C202: 'Time': undefined identifier
+..\Source\TimeCorrect.c(89): error C202: 'Time': undefined identifier
+..\Source\TimeCorrect.c(91): error C202: 'Time': undefined identifier
+..\Source\TimeCorrect.c(93): error C202: 'Time': undefined identifier
+..\Source\TimeCorrect.c(95): error C202: 'Time': undefined identifier
+Target not created
+Build target 'Target 1'
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  TIME
+    MODULE:  ..\Outpt\main.obj (MAIN)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  TIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  UCINITTIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?DS1302
+Program Size: data=23.0 xdata=0 code=806
+Target not created
+Build target 'Target 1'
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  TIME
+    MODULE:  ..\Outpt\main.obj (MAIN)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  TIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  UCINITTIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?DS1302
+Program Size: data=23.0 xdata=0 code=806
+Target not created
+Build target 'Target 1'
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  TIME
+    MODULE:  ..\Outpt\main.obj (MAIN)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  TIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  UCINITTIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?DS1302
+Program Size: data=23.0 xdata=0 code=806
+Target not created
+compiling main.c...
+..\Source\main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  TIME
+    MODULE:  ..\Outpt\main.obj (MAIN)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  TIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  UCINITTIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?DS1302
+Program Size: data=23.0 xdata=0 code=806
+Target not created
+compiling main.c...
+..\Source\main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  TIME
+    MODULE:  ..\Outpt\main.obj (MAIN)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  TIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  UCINITTIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?DS1302
+Program Size: data=23.0 xdata=0 code=806
+Target not created
+Rebuild target 'Target 1'
+compiling main.c...
+compiling ds1302.c...
+compiling lcd.c...
+compiling 8DigitalDTubeDisplay.c...
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  TIME
+    MODULE:  ..\Outpt\main.obj (MAIN)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  TIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  UCINITTIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?DS1302
+Program Size: data=23.0 xdata=0 code=806
+Target not created
+compiling main.c...
+..\Source\main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  TIME
+    MODULE:  ..\Outpt\main.obj (MAIN)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  TIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** ERROR L104: MULTIPLE PUBLIC DEFINITIONS
+    SYMBOL:  UCINITTIME
+    MODULE:  ..\Outpt\ds1302.obj (DS1302)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?DS1302
+Program Size: data=23.0 xdata=0 code=806
+Target not created
+compiling main.c...
+..\Source\main.c - 0 Error(s), 0 Warning(s).
+compiling main1.c...
+..\Source\main1.c(26): error C100: unprintable character 0xA3 skipped
+..\Source\main1.c(26): error C100: unprintable character 0xBB skipped
+..\Source\main1.c(28): error C141: syntax error near '}'
+..\Source\main1.c - 3 Error(s), 0 Warning(s).
+compiling main1.c...
+..\Source\main1.c(26): error C100: unprintable character 0xA3 skipped
+..\Source\main1.c(26): error C100: unprintable character 0xBB skipped
+..\Source\main1.c(27): error C141: syntax error near '}'
+..\Source\main1.c - 3 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main1.c...
+..\Source\main1.c(26): error C100: unprintable character 0xA3 skipped
+..\Source\main1.c(26): error C100: unprintable character 0xBB skipped
+..\Source\main1.c(27): error C141: syntax error near '}'
+Target not created
+compiling main1.c...
+..\Source\main1.c(26): error C100: unprintable character 0xA3 skipped
+..\Source\main1.c(26): error C100: unprintable character 0xBB skipped
+..\Source\main1.c(27): error C141: syntax error near '}'
+..\Source\main1.c - 3 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main1.c...
+..\Source\main1.c(26): error C100: unprintable character 0xA3 skipped
+..\Source\main1.c(26): error C100: unprintable character 0xBB skipped
+..\Source\main1.c(27): error C141: syntax error near '}'
+Target not created
+compiling main1.c...
+..\Source\main1.c(108): warning C206: 'keyboardscan': missing function-prototype
+..\Source\main1.c(114): error C183: unmodifiable lvalue
+..\Source\main1.c(121): error C183: unmodifiable lvalue
+..\Source\main1.c(128): error C183: unmodifiable lvalue
+..\Source\main1.c(135): error C183: unmodifiable lvalue
+..\Source\main1.c(142): error C183: unmodifiable lvalue
+..\Source\main1.c(149): error C183: unmodifiable lvalue
+..\Source\main1.c(156): error C183: unmodifiable lvalue
+..\Source\main1.c(163): error C183: unmodifiable lvalue
+..\Source\main1.c(170): error C183: unmodifiable lvalue
+..\Source\main1.c(177): error C183: unmodifiable lvalue
+..\Source\main1.c(183): error C183: unmodifiable lvalue
+..\Source\main1.c(185): error C183: unmodifiable lvalue
+..\Source\main1.c(187): error C183: unmodifiable lvalue
+..\Source\main1.c(189): error C183: unmodifiable lvalue
+..\Source\main1.c(202): error C231: 'keyboardscan': redefinition
+..\Source\main1.c - 15 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main1.c...
+..\Source\main1.c(108): warning C206: 'keyboardscan': missing function-prototype
+..\Source\main1.c(114): error C183: unmodifiable lvalue
+..\Source\main1.c(121): error C183: unmodifiable lvalue
+..\Source\main1.c(128): error C183: unmodifiable lvalue
+..\Source\main1.c(135): error C183: unmodifiable lvalue
+..\Source\main1.c(142): error C183: unmodifiable lvalue
+..\Source\main1.c(149): error C183: unmodifiable lvalue
+..\Source\main1.c(156): error C183: unmodifiable lvalue
+..\Source\main1.c(163): error C183: unmodifiable lvalue
+..\Source\main1.c(170): error C183: unmodifiable lvalue
+..\Source\main1.c(177): error C183: unmodifiable lvalue
+..\Source\main1.c(183): error C183: unmodifiable lvalue
+..\Source\main1.c(185): error C183: unmodifiable lvalue
+..\Source\main1.c(187): error C183: unmodifiable lvalue
+..\Source\main1.c(189): error C183: unmodifiable lvalue
+..\Source\main1.c(202): error C231: 'keyboardscan': redefinition
+Target not created
+compiling main1.c...
+..\Source\main1.c(108): warning C206: 'keyboardscan': missing function-prototype
+..\Source\main1.c(114): error C183: unmodifiable lvalue
+..\Source\main1.c(121): error C183: unmodifiable lvalue
+..\Source\main1.c(128): error C183: unmodifiable lvalue
+..\Source\main1.c(135): error C183: unmodifiable lvalue
+..\Source\main1.c(142): error C183: unmodifiable lvalue
+..\Source\main1.c(149): error C183: unmodifiable lvalue
+..\Source\main1.c(156): error C183: unmodifiable lvalue
+..\Source\main1.c(163): error C183: unmodifiable lvalue
+..\Source\main1.c(170): error C183: unmodifiable lvalue
+..\Source\main1.c(177): error C183: unmodifiable lvalue
+..\Source\main1.c(183): error C183: unmodifiable lvalue
+..\Source\main1.c(185): error C183: unmodifiable lvalue
+..\Source\main1.c(187): error C183: unmodifiable lvalue
+..\Source\main1.c(189): error C183: unmodifiable lvalue
+..\Source\main1.c(202): error C231: 'keyboardscan': redefinition
+..\Source\main1.c - 15 Error(s), 1 Warning(s).
+compiling main1.c...
+..\Source\main1.c(108): warning C206: 'keyboardscan': missing function-prototype
+..\Source\main1.c(114): error C183: unmodifiable lvalue
+..\Source\main1.c(121): error C183: unmodifiable lvalue
+..\Source\main1.c(128): error C183: unmodifiable lvalue
+..\Source\main1.c(135): error C183: unmodifiable lvalue
+..\Source\main1.c(142): error C183: unmodifiable lvalue
+..\Source\main1.c(149): error C183: unmodifiable lvalue
+..\Source\main1.c(156): error C183: unmodifiable lvalue
+..\Source\main1.c(163): error C183: unmodifiable lvalue
+..\Source\main1.c(170): error C183: unmodifiable lvalue
+..\Source\main1.c(177): error C183: unmodifiable lvalue
+..\Source\main1.c(183): error C183: unmodifiable lvalue
+..\Source\main1.c(185): error C183: unmodifiable lvalue
+..\Source\main1.c(187): error C183: unmodifiable lvalue
+..\Source\main1.c(189): error C183: unmodifiable lvalue
+..\Source\main1.c(202): error C231: 'keyboardscan': redefinition
+..\Source\main1.c - 15 Error(s), 1 Warning(s).
+compiling main1.c...
+..\Source\main1.c(19): warning C206: 'delay': missing function-prototype
+..\Source\main1.c(19): error C267: 'delay': requires ANSI-style prototype
+..\Source\main1.c(134): error C183: unmodifiable lvalue
+..\Source\main1.c(141): error C183: unmodifiable lvalue
+..\Source\main1.c(148): error C183: unmodifiable lvalue
+..\Source\main1.c(155): error C183: unmodifiable lvalue
+..\Source\main1.c(162): error C183: unmodifiable lvalue
+..\Source\main1.c(169): error C183: unmodifiable lvalue
+..\Source\main1.c(176): error C183: unmodifiable lvalue
+..\Source\main1.c(183): error C183: unmodifiable lvalue
+..\Source\main1.c(190): error C183: unmodifiable lvalue
+..\Source\main1.c(197): error C183: unmodifiable lvalue
+..\Source\main1.c(203): error C183: unmodifiable lvalue
+..\Source\main1.c(205): error C183: unmodifiable lvalue
+..\Source\main1.c(207): error C183: unmodifiable lvalue
+..\Source\main1.c(209): error C183: unmodifiable lvalue
+..\Source\main1.c - 15 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main1.c...
+..\Source\main1.c(19): warning C206: 'delay': missing function-prototype
+..\Source\main1.c(19): error C267: 'delay': requires ANSI-style prototype
+..\Source\main1.c(134): error C183: unmodifiable lvalue
+..\Source\main1.c(141): error C183: unmodifiable lvalue
+..\Source\main1.c(148): error C183: unmodifiable lvalue
+..\Source\main1.c(155): error C183: unmodifiable lvalue
+..\Source\main1.c(162): error C183: unmodifiable lvalue
+..\Source\main1.c(169): error C183: unmodifiable lvalue
+..\Source\main1.c(176): error C183: unmodifiable lvalue
+..\Source\main1.c(183): error C183: unmodifiable lvalue
+..\Source\main1.c(190): error C183: unmodifiable lvalue
+..\Source\main1.c(197): error C183: unmodifiable lvalue
+..\Source\main1.c(203): error C183: unmodifiable lvalue
+..\Source\main1.c(205): error C183: unmodifiable lvalue
+..\Source\main1.c(207): error C183: unmodifiable lvalue
+..\Source\main1.c(209): error C183: unmodifiable lvalue
+Target not created
+compiling main1.c...
+..\Source\main1.c(19): warning C206: 'delay': missing function-prototype
+..\Source\main1.c(19): error C267: 'delay': requires ANSI-style prototype
+..\Source\main1.c(134): error C183: unmodifiable lvalue
+..\Source\main1.c(141): error C183: unmodifiable lvalue
+..\Source\main1.c(148): error C183: unmodifiable lvalue
+..\Source\main1.c(155): error C183: unmodifiable lvalue
+..\Source\main1.c(162): error C183: unmodifiable lvalue
+..\Source\main1.c(169): error C183: unmodifiable lvalue
+..\Source\main1.c(176): error C183: unmodifiable lvalue
+..\Source\main1.c(183): error C183: unmodifiable lvalue
+..\Source\main1.c(190): error C183: unmodifiable lvalue
+..\Source\main1.c(197): error C183: unmodifiable lvalue
+..\Source\main1.c(203): error C183: unmodifiable lvalue
+..\Source\main1.c(205): error C183: unmodifiable lvalue
+..\Source\main1.c(207): error C183: unmodifiable lvalue
+..\Source\main1.c(209): error C183: unmodifiable lvalue
+..\Source\main1.c - 15 Error(s), 1 Warning(s).
+compiling main1.c...
+..\Source\main1.c(139): error C183: unmodifiable lvalue
+..\Source\main1.c(146): error C183: unmodifiable lvalue
+..\Source\main1.c(153): error C183: unmodifiable lvalue
+..\Source\main1.c(160): error C183: unmodifiable lvalue
+..\Source\main1.c(167): error C183: unmodifiable lvalue
+..\Source\main1.c(174): error C183: unmodifiable lvalue
+..\Source\main1.c(181): error C183: unmodifiable lvalue
+..\Source\main1.c(188): error C183: unmodifiable lvalue
+..\Source\main1.c(195): error C183: unmodifiable lvalue
+..\Source\main1.c(202): error C183: unmodifiable lvalue
+..\Source\main1.c(208): error C183: unmodifiable lvalue
+..\Source\main1.c(210): error C183: unmodifiable lvalue
+..\Source\main1.c(212): error C183: unmodifiable lvalue
+..\Source\main1.c(214): error C183: unmodifiable lvalue
+..\Source\main1.c - 14 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main1.c...
+..\Source\main1.c(139): error C183: unmodifiable lvalue
+..\Source\main1.c(146): error C183: unmodifiable lvalue
+..\Source\main1.c(153): error C183: unmodifiable lvalue
+..\Source\main1.c(160): error C183: unmodifiable lvalue
+..\Source\main1.c(167): error C183: unmodifiable lvalue
+..\Source\main1.c(174): error C183: unmodifiable lvalue
+..\Source\main1.c(181): error C183: unmodifiable lvalue
+..\Source\main1.c(188): error C183: unmodifiable lvalue
+..\Source\main1.c(195): error C183: unmodifiable lvalue
+..\Source\main1.c(202): error C183: unmodifiable lvalue
+..\Source\main1.c(208): error C183: unmodifiable lvalue
+..\Source\main1.c(210): error C183: unmodifiable lvalue
+..\Source\main1.c(212): error C183: unmodifiable lvalue
+..\Source\main1.c(214): error C183: unmodifiable lvalue
+Target not created
+compiling main1.c...
+..\Source\main1.c(139): error C183: unmodifiable lvalue
+..\Source\main1.c(146): error C183: unmodifiable lvalue
+..\Source\main1.c(153): error C183: unmodifiable lvalue
+..\Source\main1.c(160): error C183: unmodifiable lvalue
+..\Source\main1.c(167): error C183: unmodifiable lvalue
+..\Source\main1.c(174): error C183: unmodifiable lvalue
+..\Source\main1.c(181): error C183: unmodifiable lvalue
+..\Source\main1.c(188): error C183: unmodifiable lvalue
+..\Source\main1.c(195): error C183: unmodifiable lvalue
+..\Source\main1.c(202): error C183: unmodifiable lvalue
+..\Source\main1.c(208): error C183: unmodifiable lvalue
+..\Source\main1.c(210): error C183: unmodifiable lvalue
+..\Source\main1.c(212): error C183: unmodifiable lvalue
+..\Source\main1.c(214): error C183: unmodifiable lvalue
+..\Source\main1.c - 14 Error(s), 0 Warning(s).
+compiling main1.c...
+..\Source\ds1302.h(36): error C141: syntax error near '}'
+..\Source\main1.c(139): error C183: unmodifiable lvalue
+..\Source\main1.c(146): error C183: unmodifiable lvalue
+..\Source\main1.c(153): error C183: unmodifiable lvalue
+..\Source\main1.c(160): error C183: unmodifiable lvalue
+..\Source\main1.c(167): error C183: unmodifiable lvalue
+..\Source\main1.c(174): error C183: unmodifiable lvalue
+..\Source\main1.c(181): error C183: unmodifiable lvalue
+..\Source\main1.c(188): error C183: unmodifiable lvalue
+..\Source\main1.c(195): error C183: unmodifiable lvalue
+..\Source\main1.c(202): error C183: unmodifiable lvalue
+..\Source\main1.c(208): error C183: unmodifiable lvalue
+..\Source\main1.c(210): error C183: unmodifiable lvalue
+..\Source\main1.c(212): error C183: unmodifiable lvalue
+..\Source\main1.c(214): error C183: unmodifiable lvalue
+..\Source\main1.c - 15 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling ds1302.c...
+..\Source\ds1302.h(36): error C141: syntax error near '}'
+compiling main1.c...
+..\Source\ds1302.h(36): error C141: syntax error near '}'
+..\Source\main1.c(139): error C183: unmodifiable lvalue
+..\Source\main1.c(146): error C183: unmodifiable lvalue
+..\Source\main1.c(153): error C183: unmodifiable lvalue
+..\Source\main1.c(160): error C183: unmodifiable lvalue
+..\Source\main1.c(167): error C183: unmodifiable lvalue
+..\Source\main1.c(174): error C183: unmodifiable lvalue
+..\Source\main1.c(181): error C183: unmodifiable lvalue
+..\Source\main1.c(188): error C183: unmodifiable lvalue
+..\Source\main1.c(195): error C183: unmodifiable lvalue
+..\Source\main1.c(202): error C183: unmodifiable lvalue
+..\Source\main1.c(208): error C183: unmodifiable lvalue
+..\Source\main1.c(210): error C183: unmodifiable lvalue
+..\Source\main1.c(212): error C183: unmodifiable lvalue
+..\Source\main1.c(214): error C183: unmodifiable lvalue
+Target not created
+compiling main1.c...
+..\Source\main1.c(139): error C183: unmodifiable lvalue
+..\Source\main1.c(146): error C183: unmodifiable lvalue
+..\Source\main1.c(153): error C183: unmodifiable lvalue
+..\Source\main1.c(160): error C183: unmodifiable lvalue
+..\Source\main1.c(167): error C183: unmodifiable lvalue
+..\Source\main1.c(174): error C183: unmodifiable lvalue
+..\Source\main1.c(181): error C183: unmodifiable lvalue
+..\Source\main1.c(188): error C183: unmodifiable lvalue
+..\Source\main1.c(195): error C183: unmodifiable lvalue
+..\Source\main1.c(202): error C183: unmodifiable lvalue
+..\Source\main1.c(208): error C183: unmodifiable lvalue
+..\Source\main1.c(210): error C183: unmodifiable lvalue
+..\Source\main1.c(212): error C183: unmodifiable lvalue
+..\Source\main1.c(214): error C183: unmodifiable lvalue
+..\Source\main1.c - 14 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling ds1302.c...
+compiling main1.c...
+..\Source\main1.c(139): error C183: unmodifiable lvalue
+..\Source\main1.c(146): error C183: unmodifiable lvalue
+..\Source\main1.c(153): error C183: unmodifiable lvalue
+..\Source\main1.c(160): error C183: unmodifiable lvalue
+..\Source\main1.c(167): error C183: unmodifiable lvalue
+..\Source\main1.c(174): error C183: unmodifiable lvalue
+..\Source\main1.c(181): error C183: unmodifiable lvalue
+..\Source\main1.c(188): error C183: unmodifiable lvalue
+..\Source\main1.c(195): error C183: unmodifiable lvalue
+..\Source\main1.c(202): error C183: unmodifiable lvalue
+..\Source\main1.c(208): error C183: unmodifiable lvalue
+..\Source\main1.c(210): error C183: unmodifiable lvalue
+..\Source\main1.c(212): error C183: unmodifiable lvalue
+..\Source\main1.c(214): error C183: unmodifiable lvalue
+Target not created
+compiling main1.c...
+..\Source\main1.c(139): error C183: unmodifiable lvalue
+..\Source\main1.c(146): error C183: unmodifiable lvalue
+..\Source\main1.c(153): error C183: unmodifiable lvalue
+..\Source\main1.c(160): error C183: unmodifiable lvalue
+..\Source\main1.c(167): error C183: unmodifiable lvalue
+..\Source\main1.c(174): error C183: unmodifiable lvalue
+..\Source\main1.c(181): error C183: unmodifiable lvalue
+..\Source\main1.c(188): error C183: unmodifiable lvalue
+..\Source\main1.c(195): error C183: unmodifiable lvalue
+..\Source\main1.c(202): error C183: unmodifiable lvalue
+..\Source\main1.c(208): error C183: unmodifiable lvalue
+..\Source\main1.c(210): error C183: unmodifiable lvalue
+..\Source\main1.c(212): error C183: unmodifiable lvalue
+..\Source\main1.c(214): error C183: unmodifiable lvalue
+..\Source\main1.c - 14 Error(s), 0 Warning(s).
+compiling main1.c...
+..\Source\main1.c(141): error C183: unmodifiable lvalue
+..\Source\main1.c(148): error C183: unmodifiable lvalue
+..\Source\main1.c(155): error C183: unmodifiable lvalue
+..\Source\main1.c(162): error C183: unmodifiable lvalue
+..\Source\main1.c(169): error C183: unmodifiable lvalue
+..\Source\main1.c(176): error C183: unmodifiable lvalue
+..\Source\main1.c(183): error C183: unmodifiable lvalue
+..\Source\main1.c(190): error C183: unmodifiable lvalue
+..\Source\main1.c(197): error C183: unmodifiable lvalue
+..\Source\main1.c(204): error C183: unmodifiable lvalue
+..\Source\main1.c(210): error C183: unmodifiable lvalue
+..\Source\main1.c(212): error C183: unmodifiable lvalue
+..\Source\main1.c(214): error C183: unmodifiable lvalue
+..\Source\main1.c(216): error C183: unmodifiable lvalue
+..\Source\main1.c - 14 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling ds1302.c...
+compiling main1.c...
+..\Source\main1.c(141): error C183: unmodifiable lvalue
+..\Source\main1.c(148): error C183: unmodifiable lvalue
+..\Source\main1.c(155): error C183: unmodifiable lvalue
+..\Source\main1.c(162): error C183: unmodifiable lvalue
+..\Source\main1.c(169): error C183: unmodifiable lvalue
+..\Source\main1.c(176): error C183: unmodifiable lvalue
+..\Source\main1.c(183): error C183: unmodifiable lvalue
+..\Source\main1.c(190): error C183: unmodifiable lvalue
+..\Source\main1.c(197): error C183: unmodifiable lvalue
+..\Source\main1.c(204): error C183: unmodifiable lvalue
+..\Source\main1.c(210): error C183: unmodifiable lvalue
+..\Source\main1.c(212): error C183: unmodifiable lvalue
+..\Source\main1.c(214): error C183: unmodifiable lvalue
+..\Source\main1.c(216): error C183: unmodifiable lvalue
+Target not created
+compiling main1.c...
+..\Source\main1.c(141): error C183: unmodifiable lvalue
+..\Source\main1.c(148): error C183: unmodifiable lvalue
+..\Source\main1.c(155): error C183: unmodifiable lvalue
+..\Source\main1.c(162): error C183: unmodifiable lvalue
+..\Source\main1.c(169): error C183: unmodifiable lvalue
+..\Source\main1.c(176): error C183: unmodifiable lvalue
+..\Source\main1.c(183): error C183: unmodifiable lvalue
+..\Source\main1.c(190): error C183: unmodifiable lvalue
+..\Source\main1.c(197): error C183: unmodifiable lvalue
+..\Source\main1.c(204): error C183: unmodifiable lvalue
+..\Source\main1.c(210): error C183: unmodifiable lvalue
+..\Source\main1.c(212): error C183: unmodifiable lvalue
+..\Source\main1.c(214): error C183: unmodifiable lvalue
+..\Source\main1.c(216): error C183: unmodifiable lvalue
+..\Source\main1.c - 14 Error(s), 0 Warning(s).
+compiling main1.c...
+..\Source\main1.c(141): error C183: unmodifiable lvalue
+..\Source\main1.c(148): error C183: unmodifiable lvalue
+..\Source\main1.c(155): error C183: unmodifiable lvalue
+..\Source\main1.c(162): error C183: unmodifiable lvalue
+..\Source\main1.c(169): error C183: unmodifiable lvalue
+..\Source\main1.c(176): error C183: unmodifiable lvalue
+..\Source\main1.c(183): error C183: unmodifiable lvalue
+..\Source\main1.c(190): error C183: unmodifiable lvalue
+..\Source\main1.c(197): error C183: unmodifiable lvalue
+..\Source\main1.c(204): error C183: unmodifiable lvalue
+..\Source\main1.c(210): error C183: unmodifiable lvalue
+..\Source\main1.c(212): error C183: unmodifiable lvalue
+..\Source\main1.c(214): error C183: unmodifiable lvalue
+..\Source\main1.c(216): error C183: unmodifiable lvalue
+..\Source\main1.c - 14 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main1.c...
+..\Source\main1.c(141): error C183: unmodifiable lvalue
+..\Source\main1.c(148): error C183: unmodifiable lvalue
+..\Source\main1.c(155): error C183: unmodifiable lvalue
+..\Source\main1.c(162): error C183: unmodifiable lvalue
+..\Source\main1.c(169): error C183: unmodifiable lvalue
+..\Source\main1.c(176): error C183: unmodifiable lvalue
+..\Source\main1.c(183): error C183: unmodifiable lvalue
+..\Source\main1.c(190): error C183: unmodifiable lvalue
+..\Source\main1.c(197): error C183: unmodifiable lvalue
+..\Source\main1.c(204): error C183: unmodifiable lvalue
+..\Source\main1.c(210): error C183: unmodifiable lvalue
+..\Source\main1.c(212): error C183: unmodifiable lvalue
+..\Source\main1.c(214): error C183: unmodifiable lvalue
+..\Source\main1.c(216): error C183: unmodifiable lvalue
+Target not created
+compiling main1.c...
+..\Source\main1.c(141): error C183: unmodifiable lvalue
+..\Source\main1.c(148): error C183: unmodifiable lvalue
+..\Source\main1.c(155): error C183: unmodifiable lvalue
+..\Source\main1.c(162): error C183: unmodifiable lvalue
+..\Source\main1.c(169): error C183: unmodifiable lvalue
+..\Source\main1.c(176): error C183: unmodifiable lvalue
+..\Source\main1.c(183): error C183: unmodifiable lvalue
+..\Source\main1.c(190): error C183: unmodifiable lvalue
+..\Source\main1.c(197): error C183: unmodifiable lvalue
+..\Source\main1.c(204): error C183: unmodifiable lvalue
+..\Source\main1.c(210): error C183: unmodifiable lvalue
+..\Source\main1.c(212): error C183: unmodifiable lvalue
+..\Source\main1.c(214): error C183: unmodifiable lvalue
+..\Source\main1.c(216): error C183: unmodifiable lvalue
+..\Source\main1.c - 14 Error(s), 0 Warning(s).

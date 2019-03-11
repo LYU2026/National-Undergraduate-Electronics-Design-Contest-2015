@@ -1,0 +1,10 @@
+Added Component: Designator=P7(HDR1X4)
+Added Pin To Net: NetName=VCC Pin=P7-1
+Added Pin To Net: NetName=GND Pin=P7-4
+Added Pin To Net: NetName=RXD Pin=P7-2
+Added Pin To Net: NetName=RXD Pin=U1-10
+Added Net: Name=RXD
+Added Pin To Net: NetName=TXD Pin=P7-3
+Added Pin To Net: NetName=TXD Pin=U1-11
+Added Net: Name=TXD
+Added Room: Name=main

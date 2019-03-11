@@ -1,0 +1,107 @@
+C51 COMPILER V7.09   TIMER                                                                 09/17/2004 11:08:45 PAGE 1   
+
+
+C51 COMPILER V7.09, COMPILATION OF MODULE TIMER
+OBJECT MODULE PLACED IN timer.OBJ
+COMPILER INVOKED BY: C:\KEIL\C51\BIN\C51.EXE timer.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include        "reg52.h"
+   2          #include        "VIiC_C51.H"    //包含VI2C软件包
+   3          #include    "zlg7290.h"
+   4          
+   5          #define PCF8563 0xA2            //定义器件地址
+   6          #define WRADDR  0x00            //定义写单元首地址
+   7          #define RDADDR  0x02            //定义读单元首地址
+   8          
+   9          sbit    KEY_INT=P3^2;
+  10          sbit    RST=P1^0;
+  11          unsigned char disp_buf[8]={0,0,0,0,0,0,0,0};//显示缓存
+  12          unsigned char KEY;                                                      //保存键值
+  13          bit     swich_date=0;
+  14          unsigned char display_time(unsigned char  *sd)
+  15          { 
+  16   1      
+  17   1              sd[0]=sd[0]&0x7f;//秒屏蔽保留位
+  18   1              sd[1]=sd[1]&0x7f;//分屏蔽保留位
+  19   1              sd[2]=sd[2]&0x3f;//时屏蔽保留位
+  20   1              disp_buf[0] =(sd[0]%16);                        
+  21   1          disp_buf[1] =(sd[0]/16);            
+  22   1          disp_buf[2] = 31;
+  23   1          disp_buf[3] =(sd[1]%16);
+  24   1          disp_buf[4] =(sd[1]/16);
+  25   1          disp_buf[5] = 31;
+  26   1          disp_buf[6] =(sd[2]%16);    
+  27   1          disp_buf[7] =(sd[2]/16);
+  28   1          ZLG7290_SendBuf(disp_buf,8);
+  29   1              return 0;
+  30   1      }
+  31          unsigned char display_date(unsigned char  *sd)
+  32          { 
+  33   1              sd[0]=sd[0]&0x3f;//日屏蔽保留位
+  34   1              sd[2]=sd[2]&0x1f;//月屏蔽保留位
+  35   1              disp_buf[0] =(sd[0]%16);                        
+  36   1          disp_buf[1] =(sd[0]/16);            
+  37   1          disp_buf[2] =(sd[2]%16)+0x80;//后面加小数点
+  38   1          disp_buf[3] =(sd[2]/16);
+  39   1          disp_buf[4] =(sd[3]%16)+0x80;//后面加小数点
+  40   1          disp_buf[5] =(sd[3]/16);
+  41   1              disp_buf[6] =0; 
+  42   1          disp_buf[7] =2;
+  43   1          ZLG7290_SendBuf(disp_buf,8);
+  44   1              return 0;
+  45   1      }
+  46          unsigned char DelayNS(unsigned char  no)
+  47          { 
+  48   1              unsigned char  i,j;                                     //延时参数
+  49   1      
+  50   1              for(; no>0; no--)
+  51   1                      for(i=0; i<100; i++)
+  52   1                      for(j=0; j<100; j++);
+  53   1              return 0; 
+  54   1      }
+  55          void    main()
+C51 COMPILER V7.09   TIMER                                                                 09/17/2004 11:08:45 PAGE 2   
+
+  56          {
+  57   1              unsigned char code td[9]={0x00,0x12,0x00,0x30,0x12,0x06,0x05,0x02,0x04};        //定义初始化字
+  58   1              unsigned char rd[7];    //定义接收缓冲区
+  59   1              RST=0;
+  60   1              DelayNS(1);
+  61   1              RST=1;
+  62   1              ISendStr(PCF8563,WRADDR,td,0x5);        //初始化PCF8563,如果需要的话可以不去掉
+  63   1              DelayNS(1);
+  64   1              ISendStr(PCF8563,WRADDR+5,&td[5],0x4);//初始化PCF8563,如果需要的话可以不去掉
+  65   1              while(1)
+  66   1              {
+  67   2                      DelayNS(1);
+  68   2                      IRcvStr(PCF8563,RDADDR,rd,0x7); //读现在的时、分、秒
+  69   2                      DelayNS(1);
+  70   2                      if(swich_date)
+  71   2                              display_date(rd+3);     //调显示日期子程序
+  72   2                      else
+  73   2                              display_time(rd);       //调显示时间子程序
+  74   2                      if(KEY_INT==0)
+  75   2                      {
+  76   3                              KEY=ZLG7290_GetKey();
+  77   3                              if(KEY==1)
+  78   3                                      swich_date=~swich_date;
+  79   3                      }
+  80   2                      
+  81   2              }
+  82   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    370    ----
+   CONSTANT SIZE    =      9    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      9      13
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =      1    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

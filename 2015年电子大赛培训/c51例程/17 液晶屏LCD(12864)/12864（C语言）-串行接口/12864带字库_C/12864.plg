@@ -1,0 +1,140 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\Administrator\Desktop\步骤3 51单片机例程\17 液晶屏LCD(12864)\12864（C语言）-串行接口\12864带字库_C\12864C.uvproj
+Project File Date:  08/05/2014
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling 12864.c...
+12864.C(142): error C202: 'LCD_SCLK': undefined identifier
+12864.C(144): error C202: 'LCD_SCLK': undefined identifier
+12864.C(160): error C141: syntax error near 'byte2'
+12864.C(160): error C231: 'byte2': redefinition
+12864.C(178): error C141: syntax error near 'byte2'
+12864.C(178): error C231: 'byte2': redefinition
+12864.C(332): error C202: 'LCD_SCLK': undefined identifier
+12864.C(334): error C141: syntax error near 'unsigned'
+12864.C(334): error C202: 'i': undefined identifier
+12864.C(342): error C202: 'i': undefined identifier
+12864.C(344): error C202: 'i': undefined identifier
+12864.C(349): error C202: 'i': undefined identifier
+12864.C(351): error C202: 'i': undefined identifier
+12864.C(355): error C202: 'i': undefined identifier
+12864.C(357): error C202: 'i': undefined identifier
+12864.C(361): error C202: 'i': undefined identifier
+12864.C(363): error C202: 'i': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling 12864.c...
+12864.C(160): error C141: syntax error near 'byte2'
+12864.C(160): error C231: 'byte2': redefinition
+12864.C(178): error C141: syntax error near 'byte2'
+12864.C(178): error C231: 'byte2': redefinition
+12864.C(334): error C141: syntax error near 'unsigned'
+12864.C(334): error C202: 'i': undefined identifier
+12864.C(342): error C202: 'i': undefined identifier
+12864.C(344): error C202: 'i': undefined identifier
+12864.C(349): error C202: 'i': undefined identifier
+12864.C(351): error C202: 'i': undefined identifier
+12864.C(355): error C202: 'i': undefined identifier
+12864.C(357): error C202: 'i': undefined identifier
+12864.C(361): error C202: 'i': undefined identifier
+12864.C(363): error C202: 'i': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling 12864.c...
+12864.C(334): error C141: syntax error near 'unsigned'
+12864.C(334): error C202: 'i': undefined identifier
+12864.C(342): error C202: 'i': undefined identifier
+12864.C(344): error C202: 'i': undefined identifier
+12864.C(349): error C202: 'i': undefined identifier
+12864.C(351): error C202: 'i': undefined identifier
+12864.C(355): error C202: 'i': undefined identifier
+12864.C(357): error C202: 'i': undefined identifier
+12864.C(361): error C202: 'i': undefined identifier
+12864.C(363): error C202: 'i': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling 12864.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+Program Size: data=18.0 xdata=0 code=1836
+creating hex file from "12864"...
+"12864" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling 12864.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_POS?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?12864
+Program Size: data=19.0 xdata=0 code=1725
+creating hex file from "12864"...
+"12864" - 0 Error(s), 5 Warning(s).
+Build target 'Target 1'
+compiling 12864.c...
+12864.C(146): warning C275: expression with possibly no effect
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_POS?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?12864
+Program Size: data=19.0 xdata=0 code=1725
+creating hex file from "12864"...
+"12864" - 0 Error(s), 6 Warning(s).
+Build target 'Target 1'
+compiling 12864.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_POS?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?12864
+Program Size: data=19.0 xdata=0 code=1729
+creating hex file from "12864"...
+"12864" - 0 Error(s), 5 Warning(s).
+Build target 'Target 1'
+compiling 12864.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+Program Size: data=18.0 xdata=0 code=1840
+creating hex file from "12864"...
+"12864" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling 12864.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+Program Size: data=17.0 xdata=0 code=1873
+creating hex file from "12864"...
+"12864" - 0 Error(s), 1 Warning(s).

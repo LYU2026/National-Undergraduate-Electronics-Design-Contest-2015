@@ -1,0 +1,266 @@
+C51 COMPILER V9.52.0.0   MAIN                                                              05/30/2015 07:45:22 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: C:\Program Files\keil\C51\BIN\C51.EXE main.c LARGE BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #include<reg51.h>
+   2          #include<intrins.h>
+   3          #include"main.h"
+   4          #include"12864.h"
+   5          #include"ds1302.h"
+   6          //#include"18B20.h"
+   7          #include"temp.h"
+   8          #include"I2C.h"
+   9          #include"pcf8591.h"
+  10          /*
+  11          void main()
+  12          {
+  13            int t=0;
+  14            //Ds18b20Init();
+  15            Time0[7]=0x20;
+  16            //delay_main(100);
+  17            lcd_init();
+  18          //  lcd_wdat(0x31);
+  19            while(1)
+  20            {
+  21              lcd_wcmd(0x80); 
+  22              //ClockPlay();
+  23              t=Ds18b20ReadTemp();
+  24              LcdDisplayTemp0(t);
+  25              delay0(600);
+  26              //P1=(Ds18b20ReadTemp()>>8);
+  27              //ADDisplay();
+  28            }
+  29          }
+  30          */
+  31          
+  32          
+  33          extern   int  Ds18b20ReadTemp();  //¶ÁÈ¡ÎÂ¶È
+  34          void main()
+  35          {
+  36   1        int t=0;
+  37   1        lcd_init(); 
+  38   1        while(1)
+  39   1        {
+  40   2          //clr_screen();
+  41   2        //  P0=0x00;
+  42   2        //  delay0(600);
+  43   2          lcd_wcmd(0x80); 
+  44   2        //  lcd_wdat(0x65);
+  45   2          t=Ds18b20ReadTemp();
+  46   2          LcdDisplayTemp0(t);
+  47   2        //  P0=0xfe;
+  48   2          delay0(600);
+  49   2          //while(1);
+  50   2        }
+  51   1      }
+  52          
+  53          void delay_main(int ms)
+  54          {
+  55   1          while(ms--)
+C51 COMPILER V9.52.0.0   MAIN                                                              05/30/2015 07:45:22 PAGE 2   
+
+  56   1        {
+  57   2            uchar i;
+  58   2          for(i=0;i<150;i++)  
+  59   2           {
+  60   3            _nop_();         
+  61   3          _nop_();
+  62   3          _nop_();
+  63   3          _nop_();
+  64   3           }
+  65   2        }
+  66   1      } 
+  67          
+  68          void readtime()
+  69          {
+  70   1           Time0[0]= (DS1302_ReadOneByteAtAddr(ADDR_SEC_R));
+  71   1           Time0[1]= (DS1302_ReadOneByteAtAddr(ADDR_MIN_R));
+  72   1           Time0[2]= (DS1302_ReadOneByteAtAddr(ADDR_HOUR_R));
+  73   1           Time0[3]= (DS1302_ReadOneByteAtAddr(ADDR_DAY_R));
+  74   1           Time0[4]= (DS1302_ReadOneByteAtAddr(ADDR_MONTH_R));
+  75   1           Time0[5]= (DS1302_ReadOneByteAtAddr(ADDR_WEEK_R));
+  76   1           Time0[6]= (DS1302_ReadOneByteAtAddr(ADDR_YEAR_R));
+  77   1      }
+  78          void ClockPlay()
+  79          {   uchar i;
+  80   1        
+  81   1            if((Time0[7]&0x0a)==0x0a)    
+  82   1            {   
+  83   2                Time0[7]=(Time0[7]&0xf0);
+  84   2                Time0[7]+=0x10;
+  85   2            }
+  86   1            if((Time0[7]&0x0f)==0x0f)
+  87   1            {   
+  88   2                Time0[7]=(Time0[7]&0xf0);
+  89   2                Time0[7]+=0x09;
+  90   2            }
+  91   1          readtime();
+  92   1           lcd_pos(1,0);             //ÉèÖÃÏÔÊ¾Î»ÖÃÎªµÚÒ»ÐÐ
+  93   1           for(i=0;i<5;i++)
+  94   1           {
+  95   2             lcd_wdat(DIS1[i]);
+  96   2             delay_main(5);
+  97   2           }
+  98   1           lcd_wcmd(0x91); 
+  99   1           lcd_wdat(0x30+Time0[7]/16);
+ 100   1           lcd_wdat(0x30+Time0[7]%16);
+ 101   1           lcd_wdat(0x30+Time0[6]/16);
+ 102   1           lcd_wdat(0x30+Time0[6]%16);
+ 103   1           lcd_wdat(0xc4);
+ 104   1           lcd_wdat(0xea);
+ 105   1           lcd_wdat(0x30+Time0[4]/16);
+ 106   1           lcd_wdat(0x30+Time0[4]%16);
+ 107   1           lcd_wdat(0xd4);
+ 108   1           lcd_wdat(0xc2);
+ 109   1           lcd_wdat(0x30+Time0[3]/16);
+ 110   1           lcd_wdat(0x30+Time0[3]%16);
+ 111   1           lcd_wdat(0xc8);
+ 112   1           lcd_wdat(0xd5);
+ 113   1           lcd_pos(3,0);           
+ 114   1           for(i=0;i<5;i++)
+ 115   1           {
+ 116   2             lcd_wdat(DIS2[i]);
+ 117   2             delay_main(5);
+C51 COMPILER V9.52.0.0   MAIN                                                              05/30/2015 07:45:22 PAGE 3   
+
+ 118   2           }
+ 119   1           //lcd_pos(4,0); 
+ 120   1           lcd_wcmd(0x9C); 
+ 121   1           lcd_wdat(0x30+Time0[2]/16);
+ 122   1           lcd_wdat(0x30+Time0[2]%16);
+ 123   1           lcd_wdat(':');
+ 124   1           lcd_wdat(0x30+Time0[1]/16);
+ 125   1           lcd_wdat(0x30+Time0[1]%16);
+ 126   1           lcd_wdat(':');
+ 127   1           lcd_wdat(0x30+Time0[0]/16);
+ 128   1           lcd_wdat(0x30+Time0[0]%16);
+ 129   1      }
+ 130          void LcdDisplayTemp0(int temp)   //lcdÏÔÊ¾
+ 131          {
+ 132   1        unsigned char i; unsigned char T[5];
+ 133   1          float tp;  
+ 134   1        if(temp< 0)       //µ±ÎÂ¶ÈÖµÎª¸ºÊý
+ 135   1          {
+ 136   2          DisplayData[0] = 0x40; 
+ 137   2          //ÒòÎª¶ÁÈ¡µÄÎÂ¶ÈÊÇÊµ¼ÊÎÂ¶ÈµÄ²¹Âë£¬ËùÒÔ¼õ1£¬ÔÙÈ¡·´Çó³öÔ­Âë
+ 138   2          temp=temp-1;
+ 139   2          temp=~temp;
+ 140   2          tp=temp;
+ 141   2          temp=tp*0.0625*100+0.5; 
+ 142   2          //ÁôÁ½¸öÐ¡Êýµã¾Í*100£¬+0.5ÊÇËÄÉáÎåÈë£¬ÒòÎªCÓïÑÔ¸¡µãÊý×ª»»ÎªÕûÐÍµÄÊ±ºò°ÑÐ¡Êýµã
+ 143   2          //ºóÃæµÄÊý×Ô¶¯È¥µô£¬²»¹ÜÊÇ·ñ´óÓÚ0.5£¬¶ø+0.5Ö®ºó´óÓÚ0.5µÄ¾ÍÊÇ½ø1ÁË£¬Ð¡ÓÚ0.5µÄ¾Í
+ 144   2          //ËãÓÉÏ0.5£¬»¹ÊÇÔÚÐ¡ÊýµãºóÃæ¡£
+ 145   2       
+ 146   2          }
+ 147   1        else
+ 148   1          {     
+ 149   2          DisplayData[0] = 0x00;
+ 150   2          tp=temp;//ÒòÎªÊý¾Ý´¦ÀíÓÐÐ¡ÊýµãËùÒÔ½«ÎÂ¶È¸³¸øÒ»¸ö¸¡µãÐÍ±äÁ¿
+ 151   2          //Èç¹ûÎÂ¶ÈÊÇÕýµÄÄÇÃ´£¬ÄÇÃ´ÕýÊýµÄÔ­Âë¾ÍÊÇ²¹ÂëËü±¾Éí
+ 152   2          temp=tp*0.0625*100+0.5; 
+ 153   2          //ÁôÁ½¸öÐ¡Êýµã¾Í*100£¬+0.5ÊÇËÄÉáÎåÈë£¬ÒòÎªCÓïÑÔ¸¡µãÊý×ª»»ÎªÕûÐÍµÄÊ±ºò°ÑÐ¡Êýµã
+ 154   2          //ºóÃæµÄÊý×Ô¶¯È¥µô£¬²»¹ÜÊÇ·ñ´óÓÚ0.5£¬¶ø+0.5Ö®ºó´óÓÚ0.5µÄ¾ÍÊÇ½ø1ÁË£¬Ð¡ÓÚ0.5µÄ¾Í
+ 155   2          //Ëã¼ÓÉÏ0.5£¬»¹ÊÇÔÚÐ¡ÊýµãºóÃæ¡£
+ 156   2        }
+ 157   1        //P3=tp;
+ 158   1      
+ 159   1        Data0[0] = temp / 10000;
+ 160   1        Data0[1] = temp % 10000 / 1000;
+ 161   1        Data0[2] = temp % 1000 / 100 ;
+ 162   1        Data0[3] = temp % 100 / 10;
+ 163   1        Data0[4] = temp % 10;
+ 164   1        
+ 165   1        for(i=0;i<=4;i++)
+ 166   1        {
+ 167   2          switch(Data0[i])
+ 168   2          {
+ 169   3            case 0:
+ 170   3            {T[i]=0x30;break;}
+ 171   3            case 1:
+ 172   3            {T[i]=0x31;break;}
+ 173   3            case 2:
+ 174   3            {T[i]=0x32;break;}
+ 175   3            case 3:
+ 176   3            {T[i]=0x33;break;}
+ 177   3            case 4:
+ 178   3            {T[i]=0x34;break;}
+ 179   3            case 5:
+C51 COMPILER V9.52.0.0   MAIN                                                              05/30/2015 07:45:22 PAGE 4   
+
+ 180   3            { T[i]=0x35;break;}
+ 181   3            case 6:
+ 182   3            { T[i]=0x36;break;}
+ 183   3            case 7:
+ 184   3            {T[i]=0x37;break;}
+ 185   3            case 8:
+ 186   3            {T[i]=0x38;break;}
+ 187   3            case 9:
+ 188   3            {T[i]=0x39;break;}      
+ 189   3          }
+ 190   2        }
+ 191   1        lcd_wcmd(0x80); 
+ 192   1         for(i=0;i<5;i++)
+ 193   1           {
+ 194   2             lcd_wdat(T[i]);
+ 195   2             delay0(3);
+ 196   2           }
+ 197   1            lcd_wdat(0x65);
+ 198   1      
+ 199   1      }
+ 200          
+ 201          
+ 202          void ADDisplay()
+ 203          {int i;
+ 204   1        ISendByte(PCF8591,0x41);
+ 205   1        D[0]=IRcvByte(PCF8591)*2;  //ADC0 Ä£Êý×ª»»1  ·Å´ó2±¶ÏÔÊ¾
+ 206   1        LedOut[0]=Disp_Tab[D[0]%10000/1000];
+ 207   1           LedOut[1]=Disp_Tab[D[0]%1000/100];
+ 208   1           LedOut[2]=Disp_Tab[D[0]%100/10];
+ 209   1           LedOut[3]=Disp_Tab[D[0]%10];
+ 210   1            lcd_pos(3,0);             //ÉèÖÃÏÔÊ¾Î»ÖÃÎªµÚÒ»ÐÐ
+ 211   1           for(i=0;i<5;i++)
+ 212   1           {
+ 213   2             lcd_wdat(DIS4[i]);
+ 214   2             delay_main(5);
+ 215   2           }
+ 216   1           lcd_wcmd(0x98); 
+ 217   1          //lcd_wdat(LedOut[0]);
+ 218   1           lcd_wdat(LedOut[1]);
+ 219   1          //     lcd_wdat(DIS6[0]);
+ 220   1           //lcd_wdat(DIS6[1]);
+ 221   1           lcd_wdat(LedOut[2]);
+ 222   1           lcd_wdat(0x2e);//.
+ 223   1           lcd_wdat(LedOut[3]);
+ 224   1           lcd_wdat(0x56);//V
+ 225   1      
+ 226   1      }
+ 227          void delay0(unsigned int n)
+ 228          {
+ 229   1        unsigned int k;
+ 230   1        for(k=2;k>0;k--)
+ 231   1        {
+ 232   2          while(n--){NOP();}
+*** WARNING C206 IN LINE 232 OF main.c: 'NOP': missing function-prototype
+ 233   2        }
+ 234   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   1557    ----
+   CONSTANT SIZE    =     33    ----
+   XDATA SIZE       =    119      27
+C51 COMPILER V9.52.0.0   MAIN                                                              05/30/2015 07:45:22 PAGE 5   
+
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)

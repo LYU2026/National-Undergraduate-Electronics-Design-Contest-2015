@@ -1,0 +1,7 @@
+"..\Outpt\ds1302.obj",
+"..\Outpt\main3.obj",
+"..\Outpt\temp.obj",
+"..\Outpt\12864.obj",
+"..\Outpt\lcd.obj" 
+TO "..\Outpt\ds1302" 
+PRINT(".\ds1302.m51") RAMSIZE(256) 

@@ -1,0 +1,109 @@
+C51 COMPILER V9.52.0.0   8DIGITALTUBEDISPLAY                                               05/30/2015 23:53:03 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE 8DIGITALTUBEDISPLAY
+OBJECT MODULE PLACED IN 8DigitalTubeDisplay.OBJ
+COMPILER INVOKED BY: C:\Program Files\keil\C51\BIN\C51.EXE 8DigitalTubeDisplay.c COMPACT ROM(COMPACT) BROWSE DEBUG OBJEC
+                    -TEXTEND TABS(2)
+
+line level    source
+
+   1          #include<reg51.h>
+   2          #include "intrins.h"
+   3          #include"8DigitalTubeDisplay.h"
+   4          //send the data to the HC595
+   5          
+   6          unsigned char code Seg_Data[]={  //共阳数码管的编码，并将数据定义在CODE区
+   7                        0xC0,/*0*/
+   8                            0xF9,/*1*/
+   9                            0xA4,/*2*/
+  10                            0xB0,/*3*/
+  11                            0x99,/*4*/
+  12                            0x92,/*5*/
+  13                            0x82,/*6*/
+  14                            0xF8,/*7*/
+  15                            0x80,/*8*/
+  16                            0x90,/*9*/
+  17                            0x88,/*A*/
+  18                            0x83,/*b*/
+  19                            0xC6,/*C*/
+  20                            0xA1,/*d*/
+  21                            0x86,/*E*/
+  22                            0x8E,/*F*/
+  23                        };
+  24          unsigned char code Seg_Addr[]={
+  25                        0x01,
+  26                        0x02,
+  27                        0x04,
+  28                        0x08,
+  29                        0x10,
+  30                        0x20,
+  31                        0x40,
+  32                        0x80,
+  33                        0xFF,//ALL ON
+  34                        0x00 //OFF
+  35                        };
+  36          void SEG_Send595OneByte(unsigned char ucData) //向74HC595写入一个8位的数据
+  37          {
+  38   1        unsigned char i;
+  39   1        
+  40   1        for(i = 0;i < 8;i++)   //8位数据依次写入，先写最低位
+  41   1        {
+  42   2          SEG_DS = (ucData & 0x80); //先读入高位   x&0x80;
+  43   2          SEG_SHCP = 0;
+  44   2          SEG_SHCP = 1;
+  45   2          SEG_SHCP = 0;    //SHCP引脚的上升沿移入数据
+  46   2          ucData <<=1;     //数据左移
+  47   2        }
+  48   1      }
+  49          
+  50          /*******************************************************
+  51          函数功能：在指定位置显示一个数据
+  52          参数说明：Data是要显示的数据，Addr是在第几位显示。
+  53          
+  54          Addr取值范围是0~9。
+C51 COMPILER V9.52.0.0   8DIGITALTUBEDISPLAY                                               05/30/2015 23:53:03 PAGE 2   
+
+  55          Addr=0~7时，选择的是显示在第几位数码管上;
+  56          Addr=8  时，同时选中8位数码管，即打开所有数码管
+  57          Addr=9  时，关闭8位数码管
+  58          
+  59          8位数码管，左数依次为第0位，第1位...第7位。
+  60          
+  61          *******************************************************/
+  62          void DisplayOneCharOnAddr(unsigned char Data,unsigned char Addr)
+  63          {
+  64   1          if(Addr ==3)
+  65   1          {
+  66   2            SEG_Send595OneByte(Seg_Addr[Addr-1]);
+  67   2            SEG_Send595OneByte(Seg_Data[Data]& 0x7F);
+  68   2            
+  69   2          }
+  70   1          else
+  71   1          {
+  72   2          SEG_Send595OneByte(Seg_Addr[Addr-1]);  //显示在哪一个数码管上
+  73   2          SEG_Send595OneByte( Seg_Data[Data]);  //显示的数据
+  74   2          }
+  75   1          SEG_STCP = 0;
+  76   1          SEG_STCP = 1;    //STCP引脚的上升沿更新数据
+  77   1          SEG_STCP = 0;
+  78   1        
+  79   1      }
+  80          
+  81          //main()
+  82          
+  83          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     70    ----
+   CONSTANT SIZE    =     26    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

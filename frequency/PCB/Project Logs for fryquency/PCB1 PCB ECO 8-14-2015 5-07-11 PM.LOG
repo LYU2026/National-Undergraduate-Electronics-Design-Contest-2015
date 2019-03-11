@@ -1,0 +1,9 @@
+Change Component Footprint: Designator=C3 Old Footprint=RB.2/.4A New Footprint=HDR1X2
+Change Component Footprint: Designator=C4 Old Footprint=RB.2/.4A New Footprint=HDR1X2
+Change Component Footprint: Designator=C5 Old Footprint=RB.2/.4A New Footprint=HDR1X2
+Added Pin To Net: NetName=GND Pin=C3-1
+Added Pin To Net: NetName=XTAL2 Pin=C3-2
+Added Pin To Net: NetName=GND Pin=C4-1
+Added Pin To Net: NetName=XTAL1 Pin=C4-2
+Added Pin To Net: NetName=VCC Pin=C5-1
+Added Pin To Net: NetName=RST Pin=C5-2

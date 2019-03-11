@@ -1,0 +1,194 @@
+C51 COMPILER V9.01   LCD                                                                   06/18/2015 20:17:36 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE LCD
+OBJECT MODULE PLACED IN lcd.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE lcd.c OPTIMIZE(7,SPEED) BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <reg52.h>
+   2          #include "lcd.h"
+   3          
+   4          sbit lcd_cs=P2^6;
+   5          sbit lcd_sdat=P2^5;
+   6          sbit lcd_sclk=P2^7;
+   7          
+   8          //sbit LCD_CS  =  P2^6;      //寄存器选择输入 
+   9          //sbit LCD_STD  =  P2^5;      //液晶读/写控制
+  10          //sbit LCD_SCLK  =  P2^7;      //液晶使能控制
+  11          
+  12          
+  13          
+  14          
+  15          unsigned char lcd_buffer[16];
+  16          
+  17          extern void delay(long dly);
+  18          
+  19          /*********************************************************************************************************
+  20          ** Function name:       HZLCD_Init
+  21          ** Descriptions:        HZLCD 初始化
+  22          ** input parameters:    无
+  23          ** output parameters:   无
+  24          ** Returned value:      无
+  25          *********************************************************************************************************/
+  26          void HZLCD_Init (void)
+  27          {
+  28   1          lcd_cs=0;
+  29   1              lcd_sdat=0;
+  30   1              lcd_sclk=0;
+  31   1              write_comm(0x30);                       //基本指令集
+  32   1              write_comm(0x01);                       //清除显示屏幕，把DDRAM位址计数器调整为"00H"
+  33   1              delay(1000);
+  34   1              write_comm(0x03);                       //把DDRAM位址计数器调整为"00H"，游标回原点，该功能不影响显示DDRAM
+  35   1              write_comm(0x06);                       //光标右移
+  36   1              write_comm(0x0f);                       //显示屏打开
+  37   1      }
+  38          
+  39          
+  40          /*********************************************************************************************************
+  41          ** Function name:       send_data
+  42          ** Descriptions:        向lcd写入1个字节的数据。
+  43          ** input parameters:    data：要写入的数据
+  44          ** output parameters:   无
+  45          ** Returned value:      无
+  46          *********************************************************************************************************/
+  47          void send_data(unsigned char dat)     //8位为待送数据
+  48          {       
+  49   1              unsigned char i;
+  50   1              unsigned char data1=0x80;
+  51   1              for(i=0;i<8;i++)
+  52   1              {
+  53   2                      if((dat&data1)==0)
+  54   2                      {
+  55   3                              lcd_sdat=0;
+C51 COMPILER V9.01   LCD                                                                   06/18/2015 20:17:36 PAGE 2   
+
+  56   3                      }
+  57   2                      else
+  58   2                      {
+  59   3                              lcd_sdat=1;
+  60   3                      }
+  61   2              lcd_sclk=0; 
+  62   2              lcd_sclk=1; 
+  63   2              lcd_sclk=0; 
+  64   2                      data1=data1>>1;
+  65   2              }
+  66   1      }
+  67          
+  68          void write_data(unsigned char dat)             //向LCD写数据
+  69          {       
+  70   1              lcd_cs=1;
+  71   1              send_data(0xfa);
+  72   1              send_data(dat&0xf0);
+  73   1              send_data((dat&0x0f)<<4);
+  74   1              lcd_cs=0;
+  75   1      }
+  76          void write_comm(unsigned char dat)                                //向LCD写命令
+  77          {       
+  78   1              lcd_cs=1;
+  79   1              send_data(0xf8);
+  80   1              send_data(dat&0xf0);
+  81   1              send_data((dat&0x0f)<<4);
+  82   1              lcd_cs=0;
+  83   1      }
+  84                  
+  85          
+  86          void screen(unsigned char *dat)
+  87          {       
+  88   1              unsigned char i;
+  89   1          write_comm(0x80);
+  90   1              for (i=0;i<64;i++)
+  91   1              {
+  92   2                      write_data(dat[i]);
+  93   2                      if (i==15)
+  94   2                      write_comm(0x0090);    //设定DDRAM第二行，第一列
+  95   2                      if (i==31)
+  96   2                      write_comm(0x0088);    //设定DDRAM第三行，第一列
+  97   2                      if (i==47)
+  98   2                      write_comm(0x0098);    //设定DDRAM第四行，第一列
+  99   2                      if (i==63)
+ 100   2                      write_comm(0x0080);    //设定DDRAM第四行，第一列
+ 101   2              }
+ 102   1      }       
+ 103          
+ 104          void disp_line(unsigned char line,unsigned char *dat)
+ 105          {       
+ 106   1              unsigned char i;
+ 107   1              switch(line)
+ 108   1              {
+ 109   2                      case 0:
+ 110   2                              write_comm(0x80);
+ 111   2                              break;
+ 112   2                      case 1:
+ 113   2                              write_comm(0x90);
+ 114   2                              break;
+ 115   2                      case 2:
+ 116   2                              write_comm(0x88);
+ 117   2                              break;
+C51 COMPILER V9.01   LCD                                                                   06/18/2015 20:17:36 PAGE 3   
+
+ 118   2                      case 3:
+ 119   2                              write_comm(0x98);
+ 120   2                              break;
+ 121   2              }
+ 122   1              for (i=0;i<16;i++)
+ 123   1              {
+ 124   2                      write_data(dat[i]);
+ 125   2              }
+ 126   1      }       
+ 127          
+ 128          
+ 129          
+ 130          
+ 131          
+ 132          void lcd_demo(void)
+ 133          {
+ 134   1          unsigned char code hz[65]={"  中文模块C 型  液晶图文显示器--    演示程序                    "};
+ 135   1          unsigned char code hz1[65]={"  英文字符显示  a b c d e f g h i j k l m n o p q r s t u v wxyz"};
+ 136   1          unsigned char code hz2[65]={"  英文字符显示  A B C D E F G H I J K L M N O P Q R S T U V WXYZ"};
+ 137   1          unsigned char code hz3[65]={"  数字符号显示  0 1 2 3 4 5 6 7 8 9 ~ !   # $ % ^ & * ( ) - + = "};
+ 138   1          unsigned char code hz4[65]={"+++++++++++++++++ 欢迎使用LCD  ++   液晶显示屏 +++++++++++++++++"};    
+ 139   1      //      while(1)
+ 140   1              {
+ 141   2                      screen(hz);
+ 142   2                      delay(30000);
+ 143   2                      screen(hz1);
+ 144   2                      delay(30000);
+ 145   2                      screen(hz2);
+ 146   2                      delay(30000);
+ 147   2                      screen(hz3);
+ 148   2                      delay(30000);
+ 149   2                      screen(hz4);
+ 150   2                      delay(30000);
+ 151   2      //              paint();
+ 152   2      //              delay(30000);
+ 153   2      
+ 154   2              }
+ 155   1      }
+ 156          
+ 157          void clear_lcd_buffer()
+ 158          {
+ 159   1              int i;
+ 160   1              for(i=0;i<16;i++)
+ 161   1              {
+ 162   2              lcd_buffer[i]=' ';              
+ 163   2              }
+ 164   1      }
+ 165          
+ 166          
+ 167                  
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    408    ----
+   CONSTANT SIZE    =    325    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     16       8
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

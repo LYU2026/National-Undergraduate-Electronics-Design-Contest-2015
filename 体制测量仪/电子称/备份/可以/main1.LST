@@ -1,0 +1,145 @@
+C51 COMPILER V9.52.0.0   MAIN1                                                             07/21/2015 20:39:05 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE MAIN1
+OBJECT MODULE PLACED IN main1.OBJ
+COMPILER INVOKED BY: C:\Program Files\keil\C51\BIN\C51.EXE main1.c BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #include<reg52.h>
+   2          #include"main.h"
+   3          #include"lcd.h"
+   4          #include"lcd12864.h"
+   5          #include "uart.h"
+   6          void main()
+   7          {
+   8   1        InitUart();
+   9   1        //LCD1602_Init();
+  10   1        //lcd_init(); 
+  11   1        Get_Maopi(); 
+  12   1        /*LCD12864_DisplayOneCharOnAddr(2,0,'0');
+  13   1          LCD12864_DisplayOneCharOnAddr(2,1,'.');
+  14   1          LCD12864_DisplayOneCharOnAddr(2,2,0x30);*/
+  15   1        SendData('u');
+  16   1        showdata[0]='#';
+  17   1          while(1)
+  18   1         {
+  19   2           Get_Weight() ;
+  20   2           
+  21   2           //Show_Weight2();
+  22   2          // senddata=k;
+  23   2          // if(receiveData=='#')
+  24   2          // {
+  25   2             for(i=0;i<5;i++)
+  26   2             {SendData(showdata[i]);}
+  27   2            //}
+  28   2         }
+  29   1       }
+  30           void Get_Maopi() 
+  31          {  
+  32   1      //  HX711_Buffer = ReadCount();  
+  33   1        //Weight_Maopi = HX711_Buffer; 
+  34   1        for(i=0;i<10;i++)
+  35   1        {
+  36   2          HX711_Buffer =ReadCount();  
+  37   2          HX711_Buffer=HX711_Buffer>>8;
+  38   2          //HX711_Buffer = HX711_Buffer/100; 
+  39   2          Weight_Maopi +=HX711_Buffer;
+  40   2        }
+  41   1        Weight_Maopi=Weight_Maopi/10;  
+  42   1        //Weight_Shiwu=(unsigned int)((float)Weight_Shiwu*0.05-6);
+  43   1      } 
+  44           void Get_Weight() 
+  45          {
+  46   1        /*HX711_Buffer =ReadCount();  
+  47   1        Weight_Shiwu = HX711_Buffer/100;
+  48   1        Weight_Shiwu = (unsigned int)((float)Weight_Shiwu /4.22+0.05); */
+  49   1        for(i=0;i<10;i++)
+  50   1        {
+  51   2          HX711_Buffer =ReadCount();  
+  52   2          HX711_Buffer=HX711_Buffer>>8;
+  53   2          //HX711_Buffer = HX711_Buffer/100; 
+  54   2          Weight_Shiwu +=HX711_Buffer;
+  55   2        }
+C51 COMPILER V9.52.0.0   MAIN1                                                             07/21/2015 20:39:05 PAGE 2   
+
+  56   1        Weight_Shiwu=Weight_Shiwu/10;
+  57   1        //Weight_Shiwu=(unsigned int)((float)Weight_Shiwu*0.05-6);
+  58   1        //Weight_Shiwu=(long)((float)(Weight_Shiwu-546)*9.9); //??????,???????????????
+  59   1        //Weight_Shiwu=(Weight_Shiwu+50)/100*100;
+  60   1        Weight_Shiwu=Weight_Shiwu-Weight_Maopi;
+  61   1        if(Weight_Shiwu>0x1770)
+  62   1          {Weight_Shiwu = (unsigned int)((float)Weight_Shiwu *1.04+0.007); }
+  63   1        if(Weight_Shiwu<=0x1770&&Weight_Shiwu>0x03e8)
+  64   1        {Weight_Shiwu = (unsigned int)((float)Weight_Shiwu *1.04+0.006); }
+  65   1        
+  66   1        if(Weight_Shiwu<=0x03e8&&Weight_Shiwu>0x0190)
+  67   1          {Weight_Shiwu=(unsigned int)((float)Weight_Shiwu+0x26);}
+  68   1          if(Weight_Shiwu<=0x0190&&Weight_Shiwu>0x0064)
+  69   1        {Weight_Shiwu=(unsigned int)((float)Weight_Shiwu+3.8);}
+  70   1        if(Weight_Shiwu<0x0064&&Weight_Shiwu>0x0002)
+  71   1        {Weight_Shiwu=(unsigned int)((float)Weight_Shiwu+0.15);}
+  72   1        if(Weight_Shiwu<=0x0002)
+  73   1        {Weight_Shiwu=0;}
+  74   1        k=Weight_Shiwu;
+  75   1        showdata[1]=(k%10000/1000 + 0x30);
+  76   1        showdata[2]=(k%1000/100 + 0x30);
+  77   1        //showdata[2]='.';
+  78   1        showdata[3]=(k%100/10 + 0x30);
+  79   1        showdata[4]=(k%10 + 0x30);
+  80   1      }
+  81          void Show_Weight()
+  82          {
+  83   1        //Weight_Shiwu-=MaoPi;
+  84   1          LCD1602_WriteInformation((0x80+0x40),0);
+  85   1        //ight_Shiwu=Weight_Shiwu<<4;
+  86   1         //Weight_Shiwu=(unsigned int)((float)Weight_Shiwu*10+200);
+  87   1        //Weight_Shiwu=Weight_Shiwu>>4;
+  88   1      //  k=((k+12.61)*0.591/47.9);
+  89   1        //k=100*k;
+  90   1        //k=k>>8;
+  91   1        //LCD1602_DisplayOneCharOnAddr(0,0,(k/100000 + 0x30));  
+  92   1        //LCD1602_DisplayOneCharOnAddr(0,1,(k%100000/10000 + 0x30));  
+  93   1        //LCD1602_DisplayOneCharOnAddr(0,2,(k/10000 + 0x30));  
+  94   1         LCD1602_DisplayOneCharOnAddr(0,0,(k%10000/1000 + 0x30));   
+  95   1        // LCD1602_DisplayOneCharOnAddr(0,1,'.');    
+  96   1         LCD1602_DisplayOneCharOnAddr(0,1,(k%1000/100 + 0x30));   
+  97   1        LCD1602_DisplayOneCharOnAddr(0,2,'.');  
+  98   1         LCD1602_DisplayOneCharOnAddr(0,3,(k%100/10 + 0x30));  
+  99   1         LCD1602_DisplayOneCharOnAddr(0,4,(k%10 + 0x30));
+ 100   1      }
+ 101          
+ 102          void Show_Weight2()
+ 103          {
+ 104   1        //  LCD1602_WriteInformation((0x80+0x40),0);
+ 105   1        
+ 106   1        
+ 107   1         LCD12864_DisplayOneCharOnAddr(1,0,(k%10000/1000 + 0x30));   
+ 108   1        LCD12864_DisplayOneCharOnAddr(1,1,(k%1000/100 + 0x30));   
+ 109   1        LCD12864_DisplayOneCharOnAddr(1,2,'.');  
+ 110   1         LCD12864_DisplayOneCharOnAddr(1,3,(k%100/10 + 0x30));  
+ 111   1        LCD12864_DisplayOneCharOnAddr(1,4,(k%10 + 0x30));
+ 112   1      }
+ 113          void Usart() interrupt 4
+ 114          {
+ 115   1        receiveData=SBUF;//出去接收到的数据
+ 116   1        RI = 0;//清除接收中断标志位
+ 117   1      }
+C51 COMPILER V9.52.0.0   MAIN1                                                             07/21/2015 20:39:05 PAGE 3   
+
+*** WARNING C316 IN LINE 117 OF main1.c: unterminated conditionals
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   1222    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     33    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)

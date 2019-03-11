@@ -1,0 +1,193 @@
+C51 COMPILER V9.01   LCD                                                                   06/18/2015 19:10:48 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE LCD
+OBJECT MODULE PLACED IN lcd.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE lcd.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <reg52.h>
+   2          
+   3          #include "lcd.h"
+   4          #include "74hc164.h"
+   5          #include "74hc165.h"
+   6          /**********************************
+   7          PIN口定义
+   8          **********************************/
+   9          sbit LCD_E=P1^2;
+  10          sbit LCD_RW=P1^1;
+  11          sbit LCD_RS=P1^0;
+  12          
+  13          unsigned char lcd_buffer[]={"0123456789ABCDEF"};
+  14          
+  15          unsigned char code ascii[]={"0123456789abcdef"};
+  16          
+  17          /*******************************************************************************
+  18          * 函 数 名         : Lcd1602_Delay1ms
+  19          * 函数功能                 : 延时函数，延时1ms
+  20          * 输    入         : c
+  21          * 输    出         : 无
+  22          * 说    名         : 该函数是在12MHZ晶振下，12分频单片机的延时。
+  23          *******************************************************************************/
+  24          
+  25          void Lcd1602_Delay1ms(unsigned int c)   //误差 0us
+  26          {
+  27   1          unsigned char a,b;
+  28   1              for (; c>0; c--)
+  29   1              {
+  30   2                       for (b=199;b>0;b--)
+  31   2                       {
+  32   3                              for(a=1;a>0;a--);
+  33   3                       }      
+  34   2              }
+  35   1      }
+  36          
+  37          /*******************************************************************************
+  38          * 函 数 名         : LcdWriteCom
+  39          * 函数功能                 : 向LCD写入一个字节的命令
+  40          * 输    入         : com
+  41          * 输    出         : 无
+  42          *******************************************************************************/
+  43          void LcdWriteCom(unsigned char com)       //写入命令
+  44          {       
+  45   1              unsigned char x;
+  46   1              LCD_E = 0;       //使能清零
+  47   1              LCD_RS = 0;      //选择写入命令
+  48   1              LCD_RW = 0;      //选择写入
+  49   1      
+  50   1              send_data(com); //由于4位的接线是接到P0口的高四位，所以传送高四位不用改
+  51   1              x++;
+  52   1              LCD_E = 1;       //写入时序
+  53   1              x++;
+  54   1              LCD_E = 0;
+  55   1              Lcd1602_Delay1ms(1);
+C51 COMPILER V9.01   LCD                                                                   06/18/2015 19:10:48 PAGE 2   
+
+  56   1      }
+  57          /*******************************************************************************
+  58          * 函 数 名         : LcdWriteData
+  59          * 函数功能                 : 向LCD写入一个字节的数据
+  60          * 输    入         : dat
+  61          * 输    出         : 无
+  62          *******************************************************************************/                   
+  63          void LcdWriteData(unsigned char dat)                    //写入数据
+  64          {
+  65   1              unsigned char x;
+  66   1              LCD_E = 0;        //使能清零
+  67   1              LCD_RS = 1;       //选择写入数据
+  68   1              LCD_RW = 0;       //选择写入
+  69   1      
+  70   1              send_data(dat); 
+  71   1              x++;
+  72   1              LCD_E = 1;        //写入时序
+  73   1              x++;
+  74   1              LCD_E = 0;
+  75   1              Lcd1602_Delay1ms(1);
+  76   1      }
+  77          /*******************************************************************************
+  78          * 函 数 名       : LcdInit()
+  79          * 函数功能               : 初始化LCD屏
+  80          * 输    入       : 无
+  81          * 输    出       : 无
+  82          *******************************************************************************/                   
+  83          void LcdInit()                                            //LCD初始化子程序
+  84          {
+  85   1          unsigned char code zifu[] ={0x04,0x0F,0x12,0x0F,0x0A,0x1F,0x02,0x02,                //年  ascii码=0x00
+  86   1                                                                      0x0F,0x09,0x0F,0x09,0x0F,0x09,0x11,0x00,                //月  ascii码=0x01
+  87   1                                                                      0x00,0x0F,0x09,0x0F,0x09,0x0F,0x00,0x00,                //日  ascii码=0x01
+  88   1                                                                      0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+  89   1                                                                      0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+  90   1                                                                      0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+  91   1                                                                      0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+  92   1                                                                      0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00};
+  93   1              unsigned char i;
+  94   1      
+  95   1              LcdWriteCom(0x38);       
+  96   1              LcdWriteCom(0x0c);  //开显示不显示光标
+  97   1              LcdWriteCom(0x06);  //写一个指针加1
+  98   1              LcdWriteCom(0x01);  //清屏
+  99   1              Lcd1602_Delay1ms(5);
+ 100   1      
+ 101   1              LcdWriteCom(0x40);       
+ 102   1      
+ 103   1          for(i=0;i<64;i++)
+ 104   1              {
+ 105   2                      LcdWriteData(zifu[i]);
+ 106   2              }
+ 107   1      }
+ 108          
+ 109          void disp_line(unsigned char line)   //line=0,第1行显示；line=1,第2行显示
+ 110          {
+ 111   1              unsigned char i;
+ 112   1              if(line==0)
+ 113   1              {
+ 114   2                      LcdWriteCom(0x80+0x00);  //
+ 115   2              }
+ 116   1              else
+ 117   1              {
+C51 COMPILER V9.01   LCD                                                                   06/18/2015 19:10:48 PAGE 3   
+
+ 118   2                      LcdWriteCom(0x80+0x40);  //
+ 119   2              }
+ 120   1              for(i=0;i<16;i++)
+ 121   1              {
+ 122   2                      LcdWriteData(lcd_buffer[i]);
+ 123   2              }
+ 124   1      }
+ 125          
+ 126          void disp_demo()
+ 127          {
+ 128   1              unsigned char i,j;
+ 129   1              unsigned char x=0;
+ 130   1      
+ 131   1              for(j=0;j<8;j++)
+ 132   1              { 
+ 133   2              LcdWriteCom(0x80+0x00);
+ 134   2                      for(i=0;i<16;i++)
+ 135   2                      {
+ 136   3                              LcdWriteData(x++);
+ 137   3                      }
+ 138   2                  LcdWriteCom(0x80+0x40); 
+ 139   2                      for(i=0;i<16;i++)
+ 140   2                      {
+ 141   3                              LcdWriteData(x++);
+ 142   3                      }
+ 143   2                  Lcd1602_Delay1ms(5000);
+ 144   2              }               
+ 145   1      }
+ 146          
+ 147          void disp_keycode()
+ 148          {
+ 149   1          lcd_buffer[0]='K';
+ 150   1          lcd_buffer[1]='E';
+ 151   1          lcd_buffer[2]='Y';
+ 152   1          lcd_buffer[3]='C';
+ 153   1          lcd_buffer[4]='O';
+ 154   1          lcd_buffer[5]='D';
+ 155   1          lcd_buffer[6]='E';
+ 156   1          lcd_buffer[7]=':';
+ 157   1          lcd_buffer[8]='0';
+ 158   1          lcd_buffer[9]='x';
+ 159   1          lcd_buffer[10]=ascii[key/16];
+ 160   1          lcd_buffer[11]=ascii[key%16];
+ 161   1          lcd_buffer[12]=' ';
+ 162   1          lcd_buffer[13]=' ';
+ 163   1          lcd_buffer[14]=' ';
+ 164   1          lcd_buffer[15]=' ';
+ 165   1              disp_line(0);
+ 166   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    298    ----
+   CONSTANT SIZE    =     81    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     17       7
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

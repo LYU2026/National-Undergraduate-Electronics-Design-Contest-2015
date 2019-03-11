@@ -1,0 +1,5 @@
+"main.obj",
+"74HC164.obj",
+"lcd.obj" 
+TO "LCDContrle" 
+RAMSIZE(256) 

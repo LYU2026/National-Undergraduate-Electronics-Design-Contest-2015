@@ -1,0 +1,1503 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+D:\Study\单片机\电子设计大赛\LAB2\lab.uvproj
+Project File Date:  05/29/2015
+
+<h2>Output:</h2>
+compiling mian.c...
+mian.c(7): warning C206: 'delay_mian': missing function-prototype
+mian.c(7): error C267: 'delay_mian': requires ANSI-style prototype
+mian.c(17): error C231: 'delay_mian': redefinition
+mian.c(29): error C231: 'delay_mian': redefinition
+mian.c - 3 Error(s), 1 Warning(s).
+compiling mian.c...
+mian.c(3): warning C318: can't open file 'main.h'
+mian.c(8): warning C206: 'delay_mian': missing function-prototype
+mian.c(8): error C267: 'delay_mian': requires ANSI-style prototype
+mian.c(18): error C231: 'delay_mian': redefinition
+mian.c(30): error C231: 'delay_mian': redefinition
+mian.c - 3 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling mian.c...
+mian.c(3): warning C318: can't open file 'main.h'
+mian.c(8): warning C206: 'delay_mian': missing function-prototype
+mian.c(8): error C267: 'delay_mian': requires ANSI-style prototype
+mian.c(18): error C231: 'delay_mian': redefinition
+mian.c(30): error C231: 'delay_mian': redefinition
+compiling 12864.c...
+Target not created
+compiling mian.c...
+mian.c(3): warning C318: can't open file 'main.h'
+mian.c(8): warning C206: 'delay_mian': missing function-prototype
+mian.c(8): error C267: 'delay_mian': requires ANSI-style prototype
+mian.c(18): error C231: 'delay_mian': redefinition
+mian.c(30): error C231: 'delay_mian': redefinition
+mian.c - 3 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling mian.c...
+mian.c(3): warning C318: can't open file 'main.h'
+mian.c(8): warning C206: 'delay_mian': missing function-prototype
+mian.c(8): error C267: 'delay_mian': requires ANSI-style prototype
+mian.c(18): error C231: 'delay_mian': redefinition
+mian.c(30): error C231: 'delay_mian': redefinition
+Target not created
+compiling mian.c...
+mian.c(3): warning C318: can't open file 'main.h'
+mian.c(8): warning C206: 'delay_mian': missing function-prototype
+mian.c(8): error C267: 'delay_mian': requires ANSI-style prototype
+mian.c(18): error C231: 'delay_mian': redefinition
+mian.c(30): error C231: 'delay_mian': redefinition
+mian.c - 3 Error(s), 2 Warning(s).
+compiling mian.c...
+mian.c(3): warning C318: can't open file 'main.h'
+mian.c(8): warning C206: 'delay_mian': missing function-prototype
+mian.c(8): error C267: 'delay_mian': requires ANSI-style prototype
+mian.c(18): error C231: 'delay_mian': redefinition
+mian.c(30): error C231: 'delay_mian': redefinition
+mian.c - 3 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling mian.c...
+mian.c(3): warning C318: can't open file 'main.h'
+mian.c(8): warning C206: 'delay_mian': missing function-prototype
+mian.c(8): error C267: 'delay_mian': requires ANSI-style prototype
+mian.c(18): error C231: 'delay_mian': redefinition
+mian.c(30): error C231: 'delay_mian': redefinition
+Target not created
+compiling mian.c...
+mian.c(3): warning C318: can't open file 'main.h'
+mian.c(8): warning C206: 'delay_main': missing function-prototype
+mian.c(8): error C267: 'delay_main': requires ANSI-style prototype
+mian.c(18): error C231: 'delay_main': redefinition
+mian.c(30): error C231: 'delay_main': redefinition
+mian.c - 3 Error(s), 2 Warning(s).
+compiling main.c...
+main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_POS?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+Program Size: data=15.1 xdata=0 code=598
+"lab" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling 12864.c...
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_POS?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+Program Size: data=9.1 xdata=6 code=650
+creating hex file from "lab"...
+"lab" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling 12864.c...
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_POS?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+Program Size: data=9.1 xdata=6 code=650
+creating hex file from "lab"...
+"lab" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_POS?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+Program Size: data=9.1 xdata=6 code=650
+creating hex file from "lab"...
+"lab" - 0 Error(s), 4 Warning(s).
+compiling main.c...
+main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling ds1302.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAY
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAY
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0050H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAY
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0105H
+Program Size: data=9.1 xdata=15 code=1219
+creating hex file from "lab"...
+"lab" - 0 Error(s), 7 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling ds1302.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAY
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAY
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0050H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAY
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0105H
+Program Size: data=9.1 xdata=15 code=1219
+creating hex file from "lab"...
+"lab" - 0 Error(s), 7 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAY
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAY
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0050H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAY
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0105H
+Program Size: data=9.1 xdata=15 code=1214
+creating hex file from "lab"...
+"lab" - 0 Error(s), 7 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=9.1 xdata=16 code=1214
+creating hex file from "lab"...
+"lab" - 0 Error(s), 4 Warning(s).
+compiling main.c...
+main.c(102): warning C280: 'p2': unreferenced local variable
+main.c - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling 18B20.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=9.1 xdata=39 code=2827
+creating hex file from "lab"...
+"lab" - 0 Error(s), 5 Warning(s).
+compiling 18B20.c...
+18B20.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(102): warning C280: 'p2': unreferenced local variable
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=9.1 xdata=39 code=2827
+creating hex file from "lab"...
+"lab" - 0 Error(s), 6 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=9.1 xdata=39 code=2827
+creating hex file from "lab"...
+"lab" - 0 Error(s), 5 Warning(s).
+compiling 18B20.c...
+18B20.c(39): error C174: return-expression on void-function
+18B20.c - 1 Error(s), 0 Warning(s).
+compiling main.c...
+main.c(103): warning C280: 'p2': unreferenced local variable
+main.c - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling 18B20.c...
+18B20.c(39): error C174: return-expression on void-function
+Target not created
+compiling 18B20.c...
+18B20.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(103): warning C280: 'p2': unreferenced local variable
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=9.1 xdata=39 code=2827
+creating hex file from "lab"...
+"lab" - 0 Error(s), 6 Warning(s).
+compiling main.c...
+C:\Program Files\keil\C51\Inc\reg51.h(13): error C231: 'P0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(14): error C231: 'P1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(15): error C231: 'P2': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(16): error C231: 'P3': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(17): error C231: 'PSW': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(18): error C231: 'ACC': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(19): error C231: 'B': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(20): error C231: 'SP': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(21): error C231: 'DPL': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(22): error C231: 'DPH': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(23): error C231: 'PCON': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(24): error C231: 'TCON': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(25): error C231: 'TMOD': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(26): error C231: 'TL0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(27): error C231: 'TL1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(28): error C231: 'TH0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(29): error C231: 'TH1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(30): error C231: 'IE': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(31): error C231: 'IP': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(32): error C231: 'SCON': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(33): error C231: 'SBUF': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(38): error C231: 'CY': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(39): error C231: 'AC': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(40): error C231: 'F0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(41): error C231: 'RS1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(42): error C231: 'RS0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(43): error C231: 'OV': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(44): error C231: 'P': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(47): error C231: 'TF1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(48): error C231: 'TR1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(49): error C231: 'TF0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(50): error C231: 'TR0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(51): error C231: 'IE1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(52): error C231: 'IT1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(53): error C231: 'IE0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(54): error C231: 'IT0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(57): error C231: 'EA': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(58): error C231: 'ES': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(59): error C231: 'ET1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(60): error C231: 'EX1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(61): error C231: 'ET0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(62): error C231: 'EX0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(65): error C231: 'PS': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(66): error C231: 'PT1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(67): error C231: 'PX1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(68): error C231: 'PT0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(69): error C231: 'PX0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(72): error C231: 'RD': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(73): error C231: 'WR': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(74): error C231: 'T1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(75): error C231: 'T0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(76): error C231: 'INT1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(77): error C231: 'INT0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(78): error C231: 'TXD': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(79): error C231: 'RXD': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(82): error C231: 'SM0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(83): error C231: 'SM1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(84): error C231: 'SM2': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(85): error C231: 'REN': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(86): error C231: 'TB8': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(87): error C231: 'RB8': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(88): error C231: 'TI': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(89): error C231: 'RI': redefinition
+main.c - 63 Error(s), 0 Warning(s).
+compiling main.c...
+main.c(103): warning C280: 'p2': unreferenced local variable
+main.c - 0 Error(s), 1 Warning(s).
+Rebuild target 'Target 1'
+compiling 12864.c...
+compiling main.c...
+main.c(103): warning C280: 'p2': unreferenced local variable
+compiling ds1302.c...
+compiling 18B20.c...
+18B20.c(1): warning C318: can't open file 'temp.h'
+18B20.c(9): error C141: syntax error near 'y', expected ')'
+18B20.c(11): error C141: syntax error near 'x'
+18B20.c(11): error C202: 'x': undefined identifier
+18B20.c(12): error C202: 'y': undefined identifier
+18B20.c(14): error C202: 'x': undefined identifier
+18B20.c(24): error C129: missing ';' before 'Ds18b20Init'
+Target not created
+compiling 18B20.c...
+18B20.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=9.1 xdata=39 code=2827
+creating hex file from "lab"...
+"lab" - 0 Error(s), 5 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=9.1 xdata=39 code=2827
+creating hex file from "lab"...
+"lab" - 0 Error(s), 5 Warning(s).
+compiling main.c...
+main.c(103): warning C280: 'p2': unreferenced local variable
+main.c - 0 Error(s), 1 Warning(s).
+compiling main.c...
+main.c(105): warning C280: 'p2': unreferenced local variable
+main.c - 0 Error(s), 1 Warning(s).
+compiling I2C.c...
+I2C.c - 0 Error(s), 0 Warning(s).
+compiling main.c...
+main.c(105): warning C280: 'p2': unreferenced local variable
+main.c(188): error C202: 'DIS6': undefined identifier
+main.c - 1 Error(s), 1 Warning(s).
+compiling main.c...
+main.c(105): warning C280: 'p2': unreferenced local variable
+main.c - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ADDISPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RCVBYTE?I2C
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ACK_I2C?I2C
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _IRCVBYTE
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAY
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _IRCVBYTE
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 06EAH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAY
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 07EDH
+Program Size: data=9.3 xdata=143 code=3433
+creating hex file from "lab"...
+"lab" - 0 Error(s), 13 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(106): warning C280: 'p2': unreferenced local variable
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DS18B20READTEMP?18B20
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RCVBYTE?I2C
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ACK_I2C?I2C
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _IRCVBYTE
+    MODULE:  main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _DELAY
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _IRCVBYTE
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 06EAH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _DELAY
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 07EDH
+Program Size: data=9.3 xdata=145 code=3430
+creating hex file from "lab"...
+"lab" - 0 Error(s), 15 Warning(s).
+compiling main.c...
+main.c(106): warning C280: 'p2': unreferenced local variable
+main.c(182): warning C294: unreachable code
+main.c - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DS18B20READTEMP?18B20
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?RCVBYTE?I2C
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ACK_I2C?I2C
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _IRCVBYTE
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _IRCVBYTE
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 06EAH
+Program Size: data=9.3 xdata=145 code=3325
+creating hex file from "lab"...
+"lab" - 0 Error(s), 12 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(106): warning C280: 'p2': unreferenced local variable
+main.c(182): warning C294: unreachable code
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DS18B20READTEMP?18B20
+Program Size: data=9.2 xdata=145 code=3370
+creating hex file from "lab"...
+"lab" - 0 Error(s), 10 Warning(s).
+compiling main.c...
+main.c(106): warning C280: 'p2': unreferenced local variable
+main.c(182): warning C294: unreachable code
+main.c - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DS18B20READTEMP?18B20
+Program Size: data=9.2 xdata=145 code=3370
+creating hex file from "lab"...
+"lab" - 0 Error(s), 8 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(106): warning C280: 'p2': unreferenced local variable
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DS18B20READTEMP?18B20
+Program Size: data=9.2 xdata=145 code=3464
+creating hex file from "lab"...
+"lab" - 0 Error(s), 9 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(106): warning C280: 'p2': unreferenced local variable
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DS18B20READTEMP?18B20
+Program Size: data=9.2 xdata=145 code=3471
+creating hex file from "lab"...
+"lab" - 0 Error(s), 9 Warning(s).
+compiling main.c...
+main.c(106): warning C280: 'p2': unreferenced local variable
+main.c - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ADDISPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=9.3 xdata=145 code=3474
+creating hex file from "lab"...
+"lab" - 0 Error(s), 7 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(107): warning C280: 'p2': unreferenced local variable
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ADDISPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=9.3 xdata=145 code=3481
+creating hex file from "lab"...
+"lab" - 0 Error(s), 8 Warning(s).
+Build target 'Target 1'
+compiling 12864.c...
+C:\Program Files\keil\C51\Inc\reg51.h(13): error C231: 'P0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(14): error C231: 'P1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(15): error C231: 'P2': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(16): error C231: 'P3': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(17): error C231: 'PSW': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(18): error C231: 'ACC': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(19): error C231: 'B': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(20): error C231: 'SP': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(21): error C231: 'DPL': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(22): error C231: 'DPH': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(23): error C231: 'PCON': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(24): error C231: 'TCON': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(25): error C231: 'TMOD': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(26): error C231: 'TL0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(27): error C231: 'TL1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(28): error C231: 'TH0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(29): error C231: 'TH1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(30): error C231: 'IE': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(31): error C231: 'IP': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(32): error C231: 'SCON': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(33): error C231: 'SBUF': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(38): error C231: 'CY': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(39): error C231: 'AC': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(40): error C231: 'F0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(41): error C231: 'RS1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(42): error C231: 'RS0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(43): error C231: 'OV': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(44): error C231: 'P': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(47): error C231: 'TF1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(48): error C231: 'TR1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(49): error C231: 'TF0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(50): error C231: 'TR0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(51): error C231: 'IE1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(52): error C231: 'IT1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(53): error C231: 'IE0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(54): error C231: 'IT0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(57): error C231: 'EA': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(58): error C231: 'ES': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(59): error C231: 'ET1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(60): error C231: 'EX1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(61): error C231: 'ET0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(62): error C231: 'EX0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(65): error C231: 'PS': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(66): error C231: 'PT1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(67): error C231: 'PX1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(68): error C231: 'PT0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(69): error C231: 'PX0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(72): error C231: 'RD': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(73): error C231: 'WR': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(74): error C231: 'T1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(75): error C231: 'T0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(76): error C231: 'INT1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(77): error C231: 'INT0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(78): error C231: 'TXD': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(79): error C231: 'RXD': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(82): error C231: 'SM0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(83): error C231: 'SM1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(84): error C231: 'SM2': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(85): error C231: 'REN': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(86): error C231: 'TB8': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(87): error C231: 'RB8': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(88): error C231: 'TI': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(89): error C231: 'RI': redefinition
+compiling main.c...
+C:\Program Files\keil\C51\Inc\reg51.h(13): error C231: 'P0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(14): error C231: 'P1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(15): error C231: 'P2': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(16): error C231: 'P3': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(17): error C231: 'PSW': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(18): error C231: 'ACC': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(19): error C231: 'B': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(20): error C231: 'SP': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(21): error C231: 'DPL': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(22): error C231: 'DPH': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(23): error C231: 'PCON': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(24): error C231: 'TCON': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(25): error C231: 'TMOD': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(26): error C231: 'TL0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(27): error C231: 'TL1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(28): error C231: 'TH0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(29): error C231: 'TH1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(30): error C231: 'IE': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(31): error C231: 'IP': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(32): error C231: 'SCON': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(33): error C231: 'SBUF': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(38): error C231: 'CY': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(39): error C231: 'AC': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(40): error C231: 'F0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(41): error C231: 'RS1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(42): error C231: 'RS0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(43): error C231: 'OV': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(44): error C231: 'P': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(47): error C231: 'TF1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(48): error C231: 'TR1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(49): error C231: 'TF0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(50): error C231: 'TR0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(51): error C231: 'IE1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(52): error C231: 'IT1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(53): error C231: 'IE0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(54): error C231: 'IT0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(57): error C231: 'EA': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(58): error C231: 'ES': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(59): error C231: 'ET1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(60): error C231: 'EX1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(61): error C231: 'ET0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(62): error C231: 'EX0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(65): error C231: 'PS': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(66): error C231: 'PT1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(67): error C231: 'PX1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(68): error C231: 'PT0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(69): error C231: 'PX0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(72): error C231: 'RD': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(73): error C231: 'WR': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(74): error C231: 'T1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(75): error C231: 'T0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(76): error C231: 'INT1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(77): error C231: 'INT0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(78): error C231: 'TXD': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(79): error C231: 'RXD': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(82): error C231: 'SM0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(83): error C231: 'SM1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(84): error C231: 'SM2': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(85): error C231: 'REN': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(86): error C231: 'TB8': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(87): error C231: 'RB8': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(88): error C231: 'TI': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(89): error C231: 'RI': redefinition
+compiling 18B20.c...
+Target not created
+Build target 'Target 1'
+compiling 12864.c...
+compiling main.c...
+main.c(107): warning C280: 'p2': unreferenced local variable
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ADDISPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=9.3 xdata=145 code=3474
+creating hex file from "lab"...
+"lab" - 0 Error(s), 8 Warning(s).
+Rebuild target 'Target 1'
+compiling 12864.c...
+compiling main.c...
+main.c(107): warning C280: 'p2': unreferenced local variable
+compiling ds1302.c...
+compiling 18B20.c...
+compiling I2C.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ADDISPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=9.3 xdata=145 code=3467
+creating hex file from "lab"...
+"lab" - 0 Error(s), 8 Warning(s).
+compiling main.c...
+main.c(107): warning C280: 'p2': unreferenced local variable
+main.c - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCD_INIT?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ADDISPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=9.3 xdata=146 code=3464
+creating hex file from "lab"...
+"lab" - 0 Error(s), 8 Warning(s).
+compiling main.c...
+main.c(107): warning C280: 'p2': unreferenced local variable
+main.c - 0 Error(s), 1 Warning(s).
+compiling main.c...
+main.c(107): warning C280: 'p2': unreferenced local variable
+main.c - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ADDISPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=9.3 xdata=145 code=3467
+creating hex file from "lab"...
+"lab" - 0 Error(s), 7 Warning(s).
+Rebuild target 'Target 1'
+compiling 12864.c...
+compiling main.c...
+main.c(107): warning C280: 'p2': unreferenced local variable
+compiling ds1302.c...
+compiling 18B20.c...
+compiling I2C.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ADDISPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=9.3 xdata=145 code=3467
+creating hex file from "lab"...
+"lab" - 0 Error(s), 8 Warning(s).
+compiling main.c...
+main.c(107): warning C280: 'p2': unreferenced local variable
+main.c - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ADDISPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=9.3 xdata=145 code=3467
+creating hex file from "lab"...
+"lab" - 0 Error(s), 7 Warning(s).
+Rebuild target 'Target 1'
+compiling 12864.c...
+compiling main.c...
+main.c(107): warning C280: 'p2': unreferenced local variable
+compiling ds1302.c...
+compiling 18B20.c...
+compiling I2C.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ADDISPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=9.3 xdata=145 code=3467
+creating hex file from "lab"...
+"lab" - 0 Error(s), 8 Warning(s).
+compiling main.c...
+main.c(109): warning C280: 'p2': unreferenced local variable
+main.c - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ADDISPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=9.3 xdata=147 code=3482
+creating hex file from "lab"...
+"lab" - 0 Error(s), 7 Warning(s).
+compiling main.c...
+main.c(110): warning C280: 'p2': unreferenced local variable
+main.c - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ADDISPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+Program Size: data=9.3 xdata=147 code=3487
+creating hex file from "lab"...
+"lab" - 0 Error(s), 7 Warning(s).
+compiling main.c...
+C:\Program Files\keil\C51\Inc\reg51.h(13): error C231: 'P0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(14): error C231: 'P1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(15): error C231: 'P2': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(16): error C231: 'P3': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(17): error C231: 'PSW': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(18): error C231: 'ACC': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(19): error C231: 'B': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(20): error C231: 'SP': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(21): error C231: 'DPL': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(22): error C231: 'DPH': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(23): error C231: 'PCON': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(24): error C231: 'TCON': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(25): error C231: 'TMOD': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(26): error C231: 'TL0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(27): error C231: 'TL1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(28): error C231: 'TH0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(29): error C231: 'TH1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(30): error C231: 'IE': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(31): error C231: 'IP': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(32): error C231: 'SCON': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(33): error C231: 'SBUF': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(38): error C231: 'CY': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(39): error C231: 'AC': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(40): error C231: 'F0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(41): error C231: 'RS1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(42): error C231: 'RS0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(43): error C231: 'OV': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(44): error C231: 'P': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(47): error C231: 'TF1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(48): error C231: 'TR1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(49): error C231: 'TF0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(50): error C231: 'TR0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(51): error C231: 'IE1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(52): error C231: 'IT1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(53): error C231: 'IE0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(54): error C231: 'IT0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(57): error C231: 'EA': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(58): error C231: 'ES': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(59): error C231: 'ET1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(60): error C231: 'EX1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(61): error C231: 'ET0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(62): error C231: 'EX0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(65): error C231: 'PS': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(66): error C231: 'PT1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(67): error C231: 'PX1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(68): error C231: 'PT0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(69): error C231: 'PX0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(72): error C231: 'RD': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(73): error C231: 'WR': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(74): error C231: 'T1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(75): error C231: 'T0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(76): error C231: 'INT1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(77): error C231: 'INT0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(78): error C231: 'TXD': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(79): error C231: 'RXD': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(82): error C231: 'SM0': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(83): error C231: 'SM1': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(84): error C231: 'SM2': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(85): error C231: 'REN': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(86): error C231: 'TB8': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(87): error C231: 'RB8': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(88): error C231: 'TI': redefinition
+C:\Program Files\keil\C51\Inc\reg51.h(89): error C231: 'RI': redefinition
+main.c - 63 Error(s), 0 Warning(s).
+compiling main.c...
+main.c(173): warning C206: 'delay0': missing function-prototype
+main.c(173): error C267: 'delay0': requires ANSI-style prototype
+main.c - 1 Error(s), 1 Warning(s).
+compiling main.c...
+main.c(210): warning C206: 'NOP': missing function-prototype
+main.c - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling temp.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ADDISPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0A09H
+Program Size: data=9.3 xdata=151 code=3571
+creating hex file from "lab"...
+"lab" - 0 Error(s), 9 Warning(s).
+Rebuild target 'Target 1'
+compiling 12864.c...
+compiling main.c...
+main.c(210): warning C206: 'NOP': missing function-prototype
+compiling ds1302.c...
+compiling I2C.c...
+compiling temp.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ADDISPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0A09H
+Program Size: data=9.3 xdata=151 code=3571
+creating hex file from "lab"...
+"lab" - 0 Error(s), 10 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(210): warning C206: 'NOP': missing function-prototype
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ADDISPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0A09H
+Program Size: data=9.3 xdata=151 code=3566
+creating hex file from "lab"...
+"lab" - 0 Error(s), 10 Warning(s).
+Rebuild target 'Target 1'
+compiling 12864.c...
+compiling main.c...
+main.c(210): warning C206: 'NOP': missing function-prototype
+compiling ds1302.c...
+compiling I2C.c...
+compiling temp.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ADDISPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0A09H
+Program Size: data=9.3 xdata=151 code=3566
+creating hex file from "lab"...
+"lab" - 0 Error(s), 10 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(210): warning C206: 'NOP': missing function-prototype
+main.c(23): warning C294: unreachable code
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ADDISPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DS18B20READTEMP?TEMP
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0A09H
+Program Size: data=9.3 xdata=155 code=3557
+creating hex file from "lab"...
+"lab" - 0 Error(s), 13 Warning(s).
+compiling main.c...
+main.c(210): warning C206: 'NOP': missing function-prototype
+main.c(23): warning C294: unreachable code
+main.c - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ADDISPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DS18B20READTEMP?TEMP
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0A09H
+Program Size: data=9.3 xdata=155 code=3557
+creating hex file from "lab"...
+"lab" - 0 Error(s), 11 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCDDISPLAYTEMP0?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ADDISPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DS18B20READTEMP?TEMP
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0A09H
+Program Size: data=9.3 xdata=155 code=3557
+creating hex file from "lab"...
+"lab" - 0 Error(s), 11 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(210): warning C206: 'NOP': missing function-prototype
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ADDISPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0A09H
+Program Size: data=9.3 xdata=151 code=3566
+creating hex file from "lab"...
+"lab" - 0 Error(s), 10 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(211): warning C206: 'NOP': missing function-prototype
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ADDISPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0A09H
+Program Size: data=9.3 xdata=151 code=3578
+creating hex file from "lab"...
+"lab" - 0 Error(s), 10 Warning(s).
+compiling main.c...
+main.c(211): warning C206: 'NOP': missing function-prototype
+main.c - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling 12864.c...
+compiling ds1302.c...
+compiling I2C.c...
+compiling temp.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ADDISPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0A09H
+Program Size: data=9.3 xdata=151 code=3578
+creating hex file from "lab"...
+"lab" - 0 Error(s), 9 Warning(s).
+Rebuild target 'Target 1'
+compiling 12864.c...
+compiling main.c...
+main.c(211): warning C206: 'NOP': missing function-prototype
+compiling ds1302.c...
+compiling I2C.c...
+compiling temp.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ADDISPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0A09H
+Program Size: data=9.3 xdata=151 code=3578
+creating hex file from "lab"...
+"lab" - 0 Error(s), 10 Warning(s).
+compiling main.c...
+main.c(211): warning C206: 'NOP': missing function-prototype
+main.c - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling 12864.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ADDISPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD12864_DISPLAYONECHARONADDR?12864
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0A09H
+Program Size: data=9.3 xdata=151 code=3586
+creating hex file from "lab"...
+"lab" - 0 Error(s), 10 Warning(s).
+compiling main.c...
+main.c(229): warning C206: 'NOP': missing function-prototype
+main.c - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DACCONVERSION?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CLOCKPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?ADDISPLAY?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS1302_SETINIT?DS1302
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?LCDFLAG?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PHOTODISPLAY?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BYTECODE?12864
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD12864_DISPLAYONECHARONADDR?12864
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  NOP
+    MODULE:  main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  NOP
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 0A09H
+Program Size: data=9.3 xdata=151 code=3580
+creating hex file from "lab"...
+"lab" - 0 Error(s), 10 Warning(s).
